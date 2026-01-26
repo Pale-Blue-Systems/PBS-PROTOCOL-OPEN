@@ -1,4 +1,3 @@
-```md
 # PBS-REFERENCES-RESOURCES.md  
 ## References, Standards, and Supporting Resources
 
@@ -194,4 +193,4 @@ PBS builds on this foundation to provide a coherent, interoperable communication
 
 **Pale Blue Systems Foundation**  
 Stewarding open, interoperable communication standards for humanity’s future in space.
-```
+

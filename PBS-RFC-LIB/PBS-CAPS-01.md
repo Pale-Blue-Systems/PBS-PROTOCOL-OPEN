@@ -1,4 +1,3 @@
-```md
 # PBS-CAPS-01  
 ## Capability Advertisement and Discovery
 
@@ -259,4 +258,3 @@ Rules:
 PBS-CAPS-01 defines a **flexible, optional capability advertisement model** for the PBS Open Standard.
 
 By allowing endpoints to advertise services, roles, resources, and constraints using authenticated, TLV-encoded frames, PBS enables informed, cooperative behavior across distributed and delay-tolerant environments without central coordination.
-```

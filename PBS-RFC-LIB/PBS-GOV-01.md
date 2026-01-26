@@ -1,4 +1,3 @@
-```md
 # PBS-GOV-01  
 ## Governance, Stewardship, and Evolution of the PBS Open Standard
 
@@ -204,4 +203,4 @@ Standards stability is treated as a mission requirement.
 PBS-GOV-01 defines the **governance framework** that ensures the Pale Blue Systems Open Standard remains neutral, stable, and trustworthy.
 
 By separating stewardship from implementation and embedding an RFC-based evolution process, PBS governance enables innovation while preserving interoperability for humanity’s sustained expansion beyond Earth.
-```
+

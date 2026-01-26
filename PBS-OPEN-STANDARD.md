@@ -1,4 +1,3 @@
-```md
 # PBS Open Standard  
 ## Scope, Stewardship, and Open Standard Model
 
@@ -151,4 +150,3 @@ The PBS Open Standard defines a neutral, interoperable communication language fo
 It is stewarded by an independent foundation, implemented by a diverse ecosystem, and designed to support sustained, multi-party exploration and operations beyond Earth.
 
 The standard exists to enable cooperation, reliability, and clarity in environments where assumptions common to terrestrial networking do not apply.
-```

@@ -1,4 +1,3 @@
-```md
 # PBS-PRESS-RELEASE.md  
 ## Pale Blue Systems Foundation Launches Open Communication Standard for the Next Era of Space Exploration
 
@@ -113,4 +112,4 @@ For more information, visit the Pale Blue Systems Foundation repository and docu
 
 **Pale Blue Systems Foundation**  
 Stewarding open, interoperable communication standards for humanity’s future in space.
-```
+

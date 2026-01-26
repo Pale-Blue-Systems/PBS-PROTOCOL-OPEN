@@ -1,4 +1,3 @@
-```md
 # PBS-ENV-01  
 ## Core Message Envelope
 
@@ -205,4 +204,3 @@ Rules:
 PBS-ENV-01 defines the core message envelope for PBS Core.
 
 It establishes a stable, authoritative boundary for addressing, lifetime, sequencing, and authentication, enabling interoperable communication across distributed and delay-tolerant environments.
-```
