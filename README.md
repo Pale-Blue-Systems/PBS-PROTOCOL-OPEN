@@ -122,20 +122,20 @@ This model enables adoption across civil, commercial, and international space pr
 
 ### Quick Links
 
-| Document | Description |
-|----------|-------------|
-| [PBS-OPEN-STANDARD.md](PBS-OPEN-STANDARD.md) | Scope, stewardship, and open standard model |
-| [PBS-ENV-01](PBS-RFC-LIB/PBS-ENV-01.md) | Core Message Envelope |
-| [PBS-ADDR-01](PBS-RFC-LIB/PBS-ADDR-01.md) | Addressing and Identification |
-| [PBS-MUX-01](PBS-RFC-LIB/PBS-MUX-01.md) | Payload Multiplexing and Semantic Framing |
-| [PBS-PRIO-01](PBS-RFC-LIB/PBS-PRIO-01.md) | Priority Classification and Deterministic Handling |
-| [PBS-SEC-A-01](PBS-RFC-LIB/PBS-SEC-A-01.md) | Envelope Authentication and Security Boundaries |
-| [PBS-POS-01](PBS-RFC-LIB/PBS-POS-01.md) | Position and Presence Signaling |
-| [PBS-CAPS-01](PBS-RFC-LIB/PBS-CAPS-01.md) | Capability Advertisement and Discovery |
-| [PBS-ROUTE-01](PBS-RFC-LIB/PBS-ROUTE-01.md) | Routing and Forwarding Semantics |
-| [PBS-DTN-MAP-01](PBS-RFC-LIB/PBS-DTN-MAP-01.md) | Mapping to DTN / BPv7 |
-| [PBS-CONFORMANCE-01](PBS-RFC-LIB/PBS-CONFORMANCE-01.md) | Conformance, Interoperability, and Baselines |
-| [PBS-GOV-01](PBS-RFC-LIB/PBS-GOV-01.md) | Governance, Stewardship, and Evolution |
+| Document                                                | Description                                        |
+| ------------------------------------------------------- | -------------------------------------------------- |
+| [PBS-OPEN-STANDARD.md](PBS-OPEN-STANDARD.md)            | Scope, stewardship, and open standard model        |
+| [PBS-ENV-01](PBS-RFC-LIB/PBS-ENV-01.md)                 | Core Message Envelope                              |
+| [PBS-ADDR-01](PBS-RFC-LIB/PBS-ADDR-01.md)               | Addressing and Identification                      |
+| [PBS-MUX-01](PBS-RFC-LIB/PBS-MUX-01.md)                 | Payload Multiplexing and Semantic Framing          |
+| [PBS-PRIO-01](PBS-RFC-LIB/PBS-PRIO-01.md)               | Priority Classification and Deterministic Handling |
+| [PBS-SEC-A-01](PBS-RFC-LIB/PBS-SEC-A-01.md)             | Envelope Authentication and Security Boundaries    |
+| [PBS-POS-01](PBS-RFC-LIB/PBS-POS-01.md)                 | Position and Presence Signaling                    |
+| [PBS-CAPS-01](PBS-RFC-LIB/PBS-CAPS-01.md)               | Capability Advertisement and Discovery             |
+| [PBS-ROUTE-01](PBS-RFC-LIB/PBS-ROUTE-01.md)             | Routing and Forwarding Semantics                   |
+| [PBS-DTN-MAP-01](PBS-RFC-LIB/PBS-DTN-MAP-01.md)         | Mapping to DTN / BPv7                              |
+| [PBS-CONFORMANCE-01](PBS-RFC-LIB/PBS-CONFORMANCE-01.md) | Conformance, Interoperability, and Baselines       |
+| [PBS-GOV-01](PBS-RFC-LIB/PBS-GOV-01.md)                 | Governance, Stewardship, and Evolution             |
 
 ---
 
@@ -148,6 +148,22 @@ They are intended to be:
 - implementation-agnostic
 - interoperable across independent authorities
 - stable under long-term evolution
+
+---
+
+## Legal and Governance
+
+### License
+The Pale Blue Systems Open Standard and reference implementations are released under the **Apache License 2.0**.  
+See [`LICENSE`](LICENSE) for details.
+
+### Intellectual Property & Contribution
+To ensure the long-term neutrality and availability of the standard, all contributions are subject to the Pale Blue Systems Foundation **Contributor License Agreement (CLA)**. By submitting a Pull Request, you agree to the terms of the CLA.  
+See [`CLA.md`](CLA.md) for the full agreement.
+
+### Trademark Usage
+"Pale Blue Systems", "PBSF", and the PBS Logo are trademarks of the Pale Blue Systems Foundation. Their use is governed by our Trademark Policy to protect the integrity of the standard's ecosystem.  
+See [`TRADEMARK-POLICY.md`](TRADEMARK-POLICY.md) for usage guidelines and "Fair Use" examples.
 
 ---
 
