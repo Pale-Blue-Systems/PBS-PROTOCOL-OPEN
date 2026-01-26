@@ -163,7 +163,7 @@ See [`CLA.md`](CLA.md) for the full agreement.
 
 ### Trademark Usage
 "Pale Blue Systems", "PBSF", and the PBS Logo are trademarks of the Pale Blue Systems Foundation. Their use is governed by our Trademark Policy to protect the integrity of the standard's ecosystem.  
-See [`TRADEMARK-POLICY.md`](TRADEMARK-POLICY.md) for usage guidelines and "Fair Use" examples.
+See [`TRADEMARK-USAGE-POLICY.md`](TRADEMARK-USAGE-POLICY.md) for usage guidelines and "Fair Use" examples.
 
 ---
 
