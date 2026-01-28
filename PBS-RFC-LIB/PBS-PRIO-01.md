@@ -178,3 +178,40 @@ Rules:
 PBS-PRIO-01 defines a **fixed, envelope-encoded priority classification model** for the PBS Open Standard.
 
 By encoding priority deterministically while leaving scheduling and optimization behavior implementation-defined, PBS enables predictable interoperability while supporting advanced, proprietary routing and congestion-management strategies.
+
+---
+
+## 14. NASA DSN Compatibility
+
+This section documents the relationship between PBS priority classes and the NASA Deep Space Network (DSN) 7-level priority scheduling system.
+
+### 14.1 Scope Differentiation
+
+| Aspect | NASA DSN | PBS Protocol |
+|--------|----------|--------------|
+| **Scope** | Ground station antenna allocation | Packet transmission within a link |
+| **Timescale** | Hours/days ahead | Milliseconds in real-time |
+| **Decision Authority** | Ground scheduling team | Autonomous onboard software |
+
+PBS operates at the **packet layer**, complementing DSN's macro-level ground scheduling. When an operator receives DSN antenna time, PBS determines which packets transmit first during that window.
+
+### 14.2 Priority Mapping
+
+| NASA DSN Level | DSN Description | Recommended PBS Mapping |
+|----------------|-----------------|-------------------------|
+| Level 1–2 | Spacecraft emergencies, human spaceflight | **CRITICAL (0)** |
+| Level 3–4 | Launch/landing, orbit insertion, critical ops | **HIGH (1)** |
+| Level 5–6 | Major/minor scientific events | **NORMAL (2)** / **LOW (3)** |
+| Level 7 | Nominal tracking, routine science | **BULK (4)** |
+
+Rules:
+- This mapping is INFORMATIVE, not normative.
+- Implementations MAY define mission-specific mappings.
+- PBS priority values MUST remain as defined in Section 4.
+
+### 14.3 Interoperability
+
+PBS is designed for compatibility with DSN-serviced missions:
+- Commercial operators implementing PBS can integrate with DSN ground infrastructure.
+- PBS priority semantics align with DSN's safety-critical-first philosophy.
+- No DSN software modification is required; PBS operates within allocated link time.
