@@ -8,6 +8,17 @@ The standards in this repository define a shared technical language that allows 
 
 ---
 
+## Context and Intent
+
+Pale Blue Systems publishes these standards in anticipation of a future space environment that includes **multiple space agencies, commercial operators, scientific missions, private infrastructure, and long-lived off-Earth systems operating concurrently**.
+
+This repository does not claim to resolve a single current operational failure.  
+It exists to make future interoperability, authority, and coordination challenges **explicit and addressable early**, before architectural assumptions become embedded in deployed infrastructure.
+
+Additional context on why this work is published now, and the long-term architectural motivations behind it, is available in [`WHY-NOW.md`](WHY-NOW.md).
+
+---
+
 ## Why This Repository Exists
 
 As space operations move toward sustained lunar presence, cislunar infrastructure, and Mars exploration, missions increasingly depend on distributed systems operating across:
@@ -43,6 +54,8 @@ The [`PBS-RFC-LIB/`](PBS-RFC-LIB/) directory contains the authoritative protocol
 
 These specifications define **what messages mean and how they behave**, independent of hardware, transport, or implementation language.
 
+---
+
 ### Governance and Stewardship
 
 This repository also includes governance documents describing:
@@ -74,7 +87,7 @@ Space Communication Hardware
 (Radios, Lasers, Relays, Ground Stations)
 ```
 
-The standards do not replace mission software or physical communication systems.
+The standards do not replace mission software or physical communication systems.  
 They enable those systems to interoperate safely and predictably.
 
 ---
@@ -83,19 +96,19 @@ They enable those systems to interoperate safely and predictably.
 
 The standards in this repository are designed to align with **Delay/Disruption Tolerant Networking (DTN)** architectures used in spaceflight and ground systems.
 
-Local and surface-level communication does not require DTN encapsulation.
-DTN is applied at boundaries where long delays or scheduled connectivity make it necessary.
+Local and surface-level communication does not require DTN encapsulation.  
+DTN is applied at boundaries where long delays, disruption, or scheduled connectivity make it necessary.
 
 ---
 
 ## External Alignment & Validation
 
-The Pale Blue Systems Open Standard is explicitly aligned with authoritative, peer-reviewed architectures from major space agencies and bodies.
+The Pale Blue Systems Open Standard is explicitly aligned with authoritative, peer-reviewed architectures from major space agencies and technical bodies.
 
 | Alignment ID | External Source | Domain |
 | :--- | :--- | :--- |
 | **PBS-ALIGN-NASA-LCRNS-01** | NASA LCRNS (Esper, 2025) | Lunar & Cislunar Networking |
-| **PBS-ALIGN-IEEE-AEROCONF-2025** | IEEE Aerospace Conf. | Space Network Architecture |
+| **PBS-ALIGN-IEEE-AEROCONF-2025** | IEEE Aerospace Conference | Space Network Architecture |
 | **PBS-ALIGN-IEEE-TNTN-2025** | IEEE ComSoc | Integrated T/NTN Networks |
 
 *See [PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md](PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md) for the full evidence map.*
@@ -119,37 +132,40 @@ This model enables adoption across civil, commercial, and international space pr
 ```text
 /
 ├── README.md
-├── PBS-OPEN-STANDARD.md            → Open Standard scope and stewardship model
-├── PBS-RFC-LIB/                       → Protocol specifications
-│   ├── PBS-ENV-01.md                  → Core Message Envelope
-│   ├── PBS-ADDR-01.md                 → Addressing and Identification
-│   ├── PBS-MUX-01.md                  → Payload Multiplexing
-│   ├── PBS-PRIO-01.md                 → Priority Classification
-│   ├── PBS-SEC-A-01.md                → Security Model A
-│   ├── PBS-POS-01.md                  → Position and Presence Signaling
-│   ├── PBS-CAPS-01.md                 → Capability Advertisement
-│   ├── PBS-ROUTE-01.md                → Routing and Forwarding Semantics
-│   ├── PBS-DTN-MAP-01.md              → DTN Mapping
-│   ├── PBS-CONFORMANCE-01.md          → Conformance Requirements
-│   └── PBS-GOV-01.md                  → Governance and Stewardship
+├── WHY-NOW.md                        → Architectural motivation and future context
+├── PBS-OPEN-STANDARD.md              → Open standard scope and stewardship model
+├── PBS-RFC-LIB/                      → Protocol specifications
+│   ├── PBS-ENV-01.md                 → Core Message Envelope
+│   ├── PBS-ADDR-01.md                → Addressing and Identification
+│   ├── PBS-MUX-01.md                 → Payload Multiplexing
+│   ├── PBS-PRIO-01.md                → Priority Classification
+│   ├── PBS-SEC-A-01.md               → Security Model A
+│   ├── PBS-POS-01.md                 → Position and Presence Signaling
+│   ├── PBS-CAPS-01.md                → Capability Advertisement
+│   ├── PBS-ROUTE-01.md               → Routing and Forwarding Semantics
+│   ├── PBS-DTN-MAP-01.md             → DTN / BPv7 Mapping
+│   ├── PBS-CONFORMANCE-01.md         → Conformance Requirements
+│   └── PBS-GOV-01.md                 → Governance and Stewardship
 ```
+
+---
 
 ### Quick Links
 
-| Document                                                | Description                                        |
-| ------------------------------------------------------- | -------------------------------------------------- |
-| [PBS-OPEN-STANDARD.md](PBS-OPEN-STANDARD.md)            | Scope, stewardship, and open standard model        |
-| [PBS-ENV-01](PBS-RFC-LIB/PBS-ENV-01.md)                 | Core Message Envelope                              |
-| [PBS-ADDR-01](PBS-RFC-LIB/PBS-ADDR-01.md)               | Addressing and Identification                      |
-| [PBS-MUX-01](PBS-RFC-LIB/PBS-MUX-01.md)                 | Payload Multiplexing and Semantic Framing          |
-| [PBS-PRIO-01](PBS-RFC-LIB/PBS-PRIO-01.md)               | Priority Classification and Deterministic Handling |
-| [PBS-SEC-A-01](PBS-RFC-LIB/PBS-SEC-A-01.md)             | Envelope Authentication and Security Boundaries    |
-| [PBS-POS-01](PBS-RFC-LIB/PBS-POS-01.md)                 | Position and Presence Signaling                    |
-| [PBS-CAPS-01](PBS-RFC-LIB/PBS-CAPS-01.md)               | Capability Advertisement and Discovery             |
-| [PBS-ROUTE-01](PBS-RFC-LIB/PBS-ROUTE-01.md)             | Routing and Forwarding Semantics                   |
-| [PBS-DTN-MAP-01](PBS-RFC-LIB/PBS-DTN-MAP-01.md)         | Mapping to DTN / BPv7                              |
-| [PBS-CONFORMANCE-01](PBS-RFC-LIB/PBS-CONFORMANCE-01.md) | Conformance, Interoperability, and Baselines       |
-| [PBS-GOV-01](PBS-RFC-LIB/PBS-GOV-01.md)                 | Governance, Stewardship, and Evolution             |
+| Document | Description |
+| ------- | ----------- |
+| [PBS-OPEN-STANDARD.md](PBS-OPEN-STANDARD.md) | Scope, stewardship, and open standard model |
+| [PBS-ENV-01](PBS-RFC-LIB/PBS-ENV-01.md) | Core Message Envelope |
+| [PBS-ADDR-01](PBS-RFC-LIB/PBS-ADDR-01.md) | Addressing and Identification |
+| [PBS-MUX-01](PBS-RFC-LIB/PBS-MUX-01.md) | Payload Multiplexing |
+| [PBS-PRIO-01](PBS-RFC-LIB/PBS-PRIO-01.md) | Priority Classification |
+| [PBS-SEC-A-01](PBS-RFC-LIB/PBS-SEC-A-01.md) | Envelope Authentication |
+| [PBS-POS-01](PBS-RFC-LIB/PBS-POS-01.md) | Position and Presence |
+| [PBS-CAPS-01](PBS-RFC-LIB/PBS-CAPS-01.md) | Capability Advertisement |
+| [PBS-ROUTE-01](PBS-RFC-LIB/PBS-ROUTE-01.md) | Routing Semantics |
+| [PBS-DTN-MAP-01](PBS-RFC-LIB/PBS-DTN-MAP-01.md) | DTN / BPv7 Mapping |
+| [PBS-CONFORMANCE-01](PBS-RFC-LIB/PBS-CONFORMANCE-01.md) | Conformance & Interoperability |
+| [PBS-GOV-01](PBS-RFC-LIB/PBS-GOV-01.md) | Governance & Evolution |
 
 ---
 
@@ -172,15 +188,15 @@ The Pale Blue Systems Open Standard and reference implementations are released u
 See [`LICENSE`](LICENSE) for details.
 
 ### Intellectual Property & Contribution
-To ensure the long-term neutrality and availability of the standard, all contributions are subject to the Pale Blue Systems Foundation **Contributor License Agreement (CLA)**. By submitting a Pull Request, you agree to the terms of the CLA.  
-See [`CLA.md`](CLA.md) for the full agreement.
+To ensure long-term neutrality and availability, all contributions are subject to the Pale Blue Systems Foundation **Contributor License Agreement (CLA)**.  
+See [`CLA.md`](CLA.md) for full terms.
 
 ### Trademark Usage
-"Pale Blue Systems", "PBSF", and the PBS Logo are trademarks of the Pale Blue Systems Foundation. Their use is governed by our Trademark Policy to protect the integrity of the standard's ecosystem.  
-See [`TRADEMARK-USAGE-POLICY.md`](TRADEMARK-USAGE-POLICY.md) for usage guidelines and "Fair Use" examples.
+"Pale Blue Systems", "PBSF", and the PBS logo are trademarks of the Pale Blue Systems Foundation.  
+See [`TRADEMARK-USAGE-POLICY.md`](TRADEMARK-USAGE-POLICY.md) for guidelines.
 
 ---
 
 ## About the Foundation
 
-The Pale Blue Systems Foundation stewards open, interoperable communication standards to support humanity’s expansion into space through cooperation, reliability, and technical clarity.# PBS-PROTOCOL-OPEN
+The Pale Blue Systems Foundation stewards open, interoperable communication standards to support humanity’s expansion into space through cooperation, reliability, and technical clarity.
