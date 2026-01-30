@@ -48,6 +48,14 @@ Rules:
 
 Scope governance and assignment are defined outside this specification.
 
+### 3.1 Extension Placement and Scope
+
+Addressing extensions defined in this specification are carried at the payload layer and do not alter the fixed PBS-ENV-01 header.
+
+- Extension TLVs SHALL appear as the first bytes of the payload or within a payload schema explicitly defined by the application layer.
+- Envelope parsing and validation MUST complete prior to interpretation of any addressing extensions.
+
+
 ---
 
 ## 4. Address Structure
