@@ -1,10 +1,10 @@
 # PBS-POS-01  
 ## Position and Presence Signaling
 
-**Status:** Core  
-**Version:** 1.0  
-**Applies to:** PBS Payloads (MUX Frames)  
-**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ADDR-01, PBS-ROUTE-01, PBS-SEC-A-01
+**Status:** Optional Extension
+**Version:** 1.3
+**Applies to:** Systems requiring position and presence signaling
+**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01
 
 ---
 

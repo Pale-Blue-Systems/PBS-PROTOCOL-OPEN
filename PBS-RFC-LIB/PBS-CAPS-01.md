@@ -1,10 +1,10 @@
 # PBS-CAPS-01  
 ## Capability Advertisement and Discovery
 
-**Status:** Core  
-**Version:** 1.0  
-**Applies to:** PBS Payloads (MUX Frames)  
-**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ADDR-01, PBS-POS-01, PBS-ROUTE-01, PBS-SEC-A-01
+**Status:** Optional Extension
+**Version:** 1.3
+**Applies to:** Systems requiring capability advertisement
+**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01
 
 ---
 

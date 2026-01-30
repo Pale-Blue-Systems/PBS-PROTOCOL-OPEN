@@ -1,9 +1,9 @@
 # PBS-GOV-01  
 ## Governance, Stewardship, and Evolution of the PBS Open Standard
 
-**Status:** Informational (Normative Governance)  
-**Version:** 1.0  
-**Applies to:** Pale Blue Systems Open Standard  
+**Status:** Informational (Normative Governance)
+**Version:** 1.3
+**Applies to:** Pale Blue Systems Open Standard
 **Related:** PBS-OPEN-STANDARD.md, PBS-CONFORMANCE-01, All PBS Core RFCs
 
 ---

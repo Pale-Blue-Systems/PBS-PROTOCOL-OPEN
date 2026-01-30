@@ -1,10 +1,12 @@
 # PBS-ADDR-01  
 ## Addressing and Identification
 
-**Status:** Core  
-**Version:** 1.0  
-**Applies to:** All PBS Core Messages  
+**Status:** Optional Extension
+**Version:** 1.3
+**Applies to:** Systems requiring explicit destination addressing
 **Related:** PBS-ENV-01, PBS-ROUTE-01, PBS-DTN-MAP-01
+
+> **Note:** PBS-ENV-01 v1.3 uses a fixed 16-byte Source ID field. This specification defines optional variable-length TLV addressing for systems requiring explicit destination addresses or multi-authority routing.
 
 ---
 

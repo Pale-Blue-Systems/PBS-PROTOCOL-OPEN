@@ -2,10 +2,10 @@
 
 ## Priority Classification and Deterministic Handling
 
-**Status:** Core  
-**Version:** 1.0  
-**Applies to:** All PBS Core Messages  
-**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01, PBS-SEC-A-01
+**Status:** Core
+**Version:** 1.3
+**Applies to:** All PBS Core Messages
+**Related:** PBS-ENV-01, PBS-ROUTE-01, PBS-SEC-A-01
 
 ---
 
@@ -62,29 +62,26 @@ Rules:
 
 ## 5. Envelope Encoding
 
-Priority is encoded within the **Flags field** of the PBS envelope as defined in PBS-ENV-01.
+Priority is encoded as a **dedicated byte field** in the PBS-ENV-01 v1.3 envelope header.
 
-### 5.1 Flags Field Mapping
+### 5.1 Header Field Layout
 
-The **three most significant bits** (Bits 5–7) of the `flags` field SHALL represent the Priority Class as a 3-bit unsigned integer.
+The `Priority` field occupies byte offset `0x01` in the 44-byte PBS envelope header:
 
-```text
-Bit:    7   6   5   4   3   2   1   0
-      +---+---+---+---+---+---+---+---+
-flags:| P | P | P | R | R | R | R | A |
-      +---+---+---+---+---+---+---+---+
-```
+| Offset | Field | Size | Type | Description |
+|--------|-------|------|------|-------------|
+| 0x00 | Magic | 1 | u8 | Fixed `0x10` |
+| **0x01** | **Priority** | **1** | **u8** | **Priority class (0–4)** |
+| 0x02 | Flags | 1 | u8 | `0x01`=ACK Requested |
+| 0x03 | Reserved | 1 | u8 | Padding |
 
-Where:
-- `PPP` encodes the priority class (0–4 defined; 5–7 reserved)
-- `R` represents reserved bits (Must be 0)
-- `A` represents the ACK_REQ flag (PBS-ENV-01)
+The Priority field is a single unsigned byte with defined values 0–4.
 
 Rules:
-- Priority values MUST conform to the defined class table.
-- Values 5–7 are reserved and MUST NOT be used.
+- Priority values MUST conform to the defined class table (Section 4).
+- Values 5–255 are reserved and MUST NOT be used.
 - Envelopes with invalid or reserved priority values MUST be discarded.
-- Relays MUST NOT modify priority bits.
+- Relays MUST NOT modify the priority field.
 
 ---
 
@@ -131,13 +128,14 @@ Routing behavior is defined in PBS-ROUTE-01.
 
 ---
 
-## 9. Interaction with MUX
+## 9. Payload Priority
 
-Priority applies at the envelope level.
+Priority applies at the envelope level and covers the entire payload.
 
 Rules:
-- Frames within a MUX container MUST NOT carry independent priority values.
-- Mixing semantic frames of different urgency SHOULD be avoided.
+- The entire payload inherits the envelope's priority class.
+- Payloads MUST NOT carry independent priority values.
+- Mixing data of different urgency within a single envelope SHOULD be avoided.
 - If mixed urgency is required, multiple envelopes SHOULD be used.
 
 ---

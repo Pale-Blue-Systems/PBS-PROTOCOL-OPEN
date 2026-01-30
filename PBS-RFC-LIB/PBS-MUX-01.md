@@ -1,10 +1,12 @@
 # PBS-MUX-01  
 ## Payload Multiplexing and Semantic Framing
 
-**Status:** Core  
-**Version:** 1.0  
-**Applies to:** PBS Payloads  
-**Related:** PBS-ENV-01, PBS-ADDR-01, PBS-PRIO-01, PBS-SEC-A-01
+**Status:** Optional Extension
+**Version:** 1.3
+**Applies to:** Systems requiring structured payload multiplexing
+**Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01
+
+> **Note:** PBS-ENV-01 v1.3 allows application-defined payload content. This specification defines an optional MUX container for systems requiring multiple semantic frames within a single envelope.
 
 ---
 

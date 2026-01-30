@@ -1,187 +1,218 @@
-# PBS-SEC-A-01  
-## Envelope Authentication and Security Boundaries (Model A)
+# PBS-SEC-A-01
+## Integrity Verification and Security Boundaries
 
-**Status:** Core  
-**Version:** 1.0  
-**Applies to:** All PBS Core Messages  
-**Related:** PBS-ENV-01, PBS-ADDR-01, PBS-MUX-01, PBS-PRIO-01
+**Status:** Core
+**Version:** 1.3
+**Applies to:** All PBS Core Messages
+**Related:** PBS-ENV-01, PBS-PRIO-01, PBS-CONFORMANCE-01
 
 ---
 
 ## 1. Purpose
 
-This document defines **Security Model A** for the Pale Blue Systems (PBS) Open Standard.
+This document defines the **integrity verification and security model** for the Pale Blue Systems (PBS) Open Standard.
 
-Security Model A specifies how PBS envelopes are authenticated, how trust boundaries are enforced, and how message integrity is preserved across multi-hop, multi-authority, and delay-tolerant environments.
-
-This model is intentionally minimal and deterministic, designed to provide **strong integrity and authenticity guarantees** while allowing normal relay behavior in store-and-forward networks.
+PBS-SEC-A-01 specifies how PBS envelopes are protected against transmission errors and corruption, and establishes the framework for optional cryptographic authentication.
 
 ---
 
 ## 2. Security Objectives
 
-PBS Security Model A is designed to achieve the following objectives:
+PBS Security Model is designed to achieve the following objectives:
 
-- **Envelope integrity:** Detect unauthorized modification of immutable envelope contents.
-- **Source authenticity:** Allow receivers to verify the claimed sender.
-- **Replay resistance:** Enable detection of replayed envelopes.
-- **Relay transparency:** Allow intermediate relays to forward messages without re-signing.
-- **Low computational overhead:** Support constrained and low-power systems.
-
-Confidentiality (encryption) is outside the scope of Model A and MAY be layered above or below PBS Core.
+- **Header integrity:** Detect transmission errors, bit-flips, and corruption in the envelope header.
+- **Routing safety:** Validate header integrity before trusting routing instructions.
+- **Radiation resilience:** Detect single-event upsets (SEUs) and cosmic ray bit-flips.
+- **Low computational overhead:** Support resource-constrained and low-power embedded systems.
+- **Extensibility:** Allow optional cryptographic authentication for higher-security applications.
 
 ---
 
-## 3. Security Scope
+## 3. Integrity Model: CRC32
 
-Security Model A applies to the **PBS envelope boundary**, with explicit distinction between immutable and mutable fields.
+PBS-ENV-01 v1.3 provides mandatory integrity verification using CRC32 checksum.
+
+### 3.1 CRC32 Coverage
+
+The `CRC32` field at offset `0x28` provides integrity verification for the header.
+
+| Coverage | Bytes | Description |
+|----------|-------|-------------|
+| CRC32 Input | 0x00–0x2B | All 44 bytes (with CRC32 field set to zero) |
+| CRC32 Field | 0x28–0x2B | Checksum value |
+
+### 3.2 CRC32 Algorithm
 
 Rules:
-- Immutable fields are authenticated end-to-end.
-- Mutable fields MAY be modified during transit without invalidating authentication.
-- Relays MUST NOT modify authenticated (immutable) fields.
+- CRC32 uses the standard IEEE 802.3 polynomial (0xEDB88320, reflected).
+- CRC32 is computed over header bytes 0x00–0x2B (44 bytes) with the CRC32 field set to zero.
+- Result is stored as a 32-bit unsigned integer, big-endian.
+
+### 3.3 CRC32 Limitations
+
+CRC32 provides:
+- Detection of transmission errors (noise, interference)
+- Detection of bit-flips (radiation, SEUs)
+- Validation of header structure before processing
+
+CRC32 does NOT provide:
+- Cryptographic authentication (source verification)
+- Tamper detection (malicious modification)
+- Payload integrity (header-only coverage)
 
 ---
 
-## 4. Trust Model
+## 4. Integrity Processing
 
-PBS uses a **scope-based trust model**.
+Receivers MUST verify CRC32 before processing any envelope.
+
+### 4.1 Verification Steps
+
+1. Read 44-byte header
+2. Extract CRC32 value from offset 0x28
+3. Calculate CRC32 over bytes 0x00–0x27
+4. Compare calculated value with extracted value
+5. Discard envelope if values do not match
+
+### 4.2 Failure Handling
 
 Rules:
-- Trust is evaluated within the authority context defined by the `scope` field (PBS-ENV-01).
-- Each scope defines its own trust anchors and key management policies.
-- Cross-scope trust requires explicit agreement and translation.
-
-Key distribution and trust anchor management are outside the scope of this specification.
+- Envelopes failing CRC32 verification MUST be discarded.
+- Implementations SHOULD log or count CRC failures for diagnostics.
+- CRC failures MUST NOT cause persistent failure states.
+- Processing MUST continue with subsequent envelopes.
 
 ---
 
-## 5. Authentication Mechanism
+## 5. Relay and Gateway Behavior
 
-PBS Security Model A uses a **Message Authentication Code (MAC)** to authenticate envelope contents.
-
-### 5.1 Auth Tag Field
-
-The `auth_tag` field in the PBS envelope carries the authentication data.
+Relays and gateways MUST maintain header integrity across forwarding.
 
 Rules:
-- The `auth_tag` is computed over all authenticated envelope fields (Section 5.2).
-- The MAC algorithm MUST be cryptographically strong and collision-resistant.
-- The specific MAC algorithm is implementation-defined but MUST be consistent within a scope.
+- Relays MUST verify CRC32 before forwarding.
+- Relays MUST NOT forward envelopes with invalid CRC32.
+- When TTL is decremented, CRC32 MUST be recalculated.
+- All other header fields MUST be preserved unmodified.
+
+### 5.1 CRC32 Recalculation
+
+When a relay modifies the TTL field:
+
+1. Decrement TTL value at offset 0x24
+2. Recalculate CRC32 over bytes 0x00–0x27
+3. Update CRC32 field at offset 0x28
+4. Forward envelope
 
 ---
 
-### 5.2 Authenticated (Immutable) Fields
+## 6. Sequence-Based Gap Detection
 
-The following envelope fields MUST be authenticated:
+PBS provides packet-loss detection through sequence numbers.
 
-- `version`
-- `scope`
-- `src`
-- `dst`
-- `counter`
-- `flags`
-- `payload_len`
-- `payload`
+### 6.1 Sequence Tracking
 
-Any modification to the authenticated fields MUST result in authentication failure.
-
-#### Mutable Field Exclusion
-
-The following field is **explicitly excluded** from authentication:
-
-- `ttl`
-
-The `ttl` field is mutable by design and is expected to change as an envelope traverses the network.
-
----
-
-## 6. Replay Protection
-
-Replay protection is achieved through the combined use of:
-
-- monotonic counters (`counter`)
-- authority context (`scope`)
-- source address (`src`)
+The `Sequence` field at offset 0x04 enables receivers to detect lost packets.
 
 Rules:
-- Receivers SHOULD track recent counters per (`scope`, `src`).
-- Envelopes with counters lower than or equal to previously accepted values SHOULD be rejected.
-- Counter rollover handling is implementation-defined but MUST preserve monotonicity guarantees.
+- Sequence numbers increase monotonically per source device.
+- Sequence numbers roll over from 65535 to 0.
+- Receivers SHOULD track sequence numbers per Source ID.
+- Gaps in sequence indicate lost packets.
+
+### 6.2 Gap Reporting
+
+Receivers MAY report sequence gaps to enable retransmission or diagnostics:
+- "Packets #502–#505 from Rover-Alpha were lost"
+- Gap detection is informational; PBS does not mandate retransmission.
 
 ---
 
-## 7. Authentication Processing
+## 7. Security Extension: Cryptographic Authentication
 
-Receivers MUST process authentication as follows:
+For applications requiring cryptographic security, implementations MAY extend PBS with authentication.
 
-1. Validate envelope structure.
-2. Verify the `auth_tag` against immutable fields.
-3. Validate counter monotonicity.
-4. Process payload only after successful authentication.
+### 7.1 Extension Approaches
 
-Failure at any step MUST result in envelope discard.
+Cryptographic authentication MAY be implemented via:
+
+1. **Payload-level authentication:** Authenticated payload containing MAC/signature
+2. **Gateway authentication:** Gateway adds cryptographic wrapper for transit
+3. **Transport-layer security:** TLS/DTLS on underlying transport
+
+### 7.2 Recommended Algorithm
+
+For implementations requiring cryptographic authentication:
+- HMAC-SHA-256 is RECOMMENDED for symmetric authentication.
+- Ed25519 is RECOMMENDED for asymmetric authentication.
+- Authentication SHOULD cover: Magic, Priority, Flags, Sequence, Source ID, Timestamp, Size, TTL, and Payload.
+
+### 7.3 Key Management
+
+Cryptographic key management is outside the scope of this specification. Implementations requiring authentication SHOULD:
+- Define key distribution mechanisms appropriate to deployment.
+- Establish trust anchors per deployment scope.
+- Document key rotation and revocation procedures.
 
 ---
 
-## 8. Relay Behavior
+## 8. Threat Model
 
-Relays operate within the authenticated envelope boundary.
+PBS-SEC-A-01 addresses the following threats:
 
-Rules:
-- Relays MUST decrement `ttl` as required (PBS-ENV-01).
-- Relays MUST NOT modify any authenticated (immutable) field.
-- Relays MUST NOT recompute or regenerate authentication tags.
-- Relays MAY discard envelopes based on local policy or expired TTL.
+| Threat | Mitigation | Coverage |
+|--------|------------|----------|
+| Transmission errors | CRC32 | Header |
+| Bit-flips (radiation) | CRC32 | Header |
+| Packet loss | Sequence numbers | Detection only |
+| Malicious modification | Extension required | Not baseline |
+| Source spoofing | Extension required | Not baseline |
+| Replay attacks | Extension required | Not baseline |
 
-TTL modification does not invalidate authentication.
+For deployments requiring protection against malicious actors, cryptographic extensions (Section 7) are REQUIRED.
 
 ---
 
 ## 9. Priority and Security Interaction
 
-Priority bits (PBS-PRIO-01) are part of the authenticated envelope.
+Priority values are protected by CRC32.
 
 Rules:
-- Unauthorized priority modification MUST be detected via authentication failure.
-- Relays MUST preserve priority values end-to-end.
-- Priority handling MUST NOT bypass authentication checks.
+- Priority field corruption is detected via CRC32 failure.
+- Envelopes with corrupted priority MUST be discarded.
+- Relays MUST preserve priority values unmodified.
 
 ---
 
-## 10. Addressing and Security Interaction
+## 10. Payload Security
 
-Source and destination addresses are authenticated.
+The baseline PBS-ENV-01 v1.3 CRC32 covers the header only, not the payload.
+
+Payload integrity options:
+- **Application-level checksums:** Payload includes its own integrity check.
+- **End-to-end encryption:** Payload encrypted with authenticated encryption (e.g., AES-GCM).
+- **Gateway encapsulation:** Gateway wraps payload in authenticated container.
+
+Payload security is application-defined and outside the scope of PBS Core.
+
+---
+
+## 11. Forward Compatibility
 
 Rules:
-- Address spoofing MUST be detectable via authentication failure.
-- Address resolution MUST occur only after successful authentication.
-- Scope-based trust boundaries apply to address interpretation.
+- CRC32 integrity verification SHALL remain mandatory for PBS Core v1.x.
+- Cryptographic extensions MUST NOT alter baseline header structure.
+- Future security models MAY be defined as PBS-SEC-B-01, PBS-SEC-C-01, etc.
 
 ---
 
-## 11. Failure Handling
+## 12. Summary
 
-Implementations MUST:
-- discard envelopes failing authentication
-- avoid emitting error responses that leak security state
-- continue processing subsequent envelopes
+PBS-SEC-A-01 v1.3 defines a **CRC32-based integrity verification model** for the PBS envelope header.
 
-Authentication failure MUST NOT cause persistent failure modes.
+Key features:
+- Mandatory CRC32 verification for all envelopes
+- Detection of transmission errors and bit-flips
+- Sequence-based gap detection for packet loss
+- Extensibility framework for cryptographic authentication
 
----
-
-## 12. Forward Compatibility
-
-Rules:
-- Security Model A semantics SHALL remain stable for PBS Core v1.
-- Additional security models MAY be defined in future specifications.
-- Implementations MUST NOT assume stronger guarantees than those defined here.
-
----
-
-## 13. Summary
-
-PBS-SEC-A-01 defines **Security Model A**, an envelope-level authentication model that correctly distinguishes between immutable and mutable fields.
-
-By authenticating identity, intent, and payload while allowing controlled in-transit mutation of TTL, PBS Security Model A enables secure, interoperable operation across multi-hop and delay-tolerant environments.
+This model provides efficient, low-overhead integrity verification suitable for embedded systems, while allowing mission-specific security extensions for applications requiring cryptographic guarantees.

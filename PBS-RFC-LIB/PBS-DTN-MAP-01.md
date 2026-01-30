@@ -2,10 +2,10 @@
 
 ## Mapping to Delay/Disruption Tolerant Networking (DTN)
 
-**Status:** Core (Interoperability)  
-**Version:** 1.0  
-**Applies to:** PBS Core Implementations Interfacing with DTN / BPv7  
-**Related:** PBS-ENV-01, PBS-ADDR-01, PBS-MUX-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-ROUTE-01, PBS-CONFORMANCE-01
+**Status:** Optional (Interoperability)
+**Version:** 1.3
+**Applies to:** PBS Gateway Implementations Interfacing with DTN / BPv7
+**Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-ROUTE-01
 
 ---
 
@@ -80,19 +80,20 @@ Rules:
 
 | PBS Field | BPv7 Field | Mapping Rule |
 |---------|------------|--------------|
-| `src` | Source EID | Mapped via PBS-ADDR-01 |
-| `dst` | Destination EID | Mapped via PBS-ADDR-01 |
-| `ttl` | Lifetime | Converted to DTN lifetime |
-| `counter` | Bundle ID | Used as unique identifier |
-| `priority` | Class of Service | See Section 6.3 |
+| `Source ID` | Source EID | 16-byte device name mapped to EID (e.g., "Rover-Alpha" → "ipn:99.1") |
+| Gateway Config | Destination EID | Configured at gateway (not in PBS envelope) |
+| `TTL` | Lifetime | Seconds converted to DTN lifetime |
+| `Sequence` | Bundle Sequence | Used as unique identifier component |
+| `Priority` | Class of Service | See Section 6.3 |
 
 ---
 
 ### 6.2 Payload Block
 
 Rules:
-- The **entire PBS envelope payload** (including PBS-MUX content) SHALL be placed into a single BPv7 Payload Block.
-- PBS payload contents MUST NOT be interpreted or altered.
+- The **entire PBS envelope** (44-byte header + payload) SHALL be placed into a single BPv7 Payload Block.
+- PBS envelope contents MUST NOT be interpreted or altered by the DTN layer.
+- The PBS CRC32 MUST be preserved for end-to-end integrity verification.
 
 ---
 
@@ -114,11 +115,11 @@ Mapping preserves **relative urgency**, not scheduling behavior.
 ### 6.4 Security Handling (Outbound)
 
 Rules:
-- PBS authentication (PBS-SEC-A-01) MUST be preserved end-to-end.
-- DTN security mechanisms (e.g., BPSEC) MAY be applied additionally.
-- DTN security MUST NOT replace PBS authentication.
+- PBS CRC32 integrity (PBS-SEC-A-01) MUST be preserved end-to-end.
+- DTN security mechanisms (e.g., BPSEC) MAY be applied additionally at the bundle layer.
+- DTN security operates at the bundle layer and does not replace PBS header integrity.
 
-PBS envelopes MUST NOT be re-signed during DTN encapsulation.
+PBS envelopes MUST NOT be modified during DTN encapsulation.
 
 ---
 
@@ -151,16 +152,24 @@ Rules:
 
 ---
 
-## 8. Address Translation
+## 8. Source ID to EID Translation
 
-PBS addresses MUST be translated to and from **DTN Endpoint Identifiers (EIDs)**.
+PBS Source IDs MUST be translated to **DTN Endpoint Identifiers (EIDs)** at gateway boundaries.
 
 Rules:
-- Address-to-EID mapping MUST be deterministic.
-- Authority scope MUST be preserved.
-- Service addresses MAY map to service-specific EIDs.
+- Source ID to EID mapping MUST be deterministic within a gateway.
+- Gateways SHOULD maintain a mapping table (e.g., "Rover-Alpha" → "ipn:99.1").
+- Destination EIDs are configured at the gateway level (not in PBS envelope).
 
-Exact EID syntax is implementation-defined but MUST be stable within a scope.
+Example mapping:
+```
+Source ID       →  DTN Source EID
+"Rover-Alpha"   →  ipn:99.1
+"Drill-01"      →  ipn:99.2
+"Habitat-Main"  →  ipn:99.100
+```
+
+Exact EID syntax is implementation-defined but MUST be stable within a deployment.
 
 ---
 
