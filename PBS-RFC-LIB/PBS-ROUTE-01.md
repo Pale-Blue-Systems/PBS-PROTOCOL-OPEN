@@ -1,10 +1,10 @@
 # PBS-ROUTE-01  
 ## Routing and Forwarding Semantics
 
-**Status:** Core  
-**Version:** 1.0  
-**Applies to:** All PBS Core Implementations  
-**Related:** PBS-ENV-01, PBS-ADDR-01, PBS-MUX-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-POS-01, PBS-CAPS-01, PBS-DTN-MAP-01
+**Status:** Optional
+**Version:** 1.3
+**Applies to:** PBS Relay and Gateway Implementations
+**Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-DTN-MAP-01
 
 ---
 
@@ -67,17 +67,17 @@ Scope translation behavior is outside the scope of this specification.
 
 ---
 
-## 6. Address-Based Routing
+## 6. Source-Based Routing
 
-Routing decisions are primarily guided by destination address semantics.
+PBS-ENV-01 v1.3 identifies message origin via the 16-byte Source ID field.
 
 Rules:
-- Address interpretation follows PBS-ADDR-01.
-- Unicast addresses route toward a single endpoint.
-- Group and broadcast addresses MAY result in multiple forwarding actions.
-- Service addresses require resolution before forwarding.
+- Source ID identifies the originating device (e.g., "Rover-Alpha").
+- Routing to destinations is handled by gateway-level protocols.
+- Gateways MAY maintain routing tables mapping Source IDs to endpoints.
+- Destination routing is implementation-defined above PBS Core.
 
-Address resolution mechanisms are implementation-defined.
+For systems requiring explicit destination addressing, see PBS-ADDR-01 (Optional Extension).
 
 ---
 
