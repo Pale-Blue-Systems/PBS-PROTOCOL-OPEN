@@ -88,6 +88,20 @@ DTN is applied at boundaries where long delays or scheduled connectivity make it
 
 ---
 
+## External Alignment & Validation
+
+The Pale Blue Systems Open Standard is explicitly aligned with authoritative, peer-reviewed architectures from major space agencies and bodies.
+
+| Alignment ID | External Source | Domain |
+| :--- | :--- | :--- |
+| **PBS-ALIGN-NASA-LCRNS-01** | NASA LCRNS (Esper, 2025) | Lunar & Cislunar Networking |
+| **PBS-ALIGN-IEEE-AEROCONF-2025** | IEEE Aerospace Conf. | Space Network Architecture |
+| **PBS-ALIGN-IEEE-TNTN-2025** | IEEE ComSoc | Integrated T/NTN Networks |
+
+*See [PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md](PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md) for the full evidence map.*
+
+---
+
 ## Open Standards and Neutral Stewardship
 
 PBSF is intentionally structured as a neutral foundation stewarding open standards and reference specifications.
