@@ -139,17 +139,5 @@ Taylor & Francis Online. “Article Title.” *Journal of European Public Policy
 - No dependency on a single agency, vendor, or political framework.
 - Clear evidence that PBS fits naturally into emerging space and lunar ecosystems.
 
----
-
-## Next Planned Additions (Optional)
-
-These areas are *not yet indexed* but would strengthen the alignment map if you choose to pursue them:
-
-- CCSDS Working Group outputs (DTN, BPv7 governance notes)
-- Artemis Accords technical annexes (non-policy sections)
-- ESA Moonlight / Moonlight Network documentation
-- DARPA or AFRL mesh / resilient space networking studies
-
----
 
 **End of Document**
