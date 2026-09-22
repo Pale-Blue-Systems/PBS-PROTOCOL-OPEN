@@ -3,7 +3,7 @@
 ## Priority Classification and Deterministic Handling
 
 **Status:** Core
-**Version:** 1.3
+**Version:** 1.4
 **Applies to:** All PBS Core Messages
 **Related:** PBS-ENV-01, PBS-ROUTE-01, PBS-SEC-A-01
 
@@ -36,8 +36,8 @@ Priority in PBS is expressed using a **fixed ordinal class**, carried at the env
 Rules:
 - Priority applies to the entire envelope.
 - All MUX frames within an envelope inherit the same priority class.
-- Priority influences scheduling, forwarding, storage, and discard decisions.
-- Priority does not imply delivery guarantees.
+- Priority expresses end-to-end mission urgency and is used as policy input for scheduling, forwarding, storage, and discard decisions.
+- Priority is independent of freshness, persistence, delivery mode, acknowledgement, and network resource allocation. PBS-SVC-01 defines those Service Intent properties.
 
 ---
 
@@ -120,8 +120,8 @@ Priority does not override TTL.
 Priority influences forwarding behavior but does not alter routing semantics.
 
 Rules:
-- Routing paths are selected independently of priority.
-- Priority MAY influence queue selection and transmission order.
+- Routing and service paths are selected by the applicable network/service policy using PBS priority and Service Intent as authorized policy inputs.
+- Priority MAY influence queue selection, transmission order, service class, storage preference, and provider policy through PBS-QOS-MAP-01.
 - Relays MUST preserve priority values end-to-end.
 
 Routing behavior is defined in PBS-ROUTE-01.
