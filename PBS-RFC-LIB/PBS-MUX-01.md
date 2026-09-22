@@ -2,7 +2,7 @@
 ## Payload Multiplexing and Semantic Framing
 
 **Status:** Optional Extension
-**Version:** 1.3
+**Version:** 1.4
 **Applies to:** Systems requiring structured payload multiplexing
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01
 
@@ -134,7 +134,23 @@ Rules:
 
 ---
 
-### 5.5 Application-Defined Frame (`type = 0x80–0xFF`)
+### 5.5 PBS Service Intent Frame (`type = 0x07`)
+
+Carries PBS-SVC-01 Mission Service Intent.
+
+### 5.6 PBS Authority Context Frame (`type = 0x08`)
+
+Carries PBS-AUTH-01 authority and scope context.
+
+### 5.7 PBS PNT Context Frame (`type = 0x09`)
+
+Carries PBS-PNT-CTX-01 reference, timing, provenance, uncertainty, and validity context.
+
+### 5.8 PBS Security Frame (`type = 0x0A`)
+
+Carries PBS-SEC-B-01 authenticated mission messaging metadata.
+
+### 5.9 Application-Defined Frame (`type = 0x80–0xFF`)
 
 Reserved for application-specific semantics.
 
@@ -160,11 +176,11 @@ Rules:
 Security processing applies at the envelope boundary.
 
 Rules:
-- The MUX container is authenticated as part of the envelope.
+- MUX security is selected by the active PBS security profile. PBS-SEC-B-01 authenticates protected MUX frames and application payload according to its canonical protected-data definition.
 - Frames MUST NOT carry independent authentication unless explicitly defined.
 - Encrypted payloads MAY encapsulate entire MUX containers.
 
-Security mechanisms are defined in PBS-SEC-A-01.
+Integrity baseline behavior is defined in PBS-SEC-A-01. Authenticated mission messaging is defined in PBS-SEC-B-01.
 
 ---
 
