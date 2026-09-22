@@ -13,7 +13,7 @@
 
 This document defines the **priority classification model** for the Pale Blue Systems (PBS) Open Standard.
 
-PBS priority semantics enable deterministic handling of messages across constrained, intermittent, and delay-tolerant environments. The model ensures that life-, safety-, and mission-critical data is handled predictably without requiring continuous connectivity or centralized coordination.
+PBS priority semantics enable deterministic handling of messages across constrained, intermittent, and delay-tolerant environments. The model ensures that life-, safety-, and mission-critical data is handled predictably under intermittent connectivity and distributed coordination.
 
 ---
 
@@ -111,13 +111,13 @@ Rules:
 - Lower-priority envelopes MAY be discarded when storage is exhausted.
 - TTL expiration (PBS-ENV-01) applies regardless of priority.
 
-Priority does not override TTL.
+TTL and freshness remain independently enforced alongside priority.
 
 ---
 
 ## 8. Forwarding and Routing Interaction
 
-Priority influences forwarding behavior but does not alter routing semantics.
+Priority supplies mission-urgency policy input while routing semantics remain defined by the applicable routing and service profile.
 
 Rules:
 - Routing and service paths are selected by the applicable network/service policy using PBS priority and Service Intent as authorized policy inputs.
