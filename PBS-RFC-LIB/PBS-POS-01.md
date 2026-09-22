@@ -27,7 +27,7 @@ POS signaling supports:
 PBS-POS follows these principles:
 
 - **Optionality:** POS signaling is not required for PBS Core operation.
-- **Graceful degradation:** Absence or imprecision of position data does not break communication.
+- **Graceful degradation:** Communication remains operational with absent or imprecise position data.
 - **Low overhead:** POS messages are compact and efficient.
 - **Transport independence:** POS semantics are independent of physical positioning systems.
 - **Authentication by envelope:** POS data is authenticated as part of the payload.
@@ -141,11 +141,11 @@ Note:
 
 ### 6.4 Proximity Hint (`pos_type = 0x04`)
 
-Provides a relative proximity indicator rather than absolute position.
+Provides a relative proximity indicator with bounded location disclosure.
 
 Rules:
 - Used for relay selection and nearest-node heuristics.
-- Does not expose precise coordinates.
+- Encodes proximity tier while preserving coordinate privacy.
 
 `pos_length = 1`
 
@@ -187,7 +187,7 @@ Rules:
 - Spoofed or altered POS data MUST be detectable via authentication.
 - Implementations SHOULD minimize exposure of sensitive positional data via policy.
 
-POS signaling does not imply trust in reported position accuracy.
+Position accuracy trust is established through PBS-PNT-CTX provenance, uncertainty, validity, and mission policy.
 
 ---
 
