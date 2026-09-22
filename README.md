@@ -12,8 +12,7 @@ The standards in this repository define a shared **mission-semantic interoperabi
 
 Pale Blue Systems publishes these standards in anticipation of a future space environment that includes **multiple space agencies, commercial operators, scientific missions, private infrastructure, and long-lived off-Earth systems operating concurrently**.
 
-This repository does not claim to resolve a single current operational failure.  
-It exists to make future interoperability, authority, and coordination challenges **explicit and addressable early**, before architectural assumptions become embedded in deployed infrastructure.
+This repository establishes a durable mission-semantic interoperability standard for the multi-provider lunar, cislunar, planetary, and deep-space operating environment. It makes interoperability, authority, service intent, and coordination requirements **explicit and addressable early**, before architectural assumptions become embedded in deployed infrastructure.
 
 Additional context on why this work is published now, and the long-term architectural motivations behind it, is available in [`WHY-NOW.md`](WHY-NOW.md).
 
@@ -121,7 +120,7 @@ The Pale Blue Systems Open Standard is explicitly aligned with authoritative, pe
 PBSF is intentionally structured as a neutral foundation stewarding open standards and reference specifications.
 
 - The protocol language and semantics are public and stable
-- No single vendor controls the standards
+- Foundation governance preserves vendor-neutral stewardship of the standards
 - Commercial products and mission systems may implement or extend the standards without altering the core language
 
 This model enables adoption across civil, commercial, and international space programs while allowing innovation and competition above the protocol layer.
