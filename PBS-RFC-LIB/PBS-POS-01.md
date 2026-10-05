@@ -2,7 +2,7 @@
 ## Position and Presence Signaling
 
 **Status:** Optional Extension
-**Version:** 1.3
+**Version:** 1.4
 **Applies to:** Systems requiring position and presence signaling
 **Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01
 
@@ -27,7 +27,7 @@ POS signaling supports:
 PBS-POS follows these principles:
 
 - **Optionality:** POS signaling is not required for PBS Core operation.
-- **Graceful degradation:** Absence or imprecision of position data does not break communication.
+- **Graceful degradation:** Communication remains operational with absent or imprecise position data.
 - **Low overhead:** POS messages are compact and efficient.
 - **Transport independence:** POS semantics are independent of physical positioning systems.
 - **Authentication by envelope:** POS data is authenticated as part of the payload.
@@ -120,9 +120,9 @@ Provides explicit positional coordinates.
 
 Rules:
 - Coordinates are relative to a locally defined reference frame.
-- PBS does not mandate a global coordinate system.
-- Each `scope` MUST define the coordinate reference frame and units used (e.g., meters, decameters, centimeters, or mission-defined units).
-- Implementations MUST treat coordinate semantics as advisory unless validated by local policy.
+- Coordinate interpretation is bound to PBS-PNT-CTX-01. Local operational frames and shared lunar/planetary reference frames are identified explicitly.
+- Each coordinate-bearing POS exchange SHALL identify its reference frame through PBS-PNT-CTX-01. The registered frame profile defines axes, origin, units, epoch requirements, and applicable transforms.
+- Implementations SHALL validate frame and time context required by the consuming mission function.
 
 `pos_length = 12`
 
@@ -141,11 +141,11 @@ Note:
 
 ### 6.4 Proximity Hint (`pos_type = 0x04`)
 
-Provides a relative proximity indicator rather than absolute position.
+Provides a relative proximity indicator with bounded location disclosure.
 
 Rules:
 - Used for relay selection and nearest-node heuristics.
-- Does not expose precise coordinates.
+- Encodes proximity tier while preserving coordinate privacy.
 
 `pos_length = 1`
 
@@ -187,7 +187,7 @@ Rules:
 - Spoofed or altered POS data MUST be detectable via authentication.
 - Implementations SHOULD minimize exposure of sensitive positional data via policy.
 
-POS signaling does not imply trust in reported position accuracy.
+Position accuracy trust is established through PBS-PNT-CTX provenance, uncertainty, validity, and mission policy.
 
 ---
 
@@ -222,7 +222,13 @@ Rules:
 
 ---
 
-## 13. Summary
+## 13. PNT Context Binding
+
+Coordinate-bearing POS frames crossing an interoperability boundary SHALL include or reference PBS-PNT-CTX-01 context. LunaNet-aligned deployments SHALL use the applicable registered lunar reference and time identifiers. Position validity and uncertainty SHALL be evaluated according to the consuming mission policy.
+
+---
+
+## 14. Summary
 
 PBS-POS-01 defines a **flexible, low-overhead Position and Presence signaling model** for the PBS Open Standard.
 

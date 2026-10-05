@@ -4,7 +4,7 @@ This repository contains the **open communication standards stewarded by the Pal
 
 PBSF is an independent, foundation-led steward of open standards and reference specifications for reliable, interoperable communication across space, lunar, planetary, and other extreme or delay-tolerant environments.
 
-The standards in this repository define a shared technical language that allows spacecraft, rovers, habitats, autonomous systems, and ground infrastructure to communicate predictably across heterogeneous networks where continuous connectivity, low latency, and single-authority control cannot be assumed.
+The standards in this repository define a shared **mission-semantic interoperability language** that allows spacecraft, rovers, habitats, autonomous systems, and ground applications to preserve mission meaning, authority, service intent, priority, freshness, security requirements, and PNT context across heterogeneous networks and independently operated service providers.
 
 ---
 
@@ -12,8 +12,7 @@ The standards in this repository define a shared technical language that allows 
 
 Pale Blue Systems publishes these standards in anticipation of a future space environment that includes **multiple space agencies, commercial operators, scientific missions, private infrastructure, and long-lived off-Earth systems operating concurrently**.
 
-This repository does not claim to resolve a single current operational failure.  
-It exists to make future interoperability, authority, and coordination challenges **explicit and addressable early**, before architectural assumptions become embedded in deployed infrastructure.
+This repository establishes a durable mission-semantic interoperability standard for the multi-provider lunar, cislunar, planetary, and deep-space operating environment. It makes interoperability, authority, service intent, and coordination requirements **explicit and addressable early**, before architectural assumptions become embedded in deployed infrastructure.
 
 Additional context on why this work is published now, and the long-term architectural motivations behind it, is available in [`WHY-NOW.md`](WHY-NOW.md).
 
@@ -70,25 +69,27 @@ These documents ensure the standards remain stable, interoperable, and vendor-ne
 
 ## Architectural Context
 
-Pale Blue Systems standards operate as **middleware**, providing a common protocol language between mission applications and underlying communication hardware.
+Pale Blue Systems standards operate at the **mission-semantic application boundary**, providing a common protocol language between mission applications and interoperable network services.
 
 ```text
 Mission Applications
-(Rovers, Landers, Habitats, Drones, Ops Software)
-          ▲
-          │  Interoperable Data Exchange
+(Rovers, Landers, Habitats, Robots, Ops Software)
           │
+          ▼
 Pale Blue Systems Open Standards
-(Message Semantics & Store-and-Forward Behavior)
-          ▲
-          │  Abstracted / Translated Links
+(Mission Semantics, Service Intent, Authority,
+ Security Requirements, PNT Context)
           │
-Space Communication Hardware
-(Radios, Lasers, Relays, Ground Stations)
+          ▼
+Interoperable Network Services
+(LunaNet, IP, BPv7, BPSec, CCSDS)
+          │
+          ▼
+Provider / Link Infrastructure
+(LNSPs, Relays, RF, Optical, 3GPP, Wi-Fi, Ground)
 ```
 
-The standards do not replace mission software or physical communication systems.  
-They enable those systems to interoperate safely and predictably.
+PBS gives mission systems a stable semantic contract across network, provider, and link transitions. LunaNet-compatible network services provide network interoperability beneath that contract.
 
 ---
 
@@ -96,8 +97,7 @@ They enable those systems to interoperate safely and predictably.
 
 The standards in this repository are designed to align with **Delay/Disruption Tolerant Networking (DTN)** architectures used in spaceflight and ground systems.
 
-Local and surface-level communication does not require DTN encapsulation.  
-DTN is applied at boundaries where long delays, disruption, or scheduled connectivity make it necessary.
+PBS operates over IP, BPv7, and mission gateways according to the active communications profile. BPv7 provides disruption-tolerant network service while PBS preserves application semantics end-to-end.
 
 ---
 
@@ -120,7 +120,7 @@ The Pale Blue Systems Open Standard is explicitly aligned with authoritative, pe
 PBSF is intentionally structured as a neutral foundation stewarding open standards and reference specifications.
 
 - The protocol language and semantics are public and stable
-- No single vendor controls the standards
+- Foundation governance preserves vendor-neutral stewardship of the standards
 - Commercial products and mission systems may implement or extend the standards without altering the core language
 
 This model enables adoption across civil, commercial, and international space programs while allowing innovation and competition above the protocol layer.
@@ -144,7 +144,15 @@ This model enables adoption across civil, commercial, and international space pr
 │   ├── PBS-CAPS-01.md                → Capability Advertisement
 │   ├── PBS-ROUTE-01.md               → Routing and Forwarding Semantics
 │   ├── PBS-DTN-MAP-01.md             → DTN / BPv7 Mapping
-│   ├── PBS-CONFORMANCE-01.md         → Conformance Requirements
+│   ├── PBS-CONFORMANCE-01.md         → Core Conformance Requirements
+│   ├── PBS-SVC-01.md                 → Mission Service Intent
+│   ├── PBS-AUTH-01.md                → Authority and Scope Context
+│   ├── PBS-SEC-B-01.md               → Authenticated Mission Messaging
+│   ├── PBS-PNT-CTX-01.md             → PNT Context
+│   ├── PBS-LNIS-01.md                → LunaNet Application Alignment
+│   ├── PBS-DTN-MAP-02.md             → Current BPv7 Mapping
+│   ├── PBS-QOS-MAP-01.md             → Network Treatment Mapping
+│   ├── PBS-CONFORMANCE-02.md         → NASA/LunaNet Verification Profile
 │   └── PBS-GOV-01.md                 → Governance and Stewardship
 ```
 
@@ -165,6 +173,14 @@ This model enables adoption across civil, commercial, and international space pr
 | [PBS-ROUTE-01](PBS-RFC-LIB/PBS-ROUTE-01.md) | Routing Semantics |
 | [PBS-DTN-MAP-01](PBS-RFC-LIB/PBS-DTN-MAP-01.md) | DTN / BPv7 Mapping |
 | [PBS-CONFORMANCE-01](PBS-RFC-LIB/PBS-CONFORMANCE-01.md) | Conformance & Interoperability |
+| [PBS-SVC-01](PBS-RFC-LIB/PBS-SVC-01.md) | Mission Service Intent |
+| [PBS-AUTH-01](PBS-RFC-LIB/PBS-AUTH-01.md) | Authority and Scope Context |
+| [PBS-SEC-B-01](PBS-RFC-LIB/PBS-SEC-B-01.md) | Authenticated Mission Messaging |
+| [PBS-PNT-CTX-01](PBS-RFC-LIB/PBS-PNT-CTX-01.md) | PNT Context |
+| [PBS-LNIS-01](PBS-RFC-LIB/PBS-LNIS-01.md) | LunaNet Application Alignment |
+| [PBS-DTN-MAP-02](PBS-RFC-LIB/PBS-DTN-MAP-02.md) | BPv7 Mapping |
+| [PBS-QOS-MAP-01](PBS-RFC-LIB/PBS-QOS-MAP-01.md) | Network Treatment Mapping |
+| [PBS-CONFORMANCE-02](PBS-RFC-LIB/PBS-CONFORMANCE-02.md) | NASA/LunaNet Verification Profile |
 | [PBS-GOV-01](PBS-RFC-LIB/PBS-GOV-01.md) | Governance & Evolution |
 
 ---

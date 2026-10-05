@@ -3,7 +3,7 @@
 ## Priority Classification and Deterministic Handling
 
 **Status:** Core
-**Version:** 1.3
+**Version:** 1.4
 **Applies to:** All PBS Core Messages
 **Related:** PBS-ENV-01, PBS-ROUTE-01, PBS-SEC-A-01
 
@@ -13,7 +13,7 @@
 
 This document defines the **priority classification model** for the Pale Blue Systems (PBS) Open Standard.
 
-PBS priority semantics enable deterministic handling of messages across constrained, intermittent, and delay-tolerant environments. The model ensures that life-, safety-, and mission-critical data is handled predictably without requiring continuous connectivity or centralized coordination.
+PBS priority semantics enable deterministic handling of messages across constrained, intermittent, and delay-tolerant environments. The model ensures that life-, safety-, and mission-critical data is handled predictably under intermittent connectivity and distributed coordination.
 
 ---
 
@@ -36,8 +36,8 @@ Priority in PBS is expressed using a **fixed ordinal class**, carried at the env
 Rules:
 - Priority applies to the entire envelope.
 - All MUX frames within an envelope inherit the same priority class.
-- Priority influences scheduling, forwarding, storage, and discard decisions.
-- Priority does not imply delivery guarantees.
+- Priority expresses end-to-end mission urgency and is used as policy input for scheduling, forwarding, storage, and discard decisions.
+- Priority is independent of freshness, persistence, delivery mode, acknowledgement, and network resource allocation. PBS-SVC-01 defines those Service Intent properties.
 
 ---
 
@@ -111,17 +111,17 @@ Rules:
 - Lower-priority envelopes MAY be discarded when storage is exhausted.
 - TTL expiration (PBS-ENV-01) applies regardless of priority.
 
-Priority does not override TTL.
+TTL and freshness remain independently enforced alongside priority.
 
 ---
 
 ## 8. Forwarding and Routing Interaction
 
-Priority influences forwarding behavior but does not alter routing semantics.
+Priority supplies mission-urgency policy input while routing semantics remain defined by the applicable routing and service profile.
 
 Rules:
-- Routing paths are selected independently of priority.
-- Priority MAY influence queue selection and transmission order.
+- Routing and service paths are selected by the applicable network/service policy using PBS priority and Service Intent as authorized policy inputs.
+- Priority MAY influence queue selection, transmission order, service class, storage preference, and provider policy through PBS-QOS-MAP-01.
 - Relays MUST preserve priority values end-to-end.
 
 Routing behavior is defined in PBS-ROUTE-01.

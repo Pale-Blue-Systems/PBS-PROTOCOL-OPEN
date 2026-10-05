@@ -6,6 +6,36 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.4.0] - 2026-09-22
+
+### NASA FY26 / LunaNet Alignment
+
+PBS v1.4 establishes the mission-semantic interoperability profile for lunar, cislunar, and deep-space applications operating across heterogeneous network services and independently operated providers.
+
+### Added
+- **PBS-SVC-01** — Mission Service Intent
+- **PBS-AUTH-01** — Authority and Scope Context
+- **PBS-SEC-B-01** — Authenticated Mission Messaging
+- **PBS-PNT-CTX-01** — Position, Navigation, and Timing Context
+- **PBS-LNIS-01** — LunaNet Application Alignment Profile
+- **PBS-DTN-MAP-02** — BPv7 Mapping
+- **PBS-QOS-MAP-01** — Mission Intent to Network Treatment Mapping
+- **PBS-CONFORMANCE-02** — NASA/LunaNet Alignment Conformance and Verification Profile
+- **PBS-ALIGNMENT-ASSIGNMENT-NASA-FY26** — controlled alignment assignment
+- **PBS-TRACE-NASA-FY26-01** — requirements traceability baseline
+- **PBS-ALIGN-NASA-LCRNS-02** — NASA LCRNS/LunaNet/FY26 architecture mapping
+
+### Updated
+- **PBS-MUX-01 v1.4** — registered frame types for Service Intent, Authority Context, PNT Context, and authenticated mission messaging.
+- **PBS-POS-01 v1.4** — explicit reference-frame and time-context binding through PBS-PNT-CTX-01.
+- **PBS-PRIO-01 v1.4** — priority defined as transport-independent mission urgency and policy input.
+- **README** — mission-semantic interoperability architecture and LunaNet network-service allocation.
+
+### Engineering Basis
+The release aligns PBS requirements with NASA FY26 Civil Space Shortfall needs 15.01, 13.09, 15.03, and 24.05; LunaNet Interoperability Specification V005; NASA LCRNS multi-provider service architecture; and current BPv7 network-service semantics.
+
+---
+
 ## [1.3.0] - 2026-01-28
 
 ### Changed
