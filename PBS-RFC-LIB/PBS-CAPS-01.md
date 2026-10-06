@@ -256,9 +256,9 @@ Rules:
 
 ## 14. Summary
 
-PBS-CAPS-01 defines a **flexible, optional capability advertisement model** for the PBS Open Standard.
+PBS-CAPS-01 defines an **optional capability advertisement model** for the PBS Open Standard.
 
-By allowing endpoints to advertise services, roles, resources, and constraints using TLV-encoded frames that PBS-SEC-B-01 authenticates when applied, PBS enables informed, cooperative behavior across distributed and delay-tolerant environments without central coordination.
+Endpoints advertise service, role, resource, transport, security, and application-defined capabilities in TLV-encoded frames (Section 6). PBS-SEC-B-01 authenticates CAPS frames when applied; the PBS-SEC-A-01 header CRC32 does not cover them.
 
 ---
 

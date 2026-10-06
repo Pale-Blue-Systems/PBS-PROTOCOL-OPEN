@@ -187,5 +187,3 @@ Rules:
 ## 15. Summary
 
 PBS-ROUTE-01 defines **routing and forwarding semantics** for the PBS Open Standard.
-
-By standardizing *what routing decisions mean*—while leaving *how those decisions are made* to implementations—PBS enables interoperable, resilient communication across distributed and delay-tolerant environments without constraining innovation or optimization above the protocol layer.

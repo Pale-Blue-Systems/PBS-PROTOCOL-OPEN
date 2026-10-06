@@ -176,8 +176,6 @@ Rules:
 
 PBS-PRIO-01 defines a **fixed, envelope-encoded priority classification model** for the PBS Open Standard.
 
-By encoding priority deterministically while leaving scheduling and optimization behavior implementation-defined, PBS enables predictable interoperability while supporting advanced, proprietary routing and congestion-management strategies.
-
 ---
 
 ## 14. NASA DSN Compatibility

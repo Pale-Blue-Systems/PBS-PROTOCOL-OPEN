@@ -10,7 +10,7 @@ The PBS Foundation maintains this standard for communication in space, lunar, an
 
 **Important:** Before we can merge any Pull Request (PR), you must agree to the **Contributor License Agreement (CLA)**.
 
-* **Why?** This ensures that the Foundation has the necessary legal rights to maintain and defend the standard's openness forever, preventing any single entity from claiming ownership of the core protocol.
+* **Why?** The CLA grants the Foundation the copyright and patent licenses of CLA Sections 3 and 4 for every contribution.
 * **How?** By submitting a Pull Request, you automatically agree to the terms outlined in [`CLA.md`](CLA.md).
 * **Corporate Contributions:** If you are contributing on behalf of a company, please ensure you have authorization to grant these rights.
 

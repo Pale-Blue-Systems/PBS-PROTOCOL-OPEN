@@ -231,6 +231,6 @@ Coordinate-bearing POS frames crossing an interoperability boundary SHALL includ
 
 ## 14. Summary
 
-PBS-POS-01 defines a **flexible, low-overhead Position and Presence signaling model** for the PBS Open Standard.
+PBS-POS-01 defines a **Position and Presence signaling model** for the PBS Open Standard.
 
-By encoding POS updates as TLV within the envelope payload, authenticated when PBS-SEC-B-01 applies, and separating presence, stability, proximity, and coordinate signaling, PBS enables proximity-aware behavior while maintaining interoperability under partial or absent positioning data.
+POS updates are TLV-encoded in the envelope payload. Presence, stationary markers, coordinate position, and proximity hints are separate POS data types (Section 6). PBS-SEC-B-01 authenticates POS frames when applied; the PBS-SEC-A-01 header CRC32 does not cover them.
