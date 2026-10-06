@@ -37,7 +37,7 @@ The purpose of this index is not to claim endorsement, but to demonstrate **stru
 | [PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01](PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01.md) | IEEE Aerospace Conf. 2025 – Onboard Processing | Edge / Onboard Computing | Confirms shift toward autonomous, local processing with constrained backhaul |
 | [PBS-ALIGN-CARBONARA-TNTN-01](PBS-ALIGN-CARBONARA-TNTN-01.md) | Carbonara et al., *IEEE Open Journal of the Communications Society* (2025) | T/NTN Testbeds | Demonstrates necessity of interoperable overlays across heterogeneous networks |
 | [PBS-ALIGN-NTONTIN-6G-01](PBS-ALIGN-NTONTIN-6G-01.md) | Ntontin et al., *Proceedings of the IEEE* (2025) | 6G and Beyond Space Communications | Frames space systems as one heterogeneous, multi-domain, multi-stakeholder network |
-| [PBS-ALIGN-SPJ-AUTONOMY-2022-01](PBS-ALIGN-SPJ-AUTONOMY-2022-01.md) | *Science Partner Journal*, 2022 | Space–Air–Ground Integration | Aligns with PBS abstraction of Space–Air–Ground as a single interoperable system |
+| [PBS-ALIGN-SPJ-LEO-2022-01](PBS-ALIGN-SPJ-LEO-2022-01.md) | Zhang et al., *Space: Science & Technology* (2022) | Orbital Congestion & Space Governance | Finds that LEO mega constellations make surveillance and governance among many independent operators necessary |
 | [PBS-ALIGN-TF-GOVERNANCE-2024-01](PBS-ALIGN-TF-GOVERNANCE-2024-01.md) | Beaumier et al., *Journal of European Public Policy* (2024) | Space Governance | Frames space as a fragmented, multi-actor domain requiring coordination without central authority |
 
 Requirements traceability for the v1.4 NASA alignment is in [`PBS-TRACE-NASA-FY26-01`](PBS-TRACE-NASA-FY26-01.md), under the engineering assignment [`PBS-ALIGN-ASSIGNMENT-NASA-FY26-01`](PBS-ALIGNMENT-ASSIGNMENT-NASA-FY26.md).
@@ -106,18 +106,18 @@ Carbonara, Salvatore, et al. “Hands-On Solutions for Testing Integrated Terres
 
 ---
 
-### 5. Space–Air–Ground Integrated Networks (Science Partner Journal)
+### 5. LEO Mega Constellations (Space: Science & Technology, 2022)
 
-**Alignment ID:** `PBS-ALIGN-SPJ-AUTONOMY-2022-01`
+**Alignment ID:** `PBS-ALIGN-SPJ-LEO-2022-01`
 
 **Core Finding:**  
-Space, air, and ground systems are converging into a single operational domain requiring unified coordination models.
+The growth of LEO mega constellations strains orbital resources and in-orbit safety; sustaining it requires surveillance, situational awareness, and governance mechanisms across many independent operators.
 
 **PBS Alignment:**  
-PBS treats Space–Air–Ground as a continuous system, enabling seamless message flow across domains while preserving domain-specific constraints.
+PBS provides authority-scoped, position- and time-referenced, priority-aware messages that independently operated systems can exchange and interpret consistently.
 
 **MLA Citation:**  
-“Space–Air–Ground Integrated Networks: Architecture and Challenges.” *Science Partner Journal*, 2022, doi:10.34133/2022/9865174.
+Zhang, Jingrui, et al. “LEO Mega Constellations: Review of Development, Impact, Surveillance, and Governance.” *Space: Science & Technology*, vol. 2022, 2022, doi:10.34133/2022/9865174.
 
 ---
 

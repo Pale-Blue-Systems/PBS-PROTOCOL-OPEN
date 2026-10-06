@@ -14,6 +14,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **PBS-ALIGN-TF-GOVERNANCE-2024-01** — placeholder title and publisher-as-author replaced with the published citation.
 - **PBS-ALIGN-CARBONARA-TNTN-01**, **PBS-ALIGN-NTONTIN-6G-01** — author name, volume and page numbers corrected.
 - **PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01** — given its `.md` extension.
+- **PBS-ALIGN-SPJ-LEO-2022-01** (was PBS-ALIGN-SPJ-AUTONOMY-2022-01) — rewritten against the paper its DOI identifies, Zhang et al., "LEO Mega Constellations" (2022); the previous text described a paper on autonomy that the DOI does not resolve to.
 - **README** — status names v1.4; alignment table and repository structure match the repository.
 
 ---
