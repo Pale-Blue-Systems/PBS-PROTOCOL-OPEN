@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): Sections 5.2 and 8 replace TTL decrement and CRC32 recalculation with header preservation and Timestamp-based expiry (PBS-ENV-01 Sections 12.3 and 15) and add test statements for TTL `30` and TTL `0`; Section 3 cites PBS-ENV-01 v1.5 and PBS-SEC-A-01 v1.5; Section 11.1 references the PBS-ENV-01 Section 12.5 test cases; Section 12 permits corrective changes in minor versions (PBS-GOV-01 Section 5.2). The PBS v1.4.1 errata to Sections 3, 4.3, 5.1 and 11.1 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): Sections 5.2 and 8 replace TTL decrement and CRC32 recalculation with header preservation and Timestamp-based expiry (PBS-ENV-01 Sections 12.3 and 15), and add test statements for TTL `30` and TTL `0`; Section 8 requires a clock synchronized to Unix epoch time at relays and gateways; Section 3 cites PBS-ENV-01 v1.5 and PBS-SEC-A-01 v1.5; Section 11.1 references the PBS-ENV-01 Section 12.5 test cases; Section 12 permits corrective changes in minor versions, excludes them from the major-version rule and states that a corrective change keeping the rule stated by one of the conflicting clauses does not change PBS Core semantics (PBS-GOV-01 Sections 5.2 and 6); Section 13's example conformance claim names PBS Core v1.5. The PBS v1.4.1 errata to Sections 3, 4.3, 5.1 and 11.1 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Applies to:** All PBS Core Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01
 
@@ -153,6 +153,7 @@ Relay and gateway implementations MUST:
 - Verify CRC32 before forwarding
 - Discard envelopes with invalid CRC32
 - Check TTL expiration against Timestamp before forwarding stored envelopes (PBS-ENV-01 Section 12.2)
+- Maintain a clock synchronized to Unix epoch time for the TTL expiration check (PBS-ENV-01 Section 15)
 - Discard envelopes with expired TTL
 - Forward the 44 header bytes as received (PBS-ENV-01 Section 15)
 
@@ -162,7 +163,7 @@ Relay and gateway implementations MUST NOT:
 - Forward envelopes with invalid structure
 
 Test statements (PBS-ENV-01 Section 12.5):
-- A relay receives the PBS-ENV-01 Section 13.2 envelope (Timestamp `1767225600000000`, TTL `30`, CRC32 `0x588721ED`) and stores it. At `current_time` `1767225630` it forwards the envelope, and the 44 header bytes it forwards equal the bytes it received. At `current_time` `1767225631` it discards the envelope as expired (PBS-ENV-01 Section 12.2).
+- A relay receives the PBS-ENV-01 Section 13.2 envelope (Timestamp `1767225600000000`, TTL `30`, CRC32 `0x588721ED`) and stores it. Run 1: its forwarding opportunity occurs at `current_time` `1767225630`; it forwards the envelope, and the 44 header bytes it forwards equal the bytes it received. Run 2: its first forwarding opportunity occurs at `current_time` `1767225631`; it discards the envelope as expired and does not forward it (PBS-ENV-01 Section 12.2).
 - A relay receives the same envelope with TTL `0` (CRC32 `0x8757080E`), stores it for any interval, and forwards it. The 44 header bytes it forwards equal the bytes it received, and no receiver discards the envelope as TTL-expired (PBS-ENV-01 Section 12.1).
 
 ---
@@ -218,9 +219,9 @@ Use of such tooling is RECOMMENDED but not required for conformance claims unles
 ## 12. Versioning and Compatibility
 
 Rules:
-- PBS Core v1.x semantics SHALL remain stable
+- PBS Core v1.x semantics SHALL remain stable; a corrective change that keeps the rule stated by one of the conflicting clauses does not change them (PBS-GOV-01 Section 6)
 - The 44-byte header structure SHALL remain unchanged for v1.x
-- Backward-incompatible changes require a new major version
+- Backward-incompatible changes, other than corrective changes (PBS-GOV-01 Section 5.2), require a new major version
 - Minor versions MAY add optional features without breaking conformance
 - Minor versions MAY make corrective changes (PBS-GOV-01 Section 5.2) that leave the wire format unchanged; the release states the migration for any behavior the change makes non-conformant
 

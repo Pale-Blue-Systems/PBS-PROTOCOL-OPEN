@@ -3,7 +3,7 @@
 
 **Status:** Informational (Normative Governance)
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): Section 5.2 adds the Corrective category and requires migration guidance for a corrective change that makes a permitted behavior non-conformant. Section 6 assigns a corrective change to a patch version when another clause of the release states the controlling rule, and to a minor version otherwise.
+**Changes:** 2026-10-06 (PBS v1.5.0): Section 5.2 adds the Corrective category, classifies a change that meets it as Corrective rather than Breaking, and requires migration guidance for a corrective change that makes a permitted behavior non-conformant. Section 6 assigns a corrective change to a patch version when another clause of the preceding release states the controlling rule, and to a minor version otherwise; excludes corrective changes from the major-version rule; and states that a corrective change keeping the rule stated by one of the conflicting clauses does not change PBS Core v1 semantics.
 **Applies to:** Pale Blue Systems Open Standard
 **Related:** PBS-OPEN-STANDARD.md, PBS-CONFORMANCE-01, All PBS Core RFCs
 
@@ -110,7 +110,7 @@ Changes are classified as:
 - **Corrective:** Changes to normative text that resolve a conflict between clauses, or with a normatively referenced standard, without changing the wire format.
 - **Breaking:** Semantic changes requiring a new major version.
 
-Breaking changes require a **new major version** and explicit migration guidance. A corrective change that makes non-conformant a behavior the corrected text permitted requires explicit migration guidance.
+Breaking changes require a **new major version** and explicit migration guidance. A change that meets the Corrective definition is classified Corrective, not Breaking, even when it makes non-conformant a behavior that the corrected text permitted; such a corrective change requires explicit migration guidance.
 
 ---
 
@@ -118,11 +118,11 @@ Breaking changes require a **new major version** and explicit migration guidance
 
 PBS follows semantic versioning at the standard level:
 
-- **Major version:** Backward-incompatible changes.
-- **Minor version:** Backward-compatible feature additions, and corrective changes (Section 5.2) where no clause of the release states the controlling rule.
-- **Patch version:** Clarifications, and corrective changes (Section 5.2) that apply the rule another clause of the release already states.
+- **Major version:** Backward-incompatible changes other than corrective changes (Section 5.2).
+- **Minor version:** Backward-compatible feature additions, and corrective changes (Section 5.2) for which no clause of the preceding release states the controlling rule.
+- **Patch version:** Clarifications, and corrective changes (Section 5.2) that apply a rule another clause of the preceding release already states.
 
-PBS Core v1 semantics SHALL remain stable.
+PBS Core v1 semantics SHALL remain stable. A corrective change that keeps the rule stated by one of the conflicting clauses does not change PBS Core v1 semantics.
 
 ---
 

@@ -3,7 +3,7 @@
 
 **Status:** Optional
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): Section 10 forbids TTL modification at any hop, states the expiry instant, and adds loop detection with bounded state for envelopes with TTL `0`. Section 12 requires relays to preserve every header field, including TTL and CRC32 (PBS-ENV-01 Sections 12.3 and 15), and supersedes the PBS v1.4.1 Section 12 erratum. The PBS v1.4.1 Section 4 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): Section 10 forbids TTL modification at any hop, states the expiry instant, and adds loop detection with bounded state for envelopes with TTL `0`. Section 12 requires relays to preserve every header field, including TTL and CRC32 (PBS-ENV-01 Sections 12.3 and 15), and supersedes the PBS v1.4.1 Section 12 erratum. The PBS v1.4.1 Section 4 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Applies to:** PBS Relay and Gateway Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-DTN-MAP-01
 

@@ -2,7 +2,7 @@
 ## NASA LCRNS, LunaNet, and FY26 Civil Space Shortfalls
 
 **Alignment Identifier:** `PBS-ALIGN-NASA-LCRNS-02`
-**Revision:** 2026-10-06 (PBS v1.4.1); first issued 2026-09-22 (PBS v1.4)
+**Revision:** 2026-10-06 (PBS v1.5.0); first issued 2026-09-22 (PBS v1.4)
 
 ## Aligned Architecture
 
@@ -65,7 +65,7 @@ NASA's Polylingual Experimental Terminal (PExT) completed its primary objectives
 
 ## Verification Alignment
 
-LCRNS is developing an Interoperability and Performance Testbed (IPT), a hardware-in-the-loop testbed that emulates a universal lunar user terminal to verify by test LCRNS relay service performance and interoperability requirements [4, Section 5]. PBS-CONFORMANCE-02 verifies PBS at the application interface: test cases PBS-C02-T001 to PBS-C02-T015 cover IP and BPv7 carriage, provider transition, deadline expiration, authentication, replay protection, command authorization, PNT context, QoS policy, disruption, capacity constraint and BPSec layering (Section 3).
+LCRNS is developing an Interoperability and Performance Testbed (IPT), a hardware-in-the-loop testbed that emulates a universal lunar user terminal to verify by test LCRNS relay service performance and interoperability requirements [4, Section 5]. PBS-CONFORMANCE-02 verifies PBS at the application interface: test cases PBS-C02-T001 to PBS-C02-T016 cover IP and BPv7 carriage, provider transition, deadline expiration, authentication, replay protection, command authorization, PNT context, QoS policy, disruption, capacity constraint, BPSec layering and no-expiry bundle lifetime (Section 3).
 
 ## Traceability
 

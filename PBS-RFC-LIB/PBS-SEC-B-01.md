@@ -3,7 +3,7 @@
 
 **Status:** Optional Security Profile
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): Section 5 states that PBS-ENV-01 header fields, including TTL, are not mutable network-layer fields (PBS-ENV-01 Section 15). The PBS v1.4.1 Section 9 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): Section 5 states that PBS-ENV-01 header fields, including TTL, are not mutable network-layer fields (PBS-ENV-01 Section 15). The PBS v1.4.1 Section 9 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Related:** PBS-ENV-01, PBS-AUTH-01, PBS-SVC-01, PBS-DTN-MAP-02
 
 ## 1. Purpose

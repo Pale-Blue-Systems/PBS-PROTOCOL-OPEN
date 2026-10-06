@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): Section 5 requires relays and gateways to preserve every header field, including TTL and CRC32; Section 5.1 replaces CRC32 recalculation after a TTL decrement with end-to-end verification of the originator's CRC32 (PBS-ENV-01 Sections 12.3 and 15). The PBS v1.4.1 errata to Sections 4.1, 5.1, 8 and 11 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): Section 5 requires relays and gateways to preserve every header field, including TTL and CRC32; Section 5.1 replaces CRC32 recalculation after a TTL decrement with end-to-end verification of the originator's CRC32 (PBS-ENV-01 Sections 12.3 and 15). The PBS v1.4.1 errata to Sections 4.1, 5.1, 8 and 11 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-CONFORMANCE-01, PBS-SEC-B-01
 

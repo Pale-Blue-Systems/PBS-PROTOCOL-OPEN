@@ -4,7 +4,7 @@
 
 **Status:** Optional (Interoperability)
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): Section 6.1 bounds the bundle lifetime by the time remaining until the envelope expires, assigns the creation timestamp to the gateway's bundle protocol agent (RFC 9171 Section 4.2.7) and maps neither `Sequence` nor `Priority` to a primary block field; new Section 6.1.1 sets the bundle lifetime for TTL `0`. Section 6.3 covers all five PBS-PRIO-01 priority classes, LOW included, prohibits conveying priority in reserved or unassigned bundle processing control flags, and requires a mapping profile for priority-based network treatment (PBS-DTN-MAP-02 Section 5). Section 7.3 evaluates PBS expiry against Timestamp and forbids TTL modification. Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): Section 6.1 bounds the bundle lifetime by the time remaining until the envelope expires, assigns the creation timestamp to the gateway's bundle protocol agent (RFC 9171 Section 4.2.7), maps neither `Sequence` nor `Priority` to a primary block field, and does not encapsulate an envelope with less than 1 ms remaining; new Section 6.1.1 sets the bundle lifetime for TTL `0` where no PBS-DTN-MAP-02 Section 4 finite limit applies. Section 6.3 covers all five PBS-PRIO-01 priority classes, LOW included, prohibits conveying priority in reserved or unassigned bundle processing control flags, and requires a mapping profile for priority-based network treatment (PBS-DTN-MAP-02 Section 5) in which no priority class requests a more favorable treatment than a higher-priority class. Section 7.3 evaluates PBS expiry against Timestamp and forbids TTL modification. Related adds PBS-DTN-MAP-02. Wire format unchanged.
 **Applies to:** PBS Gateway Implementations Interfacing with DTN / BPv7
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-ROUTE-01, PBS-DTN-MAP-02
 
@@ -83,24 +83,25 @@ Rules:
 |---------|------------|--------------|
 | `Source ID` | Source EID | 16-byte device name mapped to EID (e.g., "Rover-Alpha" → "ipn:99.1") |
 | Gateway Config | Destination EID | Configured at gateway (not in PBS envelope) |
-| `TTL` | Lifetime | `TTL > 0`: no greater than the interval remaining until the envelope expires (rules below). `TTL = 0`: the no-expiry lifetime (Section 6.1.1) |
+| `TTL` | Lifetime | `TTL > 0`: no greater than the interval remaining until the envelope expires (rules below). `TTL = 0`: the no-expiry lifetime, unless a PBS-DTN-MAP-02 Section 4 finite limit applies (Section 6.1.1) |
 | Gateway BPA | Creation Timestamp | Assigned by the gateway's bundle protocol agent (BPA) per RFC 9171 Section 4.2.7 (not from PBS envelope fields) |
 | `Sequence` | None | Not mapped to a primary block field; carried in the encapsulated envelope (Section 6.2) |
 | `Priority` | None | Not mapped to a primary block field; carried in the encapsulated envelope (Section 6.2). Network treatment: Section 6.3 |
 
 Rules:
-- For an envelope with `TTL > 0`, the bundle lifetime SHALL NOT exceed `⌊(TTL × 1_000_000 − max(0, c_us − Timestamp)) / 1000⌋` milliseconds, where `c_us` is the bundle creation time converted to Unix epoch microseconds, `(creation_time_ms + 946_684_800_000) × 1000` (RFC 9171 Sections 4.2.6 and 4.2.7), or the gateway's Unix epoch time in microseconds at bundle creation when the creation time is `0`. RFC 9171 Section 4.3.1 counts lifetime in milliseconds past the creation time and PBS-ENV-01 Section 12.2 counts TTL from `Timestamp`, so the bundle expires no later than the envelope (PBS-DTN-MAP-02 Section 4). An envelope for which this value is less than `1` has expired and SHALL NOT be encapsulated.
+- For an envelope with `TTL > 0`, the bundle lifetime SHALL NOT exceed `⌊(TTL × 1_000_000 − max(0, c_us − Timestamp)) / 1000⌋` milliseconds, where `c_us` is the bundle creation time converted to Unix epoch microseconds, `(creation_time_ms + 946_684_800_000) × 1000` (RFC 9171 Sections 4.2.6 and 4.2.7), or the gateway's Unix epoch time in microseconds at bundle creation when the creation time is `0`. RFC 9171 Section 4.3.1 counts lifetime in milliseconds past the creation time and PBS-ENV-01 Section 12.2 counts TTL from `Timestamp`, so the bundle expires no later than the envelope (PBS-DTN-MAP-02 Section 4). An envelope for which this value is less than `1` has expired or has less than 1 ms remaining before it expires, and SHALL NOT be encapsulated. A gateway that computes the lifetime before its BPA assigns the creation time meets this bound by using for `c_us` a time not earlier than that creation time, such as its clock reading plus the maximum latency of the transmission request.
+- The no-expiry lifetime is not less than any lifetime the gateway assigns (Section 6.1.1), so the bundle lifetime for an envelope with `TTL > 0` does not exceed it. Where the bound of the first rule is larger, the bundle can expire before the envelope; that deletion is not TTL expiry (PBS-ENV-01 Section 12.1).
 - The bundle creation timestamp, comprising the bundle creation time and the sequence number, SHALL be assigned as specified in RFC 9171 Section 4.2.7 by the BPA of the gateway, which creates the bundle.
 - The gateway MUST NOT derive the creation timestamp sequence number from the PBS `Sequence` field. The PBS `Sequence` field is assigned by the PBS source, is 16 bits wide and rolls over from 65535 to 0 (PBS-ENV-01 Sections 4 and 8); RFC 9171 Section 4.2.7 requires the latest value of a monotonically increasing positive integer counter managed by the source node's BPA.
 - The PBS `Sequence` field is carried unchanged in the encapsulated envelope (Sections 6.2 and 6.4). PBS sequence tracking (PBS-ENV-01 Section 8) applies to the `Sequence` field of the extracted envelope (Section 7.2), not to the bundle creation timestamp.
 
-### 6.1.1 Lifetime for TTL 0
+#### 6.1.1 Lifetime for TTL 0
 
 An envelope with TTL `0` never expires (PBS-ENV-01 Section 12.1). BPv7 encodes bundle lifetime as an unsigned integer number of milliseconds past the creation time and defines no value for an unlimited lifetime (RFC 9171 Section 4.3.1).
 
-For an envelope with TTL `0`, the gateway SHALL set the bundle lifetime to its no-expiry lifetime. The no-expiry lifetime:
+For an envelope with TTL `0`, the gateway SHALL set the bundle lifetime to its no-expiry lifetime, unless the gateway also implements PBS-DTN-MAP-02 and a finite deadline, maximum age or mission expiry limit applies to the message (PBS-DTN-MAP-02 Section 4); the bundle lifetime is then bounded as PBS-DTN-MAP-02 Section 4 specifies. The no-expiry lifetime:
 - SHALL be greater than `0` ms;
-- SHALL NOT be less than the lifetime the gateway assigns to any envelope with TTL greater than `0`;
+- SHALL NOT be less than the lifetime the gateway assigns to any envelope with TTL greater than `0` or to which a PBS-DTN-MAP-02 Section 4 finite limit applies;
 - SHALL NOT exceed `4294967295000` ms, the largest lifetime Section 6.1 permits for an envelope with TTL greater than `0` (TTL `4294967295` s);
 - SHALL be a value that the gateway's bundle protocol agent accepts and for which the expiration time that agent computes, creation time plus lifetime (RFC 9171 Section 5.5), does not overflow.
 
