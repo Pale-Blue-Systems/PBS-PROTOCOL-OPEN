@@ -3,7 +3,7 @@
 **Document ID:** PBS-ALIGN-ASSIGNMENT-NASA-FY26-01  
 **Status:** Active Engineering Assignment  
 **Baseline Date:** 2026-09-22  
-**Protocol Baseline:** PBS Core v1.3  
+**Protocol Baseline:** PBS v1.3 (git tag v1.3.0)  
 **Working Branch:** `alignment/nasa-fy26-lunanet`
 
 ## 1. Goal
