@@ -87,7 +87,7 @@ PBS operates over IP, over BPv7, or through a gateway that selects between them 
 - **PBS-DTN-MAP-01** (v1.3) defines a gateway translation between PBS-native domains and DTN domains. Each PBS envelope maps to exactly one bundle (Section 5.1). The complete envelope, 44-byte header and payload, is placed unmodified in a single BPv7 payload block (Section 6.2). TTL converts to bundle lifetime (Section 6.1). Source IDs map deterministically to endpoint identifiers (Section 8).
 - **PBS-DTN-MAP-02** (v1.4) defines carriage of v1.4 mission semantics over BPv7 for gateways and endpoints. One PBS protocol data unit SHOULD map to one BP application data unit (Section 2). Bundle lifetime SHALL be bounded by the remaining PBS deadline or expiry (Section 4). The adapter preserves PBS priority unchanged; network treatment is selected through BP QoS mechanisms and provider policy (Section 5). Section 6 maps Service Intent values to BPv7 adapter behavior.
 
-PBS-LNIS-01, PBS-CONFORMANCE-02 and the NASA FY26 traceability matrix reference PBS-DTN-MAP-02. PBS-CONFORMANCE-01 Section 3.1 lists PBS-DTN-MAP-01 as optional.
+PBS-CONFORMANCE-01 Section 3.1 lists both PBS-DTN-MAP-01 and PBS-DTN-MAP-02 as optional. PBS-ADDR-01 and PBS-ROUTE-01 reference PBS-DTN-MAP-01. PBS-SVC-01, PBS-SEC-B-01, PBS-LNIS-01, PBS-QOS-MAP-01, PBS-CONFORMANCE-02 and the NASA FY26 traceability matrix reference PBS-DTN-MAP-02.
 
 ---
 
@@ -199,7 +199,7 @@ Each alignment document identifies its external sources, summarizes what they st
 
 The current release is PBS v1.4.1 (2026-10-06), an errata and documentation release of PBS v1.4 (2026-09-22, NASA FY26 / LunaNet alignment). PBS v1.4.1 does not change the wire format.
 
-Each specification carries its own version. Documents unchanged since v1.3 remain at 1.3; an erratum does not change a specification's version. Errata are recorded in the header of each corrected specification (**Errata** line) and in [`PBS-PROTOCOL-CHANGELOG.md`](PBS-PROTOCOL-CHANGELOG.md).
+Each specification carries its own version. Documents unchanged since v1.3 remain at 1.3; an erratum does not change a specification's version. Errata are recorded in the header of each corrected specification (**Errata** line) and in [`PBS-PROTOCOL-CHANGELOG.md`](PBS-PROTOCOL-CHANGELOG.md). Defects in normative text that v1.4.1 does not correct are listed under [Known issues](PBS-PROTOCOL-CHANGELOG.md#known-issues-not-corrected-in-v141).
 
 The specifications define wire formats and behavior independent of hardware, transport and implementation language. The 44-byte PBS-ENV-01 header structure and PBS Core semantics remain stable for all v1.x releases; a backward-incompatible change requires a new major version (PBS-CONFORMANCE-01 Section 12, PBS-GOV-01 Section 6).
 
