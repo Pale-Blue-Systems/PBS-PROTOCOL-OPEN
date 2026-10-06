@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.5
-**Changes:** 2026-10-06 (PBS v1.5.0): TTL is the lifetime counted from Timestamp and is not modified in transit (Sections 4, 12.1, 12.3 and 15). Relays and gateways evaluate expiry with the Section 12.2 check and forward the 44 header bytes as received; the decrement-based method is removed, with migration guidance in Section 12.3. Section 15 requires relays and gateways to maintain a clock synchronized to Unix epoch time; PBS Core v1 defines no age field. An envelope with TTL `0` is never discarded as TTL-expired (Section 12.1). Section 12.5 adds TTL test cases. The PBS v1.4.1 errata to Sections 4, 12.2, 12.3, 13.1, 13.2, 19 and 21 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): TTL is the lifetime counted from Timestamp and is not modified in transit (Sections 4, 12.1, 12.3 and 15). Relays and gateways evaluate expiry with the Section 12.2 check and forward the 44 header bytes as received; the decrement-based method is removed, with migration guidance in Section 12.3. Section 15 requires relays and gateways to maintain a clock synchronized to Unix epoch time; PBS Core v1 defines no age field. An envelope with TTL `0` is never discarded as TTL-expired (Section 12.1). Section 12.5 adds TTL test cases. Section 20 no longer names a document version. The PBS v1.4.1 errata to Sections 4, 12.2, 12.3, 13.1, 13.2, 19 and 21 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-PRIO-01, PBS-SEC-A-01, PBS-CONFORMANCE-01
 
