@@ -3,6 +3,7 @@
 
 **Status:** Core
 **Version:** 1.3
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 4 CRC32 coverage corrected from bytes 0x00–0x27 to bytes 0x00–0x2B with the CRC32 field zeroed (as Section 13 states), Section 12.2 timestamp unit corrected to microseconds, Section 13.2 test vector added, and Section 19 linked to the PBS_LINK SDK. Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-PRIO-01, PBS-SEC-A-01, PBS-CONFORMANCE-01
 
@@ -61,7 +62,7 @@ A PBS envelope consists of a fixed 44-byte header followed by a variable-length 
 | 0x18 | Timestamp | 8 | u64 | Unix epoch in microseconds |
 | 0x20 | Size | 4 | u32 | Size of payload in bytes |
 | 0x24 | TTL | 4 | u32 | Time-to-live in seconds (`0` = never expires) |
-| 0x28 | CRC32 | 4 | u32 | Checksum of header bytes 0x00–0x27 |
+| 0x28 | CRC32 | 4 | u32 | IEEE 802.3 CRC-32 of header bytes 0x00–0x2B with bytes 0x28–0x2B set to zero (Section 13) |
 
 **Total: 44 Bytes**
 
@@ -180,7 +181,7 @@ An envelope is expired if:
 current_time - (timestamp / 1_000_000) > TTL
 ```
 
-Where `current_time` and `timestamp` are both Unix epoch seconds.
+Where `current_time` is Unix epoch time in seconds and `timestamp` is the `Timestamp` field in Unix epoch microseconds (Section 10). The check applies when `TTL > 0`; a TTL of `0` never expires (Section 12.1).
 
 Receivers MUST check TTL expiration:
 - On receipt, before processing
@@ -219,8 +220,10 @@ The timestamp-based method is preferred as it avoids CRC32 recalculation overhea
 The `CRC32` field provides header integrity verification.
 
 Rules:
-- CRC32 is computed over header bytes 0x00–0x2B (44 bytes) with the CRC32 field set to zero.
-- CRC32 uses the standard IEEE 802.3 polynomial (0xEDB88320, reflected).
+- CRC32 is computed over header bytes 0x00–0x2B (44 bytes) with the CRC32 field (0x28–0x2B) set to zero.
+- CRC32 uses the standard IEEE 802.3 polynomial (0xEDB88320, reflected). This is the CRC-32 computed by zlib `crc32()` and Python `zlib.crc32`.
+- The result is stored as a 32-bit unsigned integer, big-endian, at 0x28–0x2B.
+- The CRC32 does not cover the payload (Section 16.2).
 - Receivers MUST verify CRC32 before processing the envelope.
 - Envelopes failing CRC32 verification MUST be discarded.
 
@@ -242,6 +245,18 @@ The CRC32 checksum:
 - Detects transmission errors and bit-flips (radiation, noise)
 - Validates header integrity before trusting routing instructions
 - Does NOT provide cryptographic authentication (see PBS-SEC-A-01 for security extensions)
+
+### 13.2 Test Vector (Informative)
+
+Header-only envelope: Magic `0x10`, Priority `0` (CRITICAL), Flags `0x01` (ACK requested), Sequence `1`, Source ID `"Rover-A"`, Timestamp `1767225600000000` (2026-01-01T00:00:00Z), Size `0`, TTL `30`.
+
+```
+0x00  10 00 01 00   00 01 00 00   52 6f 76 65   72 2d 41 00
+0x10  00 00 00 00   00 00 00 00   00 06 47 48   46 20 40 00
+0x20  00 00 00 00   00 00 00 1e   58 87 21 ed
+```
+
+CRC32 = `0x588721ED`. A CRC32 computed over bytes 0x00–0x27 only yields `0x019507AC`; a conformant receiver discards a header carrying that value.
 
 ---
 
@@ -341,7 +356,9 @@ Rules:
 
 ## 19. Reference Implementation
 
-A reference implementation is available in the PBS-LINK SDK:
+The PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.1) implements this envelope in Python. The import package is `PBS_LINK` (`from PBS_LINK import PBSLink`).
+
+The following function builds an envelope according to Sections 4 and 13.1. Its output parses with `PBS_LINK.parse_envelope` and is byte-identical to the output of `PBS_LINK.build_envelope` for the same timestamp.
 
 ```python
 import struct

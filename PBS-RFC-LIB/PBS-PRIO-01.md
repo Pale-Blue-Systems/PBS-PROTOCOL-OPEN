@@ -4,8 +4,9 @@
 
 **Status:** Core
 **Version:** 1.4
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 10 corrected to state that the Priority byte at offset 0x01 is covered by the header CRC32 (PBS-SEC-A-01) and is authenticated when PBS-SEC-B-01 applies (PBS-SECB-REQ-004), replacing v1.0 text that required envelope authentication of priority bits. Wire format unchanged.
 **Applies to:** All PBS Core Messages
-**Related:** PBS-ENV-01, PBS-ROUTE-01, PBS-SEC-A-01
+**Related:** PBS-ENV-01, PBS-ROUTE-01, PBS-SEC-A-01, PBS-SEC-B-01
 
 ---
 
@@ -142,14 +143,14 @@ Rules:
 
 ## 10. Security Considerations
 
-Priority values are part of the authenticated envelope.
+The Priority byte at offset 0x01 is covered by the PBS-ENV-01 header CRC32 (PBS-SEC-A-01 Section 9). When PBS-SEC-B-01 applies, priority is also authenticated (PBS-SECB-REQ-004).
 
 Rules:
-- Priority bits MUST be covered by envelope authentication.
-- Unauthorized modification of priority MUST result in message rejection.
+- Envelopes failing header CRC32 verification, including those with a corrupted Priority byte, MUST be discarded (PBS-ENV-01 Section 13).
+- When PBS-SEC-B-01 applies, unauthorized modification of priority MUST result in message rejection (PBS-SECB-REQ-002).
 - Relays MUST NOT elevate or downgrade priority.
 
-Security mechanisms are defined in PBS-SEC-A-01.
+The CRC32 detects corruption; it does not detect deliberate modification. Integrity verification is defined in PBS-SEC-A-01. Authenticated mission messaging is defined in PBS-SEC-B-01.
 
 ---
 

@@ -3,6 +3,7 @@
 
 **Status:** Optional
 **Version:** 1.3
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4 and 12 corrected to the v1.3 envelope: forwarding eligibility requires header CRC32 verification (PBS-SEC-A-01 provides no authentication), the destination is determined per Section 6 (the header has no destination field), and relays preserve the Priority byte and all header fields except TTL and CRC32. Wire format unchanged.
 **Applies to:** PBS Relay and Gateway Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-DTN-MAP-01
 
@@ -46,9 +47,9 @@ PBS Core defines forwarding obligations and routing constraints but does not def
 An envelope is eligible for forwarding if and only if:
 
 - the envelope structure is valid (PBS-ENV-01)
-- authentication succeeds (PBS-SEC-A-01)
+- header CRC32 verification succeeds (PBS-SEC-A-01)
 - the TTL has not expired
-- the destination address is not local
+- the local node is not the envelope's destination (Section 6)
 
 Envelopes failing eligibility checks MUST be discarded.
 
@@ -150,15 +151,15 @@ Replication behavior is implementation-defined.
 
 Relays MUST:
 
-- preserve all authenticated envelope fields
+- preserve all envelope header fields except TTL and the recalculated CRC32 (PBS-ENV-01 Section 15)
 - decrement TTL correctly
-- preserve priority bits end-to-end
+- preserve the Priority byte end-to-end
 - forward envelopes without interpreting payload semantics
 - discard envelopes violating policy or eligibility rules
 
 Relays MUST NOT:
 - modify payload contents
-- alter authenticated fields
+- alter header fields other than TTL and CRC32
 - reinterpret envelope semantics
 
 ---
