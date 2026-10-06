@@ -3,7 +3,17 @@
 **Document ID:** PBS-TRACE-NASA-FY26-01  
 **Status:** Working Baseline  
 **Baseline Date:** 2026-09-22  
-**Errata:** 2026-10-06 (PBS v1.4.1): Allocation column restated as specification identifiers and reconciled with the specification Traceability sections, adding PBS-LNIS-01 (PBS-NASA-1501-003), PBS-QOS-MAP-01 (PBS-NASA-1309-001/002, PBS-BPV7-001) and PBS-SVC-01 (PBS-LNIS-001/002, PBS-BPV7-001), which state that they implement those rows. Requirement text unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Allocation column restated as specification identifiers and reconciled with the specification Traceability sections, adding PBS-LNIS-01 (PBS-NASA-1501-003), PBS-QOS-MAP-01 (PBS-NASA-1309-001/002, PBS-BPV7-001) and PBS-SVC-01 (PBS-LNIS-001/002, PBS-BPV7-001), which state that they implement those rows. Sources section added to identify each Source column entry. Requirement text unchanged.
+
+## Sources
+
+| Source column entry | Source |
+|---|---|
+| NASA 13.09, NASA 15.01, NASA 15.03, NASA 24.05 | Need statements 13.09, 15.01, 15.03 and 24.05 of NASA Space Technology Mission Directorate, *FY26 Civil Space Shortfall Prioritization*, May 2026, Appendix A. <https://www.nasa.gov/wp-content/uploads/2026/05/fy26-civil-space-shortfall-prioritization.pdf> |
+| LNIS V005 | NASA, ESA, and JAXA, *LunaNet Interoperability Specification Document*, Version 5, Baseline, 29 January 2025. <https://www.nasa.gov/wp-content/uploads/2025/02/lunanet-interoperability-specification-v5-baseline.pdf> |
+| RFC 9171 / CCSDS | IETF RFC 9171, *Bundle Protocol Version 7* (<https://www.rfc-editor.org/rfc/rfc9171>), and its CCSDS profile, CCSDS 734.2-P-1.1, cited by LNIS V005 as applicable document [AD19]. |
+
+The need statement texts are quoted in [`PBS-ALIGN-NASA-LCRNS-02`](PBS-ALIGN-NASA-LCRNS-02.md).
 
 ## Verification Codes
 
@@ -44,7 +54,7 @@ The Allocation column lists every specification whose Traceability section state
 
 ## Verification Evidence
 
-Verification artifacts will identify:
+No verification artifacts are published for this matrix. Each verification artifact SHALL identify:
 - implementation or test-vector version;
 - requirement identifier;
 - test configuration;

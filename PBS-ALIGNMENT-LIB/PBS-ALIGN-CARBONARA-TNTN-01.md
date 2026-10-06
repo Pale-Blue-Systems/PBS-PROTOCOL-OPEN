@@ -1,5 +1,5 @@
 # PBS Alignment  
-## Integrated Terrestrial and Non-Terrestrial Network Validation and Testbeds
+## Integrated Terrestrial and Non-Terrestrial Network Testbeds
 
 **Alignment Identifier:** `PBS-ALIGN-CARBONARA-TNTN-01`
 
@@ -7,80 +7,68 @@
 
 ## Aligned Work
 
-Carbonara, Salvatore, et al.  
+Carbonara, Salvatore, Marco Olivieri, Arcangela Rago, Vincenzo Sciancalepore, Giuseppe Piro, Gennaro Boggia, and Luigi Alfredo Grieco.  
 “Hands-On Solutions for Testing Integrated Terrestrial and Non-Terrestrial Networks: A Comprehensive Survey.”  
 *IEEE Open Journal of the Communications Society*, vol. 6, 2025, pp. 10729–10760.  
-doi:10.1109/OJCOMS.2025.3646364.
+doi:10.1109/OJCOMS.2025.3646364. Open access (CC BY 4.0).
 
 ---
 
 ## Alignment Overview
 
-Carbonara et al. present a comprehensive survey of practical, hands-on solutions for testing and validating **integrated Terrestrial and Non-Terrestrial Networks (T/NTNs)**, also referred to as Space–Air–Ground Integrated Networks. The study emphasizes the necessity of experimental platforms, hardware-in-the-loop systems, emulation environments, and cross-domain testbeds to move space communications research from theory into deployable, scalable systems.
+Carbonara et al. (Politecnico di Bari, CNIT, NEC Laboratories Europe) survey the hardware and software used to build experimental testbeds for integrated Terrestrial and Non-Terrestrial Networks (T/NTNs), which combine terrestrial 5G/6G access with UAVs, high-altitude platforms and multi-orbit satellite constellations. The survey covers:
 
-The work situates integrated T/NTNs as a foundational architectural condition for 6G and beyond, highlighting heterogeneity, multi-segment integration, and real-world validation as essential requirements. Pale Blue Systems (PBS) aligns with this framing by addressing interoperability and governance challenges that arise above these experimental and operational substrates.
+- reference T/NTN architectures with transparent and regenerative payloads (Section II);
+- hardware: software-defined radios, channel emulators and commercial off-the-shelf user equipment (Section III);
+- software emulating the core and radio access network, such as OpenAirInterface, srsRAN, Open5GS and OpenSAND (Section IV);
+- remotely accessible experimental platforms (Section V);
+- other beyond-5G/6G enablers (Section VI);
+- published testbeds, lessons learned and research directions (Section VII).
+
+The authors report that, at the time of writing, very few contributions had explored specific T/NTN functions through experimental tests (Section VII).
+
+The survey concerns 3GPP radio access and core networks. It does not address delay-tolerant networking, application-layer protocols or governance.
 
 ---
 
 ## Alignment Dimensions
 
-### Integrated Terrestrial and Non-Terrestrial Networking
+### 3GPP Non-Terrestrial Links as a Carrier for PBS
 
-Carbonara et al. frame future communication systems as inherently integrated across terrestrial, aerial, and space-based segments, including multiple orbital regimes and heterogeneous access technologies.
+The surveyed testbeds carry IP traffic between user equipment and a 5G core over UAV relays and transparent or regenerative satellite payloads in LEO and GEO (Sections II and VII-A).
 
 **PBS alignment:**  
-PBS is designed for interoperability across terrestrial, aerial, orbital, lunar, and deep-space networks. Its architecture treats integrated T/NTNs as the default operating environment rather than a special case, enabling coordinated data exchange across these domains while preserving segment-specific constraints.
+PBS envelopes are application data and do not depend on the access technology. PBS-LNIS-01 Section 5 lists 3GPP among the links over which a PBS gateway preserves the PBS semantic contract, and PBS-LNIS-REQ-004 requires surface access technology to remain transparent to PBS application semantics.
+
+**Alignment Reference:** `PBS-ALIGN-CARBONARA-3GPP-01`
 
 ---
 
-### Heterogeneity Across Network Segments
+### Emulated Channels in Verification
 
-The study emphasizes heterogeneity in physical layers, radio technologies, payload types, and network architectures as a defining feature of future space communication systems.
+The testbeds pair SDRs with channel emulators (for example Keysight PROPSIM and IZT C5040) or packet-level emulators (OpenSAND) to reproduce satellite delay, Doppler and loss, with hardware and software in the loop (Sections III, IV and VII-A, Table 8).
 
 **PBS alignment:**  
-PBS is architected with heterogeneity as a first-order design assumption. Its interoperability layer operates above diverse physical and network implementations, allowing independently designed systems to interconnect without requiring uniform technologies or configurations.
+PBS-CONFORMANCE-02 Section 4 requires each PBS verification record to identify the transport/network emulators and the link impairment model used, and requires disruption tests for complete outage, delayed contact, asymmetric link availability, constrained throughput and service restoration. Testbeds of the surveyed kind provide those emulated conditions. No PBS-CONFORMANCE-02 results on such testbeds are published.
+
+**Alignment Reference:** `PBS-ALIGN-CARBONARA-EMU-02`
 
 ---
 
-### Experimental Validation and Testbeds as Core Infrastructure
+### Lunar NTN Experimentation
 
-A central contribution of the study is its survey of experimental tools and platforms—including software-defined radios, open-source 5G/6G stacks, satellite emulators, and large-scale testbeds—used to validate integrated T/NTNs under realistic conditions.
-
-**PBS alignment:**  
-PBS aligns with this emphasis by providing an architectural layer that can be exercised across heterogeneous testbeds and experimental environments. Its design enables interoperability and coordination among independently operated platforms, supporting end-to-end validation across the types of systems surveyed in the study.
-
----
-
-### Layered Architectural Separation
-
-Carbonara et al. present a layered view of integrated T/NTNs, separating physical-layer experimentation, radio access networks, core networking functions, orchestration mechanisms, and cross-domain integration.
+One reviewed testbed, the 5G Space Communications Lab of the University of Luxembourg (Kodheli et al.), is used for both Earth and lunar NTN communications (Section VII-A).
 
 **PBS alignment:**  
-PBS is positioned above these layers as an interoperability and governance mechanism. It remains agnostic to specific radio, access, and core network implementations, enabling lower-layer innovation without disrupting inter-system coordination.
+PBS-LNIS-01 Section 5 covers 3GPP surface links in LunaNet-aligned deployments. A lunar 3GPP link of this kind is a PBS bearer under PBS-LNIS-REQ-004.
 
----
-
-### Multi-Actor and Multi-Authority Participation
-
-The survey reflects a research and deployment landscape involving academic institutions, commercial vendors, public agencies, and open-source communities, each operating under distinct governance and access models.
-
-**PBS alignment:**  
-PBS is designed to support interoperability in multi-actor, multi-authority environments. Its architecture enables independently governed systems to exchange data and coordinate through policy-aware interfaces without requiring centralized ownership or unified control.
-
----
-
-### Scalability from Testbeds to Operational Systems
-
-Carbonara et al. emphasize that experimental platforms must support scalability from controlled test environments to large-scale, operational integrated networks.
-
-**PBS alignment:**  
-PBS supports this progression by providing a consistent interoperability framework that can be applied across experimental, pilot, and operational deployments, enabling continuity as systems scale in size, scope, and complexity.
+**Alignment Reference:** `PBS-ALIGN-CARBONARA-LUNAR-03`
 
 ---
 
 ## Alignment Summary
 
-Carbonara et al. (2025) establish integrated Terrestrial and Non-Terrestrial Networks as a practical and necessary foundation for future space communications, emphasizing heterogeneity, real-world validation, and multi-segment integration. Pale Blue Systems aligns with this work by providing an architectural interoperability and governance layer capable of operating across the diverse testbeds, platforms, and network segments surveyed in the study, supporting scalable coordination in 6G-and-beyond environments.
+Carbonara et al. catalogue the tools for building integrated T/NTN testbeds and report that experimental work on specific T/NTN functions is still limited. PBS sits above the 3GPP links those testbeds emulate, and PBS-CONFORMANCE-02 requires the emulator and link-impairment configuration of any PBS verification run to be recorded.
 
 ---
 

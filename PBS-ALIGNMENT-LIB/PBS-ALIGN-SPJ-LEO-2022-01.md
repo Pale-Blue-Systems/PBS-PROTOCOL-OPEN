@@ -16,53 +16,53 @@ doi:10.34133/2022/9865174.
 
 ## Alignment Overview
 
-Zhang et al. review the growth of low Earth orbit (LEO) mega constellations and their effect on astronomical observation, in-orbit spacecraft safety, and the space environment. They conclude that sustaining activity in LEO requires stronger surveillance and governance mechanisms, and examine two responses: space surveillance and situational awareness to keep spacecraft operating safely, and accelerated end-of-life deorbiting through post-mission disposal and active removal.
+Zhang et al. review the growth of low Earth orbit (LEO) mega constellations and their effect on astronomical observation, in-orbit spacecraft safety, and the space environment. They conclude that sustaining activity in LEO requires more rational surveillance and governance mechanisms, and examine two responses: space surveillance and situational awareness to keep spacecraft operating safely, and accelerated end-of-life deorbiting through post-mission disposal and active removal.
 
-Pale Blue Systems (PBS) does not perform surveillance, collision avoidance, or debris removal. It aligns with the paper's premise that a shared orbital environment, operated by many independent parties, depends on information those parties can exchange and act on.
+PBS does not perform surveillance, collision avoidance or debris removal. It defines message formats for authority, position and priority information exchanged between independently operated systems.
 
 ---
 
 ## Alignment Dimensions
 
-### Many Independent Operators in One Environment
+### Congestion and In-Orbit Safety
 
-The paper describes LEO as a shared resource occupied by constellations from many operators, where one operator's deployment affects the safety of everyone else's assets.
+The paper finds that unrestrained constellation deployment strains orbital resources, increases congestion in LEO and seriously affects the safety of in-orbit operations of many space assets.
 
 **PBS alignment:**  
-PBS defines explicit authority and scope context (PBS-AUTH-01), so a message exchanged between independently operated systems can state who issued it and under what authority.
+PBS-AUTH-01 carries authority and scope context, so a message exchanged between independently operated systems states the administrative domain and role under which it was issued.
 
 **Alignment Reference:** `PBS-ALIGN-SPJ-LEO-MULTI-01`
 
 ---
 
-### Situational Awareness Depends on Shared Position Data
+### Space Surveillance and Situational Awareness
 
 The paper identifies space surveillance and situational awareness as one of the two main responses to congestion.
 
 **PBS alignment:**  
-PBS defines position and presence signaling (PBS-POS-01) bound to an explicit reference frame and time context (PBS-PNT-CTX-01), giving operators a common, unambiguous format for the position information that coordination depends on.
+PBS defines position and presence signaling (PBS-POS-01) bound to an explicit reference frame and time reference (PBS-PNT-CTX-01; PBS-PNT-REQ-001, PBS-PNT-REQ-002).
 
 **Alignment Reference:** `PBS-ALIGN-SPJ-LEO-SSA-02`
 
 ---
 
-### Safety-Critical Traffic Must Not Be Crowded Out
+### Safety-Critical Data
 
-The paper treats in-orbit safety as the constraint that growth must respect.
+The paper analyses the impact of mega constellations on spacecraft safety in orbit.
 
 **PBS alignment:**  
-PBS priority classification (PBS-PRIO-01) treats priority as mission urgency independent of transport, so safety-critical messages keep precedence over bulk traffic when links are constrained.
+PBS-PRIO-01 Section 4 defines five priority classes, from 0 CRITICAL (life- or safety-critical data) to 4 BULK, carried in the envelope header independently of transport.
 
 **Alignment Reference:** `PBS-ALIGN-SPJ-LEO-PRIO-03`
 
 ---
 
-### Governance Through Coordination
+### Surveillance and Governance Mechanisms
 
-The paper calls for governance mechanisms suited to an environment with no single controlling authority.
+The paper states that space environment stability in LEO must be maintained through more rational surveillance and governance mechanisms.
 
 **PBS alignment:**  
-PBS is stewarded as an open, vendor-neutral standard (PBS-GOV-01), so the coordination language itself is not owned by any one operator.
+PBS-GOV-01 Sections 2 and 3 separate stewardship of the PBS specifications from commercial implementation, and the specifications are public under the Apache License 2.0.
 
 **Alignment Reference:** `PBS-ALIGN-SPJ-LEO-GOV-04`
 
@@ -70,7 +70,7 @@ PBS is stewarded as an open, vendor-neutral standard (PBS-GOV-01), so the coordi
 
 ## Alignment Summary
 
-Zhang et al. establish that the growth of LEO mega constellations makes surveillance and governance mechanisms necessary for safe, sustainable operations among many independent operators. PBS addresses the communication layer beneath that coordination: authority-scoped, position- and time-referenced, priority-aware messages that independently operated systems can exchange and interpret consistently.
+Zhang et al. find that sustainable LEO activity requires more rational surveillance and governance mechanisms, and review space surveillance, situational awareness and end-of-life deorbiting as responses. PBS defines message formats for the information such coordination exchanges: authority context (PBS-AUTH-01), position with explicit reference frame and time (PBS-POS-01, PBS-PNT-CTX-01) and priority (PBS-PRIO-01).
 
 ---
 
