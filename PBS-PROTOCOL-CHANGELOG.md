@@ -6,6 +6,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased]
+
+### Fixed
+- **PBS-ALIGN-INDEX-01** — lists all alignment documents under their own IDs, including PBS-ALIGN-NASA-LCRNS-02 and the FY26 traceability matrix; citations corrected against their DOIs.
+- **PBS-ALIGN-NASA-LCRNS-02** — declared its identifier as LCRNS-01.
+- **PBS-ALIGN-TF-GOVERNANCE-2024-01** — placeholder title and publisher-as-author replaced with the published citation.
+- **PBS-ALIGN-CARBONARA-TNTN-01**, **PBS-ALIGN-NTONTIN-6G-01** — author name, volume and page numbers corrected.
+- **PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01** — given its `.md` extension.
+- **README** — status names v1.4; alignment table and repository structure match the repository.
+
+---
+
 ## [1.4.0] - 2026-09-22
 
 ### NASA FY26 / LunaNet Alignment

@@ -107,11 +107,13 @@ The Pale Blue Systems Open Standard is explicitly aligned with authoritative, pe
 
 | Alignment ID | External Source | Domain |
 | :--- | :--- | :--- |
-| **PBS-ALIGN-NASA-LCRNS-01** | NASA LCRNS (Esper, 2025) | Lunar & Cislunar Networking |
-| **PBS-ALIGN-IEEE-AEROCONF-2025** | IEEE Aerospace Conference | Space Network Architecture |
-| **PBS-ALIGN-IEEE-TNTN-2025** | IEEE ComSoc | Integrated T/NTN Networks |
+| **PBS-ALIGN-NASA-LCRNS-02** | NASA LCRNS, LunaNet Interoperability Specification v5, FY26 Civil Space Shortfalls | Lunar Network Services |
+| **PBS-ALIGN-NASA-LCRNS-01** | NASA LCRNS (Esper et al., SpaceOps 2025) | Lunar & Cislunar Networking |
+| **PBS-ALIGN-IEEE-AEROCONF-2025-01** | IEEE Aerospace Conference 2025 | Space Network Architecture |
+| **PBS-ALIGN-CARBONARA-TNTN-01** | IEEE Open Journal of the Communications Society (2025) | Integrated T/NTN Networks |
+| **PBS-ALIGN-NTONTIN-6G-01** | Proceedings of the IEEE (2025) | 6G and Beyond Space Communications |
 
-*See [PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md](PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md) for the full evidence map.*
+*See [PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md](PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md) for the full evidence map, and [PBS-TRACE-NASA-FY26-01](PBS-ALIGNMENT-LIB/PBS-TRACE-NASA-FY26-01.md) for requirements traceability against NASA's FY26 Civil Space Shortfalls.*
 
 ---
 
@@ -134,6 +136,13 @@ This model enables adoption across civil, commercial, and international space pr
 ├── README.md
 ├── WHY-NOW.md                        → Architectural motivation and future context
 ├── PBS-OPEN-STANDARD.md              → Open standard scope and stewardship model
+├── PBS-PROTOCOL-CHANGELOG.md         → Release history
+├── PBS-COMMERCIAL-DEVELOPERS-GUIDE.md → Guide for commercial implementers
+├── PBS-REFERENCES-RESOURCES.md       → External references
+├── PBS-REFERENCES-SOLAR-SYSTEM-INTERNET.md → Solar System Internet references
+├── CONTRIBUTING.md, CLA.md, TRADEMARK-USAGE-POLICY.md, LICENSE
+├── PRESS/                            → Press releases
+├── PBS-ALIGNMENT-LIB/                → External alignment evidence and NASA FY26 traceability
 ├── PBS-RFC-LIB/                      → Protocol specifications
 │   ├── PBS-ENV-01.md                 → Core Message Envelope
 │   ├── PBS-ADDR-01.md                → Addressing and Identification
@@ -187,7 +196,7 @@ This model enables adoption across civil, commercial, and international space pr
 
 ## Status
 
-The specifications in this repository define **Pale Blue Systems Core v1**.
+The current release is **PBS v1.4** (2026-09-22): the NASA FY26 / LunaNet alignment. Specifications carry their own version; those unchanged since v1.3 remain at 1.3. See [`PBS-PROTOCOL-CHANGELOG.md`](PBS-PROTOCOL-CHANGELOG.md).
 
 They are intended to be:
 

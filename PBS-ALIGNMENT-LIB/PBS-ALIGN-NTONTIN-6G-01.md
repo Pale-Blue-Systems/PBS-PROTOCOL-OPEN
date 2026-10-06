@@ -9,7 +9,7 @@
 
 Ntontin, Konstantinos, et al.  
 “A Vision, Survey, and Roadmap Toward Space Communications in the 6G and Beyond Era.”  
-*Proceedings of the IEEE*, 2025, pp. 1–37.  
+*Proceedings of the IEEE*, vol. 113, no. 9, 2025, pp. 987–1023.  
 doi:10.1109/JPROC.2024.3512934.
 
 ---
@@ -86,4 +86,4 @@ The vision presented by Ntontin et al. (2025) describes a future space communica
 
 ## Citation (MLA)
 
-Ntontin, Konstantinos, et al. “A Vision, Survey, and Roadmap Toward Space Communications in the 6G and Beyond Era.” *Proceedings of the IEEE*, 2025, pp. 1–37, doi:10.1109/JPROC.2024.3512934.
+Ntontin, Konstantinos, et al. “A Vision, Survey, and Roadmap Toward Space Communications in the 6G and Beyond Era.” *Proceedings of the IEEE*, vol. 113, no. 9, 2025, pp. 987–1023, doi:10.1109/JPROC.2024.3512934.

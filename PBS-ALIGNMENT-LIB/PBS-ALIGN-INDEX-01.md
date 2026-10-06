@@ -4,7 +4,7 @@
 **Document ID:** `PBS-ALIGN-INDEX-01`  
 **Status:** Living Document  
 **Scope:** Technical, Operational, Governance, and Architectural Alignment  
-**Last Updated:** 2026-01-29
+**Last Updated:** 2026-10-06
 
 ---
 
@@ -31,18 +31,22 @@ The purpose of this index is not to claim endorsement, but to demonstrate **stru
 
 | Alignment ID | External Source | Domain | Alignment Summary |
 |-------------|----------------|--------|------------------|
-| PBS-ALIGN-NASA-LCRNS-01 | NASA / DoD – LCRNS (Esper, 2025) | Lunar & Cislunar Networking | Identifies need for standardized, authority-aware relay and routing layers across lunar assets |
-| PBS-ALIGN-IEEE-AEROCONF-2025-01 | IEEE Aerospace Conf. 2025 | Space Network Architecture | Validates modular, layered, non-monolithic comms architectures |
-| PBS-ALIGN-IEEE-AEROCONF-OBP-02 | IEEE AeroConf – Onboard Processing | Edge / Onboard Computing | Confirms shift toward autonomous, local processing with constrained backhaul |
-| PBS-ALIGN-IEEE-TNTN-2025-03 | IEEE Open Journal of ComSoc (2025) | T/NTN Testbeds | Demonstrates necessity of interoperable overlays across heterogeneous networks |
-| PBS-ALIGN-SCIENCE-2022-SPACE-04 | *Science Partner Journal*, 2022 | Space–Air–Ground Integration | Aligns with PBS abstraction of Space–Air–Ground as a single interoperable system |
-| PBS-ALIGN-TF-GOVERNANCE-2024-01 | *Journal of European Public Policy*, 2024 | Space Governance | Frames space as a fragmented, multi-actor domain requiring coordination without central authority |
+| [PBS-ALIGN-NASA-LCRNS-01](PBS-ALIGN-NASA-LCRNS-01.md) | NASA LCRNS (Esper et al., SpaceOps 2025) | Lunar & Cislunar Networking | Identifies need for standardized, authority-aware relay and routing layers across lunar assets |
+| [PBS-ALIGN-NASA-LCRNS-02](PBS-ALIGN-NASA-LCRNS-02.md) | NASA LCRNS, LunaNet Interoperability Specification v5, FY26 Civil Space Shortfalls | Lunar Network Services | Maps PBS v1.4 mission semantics, service intent, authority and PNT context onto LunaNet network services |
+| [PBS-ALIGN-IEEE-AEROCONF-2025-01](PBS-ALIGN-IEEE-AEROCONF-2025.md) | IEEE Aerospace Conf. 2025 | Space Network Architecture | Validates modular, layered, non-monolithic comms architectures |
+| [PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01](PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01.md) | IEEE Aerospace Conf. 2025 – Onboard Processing | Edge / Onboard Computing | Confirms shift toward autonomous, local processing with constrained backhaul |
+| [PBS-ALIGN-CARBONARA-TNTN-01](PBS-ALIGN-CARBONARA-TNTN-01.md) | Carbonara et al., *IEEE Open Journal of the Communications Society* (2025) | T/NTN Testbeds | Demonstrates necessity of interoperable overlays across heterogeneous networks |
+| [PBS-ALIGN-NTONTIN-6G-01](PBS-ALIGN-NTONTIN-6G-01.md) | Ntontin et al., *Proceedings of the IEEE* (2025) | 6G and Beyond Space Communications | Frames space systems as one heterogeneous, multi-domain, multi-stakeholder network |
+| [PBS-ALIGN-SPJ-AUTONOMY-2022-01](PBS-ALIGN-SPJ-AUTONOMY-2022-01.md) | *Science Partner Journal*, 2022 | Space–Air–Ground Integration | Aligns with PBS abstraction of Space–Air–Ground as a single interoperable system |
+| [PBS-ALIGN-TF-GOVERNANCE-2024-01](PBS-ALIGN-TF-GOVERNANCE-2024-01.md) | Beaumier et al., *Journal of European Public Policy* (2024) | Space Governance | Frames space as a fragmented, multi-actor domain requiring coordination without central authority |
+
+Requirements traceability for the v1.4 NASA alignment is in [`PBS-TRACE-NASA-FY26-01`](PBS-TRACE-NASA-FY26-01.md), under the engineering assignment [`PBS-ALIGN-ASSIGNMENT-NASA-FY26-01`](PBS-ALIGNMENT-ASSIGNMENT-NASA-FY26.md).
 
 ---
 
 ## Detailed Alignment Summaries
 
-### 1. NASA / DoD — Lunar Communications Relay & Networking Study (LCRNS)
+### 1. NASA — Lunar Communications Relay and Navigation Systems (LCRNS)
 
 **Alignment ID:** `PBS-ALIGN-NASA-LCRNS-01`
 
@@ -53,7 +57,7 @@ NASA identifies the absence of a common, interoperable communications layer acro
 PBS provides a neutral interoperability layer that enables routing, identity, and policy awareness across independently governed lunar systems without imposing mission redesign or centralized control.
 
 **MLA Citation:**  
-Esper, Michael J., et al. *Lunar Communications Relay and Networking Study (LCRNS)*. NASA, 2025.
+Esper, J., et al. “NASA’s Lunar Communications Relay and Navigation Systems (LCRNS).” *Proceedings of the 18th International Conference on Space Operations (SpaceOps-2025)*, Montreal, May 2025.
 
 ---
 
@@ -68,13 +72,13 @@ Future space systems require modular, layered architectures rather than tightly 
 PBS is explicitly layered, sitting above transport and below mission logic, enabling reuse across missions, orbits, and operators.
 
 **MLA Citation:**  
-“Hands-On Solutions for Testing Integrated Terrestrial and Non-Terrestrial Networks.” *IEEE Open Journal of the Communications Society*, vol. 6, 2025, pp. 10729–10760.
+IEEE Aerospace Conference. *Proceedings of the IEEE Aerospace Conference 2025*. IEEE, 2025.
 
 ---
 
 ### 3. IEEE AeroConf — Onboard Processing
 
-**Alignment ID:** `PBS-ALIGN-IEEE-AEROCONF-OBP-02`
+**Alignment ID:** `PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01`
 
 **Core Finding:**  
 Onboard autonomy and edge processing are required due to latency, bandwidth, and resilience constraints.
@@ -83,13 +87,13 @@ Onboard autonomy and edge processing are required due to latency, bandwidth, and
 PBS assumes intermittent connectivity and supports autonomous operation with delayed synchronization, rather than continuous ground dependence.
 
 **MLA Citation:**  
-IEEE Aerospace Conference. *Onboard Processing Architectures for Space Systems*, 2025.
+IEEE Aerospace Conference. “Onboard Processing for Future Space Missions.” *Proceedings of the IEEE Aerospace Conference 2025*. IEEE, 2025.
 
 ---
 
 ### 4. Integrated Terrestrial–Non-Terrestrial Networks (T/NTN)
 
-**Alignment ID:** `PBS-ALIGN-IEEE-TNTN-2025-03`
+**Alignment ID:** `PBS-ALIGN-CARBONARA-TNTN-01`
 
 **Core Finding:**  
 T/NTN integration demands interoperable overlays across SDRs, satellites, UAVs, and terrestrial infrastructure.
@@ -98,13 +102,13 @@ T/NTN integration demands interoperable overlays across SDRs, satellites, UAVs, 
 PBS operates as an overlay that allows proprietary and open systems to interoperate without altering their internal implementations.
 
 **MLA Citation:**  
-Carbonara, Salvatore, et al. “Hands-On Solutions for Testing Integrated Terrestrial and Non-Terrestrial Networks.” *IEEE Open Journal of the Communications Society*, 2025.
+Carbonara, Salvatore, et al. “Hands-On Solutions for Testing Integrated Terrestrial and Non-Terrestrial Networks: A Comprehensive Survey.” *IEEE Open Journal of the Communications Society*, vol. 6, 2025, pp. 10729–10760, doi:10.1109/OJCOMS.2025.3646364.
 
 ---
 
 ### 5. Space–Air–Ground Integrated Networks (Science Partner Journal)
 
-**Alignment ID:** `PBS-ALIGN-SCIENCE-2022-SPACE-04`
+**Alignment ID:** `PBS-ALIGN-SPJ-AUTONOMY-2022-01`
 
 **Core Finding:**  
 Space, air, and ground systems are converging into a single operational domain requiring unified coordination models.
@@ -117,7 +121,7 @@ PBS treats Space–Air–Ground as a continuous system, enabling seamless messag
 
 ---
 
-### 6. Governance & Institutional Coordination (Taylor & Francis, 2024)
+### 6. Governance & Institutional Coordination (Beaumier et al., 2024)
 
 **Alignment ID:** `PBS-ALIGN-TF-GOVERNANCE-2024-01`
 
@@ -128,7 +132,7 @@ Space governance is fragmented, multi-actor, and coordination-based rather than 
 PBS embeds authority context and policy boundaries into its interoperability model, enabling coordination without governance collapse or forced unification.
 
 **MLA Citation:**  
-Taylor & Francis Online. “Article Title.” *Journal of European Public Policy*, 2024, doi:10.1080/13501763.2024.2325647.
+Beaumier, Guillaume, et al. “Hybrid Organisations and Governance Systems: The Case of the European Space Agency.” *Journal of European Public Policy*, vol. 32, no. 4, 2025, pp. 1004–1034, doi:10.1080/13501763.2024.2325647.
 
 ---
 

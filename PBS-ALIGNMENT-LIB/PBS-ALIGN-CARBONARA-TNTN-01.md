@@ -7,9 +7,9 @@
 
 ## Aligned Work
 
-Carbonara, Matteo, et al.  
+Carbonara, Salvatore, et al.  
 “Hands-On Solutions for Testing Integrated Terrestrial and Non-Terrestrial Networks: A Comprehensive Survey.”  
-*IEEE Open Journal of the Communications Society*, 2025.  
+*IEEE Open Journal of the Communications Society*, vol. 6, 2025, pp. 10729–10760.  
 doi:10.1109/OJCOMS.2025.3646364.
 
 ---
@@ -86,4 +86,4 @@ Carbonara et al. (2025) establish integrated Terrestrial and Non-Terrestrial Net
 
 ## Citation (MLA)
 
-Carbonara, Matteo, et al. “Hands-On Solutions for Testing Integrated Terrestrial and Non-Terrestrial Networks: A Comprehensive Survey.” *IEEE Open Journal of the Communications Society*, 2025, doi:10.1109/OJCOMS.2025.3646364.
+Carbonara, Salvatore, et al. “Hands-On Solutions for Testing Integrated Terrestrial and Non-Terrestrial Networks: A Comprehensive Survey.” *IEEE Open Journal of the Communications Society*, vol. 6, 2025, pp. 10729–10760, doi:10.1109/OJCOMS.2025.3646364.

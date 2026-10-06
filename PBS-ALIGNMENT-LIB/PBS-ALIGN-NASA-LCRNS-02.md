@@ -1,7 +1,7 @@
 # PBS Alignment
 ## NASA LCRNS, LunaNet, and FY26 Civil Space Shortfalls
 
-**Alignment Identifier:** `PBS-ALIGN-NASA-LCRNS-01`
+**Alignment Identifier:** `PBS-ALIGN-NASA-LCRNS-02`
 **Revision:** 2026-09-22
 
 ## Aligned Architecture
