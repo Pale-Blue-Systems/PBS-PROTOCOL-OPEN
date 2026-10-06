@@ -42,7 +42,7 @@ PBS Core covers:
 - on-wire behavior  
 - interoperability rules  
 
-The 44-byte header structure and PBS Core semantics remain stable for all v1.x releases; a backward-incompatible change requires a new major version (PBS-CONFORMANCE-01 Section 12, PBS-GOV-01 Section 6).
+The 44-byte header structure and PBS Core semantics remain stable for all v1.x releases. A backward-incompatible change requires a new major version, except a corrective change, which leaves the wire format unchanged and is released in a patch or minor version with migration guidance where needed (PBS-CONFORMANCE-01 Section 12, PBS-GOV-01 Sections 5.2 and 6).
 
 ---
 

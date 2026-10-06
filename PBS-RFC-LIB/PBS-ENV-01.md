@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): TTL is the lifetime counted from Timestamp and is not modified in transit (Sections 4, 12.1, 12.3 and 15). Relays and gateways evaluate expiry with the Section 12.2 check and forward the 44 header bytes as received; the decrement-based method is removed, with migration guidance in Section 12.3. An envelope with TTL `0` is never discarded as TTL-expired (Section 12.1). Section 12.5 adds TTL test cases. The PBS v1.4.1 errata to Sections 4, 12.2, 12.3, 13.1, 13.2, 19 and 21 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): TTL is the lifetime counted from Timestamp and is not modified in transit (Sections 4, 12.1, 12.3 and 15). Relays and gateways evaluate expiry with the Section 12.2 check and forward the 44 header bytes as received; the decrement-based method is removed, with migration guidance in Section 12.3. Section 15 requires relays and gateways to maintain a clock synchronized to Unix epoch time; PBS Core v1 defines no age field. An envelope with TTL `0` is never discarded as TTL-expired (Section 12.1). Section 12.5 adds TTL test cases. Section 20 no longer names a document version. The PBS v1.4.1 errata to Sections 4, 12.2, 12.3, 13.1, 13.2, 19 and 21 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-PRIO-01, PBS-SEC-A-01, PBS-CONFORMANCE-01
 
@@ -199,7 +199,7 @@ When a relay or gateway stores an envelope and later forwards it:
 
 The Section 12.2 check measures elapsed time from `Timestamp`. It therefore counts time spent in storage at every node, in transmission, and in non-PBS networks such as a BPv7 segment (PBS-DTN-MAP-01 Sections 6.4 and 7.2). For `TTL > 0` every node computes the same expiry instant, `timestamp / 1_000_000 + TTL` in Unix epoch seconds, and compares it with its own clock. The CRC32 computed by the originator (Section 13.1) remains valid at every hop. An envelope with TTL `0` does not expire, whatever its storage duration (Section 12.1).
 
-**Migration from PBS v1.4.1.** PBS v1.4.1 and earlier permitted a decrement-based method in this section and required relays to decrement TTL in Section 15. Under that method a relay subtracted its storage duration from TTL, discarded the envelope when the result was `<= 0`, and otherwise recalculated CRC32. An envelope forwarded by such a relay is a valid envelope, and a receiver cannot distinguish a reduced TTL from the originator's TTL. Because `Timestamp` is unchanged, the Section 12.2 check at each later node expires the envelope earlier than its originator set, by the total interval subtracted, and the method discarded every envelope with TTL `0`. A relay that implements the decrement method removes it, forwards the 44 header bytes unchanged, and applies the Section 12.2 check.
+**Migration from PBS v1.4.1.** PBS v1.4.1 and earlier permitted a decrement-based method in this section and required gateways and relay nodes to decrement TTL in Section 15. Under that method a relay subtracted its storage duration from TTL, discarded the envelope when the result was `<= 0`, and otherwise recalculated CRC32. An envelope forwarded by such a relay is a valid envelope, and a receiver cannot distinguish a reduced TTL from the originator's TTL. Because `Timestamp` is unchanged, the Section 12.2 check at each later node expires the envelope earlier than its originator set, by the total interval subtracted, and the method discarded every envelope with TTL `0`. A relay or gateway that implements the decrement method removes it, forwards the 44 header bytes unchanged, and applies the Section 12.2 check.
 
 ### 12.4 Typical Values
 
@@ -293,6 +293,7 @@ Failure at any step MUST result in envelope discard.
 Gateways and relay nodes:
 - MUST verify CRC32 before forwarding
 - MUST check TTL expiration against the unchanged `Timestamp` and `TTL` (Sections 12.2 and 12.3)
+- MUST maintain a clock synchronized to Unix epoch time (Section 10) for the Section 12.2 check. An error in that clock shifts the node's expiry decisions by the same amount. PBS Core v1 defines no age field for a node without such a clock.
 - MUST discard expired envelopes
 - MUST forward the 44 header bytes as received, including TTL, Timestamp and CRC32 (Section 12.3)
 - MAY encapsulate envelopes into higher-level protocols (e.g., CCSDS BPv7)

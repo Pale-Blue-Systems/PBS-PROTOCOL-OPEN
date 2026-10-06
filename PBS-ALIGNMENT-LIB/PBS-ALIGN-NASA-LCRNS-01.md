@@ -73,7 +73,7 @@ PBS-PNT-CTX-01 requires coordinate-bearing PNT data to identify its spatial refe
 LCRNS is developing an Interoperability and Performance Validation Capability. Its Interoperability and Performance Testbed (IPT) is a hardware-in-the-loop testbed emulating a universal lunar user terminal. The IPT tests each LNSP segment at its interface; LNSP-internal links are not tested (Section 5).
 
 **PBS alignment:**  
-PBS-CONFORMANCE-02 verifies PBS at the application interface with test cases PBS-C02-T001 to PBS-C02-T015 (Section 3). Section 4 requires disruption tests covering complete outage, delayed contact, asymmetric link availability, constrained throughput and service restoration.
+PBS-CONFORMANCE-02 verifies PBS at the application interface with test cases PBS-C02-T001 to PBS-C02-T016 (Section 3). Section 4 requires disruption tests covering complete outage, delayed contact, asymmetric link availability, constrained throughput and service restoration.
 
 **Alignment Reference:** `PBS-ALIGN-LCRNS-VER-05`
 

@@ -3,7 +3,7 @@
 
 **Status:** Optional Interoperability Profile
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): Section 4 sets the BP lifetime when no finite TTL, deadline, maximum age or mission expiry limit applies; Section 6 adds the corresponding row; Section 10 adds the verification item. Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): Section 4 sets the BP lifetime when no finite TTL, deadline, maximum age or mission expiry limit applies; Section 6 adds the corresponding row; Section 10 adds the verification item. Wire format unchanged.
 **Applies to:** PBS gateways and endpoints using BPv7
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SVC-01, PBS-SEC-B-01, PBS-LNIS-01
 

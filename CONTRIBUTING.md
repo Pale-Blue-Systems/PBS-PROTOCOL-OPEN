@@ -46,8 +46,8 @@ The RFC process applies when you want to:
 1.  **Open an issue first:** Title it `RFC Proposal: [Topic]`. State the problem and why existing mechanisms do not solve it.
 2.  **Draft:** Once the discussion reaches consensus, draft the change.
     * A new feature in v1.x is an additive change and remains backward compatible (PBS-GOV-01 Section 5.2).
-    * A corrective change resolves a conflict between clauses, or with a referenced standard, without changing the wire format. It ships in a patch release when another clause already states the rule and otherwise in a minor release, with migration guidance for any behavior it makes non-conformant (PBS-GOV-01 Sections 5.2 and 6).
-    * A backward-incompatible change requires a new major version (PBS-GOV-01 Section 6; PBS-CONFORMANCE-01 Section 12).
+    * A corrective change resolves a conflict between clauses, or with a normatively referenced standard, together with requirements that follow from that resolution, without changing the wire format or PBS Core v1 semantics. It ships in a patch release when another clause of the preceding release states the controlling rule and otherwise in a minor release, with migration guidance for any behavior it makes non-conformant (PBS-GOV-01 Sections 5.2 and 6).
+    * A backward-incompatible change that is not a corrective change requires a new major version (PBS-GOV-01 Section 6; PBS-CONFORMANCE-01 Section 12).
 3.  **Review:** The governance body and community review the proposal for:
     * **Necessity:** Is the change required?
     * **Simplicity:** Does it add complexity the problem does not require?

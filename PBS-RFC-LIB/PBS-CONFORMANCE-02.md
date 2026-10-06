@@ -3,7 +3,7 @@
 
 **Status:** Optional Conformance Profile
 **Version:** 1.5
-**Changes:** <release date> (PBS v1.5.0): Section 3 test PBS-C02-T002 requires the PBS-ENV-01 header, including TTL and CRC32, to arrive byte-identical, and test PBS-C02-T016 (no-expiry bundle lifetime, PBS-DTN-MAP-02 Section 4) is added. The PBS v1.4.1 Section 6 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
+**Changes:** 2026-10-06 (PBS v1.5.0): Section 3 test PBS-C02-T002 requires the PBS-ENV-01 header, including TTL and CRC32, to arrive byte-identical, and test PBS-C02-T016 (no-expiry bundle lifetime, PBS-DTN-MAP-02 Section 4) is added. The PBS v1.4.1 Section 6 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Related:** PBS-CONFORMANCE-01, PBS-SVC-01, PBS-LNIS-01, PBS-SEC-B-01, PBS-PNT-CTX-01, PBS-DTN-MAP-02, PBS-QOS-MAP-01
 
 ## 1. Purpose

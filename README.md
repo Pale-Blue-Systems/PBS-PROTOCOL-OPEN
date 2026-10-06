@@ -84,10 +84,10 @@ PBS envelopes are user-application data to the network services below them (PBS-
 
 PBS operates over IP, over BPv7, or through a gateway that selects between them (PBS-LNIS-01 Sections 2 and 4). Two optional specifications define carriage over BPv7. Neither supersedes the other. PBS-DTN-MAP-01 references PBS-DTN-MAP-02 Section 4 for the lifetime bound and Section 5 for the mapping profile of priority-based network treatment.
 
-- **PBS-DTN-MAP-01** (v1.5) defines a gateway translation between PBS-native domains and DTN domains. Each PBS envelope maps to exactly one bundle (Section 5.1). The complete envelope, 44-byte header and payload, is placed unmodified in a single BPv7 payload block (Section 6.2). The bundle lifetime does not exceed the time remaining until the envelope expires, and an envelope with TTL 0 takes the gateway's documented no-expiry lifetime (Sections 6.1 and 6.1.1). The gateway's bundle protocol agent assigns the creation timestamp (Section 6.1). No primary block field carries priority; a gateway that requests network treatment covers all five priority classes and documents the mechanism in a mapping profile (Section 6.3). Source IDs map deterministically to endpoint identifiers (Section 8).
+- **PBS-DTN-MAP-01** (v1.5) defines a gateway translation between PBS-native domains and DTN domains. Each PBS envelope maps to exactly one bundle (Section 5.1). The complete envelope, 44-byte header and payload, is placed unmodified in a single BPv7 payload block (Section 6.2). The bundle lifetime does not exceed the time remaining until the envelope expires, and an envelope with TTL 0 takes the gateway's documented no-expiry lifetime unless a PBS-DTN-MAP-02 Section 4 finite limit applies (Sections 6.1 and 6.1.1). The gateway's bundle protocol agent assigns the creation timestamp (Section 6.1). No primary block field carries priority; a gateway that requests network treatment covers all five priority classes and documents the mechanism in a mapping profile (Section 6.3). Source IDs map deterministically to endpoint identifiers (Section 8).
 - **PBS-DTN-MAP-02** (v1.5) defines carriage of v1.4 mission semantics over BPv7 for gateways and endpoints. One PBS protocol data unit SHOULD map to one BP application data unit (Section 2). Bundle lifetime SHALL be bounded by the remaining PBS deadline or expiry; when no finite limit applies it is the no-expiry lifetime documented in the mapping profile (Section 4). The adapter preserves PBS priority unchanged; network treatment is selected through BP QoS mechanisms and provider policy (Section 5). Section 6 maps Service Intent values to BPv7 adapter behavior.
 
-PBS-CONFORMANCE-01 Section 3.1 lists both PBS-DTN-MAP-01 and PBS-DTN-MAP-02 as optional. PBS-ADDR-01 and PBS-ROUTE-01 reference PBS-DTN-MAP-01. PBS-DTN-MAP-01, PBS-SVC-01, PBS-SEC-B-01, PBS-LNIS-01, PBS-QOS-MAP-01, PBS-CONFORMANCE-02 and the NASA FY26 traceability matrix reference PBS-DTN-MAP-02.
+PBS-CONFORMANCE-01 Section 3.1 lists both PBS-DTN-MAP-01 and PBS-DTN-MAP-02 as optional. PBS-ENV-01, PBS-ADDR-01 and PBS-ROUTE-01 reference PBS-DTN-MAP-01. PBS-DTN-MAP-01, PBS-SVC-01, PBS-SEC-B-01, PBS-LNIS-01, PBS-QOS-MAP-01, PBS-CONFORMANCE-02 and the NASA FY26 traceability matrix reference PBS-DTN-MAP-02.
 
 ---
 
@@ -114,7 +114,7 @@ Each alignment document identifies its external sources, summarizes what they st
 
 - The specifications are public under the Apache License 2.0.
 - PBS-GOV-01 Sections 2 and 3 separate stewardship of the specifications from commercial implementation.
-- Changes to PBS Core follow the RFC lifecycle of PBS-GOV-01 Section 5. A backward-incompatible change requires a new major version (PBS-GOV-01 Sections 5.2 and 6).
+- Changes to PBS Core follow the RFC lifecycle of PBS-GOV-01 Section 5. A backward-incompatible change requires a new major version, except a corrective change, which leaves the wire format unchanged and is released in a patch or minor version with migration guidance where needed (PBS-GOV-01 Sections 5.2 and 6).
 - Implementations may extend PBS above the protocol layer. Proprietary extensions are not PBS Core (PBS-GOV-01 Section 7).
 
 ---
@@ -197,11 +197,11 @@ Each alignment document identifies its external sources, summarizes what they st
 
 ## Status
 
-The current release is PBS v1.5.0 (<release date>), a corrective release (PBS-GOV-01 Section 5.2) that resolves the six known issues recorded in PBS v1.4.1. PBS v1.5.0 does not change the wire format; it changes relay, gateway and BPv7 mapping requirements, and [`PBS-PROTOCOL-CHANGELOG.md`](PBS-PROTOCOL-CHANGELOG.md) gives the migration.
+The current release is PBS v1.5.0 (2026-10-06), a corrective release (PBS-GOV-01 Section 5.2) that resolves the six known issues recorded in PBS v1.4.1. PBS v1.5.0 does not change the wire format; it changes relay, gateway and BPv7 mapping requirements, and [`PBS-PROTOCOL-CHANGELOG.md`](PBS-PROTOCOL-CHANGELOG.md) gives the migration.
 
 Each specification carries its own version, the minor release in which it last changed. Documents unchanged since v1.3 remain at 1.3 and documents unchanged since v1.4 remain at 1.4; an erratum does not change a specification's version. Errata are recorded in the header of each corrected specification (**Errata** line); a specification revised in v1.5.0 records its changes in a **Changes** line. Both are recorded in [`PBS-PROTOCOL-CHANGELOG.md`](PBS-PROTOCOL-CHANGELOG.md). Defects in normative text that v1.5.0 does not correct are listed under [Known issues](PBS-PROTOCOL-CHANGELOG.md#known-issues-not-corrected-in-v150).
 
-The specifications define wire formats and behavior independent of hardware, transport and implementation language. The 44-byte PBS-ENV-01 header structure and PBS Core semantics remain stable for all v1.x releases; a backward-incompatible change requires a new major version (PBS-CONFORMANCE-01 Section 12, PBS-GOV-01 Section 6).
+The specifications define wire formats and behavior independent of hardware, transport and implementation language. The 44-byte PBS-ENV-01 header structure and PBS Core semantics remain stable for all v1.x releases. A backward-incompatible change requires a new major version, except a corrective change, which leaves the wire format unchanged and is released in a patch or minor version with migration guidance where needed, as in PBS v1.5.0 (PBS-CONFORMANCE-01 Section 12, PBS-GOV-01 Sections 5.2 and 6).
 
 ---
 
