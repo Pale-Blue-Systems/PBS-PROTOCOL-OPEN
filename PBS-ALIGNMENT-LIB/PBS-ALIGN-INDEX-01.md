@@ -33,14 +33,14 @@ The purpose of this index is not to claim endorsement, but to demonstrate **stru
 |-------------|----------------|--------|------------------|
 | [PBS-ALIGN-NASA-LCRNS-01](PBS-ALIGN-NASA-LCRNS-01.md) | NASA LCRNS (Esper et al., SpaceOps 2025) | Lunar & Cislunar Networking | Identifies need for standardized, authority-aware relay and routing layers across lunar assets |
 | [PBS-ALIGN-NASA-LCRNS-02](PBS-ALIGN-NASA-LCRNS-02.md) | NASA LCRNS, LunaNet Interoperability Specification v5, FY26 Civil Space Shortfalls | Lunar Network Services | Maps PBS v1.4 mission semantics, service intent, authority and PNT context onto LunaNet network services |
-| [PBS-ALIGN-IEEE-AEROCONF-2025-01](PBS-ALIGN-IEEE-AEROCONF-2025.md) | IEEE Aerospace Conf. 2025 | Space Network Architecture | Validates modular, layered, non-monolithic comms architectures |
+| [PBS-ALIGN-IEEE-AEROCONF-2025-01](PBS-ALIGN-IEEE-AEROCONF-2025-01.md) | IEEE Aerospace Conf. 2025 | Space Network Architecture | Validates modular, layered, non-monolithic comms architectures |
 | [PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01](PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01.md) | IEEE Aerospace Conf. 2025 – Onboard Processing | Edge / Onboard Computing | Confirms shift toward autonomous, local processing with constrained backhaul |
 | [PBS-ALIGN-CARBONARA-TNTN-01](PBS-ALIGN-CARBONARA-TNTN-01.md) | Carbonara et al., *IEEE Open Journal of the Communications Society* (2025) | T/NTN Testbeds | Demonstrates necessity of interoperable overlays across heterogeneous networks |
 | [PBS-ALIGN-NTONTIN-6G-01](PBS-ALIGN-NTONTIN-6G-01.md) | Ntontin et al., *Proceedings of the IEEE* (2025) | 6G and Beyond Space Communications | Frames space systems as one heterogeneous, multi-domain, multi-stakeholder network |
 | [PBS-ALIGN-SPJ-LEO-2022-01](PBS-ALIGN-SPJ-LEO-2022-01.md) | Zhang et al., *Space: Science & Technology* (2022) | Orbital Congestion & Space Governance | Finds that LEO mega constellations make surveillance and governance among many independent operators necessary |
 | [PBS-ALIGN-TF-GOVERNANCE-2024-01](PBS-ALIGN-TF-GOVERNANCE-2024-01.md) | Beaumier et al., *Journal of European Public Policy* (2024) | Space Governance | Frames space as a fragmented, multi-actor domain requiring coordination without central authority |
 
-Requirements traceability for the v1.4 NASA alignment is in [`PBS-TRACE-NASA-FY26-01`](PBS-TRACE-NASA-FY26-01.md), under the engineering assignment [`PBS-ALIGN-ASSIGNMENT-NASA-FY26-01`](PBS-ALIGNMENT-ASSIGNMENT-NASA-FY26.md).
+Requirements traceability for the v1.4 NASA alignment is in [`PBS-TRACE-NASA-FY26-01`](PBS-TRACE-NASA-FY26-01.md), under the engineering assignment [`PBS-ALIGN-ASSIGNMENT-NASA-FY26-01`](PBS-ALIGN-ASSIGNMENT-NASA-FY26-01.md).
 
 ---
 

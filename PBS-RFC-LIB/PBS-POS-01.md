@@ -3,7 +3,7 @@
 
 **Status:** Optional Extension
 **Version:** 1.4
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 2, 3, 9 and 14 corrected to the v1.3 security model: the PBS-SEC-A-01 header CRC32 does not cover the payload, and POS frames are authenticated only when PBS-SEC-B-01 applies, replacing v1.0 text that assumed envelope authentication under PBS-SEC-A-01. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 2, 3, 9 and 14 corrected to the v1.3 security model (the PBS-SEC-A-01 header CRC32 does not cover the payload; POS frames are authenticated only when PBS-SEC-B-01 applies), replacing v1.0 text that assumed envelope authentication under PBS-SEC-A-01. Wire format unchanged.
 **Applies to:** Systems requiring position and presence signaling
 **Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01, PBS-PNT-CTX-01, PBS-SEC-B-01
 

@@ -4,7 +4,7 @@
 
 **Status:** Core
 **Version:** 1.4
-**Errata:** 2026-10-06 (PBS v1.4.1): Section 10 corrected to state that the Priority byte at offset 0x01 is covered by the header CRC32 (PBS-SEC-A-01) and is authenticated when PBS-SEC-B-01 applies (PBS-SECB-REQ-004), replacing v1.0 text that required envelope authentication of priority bits. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 10 corrected to state that the Priority byte at offset 0x01 is covered by the header CRC32 (PBS-SEC-A-01) and is authenticated when PBS-SEC-B-01 applies (PBS-SECB-REQ-004), replacing v1.0 text that required envelope authentication of priority bits; Section 15 traceability added. Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-ENV-01, PBS-ROUTE-01, PBS-SEC-A-01, PBS-SEC-B-01
 
@@ -214,3 +214,9 @@ PBS is designed for compatibility with DSN-serviced missions:
 - Commercial operators implementing PBS can integrate with DSN ground infrastructure.
 - PBS priority semantics align with DSN's safety-critical-first philosophy.
 - No DSN software modification is required; PBS operates within allocated link time.
+
+---
+
+## 15. Traceability
+
+PBS-PRIO-01 implements PBS-NASA-1309-002 and PBS-BPV7-002 from PBS-TRACE-NASA-FY26-01.

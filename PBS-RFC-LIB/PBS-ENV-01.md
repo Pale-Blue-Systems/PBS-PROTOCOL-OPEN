@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Section 4 CRC32 coverage corrected from bytes 0x00–0x27 to bytes 0x00–0x2B with the CRC32 field zeroed (as Section 13 states), Section 12.2 timestamp unit corrected to microseconds, Section 13.2 test vector added, and Section 19 linked to the PBS_LINK SDK. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 4 CRC32 coverage corrected from bytes 0x00–0x27 to bytes 0x00–0x2B with the CRC32 field zeroed (as Section 13 states), Section 12.2 timestamp unit corrected to microseconds, Section 13.2 test vector added, Section 19 linked to the PBS_LINK SDK, and Section 21 traceability added. Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-PRIO-01, PBS-SEC-A-01, PBS-CONFORMANCE-01
 
@@ -413,3 +413,9 @@ Key features:
 - 16-byte human-readable source identification
 
 This envelope provides a stable, efficient foundation for reliable communication across lunar surface networks, commercial space infrastructure, and deep-space relay systems.
+
+---
+
+## 21. Traceability
+
+PBS-ENV-01 implements PBS-NASA-1501-001 from PBS-TRACE-NASA-FY26-01.

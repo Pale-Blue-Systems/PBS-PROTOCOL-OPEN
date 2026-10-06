@@ -3,7 +3,7 @@
 
 **Status:** Optional Extension
 **Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 2, 3, 10 and 14 corrected to the v1.3 security model: the PBS-SEC-A-01 header CRC32 does not cover the payload, and CAPS frames are authenticated only when PBS-SEC-B-01 applies, replacing v1.0 text that assumed envelope authentication under PBS-SEC-A-01. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 2, 3, 10 and 14 corrected to the v1.3 security model (the PBS-SEC-A-01 header CRC32 does not cover the payload; CAPS frames are authenticated only when PBS-SEC-B-01 applies), replacing v1.0 text that assumed envelope authentication under PBS-SEC-A-01; Section 15 traceability added. Wire format unchanged.
 **Applies to:** Systems requiring capability advertisement
 **Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01, PBS-SEC-B-01
 
@@ -259,3 +259,9 @@ Rules:
 PBS-CAPS-01 defines a **flexible, optional capability advertisement model** for the PBS Open Standard.
 
 By allowing endpoints to advertise services, roles, resources, and constraints using TLV-encoded frames that PBS-SEC-B-01 authenticates when applied, PBS enables informed, cooperative behavior across distributed and delay-tolerant environments without central coordination.
+
+---
+
+## 15. Traceability
+
+PBS-CAPS-01 implements PBS-NASA-1309-003 from PBS-TRACE-NASA-FY26-01.
