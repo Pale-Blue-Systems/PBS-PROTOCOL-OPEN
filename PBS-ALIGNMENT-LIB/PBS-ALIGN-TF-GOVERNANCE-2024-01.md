@@ -7,16 +7,16 @@
 
 ## Aligned Work
 
-Taylor & Francis Online.  
-“[Article Title as Published].”  
-*Journal of European Public Policy*, 2024.  
+Beaumier, Guillaume, Cynthia Couette, and Jean-Frédéric Morin.  
+“Hybrid Organisations and Governance Systems: The Case of the European Space Agency.”  
+*Journal of European Public Policy*, vol. 32, no. 4, 2025, pp. 1004–1034 (published online 2024).  
 doi:10.1080/13501763.2024.2325647.
 
 ---
 
 ## Alignment Overview
 
-The Taylor & Francis (2024) paper examines outer space as a politically governed, institutionally fragmented domain characterized by the participation of states, commercial actors, and hybrid public–private entities. It emphasizes that contemporary space activity is shaped by overlapping jurisdictions, competing authorities, and evolving norms rather than centralized governance structures. Coordination, stability, and sustainability emerge through layered institutional, operational, and infrastructural mechanisms.
+Beaumier, Couette, and Morin (2024) examine outer space as a politically governed, institutionally fragmented domain characterized by the participation of states, commercial actors, and hybrid public–private entities. It emphasizes that contemporary space activity is shaped by overlapping jurisdictions, competing authorities, and evolving norms rather than centralized governance structures. Coordination, stability, and sustainability emerge through layered institutional, operational, and infrastructural mechanisms.
 
 Pale Blue Systems (PBS) aligns with this analysis by providing a governance-aware interoperability layer that enables policy-consistent coordination across independently governed space systems. PBS operationalizes institutional and political realities at the systems level, enabling cooperation without requiring centralized authority or uniform governance regimes.
 
@@ -81,10 +81,10 @@ PBS contributes to long-term stability by enabling predictable, auditable, and p
 
 ## Alignment Summary
 
-The Taylor & Francis (2024) analysis positions outer space as a fragmented, multi-actor governance environment in which coordination emerges through layered institutional and operational mechanisms rather than centralized authority. Pale Blue Systems aligns with this framework by providing a governance-aware interoperability layer that enables policy-consistent coordination across autonomous space systems, supporting sustainable, multi-actor operations in complex institutional landscapes.
+The Beaumier, Couette, and Morin (2024) analysis positions outer space as a fragmented, multi-actor governance environment in which coordination emerges through layered institutional and operational mechanisms rather than centralized authority. Pale Blue Systems aligns with this framework by providing a governance-aware interoperability layer that enables policy-consistent coordination across autonomous space systems, supporting sustainable, multi-actor operations in complex institutional landscapes.
 
 ---
 
 ## Citation (MLA)
 
-Taylor & Francis Online. “Article Title.” *Journal of European Public Policy*, 2024, doi:10.1080/13501763.2024.2325647.
+Beaumier, Guillaume, et al. “Hybrid Organisations and Governance Systems: The Case of the European Space Agency.” *Journal of European Public Policy*, vol. 32, no. 4, 2025, pp. 1004–1034, doi:10.1080/13501763.2024.2325647.
