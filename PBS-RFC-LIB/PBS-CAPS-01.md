@@ -3,8 +3,9 @@
 
 **Status:** Optional Extension
 **Version:** 1.3
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 2, 3, 10 and 14 corrected to the v1.3 security model (the PBS-SEC-A-01 header CRC32 does not cover the payload; CAPS frames are authenticated only when PBS-SEC-B-01 applies), replacing v1.0 text that assumed envelope authentication under PBS-SEC-A-01; Section 15 traceability added. Wire format unchanged.
 **Applies to:** Systems requiring capability advertisement
-**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01
+**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01, PBS-SEC-B-01
 
 ---
 
@@ -30,17 +31,17 @@ PBS-CAPS follows these principles:
 - **Deterministic parsing:** Capability data is self-describing and safely skippable.
 - **Low overhead:** Advertisements are compact and rate-limited.
 - **Scope awareness:** Capability meaning is interpreted within an authority scope.
-- **Authentication by envelope:** Capability data is authenticated end-to-end.
+- **Authentication by profile:** Capability data is authenticated end-to-end when PBS-SEC-B-01 applies.
 
 ---
 
 ## 3. CAPS as a MUX Frame
 
-Capability information is carried as a **PBS-MUX frame** within the authenticated envelope.
+Capability information is carried as a **PBS-MUX frame** within the envelope payload.
 
 Rules:
 - CAPS frames MUST be encapsulated within a PBS-MUX container (PBS-MUX-01).
-- CAPS frames inherit envelope authentication (PBS-SEC-A-01).
+- CAPS frames are authenticated when PBS-SEC-B-01 applies. The PBS-SEC-A-01 header CRC32 does not cover the payload.
 - Relays MUST NOT modify CAPS frames.
 - Relays MAY use CAPS data as a forwarding heuristic.
 
@@ -213,11 +214,11 @@ Routing semantics are defined in PBS-ROUTE-01.
 
 ## 10. Security Considerations
 
-CAPS data is authenticated as part of the envelope payload.
+CAPS data is part of the envelope payload. The PBS-SEC-A-01 header CRC32 does not cover it. PBS-SEC-B-01 authenticates it as application payload (PBS-SEC-B-01 Section 5).
 
 Rules:
 - CAPS frames MUST NOT be modified in transit.
-- Spoofed or altered capability data MUST be detectable via authentication.
+- When PBS-SEC-B-01 applies, spoofed or altered capability data MUST be rejected through authentication failure (PBS-SECB-REQ-002).
 - Implementations SHOULD treat CAPS data as informational unless verified by policy.
 
 ---
@@ -255,6 +256,12 @@ Rules:
 
 ## 14. Summary
 
-PBS-CAPS-01 defines a **flexible, optional capability advertisement model** for the PBS Open Standard.
+PBS-CAPS-01 defines an **optional capability advertisement model** for the PBS Open Standard.
 
-By allowing endpoints to advertise services, roles, resources, and constraints using authenticated, TLV-encoded frames, PBS enables informed, cooperative behavior across distributed and delay-tolerant environments without central coordination.
+Endpoints advertise service, role, resource, transport, security, and application-defined capabilities in TLV-encoded frames (Section 6). PBS-SEC-B-01 authenticates CAPS frames when applied; the PBS-SEC-A-01 header CRC32 does not cover them.
+
+---
+
+## 15. Traceability
+
+PBS-CAPS-01 implements PBS-NASA-1309-003 from PBS-TRACE-NASA-FY26-01.

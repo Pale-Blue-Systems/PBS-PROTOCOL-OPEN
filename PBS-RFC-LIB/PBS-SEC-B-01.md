@@ -3,6 +3,7 @@
 
 **Status:** Optional Security Profile
 **Version:** 1.4
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 9 cited LNIS requirement 008 by an identifier without its REQ segment, which matches no definition; it now cites PBS-LNIS-REQ-008, defined in PBS-LNIS-01 Section 3. Wire format unchanged.
 **Related:** PBS-ENV-01, PBS-AUTH-01, PBS-SVC-01, PBS-DTN-MAP-02
 
 ## 1. Purpose
@@ -74,4 +75,4 @@ When PBS is carried over BPv7, BPSec may provide bundle-layer integrity and conf
 
 ## 9. Traceability
 
-PBS-SEC-B-01 implements PBS-NASA-1503-001/002/003 and PBS-LNIS-008.
+PBS-SEC-B-01 implements PBS-NASA-1503-001/002/003 from PBS-TRACE-NASA-FY26-01 and PBS-LNIS-REQ-008 from PBS-LNIS-01.

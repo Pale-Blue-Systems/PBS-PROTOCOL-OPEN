@@ -3,6 +3,7 @@
 
 **Status:** Optional Extension
 **Version:** 1.3
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 3 and 4 corrected to the v1.3 envelope: the header carries no `scope` field, addresses are encoded in the envelope payload (Section 3.1), and TLV encoding applies to implementations of this optional extension rather than to all PBS implementations. Wire format unchanged.
 **Applies to:** Systems requiring explicit destination addressing
 **Related:** PBS-ENV-01, PBS-ROUTE-01, PBS-DTN-MAP-01
 
@@ -38,7 +39,7 @@ PBS addressing follows these core principles:
 
 ## 3. Authority Context and Scope
 
-All PBS addresses exist within an **authority context**, identified by the `scope` field in the PBS envelope (PBS-ENV-01).
+All PBS addresses exist within an **authority context** (scope). The PBS-ENV-01 v1.3 header carries no scope field; the scope is established by deployment configuration or by a PBS-AUTH-01 Authority Context frame.
 
 Rules:
 - A scope defines an independent administrative namespace.
@@ -60,7 +61,7 @@ Addressing extensions defined in this specification are carried at the payload l
 
 ## 4. Address Structure
 
-A PBS address is a structured identifier encoded within the PBS envelope.
+A PBS address is a structured identifier encoded within the PBS envelope payload (Section 3.1).
 
 ### 4.1 Canonical Wire Encoding (TLV)
 
@@ -76,7 +77,7 @@ Rules:
 - Parsers MUST read `type` and `length` before interpreting `value`.
 - Unknown `type` values MUST be safely ignored or rejected.
 - Multiple address TLVs MAY appear only where explicitly allowed by higher-level specifications.
-- TLV encoding applies uniformly across all PBS implementations.
+- TLV encoding applies uniformly across all implementations of this specification.
 
 ---
 
@@ -217,5 +218,3 @@ Rules:
 ## 14. Summary
 
 PBS-ADDR-01 defines a **scope-aware, TLV-encoded addressing model** for the PBS Open Standard.
-
-By enforcing a deterministic wire format while separating identity from routing and location, PBS addressing enables interoperable, multi-actor communication across space and extreme environments while allowing implementation-specific optimization above the protocol layer.

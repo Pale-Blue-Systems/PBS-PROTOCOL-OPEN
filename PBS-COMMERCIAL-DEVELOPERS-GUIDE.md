@@ -4,84 +4,72 @@
 
 **Status:** Informational  
 **Applies to:** Commercial, Industrial, and Infrastructure Developers Operating in Space, Lunar, and Extreme Environments  
-**Related:** PBS-OPEN-STANDARD.md, PBS-CONFORMANCE-01, PBS-ENV-01, PBS-DTN-MAP-01, PBS-REFERENCES-RESOURCES.md
+**Related:** PBS-OPEN-STANDARD.md, PBS-CONFORMANCE-01, PBS-ENV-01, PBS-DTN-MAP-01, PBS-DTN-MAP-02, PBS-LNIS-01, PBS-REFERENCES-RESOURCES.md
 
 ---
 
 ## 1. Purpose
 
-This document is written for **commercial developers, architects, and executive decision makers** designing systems intended to operate in space, on the Moon, in cislunar environments, or in other extreme and connectivity-challenged domains.
+This document is for **commercial developers, architects, and technical managers** building systems that operate in space, on the Moon, in cislunar space, or in other environments with delayed or intermittent connectivity.
 
-Its purpose is to explain:
+It explains:
 
-- what the Pale Blue Systems Open Standard (PBS) provides at a system level
-- how commercial systems integrate with PBS without sacrificing proprietary advantage
-- why a shared, open communication layer reduces risk and expands opportunity
-- how PBS aligns with current and future civil and commercial space architectures
+- what the Pale Blue Systems Open Standard (PBS) defines at a system level
+- how a commercial system integrates with PBS while keeping its internal design proprietary
+- which PBS specifications apply at each integration step
+- how PBS relates to NASA and LunaNet architectures
 
-This guide is non-marketing, non-promotional, and focused on **practical integration and value**.
+The normative requirements are in `PBS-RFC-LIB/`; this guide does not change them.
 
 ---
 
 ## 2. The Problem Commercial Developers Face
 
-As commercial activity expands beyond Earth, systems are increasingly required to operate in environments that differ fundamentally from terrestrial networks.
+Systems beyond Earth operate under conditions that terrestrial networks do not impose:
 
-Common challenges include:
 - intermittent or scheduled connectivity
 - long and variable communication delays
 - multiple independent operators sharing infrastructure
 - safety- and mission-critical data flows
 - integration with civil and international systems
 
-Historically, each mission or company has solved these challenges independently, often resulting in:
-- bespoke integration work
-- vendor lock-in
-- duplicated engineering effort
-- high long-term maintenance risk
-
-PBS exists to reduce these systemic frictions.
+Without a shared message format, each pair of operators must agree on bespoke conventions for identity, priority, lifetime and authority. PBS defines those conventions once, as public specifications.
 
 ---
 
-## 3. What PBS Provides (At a High Level)
+## 3. What PBS Provides
 
-PBS defines a **standardized communication layer** that sits between your internal systems and the underlying transport links used in space.
+PBS defines a **message envelope and extensions** between your internal systems and the transport links used in space.
 
-At a conceptual level, PBS answers:
-- how messages are identified across organizations
-- how data is packaged and authenticated
-- how priority is expressed and preserved
-- how systems operate when connections are delayed or unavailable
-- how commercial systems interface with civil DTN infrastructure when required
+PBS specifies:
 
-PBS does **not** dictate how your internal systems are built, how your software works, or how your business differentiates itself.
+- how a message identifies its source: the 16-byte Source ID of PBS-ENV-01, with optional authority context (PBS-AUTH-01) and addressing (PBS-ADDR-01)
+- how a message is packaged and integrity-checked: a fixed 44-byte header protected by a CRC32 (PBS-ENV-01, PBS-SEC-A-01), with cryptographic authentication when the PBS-SEC-B-01 profile applies
+- how priority is expressed and preserved: five classes, 0 CRITICAL to 4 BULK, in the header byte at offset 0x01 (PBS-PRIO-01)
+- how a message behaves when connections are delayed or unavailable: TTL and timestamp (PBS-ENV-01), Service Intent persistence, deadline and disruption policy (PBS-SVC-01)
+- how PBS is carried over DTN/BPv7 and LunaNet services (PBS-DTN-MAP-01, PBS-DTN-MAP-02, PBS-LNIS-01)
+
+PBS does **not** dictate how your internal systems are built.
 
 ---
 
-## 4. PBS as an “Outside Language” for Your Systems
-
-For commercial developers, the most important design concept is this:
+## 4. PBS as an External Interface
 
 **PBS is an external interoperability layer.**
 
 Your system:
 - continues to use proprietary data models internally
-- retains full control over routing, optimization, and intelligence
+- retains full control over routing, optimization, and autonomy
 - exposes only what is necessary at the PBS boundary
 
-PBS provides a **common language at the edges**, enabling your system to:
-- communicate with other vendors
+At that boundary PBS gives your system a common format to:
+- exchange data with other operators' systems
 - integrate with civil infrastructure
-- participate in shared environments without custom adapters
-
-This model is analogous to how IP enabled the internet while allowing companies to build proprietary applications on top.
+- operate in shared environments without a separate adapter per partner
 
 ---
 
 ## 5. Where PBS Fits in a Commercial Architecture
-
-A typical commercial integration looks like this:
 
 ```text
       Your Applications & Services
@@ -89,16 +77,15 @@ A typical commercial integration looks like this:
                  ▲
                  |
       PBS Interface Layer
-(Envelope, Addressing, Priority,
- Security, Optional Extensions)
+(Envelope, Priority, Integrity,
+ Optional Extensions)
                  ▲
                  |
     Radios / Lasers / Relays /
    DTN Gateways / Ground Links
 ```
 
-PBS does not replace your applications or transports.
-It standardizes the **contract between them**.
+PBS standardizes the **contract between applications and transports**. It replaces neither.
 
 ---
 
@@ -112,16 +99,21 @@ Determine where external communication leaves your system:
 - shared infrastructure
 - civil or international gateways
 
-This is where PBS is applied.
+PBS applies at these points.
 
 ---
 
-### Step 2: Map Internal Data to PBS Envelopes
+### Step 2: Build PBS Envelopes
 
 At the boundary:
-- wrap outgoing data in a PBS envelope
-- assign addresses, scope, and priority
-- authenticate the message
+- wrap outgoing data in a PBS envelope: the 44-byte PBS-ENV-01 header (Magic `0x10`, Priority, Flags, Sequence, Source ID, Timestamp in Unix microseconds, payload Size, TTL in seconds, CRC32) followed by the payload
+- set the Priority class (PBS-PRIO-01 Section 4) and TTL
+- compute the CRC32 over header bytes 0x00–0x2B with the CRC32 field set to zero (PBS-ENV-01 Section 13.1)
+- add optional extensions where the mission profile requires them: Service Intent (PBS-SVC-01), authority context (PBS-AUTH-01), authenticated mission messaging (PBS-SEC-B-01), PNT context (PBS-PNT-CTX-01)
+
+The header CRC32 does not cover the payload and provides no authentication (PBS-ENV-01 Section 16.2, PBS-SEC-A-01). Payload integrity and authentication come from PBS-SEC-B-01 or the application.
+
+The PBS_LINK Python SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.2; `from PBS_LINK import PBSLink`) implements the PBS-ENV-01 envelope.
 
 Internally, your data remains unchanged.
 
@@ -129,41 +121,39 @@ Internally, your data remains unchanged.
 
 ### Step 3: Optional Capability and Presence Signaling
 
-If useful to your operation:
+Where your operation requires it:
 - advertise capabilities (PBS-CAPS-01)
-- provide presence or proximity signals (PBS-POS-01)
+- provide presence or position signals (PBS-POS-01)
 
-These are optional and policy-controlled.
-
----
-
-### Step 4: DTN Interoperability (When Required)
-
-If your system interfaces with civil DTN infrastructure:
-- use PBS-DTN-MAP-01 at the gateway
-- preserve PBS semantics internally
-- translate only at the boundary
-
-Your system does not need to be DTN-native to interoperate.
+Both are optional and policy-controlled.
 
 ---
 
-## 7. Why PBS Reduces Commercial Risk
+### Step 4: DTN and LunaNet Interoperability
 
-Adopting PBS provides measurable risk reduction:
+If your system interfaces with DTN infrastructure:
+- PBS-DTN-MAP-01 defines a gateway translation that places each complete envelope unmodified in one BPv7 payload block
+- PBS-DTN-MAP-02 defines BPv7 carriage of v1.4 mission semantics, with bundle lifetime bounded by the PBS deadline or expiry
+- PBS-LNIS-01 defines operation over LunaNet IP and BPv7 network services
 
-- **Integration risk:** Reduced need for bespoke partner integrations
-- **Regulatory risk:** Alignment with architectures recognized by civil agencies
-- **Vendor risk:** Freedom to change internal implementations without breaking interoperability
-- **Longevity risk:** Stability across multi-decade mission horizons
-
-PBS shifts interoperability from a per-partner cost to a shared infrastructure benefit.
+Your internal systems do not need to be DTN-native; translation happens at the gateway.
 
 ---
 
-## 8. Why PBS Preserves Competitive Advantage
+## 7. Risk Reduction
 
-PBS intentionally standardizes **inputs and outputs**, not internal behavior.
+PBS changes integration cost and dependency in specific ways:
+
+- **Integration:** one published envelope format replaces per-partner conventions
+- **Vendor dependency:** internal implementations can change without changing the PBS interface
+- **Stability:** the 44-byte header and PBS Core semantics are stable for all v1.x releases (PBS-CONFORMANCE-01 Section 12)
+- **Verification:** conformance requirements are public (PBS-CONFORMANCE-01, PBS-CONFORMANCE-02)
+
+---
+
+## 8. What Remains Proprietary
+
+PBS standardizes **inputs and outputs**, not internal behavior.
 
 What remains proprietary:
 - routing algorithms
@@ -172,36 +162,32 @@ What remains proprietary:
 - performance tuning
 - commercial service models
 
-Two PBS-compliant systems can interoperate while competing aggressively on quality, efficiency, and intelligence.
+Two PBS-conformant systems interoperate at the PBS boundary while differing in all of the above.
 
 ---
 
-## 9. Executive Considerations
+## 9. Considerations for Technical Management
 
-For commercial leadership, PBS adoption supports:
+PBS adoption affects:
 
-- faster partner onboarding
-- lower long-term integration cost
-- improved readiness for government and international collaboration
-- participation in shared lunar and cislunar infrastructure
-- alignment with future exploration architectures
-
-PBS should be viewed as **infrastructure insurance** for a growing space economy.
+- partner onboarding: a partner that implements PBS needs no bespoke message format
+- integration cost: one interface implementation serves multiple partners
+- NASA/LunaNet traceability: PBS v1.4 traces to NASA FY26 need statements 13.09, 15.01, 15.03 and 24.05 and to LNIS V005 (PBS-TRACE-NASA-FY26-01). No PBS-CONFORMANCE-02 verification records are published.
 
 ---
 
-## 10. Validation and References
+## 10. References
 
-PBS is informed by and aligned with:
-- NASA-identified technology shortfalls
-- DTN and CCSDS standards
-- active lunar and Mars exploration architectures
-- commercial and international space initiatives
+PBS v1.4 traces to:
+- NASA *FY26 Civil Space Shortfall Prioritization* need statements 13.09, 15.01, 15.03 and 24.05 (PBS-TRACE-NASA-FY26-01)
+- LunaNet Interoperability Specification Version 5 (PBS-LNIS-01)
+- IETF RFC 9171, Bundle Protocol Version 7 (PBS-DTN-MAP-01, PBS-DTN-MAP-02)
 
-Developers and decision makers are encouraged to review:
+Start with:
 - `PBS-OPEN-STANDARD.md`
-- `PBS-CONFORMANCE-01.md`
-- `PBS-DTN-MAP-01.md`
+- `PBS-RFC-LIB/PBS-ENV-01.md`
+- `PBS-RFC-LIB/PBS-CONFORMANCE-01.md`
+- `PBS-RFC-LIB/PBS-DTN-MAP-02.md`
 - `PBS-REFERENCES-RESOURCES.md`
 
 All referenced documents are publicly available.
@@ -210,13 +196,4 @@ All referenced documents are publicly available.
 
 ## 11. Summary
 
-PBS provides a **neutral, open communication standard** that allows commercial systems to operate independently while interoperating globally.
-
-By adopting PBS as an external communication layer, commercial developers gain access to a broader ecosystem—civil, commercial, and international—without surrendering control, differentiation, or intellectual property.
-
-PBS enables a future where **innovation scales because communication is shared, predictable, and trusted**.
-
----
-
-**Pale Blue Systems Open Standard**
-A common language for interoperable systems beyond Earth.
+PBS is an open communication standard that commercial systems implement at their external interfaces. Inside that boundary, each system keeps its own design, data models and intellectual property.

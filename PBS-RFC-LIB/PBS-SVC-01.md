@@ -3,6 +3,7 @@
 
 **Status:** Optional Extension
 **Version:** 1.4
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 13 traceability adds PBS-NASA-1501-001 and PBS-NASA-1501-003, which PBS-TRACE-NASA-FY26-01 allocates to this specification. Wire format unchanged.
 **Applies to:** PBS systems requiring explicit mission delivery semantics
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-MUX-01, PBS-SEC-B-01, PBS-DTN-MAP-02, PBS-LNIS-01
 
@@ -134,4 +135,4 @@ The disposition SHALL be observable to mission software when acknowledgement or 
 
 ## 13. Traceability
 
-PBS-SVC-01 implements PBS-NASA-1309-001/002, PBS-NASA-1503-004/005, PBS-LNIS-001/002, and PBS-BPV7-001 from PBS-TRACE-NASA-FY26-01.
+PBS-SVC-01 implements PBS-NASA-1501-001/003, PBS-NASA-1309-001/002, PBS-NASA-1503-004/005, PBS-LNIS-001/002, and PBS-BPV7-001 from PBS-TRACE-NASA-FY26-01.

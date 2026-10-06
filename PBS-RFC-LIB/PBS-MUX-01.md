@@ -3,6 +3,7 @@
 
 **Status:** Optional Extension
 **Version:** 1.4
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 3 corrected so that the MUX container applies only when PBS-MUX-01 is used (PBS-ENV-01 v1.3 payloads are application-defined), and Section 6 corrected to match PBS-PRIO-01 Sections 3 and 9: frames inherit the envelope priority and carry no independent priority value. Wire format unchanged.
 **Applies to:** Systems requiring structured payload multiplexing
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01
 
@@ -32,7 +33,7 @@ PBS-MUX is designed to:
 
 ## 3. MUX Container Overview
 
-The PBS payload carried in the envelope (`payload` field in PBS-ENV-01) SHALL be a **PBS-MUX container**.
+When an implementation uses PBS-MUX, the envelope payload (PBS-ENV-01 Section 16) SHALL be a **PBS-MUX container**. PBS-ENV-01 does not require a MUX container; without PBS-MUX, payload content is application-defined.
 
 The MUX container consists of:
 - a container header
@@ -162,11 +163,11 @@ Rules:
 
 ## 6. Priority Interaction
 
-Frame-level priority MAY be expressed implicitly or explicitly.
+All frames inherit the envelope priority class (PBS-PRIO-01 Section 3).
 
 Rules:
 - Envelope-level priority applies to the container as a whole.
-- Frame-level priority semantics are defined in PBS-PRIO-01.
+- Frames MUST NOT carry independent priority values (PBS-PRIO-01 Section 9).
 - Implementations MAY reorder frames internally only if semantics allow.
 
 ---
@@ -219,5 +220,3 @@ Rules:
 ## 11. Summary
 
 PBS-MUX-01 defines a **TLV-based multiplexing container** for PBS payloads.
-
-By allowing multiple independent semantic frames to share a single envelope while preserving deterministic parsing, skipping, and padding behavior, PBS-MUX enables efficient, resilient communication across constrained and delay-tolerant environments.

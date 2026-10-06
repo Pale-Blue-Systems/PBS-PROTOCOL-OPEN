@@ -3,6 +3,7 @@
 
 **Status:** Core
 **Version:** 1.3
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.3 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B (44 bytes) with the CRC32 field zeroed, as PBS-ENV-01 Section 13 and PBS-SEC-A-01 Section 3 specify; Section 3 updated to cite PBS-PRIO-01 v1.4 (PBS-PRIO-01 v1.4 added no MUST requirements to v1.3; PBS-PRIO-01 Section 10 is corrected by its own v1.4.1 erratum), to list PBS-ADDR-01 and PBS-MUX-01 as optional, as the v1.3.0 changelog records, to list the seven optional specifications added in v1.4, and to use each specification's declared title, and to refer implementations claiming the v1.4 alignment profile to PBS-CONFORMANCE-02; Section 11.1 linked to the PBS_LINK SDK. Wire format unchanged.
 **Applies to:** All PBS Core Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01
 
@@ -39,8 +40,8 @@ A PBS Core conformant implementation MUST correctly implement the following spec
 | Specification | Description | Status |
 |---------------|-------------|--------|
 | PBS-ENV-01 v1.3 | Core Message Envelope (44-byte header) | Mandatory |
-| PBS-PRIO-01 v1.3 | Priority Classification | Mandatory |
-| PBS-SEC-A-01 v1.3 | Integrity Verification (CRC32) | Mandatory |
+| PBS-PRIO-01 v1.4 | Priority Classification and Deterministic Handling | Mandatory |
+| PBS-SEC-A-01 v1.3 | Integrity Verification and Security Boundaries (CRC32) | Mandatory |
 
 ### 3.1 Optional Specifications
 
@@ -48,12 +49,23 @@ Implementations MAY additionally support:
 
 | Specification | Description | Status |
 |---------------|-------------|--------|
+| PBS-ADDR-01 | Addressing and Identification | Optional |
+| PBS-MUX-01 | Payload Multiplexing and Semantic Framing | Optional |
 | PBS-ROUTE-01 | Routing and Forwarding Semantics | Optional |
-| PBS-DTN-MAP-01 | DTN/BPv7 Mapping | Optional |
+| PBS-DTN-MAP-01 | Mapping to Delay/Disruption Tolerant Networking (DTN) | Optional |
 | PBS-POS-01 | Position and Presence Signaling | Optional |
-| PBS-CAPS-01 | Capability Advertisement | Optional |
+| PBS-CAPS-01 | Capability Advertisement and Discovery | Optional |
+| PBS-SVC-01 | Mission Service Intent | Optional |
+| PBS-AUTH-01 | Authority and Scope Context | Optional |
+| PBS-SEC-B-01 | Authenticated Mission Messaging | Optional |
+| PBS-PNT-CTX-01 | Position, Navigation, and Timing Context | Optional |
+| PBS-LNIS-01 | LunaNet Application Alignment Profile | Optional |
+| PBS-DTN-MAP-02 | Mapping to BPv7 Delay/Disruption Tolerant Networking | Optional |
+| PBS-QOS-MAP-01 | Mission Intent to Network Treatment Mapping | Optional |
 
 Optional specifications MUST be implemented fully if claimed.
+
+PBS-CONFORMANCE-02 defines the verification requirements for implementations claiming the PBS v1.4 NASA/LunaNet alignment profile.
 
 ---
 
@@ -83,7 +95,7 @@ Implementations MUST:
 - Set Magic to `0x10`
 - Set Priority to valid value (0–4)
 - Set reserved bytes to `0x00`
-- Calculate CRC32 correctly over bytes 0x00–0x27
+- Calculate CRC32 over header bytes 0x00–0x2B (44 bytes) with the CRC32 field (0x28–0x2B) set to zero, and store it big-endian at 0x28 (PBS-ENV-01 Section 13.1)
 - Encode Source ID as null-padded UTF-8
 
 ---
@@ -96,7 +108,7 @@ PBS Core v1.3 conformance REQUIRES support for CRC32 integrity verification.
 
 Implementations MUST:
 - Calculate CRC32 using IEEE 802.3 polynomial (0xEDB88320, reflected)
-- Compute CRC32 over header bytes 0x00–0x27 (40 bytes)
+- Compute CRC32 over header bytes 0x00–0x2B (44 bytes) with the CRC32 field (0x28–0x2B) set to zero
 - Verify CRC32 before processing any envelope
 - Discard envelopes failing CRC32 verification
 
@@ -183,9 +195,12 @@ Interoperability does not imply identical performance or routing behavior.
 
 ### 11.1 Reference Implementation
 
-The PBS-LINK SDK provides a reference implementation of PBS-ENV-01 v1.3:
-- Python implementation in `PBS_LINK/core.py`
-- Test vectors in `TESTS/test_torture.py`
+The PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.2) implements PBS-ENV-01 v1.3 in Python. The import package is `PBS_LINK` (`from PBS_LINK import PBSLink`).
+
+- Envelope encoder and parser: `PBS_LINK/core.py`
+- Unit tests (55): `TESTS/test_torture.py`
+
+PBS-ENV-01 Section 13.2 provides a CRC32 test vector.
 
 ### 11.2 Conformance Testing
 
@@ -236,4 +251,4 @@ Key requirements:
 - Sequence-based gap detection
 - Big-endian, 4-byte aligned encoding
 
-By establishing deterministic parsing rules, mandatory CRC32 verification, and clear conformance boundaries, this document ensures that PBS Core remains reliable infrastructure while allowing innovation above the protocol layer.
+This document defines the parsing, CRC32 verification and conformance-claim rules for PBS Core implementations.

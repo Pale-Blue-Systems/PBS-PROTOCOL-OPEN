@@ -3,8 +3,9 @@
 
 **Status:** Core
 **Version:** 1.3
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.1 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B with the CRC32 field zeroed, matching Sections 3.1–3.2 and PBS-ENV-01 Section 13.1, and Sections 8 and 11 updated to reference PBS-SEC-B-01 (PBS v1.4). Wire format unchanged.
 **Applies to:** All PBS Core Messages
-**Related:** PBS-ENV-01, PBS-PRIO-01, PBS-CONFORMANCE-01
+**Related:** PBS-ENV-01, PBS-PRIO-01, PBS-CONFORMANCE-01, PBS-SEC-B-01
 
 ---
 
@@ -46,7 +47,8 @@ The `CRC32` field at offset `0x28` provides integrity verification for the heade
 Rules:
 - CRC32 uses the standard IEEE 802.3 polynomial (0xEDB88320, reflected).
 - CRC32 is computed over header bytes 0x00–0x2B (44 bytes) with the CRC32 field set to zero.
-- Result is stored as a 32-bit unsigned integer, big-endian.
+- Result is stored as a 32-bit unsigned integer, big-endian, at 0x28–0x2B.
+- The CRC32 does not cover the payload (Section 10).
 
 ### 3.3 CRC32 Limitations
 
@@ -68,10 +70,12 @@ Receivers MUST verify CRC32 before processing any envelope.
 
 ### 4.1 Verification Steps
 
-1. Read 44-byte header
-2. Extract CRC32 value from offset 0x28
-3. Calculate CRC32 over bytes 0x00–0x27
-4. Compare calculated value with extracted value
+The receiver procedure is identical to PBS-ENV-01 Section 13.1:
+
+1. Extract CRC32 value from bytes 0x28–0x2B
+2. Set bytes 0x28–0x2B to `0x00000000`
+3. Compute CRC32 over all 44 bytes
+4. Compare computed value with extracted value
 5. Discard envelope if values do not match
 
 ### 4.2 Failure Handling
@@ -99,9 +103,10 @@ Rules:
 When a relay modifies the TTL field:
 
 1. Decrement TTL value at offset 0x24
-2. Recalculate CRC32 over bytes 0x00–0x27
-3. Update CRC32 field at offset 0x28
-4. Forward envelope
+2. Set bytes 0x28–0x2B to `0x00000000`
+3. Compute CRC32 over all 44 bytes
+4. Write computed CRC32 value into bytes 0x28–0x2B (big-endian)
+5. Forward envelope
 
 ---
 
@@ -168,7 +173,7 @@ PBS-SEC-A-01 addresses the following threats:
 | Source spoofing | Extension required | Not baseline |
 | Replay attacks | Extension required | Not baseline |
 
-For deployments requiring protection against malicious actors, cryptographic extensions (Section 7) are REQUIRED.
+For deployments requiring protection against malicious actors, cryptographic authentication (Section 7 or PBS-SEC-B-01) is REQUIRED.
 
 ---
 
@@ -201,7 +206,8 @@ Payload security is application-defined and outside the scope of PBS Core.
 Rules:
 - CRC32 integrity verification SHALL remain mandatory for PBS Core v1.x.
 - Cryptographic extensions MUST NOT alter baseline header structure.
-- Future security models MAY be defined as PBS-SEC-B-01, PBS-SEC-C-01, etc.
+- PBS-SEC-B-01 (PBS v1.4) defines authenticated mission messaging as an optional security profile.
+- Further security models MAY be defined as additional PBS-SEC specifications.
 
 ---
 

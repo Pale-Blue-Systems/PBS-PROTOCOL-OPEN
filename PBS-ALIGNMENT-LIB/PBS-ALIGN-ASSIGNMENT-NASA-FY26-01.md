@@ -1,14 +1,13 @@
 # PBS Alignment Assignment — NASA FY26 Civil Space Shortfalls / LunaNet
 
 **Document ID:** PBS-ALIGN-ASSIGNMENT-NASA-FY26-01  
-**Status:** Active Engineering Assignment  
+**Status:** Delivered in PBS v1.4 (2026-09-22; pull request #1, git tag v1.4.0)  
 **Baseline Date:** 2026-09-22  
-**Protocol Baseline:** PBS Core v1.3  
-**Working Branch:** `alignment/nasa-fy26-lunanet`
+**Protocol Baseline:** PBS v1.3 (git tag v1.3.0)
 
 ## 1. Goal
 
-The Pale Blue Systems Protocol (PBS) defines the open **mission-semantic interoperability standard** for heterogeneous lunar, cislunar, and deep-space systems operating across LunaNet-compatible IP and DTN/BPv7 network services.
+The Pale Blue Systems Protocol (PBS) defines an open **mission-semantic interoperability standard** for heterogeneous lunar, cislunar, and deep-space systems operating across LunaNet-compatible IP and DTN/BPv7 network services.
 
 PBS carries stable mission meaning across transport and provider boundaries, including identity and authority context, service intent, priority, freshness, delivery semantics, security requirements, capability context, PNT context, and deterministic degradation behavior.
 
@@ -38,12 +37,14 @@ PBS provides the application-facing semantic contract used consistently across n
 
 ## 3. NASA Need Traceability Baseline
 
-| Need ID | NASA need | PBS alignment objective |
+Need IDs and need statements are quoted from NASA's *FY26 Civil Space Shortfall Prioritization*, Appendix A (Section 7, source 1). Each need statement belongs to one of the 32 shortfall categories in that document.
+
+| Need ID | NASA need statement | PBS alignment objective |
 |---|---|---|
-| 15.01 | Scalable, reliable lunar surface-to-surface communications usable by participating elements | Common mission-semantic envelope and service-intent contract across surface links and LunaNet access points |
-| 13.09 | Advanced networking for multi-spacecraft responsive operations | Transport-independent service intent, priority, freshness, capability, acknowledgement, and deterministic handling semantics |
-| 15.03 | Secure command/control across high-latency, bandwidth-constrained networks and reliable automated safing | Authenticated authority context, replay protection, command delivery semantics, deadlines, acknowledgements, and deterministic handling |
-| 24.05 | Scalable lunar PNT architecture | Reference-frame, time-reference, provenance, uncertainty, validity, and PNT-context bindings carried with mission data |
+| 15.01 | “Provide scalable, reliable surface-to-surface communications between assets on the lunar surface that is usable by all participating elements.” | Common mission-semantic envelope and service-intent contract across surface links and LunaNet access points |
+| 13.09 | “Provide advanced networking needed for multi-spacecraft responsive space operations.” | Transport-independent service intent, priority, freshness, capability, acknowledgement, and deterministic handling semantics |
+| 15.03 | “Achieve safe, efficient human-robot interactions for exploration missions, secure command and control over high-latency, bandwidth-limited networks, or implement reliable automated safing sequences.” | Authenticated authority context, replay protection, command delivery semantics, deadlines, acknowledgements, and deterministic handling |
+| 24.05 | “Develop a lunar position, navigation, and timing architecture capable of scaling to long term operational needs.” | Reference-frame, time-reference, provenance, uncertainty, validity, and PNT-context bindings carried with mission data |
 
 ## 4. Work Packages
 
@@ -85,7 +86,7 @@ Every normative requirement:
 
 ## 6. Acceptance Criteria
 
-The assignment reaches review-ready status when:
+Acceptance criteria:
 
 - each targeted NASA need has bidirectional traceability to PBS requirements;
 - the PBS/LunaNet interface is explicit and testable;
@@ -98,14 +99,14 @@ The assignment reaches review-ready status when:
 
 ## 7. Authoritative Source Set
 
-1. NASA. *FY26 Civil Space Shortfall Prioritization*. May 2026.
-2. NASA, ESA, JAXA. *LunaNet Interoperability Specification*, LNIS V005, 29 Jan. 2025.
-3. NASA Goddard Space Flight Center. *Lunar Communications Relay and Navigation Systems (LCRNS)*.
-4. NASA SCaN. *Delay/Disruption Tolerant Networking* operational service documentation.
-5. NASA Small Spacecraft Technology. *PExT Primary Mission Completion and Extended Operations*, June 2026.
-6. NASA. *Moon Base Systems* communications and PNT architecture, 2026.
-7. IETF. RFC 9171, *Bundle Protocol Version 7*.
-8. CCSDS. Applicable BPv7, BPSec, and quality-of-service specifications and working materials.
+1. NASA Space Technology Mission Directorate. *FY26 Civil Space Shortfall Prioritization*. May 2026. <https://www.nasa.gov/wp-content/uploads/2026/05/fy26-civil-space-shortfall-prioritization.pdf>
+2. NASA, ESA, and JAXA. *LunaNet Interoperability Specification Document*, Version 5 (LNIS V005), Baseline, 29 January 2025. <https://www.nasa.gov/wp-content/uploads/2025/02/lunanet-interoperability-specification-v5-baseline.pdf>
+3. NASA Goddard Space Flight Center, Exploration and Space Communications. *LCRNS*. <https://www.nasa.gov/goddard/esc/lcrns/>; Esper, J., G. Heckler, J. Verville, and G. Ryden. “NASA’s Lunar Communications Relay and Navigation Systems (LCRNS).” SpaceOps 2025. <https://ntrs.nasa.gov/citations/20250003321>
+4. NASA Space Communications and Navigation. *Delay/Disruption Tolerant Networking*. <https://www.nasa.gov/communicating-with-missions/delay-disruption-tolerant-networking/>
+5. Kearns, M. “NASA Wideband Demo Completes Primary Mission, Extends Operations” (PExT). NASA, 1 June 2026. <https://www.nasa.gov/blogs/smallsatellites/2026/06/01/nasa-wideband-demo-completes-primary-mission-extends-operations/>
+6. NASA. *2026 Civil Space Shortfalls*. Released 12 January 2026. <https://www.nasa.gov/wp-content/uploads/2026/03/2026-civil-space-shortfalls.pdf>
+7. IETF. RFC 9171, *Bundle Protocol Version 7*, and RFC 9172, *Bundle Protocol Security (BPSec)*. <https://www.rfc-editor.org/rfc/rfc9171>, <https://www.rfc-editor.org/rfc/rfc9172>
+8. CCSDS 734.2-P-1.1, *CCSDS Bundle Protocol Specification* (draft Recommended Standard), cited by LNIS V005 as applicable document [AD19].
 
 ## 8. Configuration Management
 

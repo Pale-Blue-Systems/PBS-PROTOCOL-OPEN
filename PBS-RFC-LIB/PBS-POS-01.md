@@ -3,8 +3,9 @@
 
 **Status:** Optional Extension
 **Version:** 1.4
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 2, 3, 9 and 14 corrected to the v1.3 security model (the PBS-SEC-A-01 header CRC32 does not cover the payload; POS frames are authenticated only when PBS-SEC-B-01 applies), replacing v1.0 text that assumed envelope authentication under PBS-SEC-A-01. Wire format unchanged.
 **Applies to:** Systems requiring position and presence signaling
-**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01
+**Related:** PBS-ENV-01, PBS-MUX-01, PBS-ROUTE-01, PBS-PNT-CTX-01, PBS-SEC-B-01
 
 ---
 
@@ -30,17 +31,17 @@ PBS-POS follows these principles:
 - **Graceful degradation:** Communication remains operational with absent or imprecise position data.
 - **Low overhead:** POS messages are compact and efficient.
 - **Transport independence:** POS semantics are independent of physical positioning systems.
-- **Authentication by envelope:** POS data is authenticated as part of the payload.
+- **Authentication by profile:** POS data is authenticated as part of the payload when PBS-SEC-B-01 applies.
 
 ---
 
 ## 3. POS as a MUX Frame
 
-POS information is carried as a **PBS-MUX frame** within the authenticated envelope.
+POS information is carried as a **PBS-MUX frame** within the envelope payload.
 
 Rules:
 - POS frames MUST be encapsulated within a PBS-MUX container (PBS-MUX-01).
-- POS frames inherit envelope authentication (PBS-SEC-A-01).
+- POS frames are authenticated when PBS-SEC-B-01 applies. The PBS-SEC-A-01 header CRC32 does not cover the payload.
 - Relays MUST NOT modify POS frames.
 
 ---
@@ -180,11 +181,11 @@ Routing semantics are defined in PBS-ROUTE-01.
 
 ## 9. Security Considerations
 
-POS data is authenticated as part of the envelope payload.
+POS data is part of the envelope payload. The PBS-SEC-A-01 header CRC32 does not cover it. PBS-SEC-B-01 authenticates it as application payload (PBS-SEC-B-01 Section 5).
 
 Rules:
 - POS frames MUST NOT be modified in transit.
-- Spoofed or altered POS data MUST be detectable via authentication.
+- When PBS-SEC-B-01 applies, spoofed or altered POS data MUST be rejected through authentication failure (PBS-SECB-REQ-002).
 - Implementations SHOULD minimize exposure of sensitive positional data via policy.
 
 Position accuracy trust is established through PBS-PNT-CTX provenance, uncertainty, validity, and mission policy.
@@ -230,6 +231,6 @@ Coordinate-bearing POS frames crossing an interoperability boundary SHALL includ
 
 ## 14. Summary
 
-PBS-POS-01 defines a **flexible, low-overhead Position and Presence signaling model** for the PBS Open Standard.
+PBS-POS-01 defines a **Position and Presence signaling model** for the PBS Open Standard.
 
-By encoding POS updates as TLV within authenticated envelopes and separating presence, stability, proximity, and coordinate signaling, PBS enables proximity-aware behavior while maintaining interoperability under partial or absent positioning data.
+POS updates are TLV-encoded in the envelope payload. Presence, stationary markers, coordinate position, and proximity hints are separate POS data types (Section 6). PBS-SEC-B-01 authenticates POS frames when applied; the PBS-SEC-A-01 header CRC32 does not cover them.
