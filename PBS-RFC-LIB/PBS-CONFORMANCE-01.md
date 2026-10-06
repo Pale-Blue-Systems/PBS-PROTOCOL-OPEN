@@ -195,7 +195,7 @@ Interoperability does not imply identical performance or routing behavior.
 
 ### 11.1 Reference Implementation
 
-The PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.2) implements PBS-ENV-01 v1.3 in Python. The import package is `PBS_LINK` (`from PBS_LINK import PBSLink`).
+The PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.3) implements PBS-ENV-01 v1.3 in Python. The import package is `PBS_LINK` (`from PBS_LINK import PBSLink`).
 
 - Envelope encoder and parser: `PBS_LINK/core.py`
 - Unit tests (55): `TESTS/test_torture.py`

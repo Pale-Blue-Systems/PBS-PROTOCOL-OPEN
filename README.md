@@ -46,7 +46,7 @@ Source: <https://www.nasa.gov/wp-content/uploads/2026/05/fy26-civil-space-shortf
 
 ### Reference Implementation
 
-The PBS_LINK Python SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, distribution `pbs-link` 0.1.2, import package `PBS_LINK`) implements the PBS-ENV-01 v1.3 envelope. It is maintained in its own repository.
+The PBS_LINK Python SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, distribution `pbs-link` 0.1.3, import package `PBS_LINK`) implements the PBS-ENV-01 v1.3 envelope. It is maintained in its own repository.
 
 ### Governance and Alignment
 
