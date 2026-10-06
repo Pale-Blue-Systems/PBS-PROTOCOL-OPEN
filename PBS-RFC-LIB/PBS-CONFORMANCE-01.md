@@ -198,7 +198,7 @@ Interoperability does not imply identical performance or routing behavior.
 The PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.3) implements PBS-ENV-01 v1.3 in Python. The import package is `PBS_LINK` (`from PBS_LINK import PBSLink`).
 
 - Envelope encoder and parser: `PBS_LINK/core.py`
-- Unit tests (55): `TESTS/test_torture.py`
+- Unit tests (68): `TESTS/test_torture.py`
 
 PBS-ENV-01 Section 13.2 provides a CRC32 test vector.
 
