@@ -196,13 +196,11 @@ This model enables adoption across civil, commercial, and international space pr
 
 ## Status
 
-The current release is **PBS v1.4** (2026-09-22): the NASA FY26 / LunaNet alignment. Specifications carry their own version; those unchanged since v1.3 remain at 1.3. See [`PBS-PROTOCOL-CHANGELOG.md`](PBS-PROTOCOL-CHANGELOG.md).
+The current release is PBS v1.4.1 (2026-10-06), an errata and documentation release of PBS v1.4 (2026-09-22, NASA FY26 / LunaNet alignment). PBS v1.4.1 does not change the wire format.
 
-They are intended to be:
+Each specification carries its own version. Documents unchanged since v1.3 remain at 1.3; an erratum does not change a specification's version. Errata are recorded in the header of each corrected specification (**Errata** line) and in [`PBS-PROTOCOL-CHANGELOG.md`](PBS-PROTOCOL-CHANGELOG.md).
 
-- implementation-agnostic
-- interoperable across independent authorities
-- stable under long-term evolution
+The specifications define wire formats and behavior independent of hardware, transport and implementation language. The 44-byte PBS-ENV-01 header structure and PBS Core semantics remain stable for all v1.x releases; a backward-incompatible change requires a new major version (PBS-CONFORMANCE-01 Section 12, PBS-GOV-01 Section 6).
 
 ---
 

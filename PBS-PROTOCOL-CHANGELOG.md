@@ -6,16 +6,36 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased]
+## [1.4.1] - 2026-10-06
 
-### Fixed
+Errata and documentation release of PBS v1.4. No wire-format change.
+
+### Errata (normative text corrected; wire format unchanged)
+
+Each corrected document carries an **Errata** line under its Version line (Baseline Date for the matrix). Version values are unchanged.
+
+- **PBS-ENV-01** — Section 4: the CRC32 row said "header bytes 0x00–0x27". It now states the Section 13 rule: IEEE 802.3 CRC-32 over bytes 0x00–0x2B with the CRC32 field (0x28–0x2B) set to zero, stored big-endian at 0x28. Section 12.2: `timestamp` is in microseconds, as the expiry formula already assumed. Section 13.2: test vector added (CRC32 `0x588721ED`; the 0x00–0x27 rule yields `0x019507AC`).
+- **PBS-SEC-A-01** — Sections 4.1 and 5.1 computed CRC32 over bytes 0x00–0x27. Both now use bytes 0x00–0x2B with the CRC32 field zeroed, and Section 4.1 lists the PBS-ENV-01 Section 13.1 receiver procedure. Section 11 references PBS-SEC-B-01.
+- **PBS-CONFORMANCE-01** — Sections 4.3 and 5.1 required CRC32 over bytes 0x00–0x27 ("40 bytes"). Both now require bytes 0x00–0x2B with the CRC32 field zeroed. Section 3 cites PBS-PRIO-01 v1.4 (MUST requirements unchanged from v1.3) and lists PBS-ADDR-01 and PBS-MUX-01 as optional, as recorded in [1.3.0]; it refers implementations claiming the v1.4 alignment profile to PBS-CONFORMANCE-02.
+- **PBS-PRIO-01** — Section 10 required "priority bits" to be covered by envelope authentication (v1.0 text). Priority is the u8 at offset 0x01, covered by the header CRC32 (PBS-SEC-A-01) and authenticated when PBS-SEC-B-01 applies (PBS-SECB-REQ-004).
+- **PBS-ROUTE-01** — Section 4: forwarding eligibility requires header CRC32 verification, not authentication, and the destination is determined per Section 6 (the v1.3 header has no destination field). Section 12: relays preserve the Priority byte and all header fields except TTL and CRC32.
+- **PBS-ADDR-01** — Section 3 located the authority context in an envelope `scope` field that v1.3 removed. Section 4.1 applied TLV addressing to all PBS implementations; it applies to implementations of this optional extension.
+- **PBS-MUX-01** — Section 3 required every envelope payload to be a MUX container; the requirement applies only when PBS-MUX-01 is used. Section 6 permitted explicit frame-level priority, contradicting PBS-PRIO-01 Section 9; frames inherit the envelope priority.
+- **PBS-CAPS-01**, **PBS-POS-01** — stated that payload frames inherit envelope authentication from PBS-SEC-A-01. The SEC-A-01 CRC32 does not cover the payload; CAPS and POS frames are authenticated when PBS-SEC-B-01 applies.
+- **PBS-SEC-B-01** — Section 9 cited LNIS requirement 008 by an identifier that matches no definition; it cites PBS-LNIS-REQ-008.
+- **PBS-TRACE-NASA-FY26-01** — the Allocation column used short names (DTN, CONFORMANCE) and omitted specifications that state they implement a row. It lists specification identifiers and matches the specification Traceability sections. PBS-NASA-1309-003 was cited by no specification; PBS-CAPS-01 Section 15 cites it. Traceability sections added or completed in PBS-ENV-01 (Section 21), PBS-PRIO-01 (Section 15), PBS-CAPS-01 (Section 15), PBS-SVC-01 (Section 13) and PBS-CONFORMANCE-02 (Section 6).
+
+### Documentation
+
+- **PBS-ENV-01** Section 19, **PBS-CONFORMANCE-01** Section 11.1 — link the PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.1) and name its import package, `PBS_LINK`. The Section 19 Python function was executed: its output parses with `PBS_LINK.parse_envelope` and is byte-identical to `PBS_LINK.build_envelope` output for the same timestamp.
+- **PBS-ALIGN-IEEE-AEROCONF-2025-01**, **PBS-ALIGN-ASSIGNMENT-NASA-FY26-01** — files renamed to their declared identifiers (were `PBS-ALIGN-IEEE-AEROCONF-2025.md` and `PBS-ALIGNMENT-ASSIGNMENT-NASA-FY26.md`); PBS-ALIGN-INDEX-01 links updated.
 - **PBS-ALIGN-INDEX-01** — lists all alignment documents under their own IDs, including PBS-ALIGN-NASA-LCRNS-02 and the FY26 traceability matrix; citations corrected against their DOIs.
-- **PBS-ALIGN-NASA-LCRNS-02** — declared its identifier as LCRNS-01.
+- **PBS-ALIGN-NASA-LCRNS-02** — declares its own identifier; it declared PBS-ALIGN-NASA-LCRNS-01.
 - **PBS-ALIGN-TF-GOVERNANCE-2024-01** — placeholder title and publisher-as-author replaced with the published citation.
 - **PBS-ALIGN-CARBONARA-TNTN-01**, **PBS-ALIGN-NTONTIN-6G-01** — author name, volume and page numbers corrected.
 - **PBS-ALIGN-IEEE-AEROCONF-ONBOARD-2025-01** — given its `.md` extension.
-- **PBS-ALIGN-SPJ-LEO-2022-01** (was PBS-ALIGN-SPJ-AUTONOMY-2022-01) — rewritten against the paper its DOI identifies, Zhang et al., "LEO Mega Constellations" (2022); the previous text described a paper on autonomy that the DOI does not resolve to.
-- **README** — status names v1.4; alignment table and repository structure match the repository.
+- **PBS-ALIGN-SPJ-LEO-2022-01** (was PBS-ALIGN-SPJ-AUTONOMY-2022-01) — rewritten against the paper its DOI (doi:10.34133/2022/9865174) identifies: Zhang et al., "LEO Mega Constellations: Review of Development, Impact, Surveillance, and Governance", *Space: Science & Technology*, 2022. The previous text described a paper on autonomy that the DOI does not resolve to.
+- **README** — Status names PBS v1.4.1; alignment table and repository structure match the repository.
 
 ---
 
