@@ -3,18 +3,16 @@
 
 This document defines the **Pale Blue Systems (PBS) Open Standard**: its scope, intent, stewardship model, and relationship to commercial implementations.
 
-It is an informational document intended to clarify how the PBS Open Standard is governed and evolved.  
+It is an informational document describing how the PBS Open Standard is governed and evolved.  
 It does **not** define protocol behavior and does **not** supersede any normative specification in `PBS-RFC-LIB/`.
 
 ---
 
 ## Purpose of the PBS Open Standard
 
-The PBS Open Standard defines a **shared communication language** for systems operating in space, lunar, planetary, and other extreme or delay-tolerant environments.
+The PBS Open Standard defines a **shared communication language** for systems operating in space, lunar, planetary, and other delay- and disruption-prone environments.
 
-Its purpose is to ensure that independently developed systems—civil, commercial, and international—can communicate, coordinate, and exchange data predictably across heterogeneous networks without requiring shared vendors, shared hardware, or proprietary disclosure.
-
-The standard is designed to function as durable infrastructure, suitable for long-lived missions and multi-party operational environments.
+Its purpose is to let independently developed systems—civil, commercial, and international—exchange data with consistent meaning across heterogeneous networks without shared vendors, shared hardware, or proprietary disclosure.
 
 ---
 
@@ -22,13 +20,11 @@ The standard is designed to function as durable infrastructure, suitable for lon
 
 The PBS Open Standard encompasses:
 
-- the normative protocol specifications that define message structure, semantics, and behavior  
-- the authority and addressing model that enables multi-actor coexistence  
-- priority handling and deterministic degradation semantics  
-- security structure and authentication boundaries  
-- relay and forwarding signaling  
-- interoperability with Delay/Disruption Tolerant Networking (DTN) architectures  
-- conformance requirements for interoperable implementations  
+- the 44-byte message envelope (PBS-ENV-01) and priority classification (PBS-PRIO-01)  
+- header integrity verification (PBS-SEC-A-01) and the optional authenticated mission messaging profile (PBS-SEC-B-01)  
+- optional authority, addressing, Service Intent, PNT context, position, capability and routing extensions  
+- mappings to DTN/BPv7 (PBS-DTN-MAP-01, PBS-DTN-MAP-02) and LunaNet network services (PBS-LNIS-01)  
+- conformance requirements (PBS-CONFORMANCE-01, PBS-CONFORMANCE-02) and governance (PBS-GOV-01)  
 
 These elements together define **how messages behave and are interpreted**, independent of physical transport, hardware platform, or implementation language.
 
@@ -36,15 +32,17 @@ These elements together define **how messages behave and are interpreted**, inde
 
 ## What Constitutes the PBS Core
 
-The **PBS Core** consists of the RFC-style specifications maintained in the `PBS-RFC-LIB/` directory.
+All PBS specifications are maintained in the `PBS-RFC-LIB/` directory.
 
-PBS Core is intentionally limited to:
+The **PBS Core** is the set of specifications a PBS Core conformant implementation must implement: PBS-ENV-01, PBS-PRIO-01 and PBS-SEC-A-01 (PBS-CONFORMANCE-01 Section 3). The other specifications are optional extensions and profiles; an implementation that claims one implements it fully (PBS-CONFORMANCE-01 Section 3.1).
+
+PBS Core covers:
 
 - protocol semantics  
 - on-wire behavior  
-- interoperability guarantees  
+- interoperability rules  
 
-PBS Core is designed to remain stable over time, with changes governed by backward-compatibility and conformance requirements.
+The 44-byte header structure and PBS Core semantics remain stable for all v1.x releases; a backward-incompatible change requires a new major version (PBS-CONFORMANCE-01 Section 12, PBS-GOV-01 Section 6).
 
 ---
 
@@ -54,12 +52,10 @@ PBS is released and maintained as an **open standard**.
 
 In this context, “open standard” means:
 
-- the protocol specifications are publicly available  
-- the semantics and wire formats are stable and reviewable  
-- no single commercial entity controls the evolution of the standard  
-- multiple independent implementations are expected and encouraged  
-
-The PBS Open Standard exists to enable an ecosystem, not to define a product.
+- the protocol specifications are publicly available under the Apache License 2.0  
+- the semantics and wire formats are versioned and reviewable  
+- no single commercial entity controls the evolution of the standard (PBS-GOV-01 Section 3.2)  
+- independent implementations are permitted, open or proprietary (PBS-GOV-01 Section 10)  
 
 ---
 
@@ -75,7 +71,7 @@ PBSF is responsible for:
 - publishing conformance guidance  
 - ensuring long-term neutrality and interoperability  
 
-PBSF does not operate networks, deploy mission systems, or sell products.
+PBSF does not develop mission-specific software, operate networks, or deploy infrastructure (PBS-GOV-01 Section 3.1).
 
 ---
 
@@ -103,50 +99,38 @@ The separation between standard stewardship and commercial activity is intention
 - **PBSF** stewards the open standard and protects its neutrality  
 - **Commercial entities** compete and innovate through implementations  
 
-This separation ensures that the PBS Open Standard can be adopted with confidence by government agencies, international partners, and commercial operators without vendor lock-in or dependency on a single organization.
+Under this separation, an implementer depends on the published specifications, not on a particular vendor's implementation.
 
 ---
 
 ## Evolution of the Standard
 
-The PBS Open Standard is expected to evolve gradually in response to operational experience and new mission requirements.
-
-Changes to PBS Core are governed by:
+Changes to the PBS Open Standard follow the RFC lifecycle of PBS-GOV-01 Section 5. Changes to PBS Core are governed by:
 
 - technical review  
 - interoperability impact  
 - backward-compatibility guarantees  
 
-Experimental features, mission-specific adaptations, and proprietary extensions are expected to live outside the core standard.
-
----
-
-## Long-Term Intent
-
-The PBS Open Standard is designed for **multi-decade relevance**.
-
-Space infrastructure often outlives individual missions, programs, and companies. By separating protocol semantics from implementation and stewardship from commercialization, the PBS Open Standard is structured to remain usable, trustworthy, and interoperable over long time horizons.
+Experimental features, mission-specific adaptations, and proprietary extensions are not part of PBS Core (PBS-GOV-01 Section 7).
 
 ---
 
 ## Relationship to This Repository
 
-This repository serves as the **authoritative public home** of the PBS Open Standard.
+This repository is the **authoritative public source** of the PBS Open Standard.
 
 It contains:
 
-- the current version of the PBS Core specifications  
+- the current version of every PBS specification  
 - governance and stewardship documentation  
-- version history and conformance references  
+- version history, alignment records and traceability  
 
-It does not contain mission software or commercial implementations.
+It does not contain mission software or commercial implementations. The PBS_LINK Python reference SDK is maintained separately at <https://github.com/Pale-Blue-Systems/PBS_LINK>.
 
 ---
 
 ## Summary
 
-The PBS Open Standard defines a neutral, interoperable communication language for space and extreme environments.
+The PBS Open Standard defines a vendor-neutral message envelope and extensions for space and other delay- and disruption-prone environments.
 
-It is stewarded by an independent foundation, implemented by a diverse ecosystem, and designed to support sustained, multi-party exploration and operations beyond Earth.
-
-The standard exists to enable cooperation, reliability, and clarity in environments where assumptions common to terrestrial networking do not apply.
+It is stewarded by the Pale Blue Systems Foundation (PBSF) under PBS-GOV-01 and may be implemented by any party.
