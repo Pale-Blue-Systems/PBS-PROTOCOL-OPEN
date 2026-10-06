@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.1 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B with the CRC32 field zeroed, matching Sections 3.1–3.2 and PBS-ENV-01 Section 13.1, and Section 11 updated to reference PBS-SEC-B-01 (PBS v1.4). Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.1 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B with the CRC32 field zeroed, matching Sections 3.1–3.2 and PBS-ENV-01 Section 13.1, and Sections 8 and 11 updated to reference PBS-SEC-B-01 (PBS v1.4). Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-CONFORMANCE-01, PBS-SEC-B-01
 
@@ -173,7 +173,7 @@ PBS-SEC-A-01 addresses the following threats:
 | Source spoofing | Extension required | Not baseline |
 | Replay attacks | Extension required | Not baseline |
 
-For deployments requiring protection against malicious actors, cryptographic extensions (Section 7) are REQUIRED.
+For deployments requiring protection against malicious actors, cryptographic authentication (Section 7 or PBS-SEC-B-01) is REQUIRED.
 
 ---
 

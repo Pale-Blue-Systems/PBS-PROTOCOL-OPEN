@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.3 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B (44 bytes) with the CRC32 field zeroed, as PBS-ENV-01 Section 13 and PBS-SEC-A-01 Section 3 specify; Section 3 updated to cite PBS-PRIO-01 v1.4 (no change to its MUST requirements) and to list PBS-ADDR-01 and PBS-MUX-01 as optional, as the v1.3.0 changelog records; Section 11.1 linked to the PBS_LINK SDK. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.3 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B (44 bytes) with the CRC32 field zeroed, as PBS-ENV-01 Section 13 and PBS-SEC-A-01 Section 3 specify; Section 3 updated to cite PBS-PRIO-01 v1.4 (v1.4 added no MUST requirements to v1.3; Section 10 corrected by the v1.4.1 erratum), to list PBS-ADDR-01 and PBS-MUX-01 as optional, as the v1.3.0 changelog records, to list the seven optional specifications added in v1.4, and to use each specification's declared title; Section 11.1 linked to the PBS_LINK SDK. Wire format unchanged.
 **Applies to:** All PBS Core Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01
 
@@ -40,8 +40,8 @@ A PBS Core conformant implementation MUST correctly implement the following spec
 | Specification | Description | Status |
 |---------------|-------------|--------|
 | PBS-ENV-01 v1.3 | Core Message Envelope (44-byte header) | Mandatory |
-| PBS-PRIO-01 v1.4 | Priority Classification | Mandatory |
-| PBS-SEC-A-01 v1.3 | Integrity Verification (CRC32) | Mandatory |
+| PBS-PRIO-01 v1.4 | Priority Classification and Deterministic Handling | Mandatory |
+| PBS-SEC-A-01 v1.3 | Integrity Verification and Security Boundaries (CRC32) | Mandatory |
 
 ### 3.1 Optional Specifications
 
@@ -52,9 +52,16 @@ Implementations MAY additionally support:
 | PBS-ADDR-01 | Addressing and Identification | Optional |
 | PBS-MUX-01 | Payload Multiplexing and Semantic Framing | Optional |
 | PBS-ROUTE-01 | Routing and Forwarding Semantics | Optional |
-| PBS-DTN-MAP-01 | DTN/BPv7 Mapping | Optional |
+| PBS-DTN-MAP-01 | Mapping to Delay/Disruption Tolerant Networking (DTN) | Optional |
 | PBS-POS-01 | Position and Presence Signaling | Optional |
-| PBS-CAPS-01 | Capability Advertisement | Optional |
+| PBS-CAPS-01 | Capability Advertisement and Discovery | Optional |
+| PBS-SVC-01 | Mission Service Intent | Optional |
+| PBS-AUTH-01 | Authority and Scope Context | Optional |
+| PBS-SEC-B-01 | Authenticated Mission Messaging | Optional |
+| PBS-PNT-CTX-01 | Position, Navigation, and Timing Context | Optional |
+| PBS-LNIS-01 | LunaNet Application Alignment Profile | Optional |
+| PBS-DTN-MAP-02 | Mapping to BPv7 Delay/Disruption Tolerant Networking | Optional |
+| PBS-QOS-MAP-01 | Mission Intent to Network Treatment Mapping | Optional |
 
 Optional specifications MUST be implemented fully if claimed.
 
@@ -244,4 +251,4 @@ Key requirements:
 - Sequence-based gap detection
 - Big-endian, 4-byte aligned encoding
 
-By establishing deterministic parsing rules, mandatory CRC32 verification, and clear conformance boundaries, this document ensures that PBS Core remains reliable infrastructure while allowing innovation above the protocol layer.
+This document defines the parsing, CRC32 verification and conformance-claim rules for PBS Core implementations.

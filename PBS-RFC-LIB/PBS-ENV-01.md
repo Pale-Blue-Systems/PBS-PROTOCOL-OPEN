@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Section 4 CRC32 coverage corrected from bytes 0x00–0x27 to bytes 0x00–0x2B with the CRC32 field zeroed (as Section 13 states), Section 12.2 timestamp unit corrected to microseconds, Section 13.2 test vector added, Section 19 linked to the PBS_LINK SDK, and Section 21 traceability added. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 4 CRC32 coverage corrected from bytes 0x00–0x27 to bytes 0x00–0x2B with the CRC32 field zeroed (as Section 13 states), Sections 12.2 and 12.3 timestamp unit corrected to microseconds, Section 13.1 references PBS-SEC-B-01, Section 13.2 test vector added, Section 19 linked to the PBS_LINK SDK with its Source ID truncation stated, and Section 21 traceability added. Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-PRIO-01, PBS-SEC-A-01, PBS-CONFORMANCE-01
 
@@ -198,7 +198,7 @@ When a relay or gateway stores and later forwards an envelope:
 4. Otherwise, update TTL field and recalculate CRC32
 
 Implementations MAY use either method:
-- **Timestamp-based** (RECOMMENDED): Check `current_time - timestamp > TTL` without modifying TTL
+- **Timestamp-based** (RECOMMENDED): Check `current_time - (timestamp / 1_000_000) > TTL` (Section 12.2) without modifying TTL
 - **Decrement-based**: Reduce TTL value at each hop (requires CRC32 recalculation)
 
 The timestamp-based method is preferred as it avoids CRC32 recalculation overhead.
@@ -244,7 +244,7 @@ Rules:
 The CRC32 checksum:
 - Detects transmission errors and bit-flips (radiation, noise)
 - Validates header integrity before trusting routing instructions
-- Does NOT provide cryptographic authentication (see PBS-SEC-A-01 for security extensions)
+- Does NOT provide cryptographic authentication (PBS-SEC-A-01 Section 3.3). PBS-SEC-A-01 Section 7 lists the extension approaches; PBS-SEC-B-01 defines authenticated mission messaging.
 
 ### 13.2 Test Vector (Informative)
 
@@ -398,6 +398,8 @@ def build_envelope(source_id, priority, payload, ttl=0, sequence=0, require_ack=
     return header + payload_bytes
 ```
 
+Section 9 limits the Source ID to 16 bytes of UTF-8. The function truncates a longer encoding at byte 16, as PBS_LINK 0.1.1 does; the truncation can split a multi-byte character and produce invalid UTF-8.
+
 ---
 
 ## 20. Summary
@@ -411,8 +413,6 @@ Key features:
 - 5-level priority classification
 - TTL-based lifetime management
 - 16-byte human-readable source identification
-
-This envelope provides a stable, efficient foundation for reliable communication across lunar surface networks, commercial space infrastructure, and deep-space relay systems.
 
 ---
 

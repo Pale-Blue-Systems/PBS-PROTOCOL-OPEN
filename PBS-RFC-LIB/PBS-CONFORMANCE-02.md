@@ -3,7 +3,7 @@
 
 **Status:** Optional Conformance Profile
 **Version:** 1.4
-**Errata:** 2026-10-06 (PBS v1.4.1): Section 6 names the PBS-TRACE-NASA-FY26-01 rows allocated to this profile (PBS-NASA-1501-002, PBS-NASA-1503-005, PBS-LNIS-002) and the test cases that verify them. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Section 6 names the PBS-TRACE-NASA-FY26-01 rows allocated to this profile (PBS-NASA-1501-002, PBS-NASA-1503-005, PBS-LNIS-002) and the test cases defined for them. Section 6 stated that the profile supplies verification evidence; it now states that the profile defines tests and verification records and that none are published. Wire format unchanged.
 **Related:** PBS-CONFORMANCE-01, PBS-SVC-01, PBS-LNIS-01, PBS-SEC-B-01, PBS-PNT-CTX-01, PBS-DTN-MAP-02, PBS-QOS-MAP-01
 
 ## 1. Purpose
@@ -69,4 +69,4 @@ PBS-CONFORMANCE-02 implements the following rows of PBS-TRACE-NASA-FY26-01:
 | PBS-NASA-1503-005 | PBS-C02-T004, PBS-C02-T005, PBS-C02-T012 |
 | PBS-LNIS-002 | PBS-C02-T003 |
 
-This profile supplies verification evidence for PBS-TRACE-NASA-FY26-01 and the normative requirements in the NASA/LunaNet alignment specifications.
+This profile defines the tests and verification records for PBS-TRACE-NASA-FY26-01 and the normative requirements of the NASA/LunaNet alignment specifications. No verification records are published.

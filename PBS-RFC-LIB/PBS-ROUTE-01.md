@@ -3,7 +3,7 @@
 
 **Status:** Optional
 **Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4 and 12 corrected to the v1.3 envelope: forwarding eligibility requires header CRC32 verification (PBS-SEC-A-01 provides no authentication), the destination is determined per Section 6 (the header has no destination field), and relays preserve the Priority byte and all header fields except TTL and CRC32. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4 and 12 corrected to the v1.3 envelope: forwarding eligibility requires header CRC32 verification (PBS-SEC-A-01 provides no authentication), the destination is determined per Section 6 (the header has no destination field), and relays preserve the Priority byte and all header fields except TTL and CRC32. The Section 4 discard rule applies to envelopes failing the structure, CRC32 or TTL checks; an envelope destined for the local node is delivered locally, not discarded. Wire format unchanged.
 **Applies to:** PBS Relay and Gateway Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-DTN-MAP-01
 
@@ -51,7 +51,7 @@ An envelope is eligible for forwarding if and only if:
 - the TTL has not expired
 - the local node is not the envelope's destination (Section 6)
 
-Envelopes failing eligibility checks MUST be discarded.
+Envelopes failing the structure, CRC32 or TTL checks MUST be discarded. Envelopes destined for the local node are delivered locally and are not forwarded.
 
 ---
 
