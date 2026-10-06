@@ -2,8 +2,8 @@
 ## NASA/LunaNet Alignment Conformance and Verification Profile
 
 **Status:** Optional Conformance Profile
-**Version:** 1.4
-**Errata:** 2026-10-06 (PBS v1.4.1): Section 6 names the PBS-TRACE-NASA-FY26-01 rows allocated to this profile (PBS-NASA-1501-002, PBS-NASA-1503-005, PBS-LNIS-002) and the test cases defined for them. Section 6 stated that the profile supplies verification evidence; it now states that the profile defines tests and verification records and that none are published. Wire format unchanged.
+**Version:** 1.5
+**Changes:** <release date> (PBS v1.5.0): Section 3 test PBS-C02-T002 requires the PBS-ENV-01 header, including TTL and CRC32, to arrive byte-identical, and test PBS-C02-T016 (no-expiry bundle lifetime, PBS-DTN-MAP-02 Section 4) is added. The PBS v1.4.1 Section 6 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Related:** PBS-CONFORMANCE-01, PBS-SVC-01, PBS-LNIS-01, PBS-SEC-B-01, PBS-PNT-CTX-01, PBS-DTN-MAP-02, PBS-QOS-MAP-01
 
 ## 1. Purpose
@@ -26,7 +26,7 @@ A conformance claim SHALL identify:
 | Test ID | Requirement area | Method | Acceptance condition |
 |---|---|---|---|
 | PBS-C02-T001 | IP carriage | T | PBS semantic fields preserved end-to-end |
-| PBS-C02-T002 | BPv7 carriage | T | PBS semantic fields preserved through store-and-forward |
+| PBS-C02-T002 | BPv7 carriage | T | PBS semantic fields preserved through store-and-forward; the PBS-ENV-01 header, including TTL and CRC32, is byte-identical at the receiving endpoint |
 | PBS-C02-T003 | Provider/path transition | D/T | Source, authority, priority, intent, security context preserved |
 | PBS-C02-T004 | Deadline expiration | T | Expired message is withheld from application acceptance |
 | PBS-C02-T005 | Latest-state degradation | T | Superseded state is retired according to profile |
@@ -40,6 +40,7 @@ A conformance claim SHALL identify:
 | PBS-C02-T013 | Security layering | T | PBS-SEC-B remains valid across BPSec-enabled BP path |
 | PBS-C02-T014 | Unknown extension | T | Unknown optional frame safely skipped without semantic corruption |
 | PBS-C02-T015 | Auditability | I/T | Required security/service dispositions produce traceable event evidence |
+| PBS-C02-T016 | No-expiry lifetime | I/T | Message to which no finite limit applies (PBS-DTN-MAP-02 Section 4) is carried with the no-expiry lifetime documented in the mapping profile; the value is greater than 0 ms, not greater than `4294967295000` ms and not less than the lifetime assigned to any message with a finite limit, and the BP agent does not expire the bundle at creation |
 
 ## 4. Test Environment
 

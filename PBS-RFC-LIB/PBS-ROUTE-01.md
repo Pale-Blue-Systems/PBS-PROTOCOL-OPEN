@@ -2,8 +2,8 @@
 ## Routing and Forwarding Semantics
 
 **Status:** Optional
-**Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4 and 12 corrected to the v1.3 envelope: forwarding eligibility requires header CRC32 verification (PBS-SEC-A-01 provides no authentication), the destination is determined per Section 6 (the header has no destination field), and relays preserve the Priority byte and all header fields except TTL and CRC32. The Section 4 discard rule applies to envelopes failing the structure, CRC32 or TTL checks; an envelope destined for the local node is delivered locally, not discarded. Wire format unchanged.
+**Version:** 1.5
+**Changes:** <release date> (PBS v1.5.0): Section 10 forbids TTL modification at any hop, states the expiry instant, and adds loop detection with bounded state for envelopes with TTL `0`. Section 12 requires relays to preserve every header field, including TTL and CRC32 (PBS-ENV-01 Sections 12.3 and 15), and supersedes the PBS v1.4.1 Section 12 erratum. The PBS v1.4.1 Section 4 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Applies to:** PBS Relay and Gateway Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01, PBS-DTN-MAP-01
 
@@ -123,11 +123,12 @@ Routing MUST remain correct in the absence of POS or CAPS.
 
 ## 10. Loop Prevention
 
-PBS relies on TTL-based loop prevention.
+PBS relies on TTL-based loop prevention. An envelope with `TTL > 0` expires at `timestamp / 1_000_000 + TTL` in Unix epoch seconds (PBS-ENV-01 Section 12.2), however many hops it traverses. A forwarding loop therefore cannot keep it past that instant at any node, measured by that node's clock.
 
 Rules:
-- TTL MUST be decremented at each forwarding hop (PBS-ENV-01).
+- TTL MUST NOT be modified at any forwarding hop (PBS-ENV-01 Section 12.3).
 - Envelopes with expired TTL MUST be discarded.
+- Expiry does not bound the forwarding of an envelope with TTL `0` (PBS-ENV-01 Section 12.1). Implementations that forward envelopes with TTL `0` SHOULD employ an additional loop detection mechanism. A mechanism that suppresses an envelope repeating the Source ID, Sequence and Timestamp of an envelope already forwarded SHOULD keep that state only for a locally configured interval, so that it does not suppress a later retransmission of the same envelope.
 - Implementations MAY employ additional loop detection mechanisms.
 
 No global loop-free topology is assumed.
@@ -151,15 +152,15 @@ Replication behavior is implementation-defined.
 
 Relays MUST:
 
-- preserve all envelope header fields except TTL and the recalculated CRC32 (PBS-ENV-01 Section 15)
-- decrement TTL correctly
+- forward all envelope header fields unchanged, including TTL and CRC32 (PBS-ENV-01 Section 15)
+- evaluate TTL expiration against the unchanged Timestamp and TTL (PBS-ENV-01 Sections 12.2 and 12.3)
 - preserve the Priority byte end-to-end
 - forward envelopes without interpreting payload semantics
 - discard envelopes violating policy or eligibility rules
 
 Relays MUST NOT:
 - modify payload contents
-- alter header fields other than TTL and CRC32
+- alter any header field
 - reinterpret envelope semantics
 
 ---

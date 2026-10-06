@@ -2,8 +2,8 @@
 ## Integrity Verification and Security Boundaries
 
 **Status:** Core
-**Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.1 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B with the CRC32 field zeroed, matching Sections 3.1–3.2 and PBS-ENV-01 Section 13.1, and Sections 8 and 11 updated to reference PBS-SEC-B-01 (PBS v1.4). Wire format unchanged.
+**Version:** 1.5
+**Changes:** <release date> (PBS v1.5.0): Section 5 requires relays and gateways to preserve every header field, including TTL and CRC32; Section 5.1 replaces CRC32 recalculation after a TTL decrement with end-to-end verification of the originator's CRC32 (PBS-ENV-01 Sections 12.3 and 15). The PBS v1.4.1 errata to Sections 4.1, 5.1, 8 and 11 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Applies to:** All PBS Core Messages
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-CONFORMANCE-01, PBS-SEC-B-01
 
@@ -95,18 +95,11 @@ Relays and gateways MUST maintain header integrity across forwarding.
 Rules:
 - Relays MUST verify CRC32 before forwarding.
 - Relays MUST NOT forward envelopes with invalid CRC32.
-- When TTL is decremented, CRC32 MUST be recalculated.
-- All other header fields MUST be preserved unmodified.
+- All header fields, including TTL and CRC32, MUST be preserved unmodified (PBS-ENV-01 Sections 12.3 and 15).
 
-### 5.1 CRC32 Recalculation
+### 5.1 End-to-End CRC32
 
-When a relay modifies the TTL field:
-
-1. Decrement TTL value at offset 0x24
-2. Set bytes 0x28–0x2B to `0x00000000`
-3. Compute CRC32 over all 44 bytes
-4. Write computed CRC32 value into bytes 0x28–0x2B (big-endian)
-5. Forward envelope
+Relays and gateways do not recalculate CRC32. The originator computes CRC32 once (PBS-ENV-01 Section 13.1), and the value remains valid at every hop. A relay verifies it with the Section 4.1 procedure applied to a copy of the header, and forwards the 44 header bytes as received. Header corruption after origination, including corruption in a relay's storage after that relay verified the CRC32, is therefore subject to CRC32 verification at the next relay or receiver, within the limits stated in Section 3.3.
 
 ---
 
@@ -213,7 +206,7 @@ Rules:
 
 ## 12. Summary
 
-PBS-SEC-A-01 v1.3 defines a **CRC32-based integrity verification model** for the PBS envelope header.
+PBS-SEC-A-01 defines a **CRC32-based integrity verification model** for the PBS envelope header.
 
 Key features:
 - Mandatory CRC32 verification for all envelopes

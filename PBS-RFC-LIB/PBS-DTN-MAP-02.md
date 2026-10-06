@@ -2,7 +2,8 @@
 ## Mapping to BPv7 Delay/Disruption Tolerant Networking
 
 **Status:** Optional Interoperability Profile
-**Version:** 1.4
+**Version:** 1.5
+**Changes:** <release date> (PBS v1.5.0): Section 4 sets the BP lifetime when no finite TTL, deadline, maximum age or mission expiry limit applies; Section 6 adds the corresponding row; Section 10 adds the verification item. Wire format unchanged.
 **Applies to:** PBS gateways and endpoints using BPv7
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SVC-01, PBS-SEC-B-01, PBS-LNIS-01
 
@@ -38,6 +39,19 @@ BP bundle lifetime SHALL be selected so that network delivery cannot extend the 
 
 For finite PBS deadlines or freshness limits, the adapter SHALL calculate a BP lifetime bounded by the remaining permitted interval at bundle creation.
 
+No finite limit applies when all of the following hold:
+- the envelope TTL is `0` (PBS-ENV-01 Section 12.1);
+- the message carries no Service Intent frame, or carries one with both `deadline_ms` and `max_age_ms` set to `0xFFFFFFFF` (PBS-SVC-01 Section 3);
+- no mission deadline or expiry policy sets a finite limit.
+
+BPv7 defines no value for an unlimited lifetime (RFC 9171 Section 4.3.1). When no finite limit applies, the adapter SHALL set the BP lifetime to the no-expiry lifetime of the mapping profile. The no-expiry lifetime:
+- SHALL be greater than `0` ms;
+- SHALL NOT be less than the BP lifetime the adapter assigns to any message to which a finite limit applies;
+- SHALL NOT exceed `4294967295000` ms, the largest PBS TTL (`4294967295` s, PBS-ENV-01 Section 4) in milliseconds;
+- SHALL be a value that the adapter's BP agent accepts and for which the expiration time that agent computes, creation time plus lifetime (RFC 9171 Section 5.5), does not overflow.
+
+The mapping profile SHALL document the no-expiry lifetime and the BP agent implementation for which it was selected. The adapter SHOULD use the largest value that meets these conditions. For a BP agent that holds DTN time and expiration time in 64-bit integers, that value is `4294967295000` ms. A BP agent that holds expiration time as a 32-bit count of seconds cannot represent `4294967295000` ms, which is (2^32 − 1) s, past the creation time: the expiration time wraps into the past and the agent deletes the bundle at once. RFC 9171 Section 4.3.1 permits the BP agent of a node to impose a shorter overriding lifetime while the bundle resides at that node. The bundle, with the PBS message it carries, is deleted at that node when its age exceeds the override (RFC 9171 Section 5.5).
+
 PBS application acceptance SHALL continue to evaluate PBS freshness independently of BP delivery status.
 
 ## 5. Priority and QoS
@@ -61,6 +75,7 @@ Network treatment SHALL preserve the relative mission intent expressed by PBS po
 | STORE_FORWARD | BPv7 store-and-forward eligible |
 | EITHER | BPv7 eligible according to path policy |
 | finite deadline | bundle lifetime bounded to remaining deadline |
+| no finite deadline, maximum age, TTL or mission expiry limit | bundle lifetime set to the no-expiry lifetime (Section 4) |
 | UNTIL_EXPIRY | storage bounded to effective expiry |
 | AT_LEAST_ONCE | duplicate detection maintained at PBS/application layer |
 | EXACTLY_ONCE_TRANSACTION | transaction identity and replay state maintained end-to-end |
@@ -86,6 +101,7 @@ Conformance tests SHALL verify:
 - envelope preservation through BP encapsulation;
 - EID mapping stability;
 - deadline-to-lifetime bounding;
+- no-expiry lifetime selection when no finite limit applies;
 - priority semantic preservation;
 - store-and-forward delivery;
 - expiry during disruption;
