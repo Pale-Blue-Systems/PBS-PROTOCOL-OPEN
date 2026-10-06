@@ -92,6 +92,6 @@ Cerf, Vinton, et al. “Delay-Tolerant Networking Architecture.” *RFC 4838*, I
 
 Burleigh, Scott, et al. “Delay-Tolerant Networking: An Approach to Interplanetary Internet.” *IEEE Communications Magazine*, vol. 41, no. 6, June 2003, pp. 128–136, doi:10.1109/MCOM.2003.1204759.
 
-Burleigh, Scott, Kevin Fall, and Edward J. Birrane III. “Bundle Protocol Version 7.” *RFC 9171*, Internet Engineering Task Force, Feb. 2022, https://www.rfc-editor.org/rfc/rfc9171.
+Burleigh, Scott, Kevin Fall, and Edward J. Birrane III. “Bundle Protocol Version 7.” *RFC 9171*, Internet Engineering Task Force, Jan. 2022, https://www.rfc-editor.org/rfc/rfc9171.
 
 NASA Jet Propulsion Laboratory. *Interplanetary Overlay Network (ION)*. https://github.com/nasa-jpl/ION-DTN.

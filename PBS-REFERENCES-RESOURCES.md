@@ -25,11 +25,11 @@ Each link was checked on 2026-10-06.
 - **RFC 4838 – Delay-Tolerant Networking Architecture** (Informational, April 2007)  
   https://datatracker.ietf.org/doc/html/rfc4838  
 
-- **RFC 9171 – Bundle Protocol Version 7 (BPv7)** (Proposed Standard, February 2022)  
+- **RFC 9171 – Bundle Protocol Version 7 (BPv7)** (Proposed Standard, January 2022)  
   https://datatracker.ietf.org/doc/html/rfc9171  
   Section 4.2.6 defines DTN time as milliseconds since 2000-01-01 00:00:00 UTC; Section 4.3.1 defines bundle lifetime in milliseconds past the creation time.
 
-- **RFC 9172 – Bundle Protocol Security (BPSec)** (Proposed Standard, February 2022)  
+- **RFC 9172 – Bundle Protocol Security (BPSec)** (Proposed Standard, January 2022)  
   https://www.rfc-editor.org/rfc/rfc9172  
 
 - **RFC 5326 – Licklider Transmission Protocol (LTP) Specification** (Experimental, September 2008)  
