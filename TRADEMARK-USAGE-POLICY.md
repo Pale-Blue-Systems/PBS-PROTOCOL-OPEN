@@ -37,7 +37,7 @@ You **may** use the trademarks without prior written permission in the following
 
 You **may not** use the trademarks in the following ways without a specific license or certification agreement:
 
-* **Product Naming:** You may not name your product, service, or company in a way that suggests it is an official product of the Foundation or Pale Blue Systems Inc. (e.g., naming a product "The PBS Router" is prohibited; naming it "Router X, for PBS" is permitted).
+* **Product Naming:** You may not name your product, service, or company in a way that suggests it is an official product of the Foundation or Pale Blue Systems. (e.g., naming a product "The PBS Router" is prohibited; naming it "Router X, for PBS" is permitted).
 * **Endorsement:** You may not use the marks in a way that implies endorsement, sponsorship, or affiliation with the Foundation where none exists.
 * **Confusing Similarity:** You may not use a variation of the marks or logos that is confusingly similar to the official marks.
 * **False Conformance:** You may not claim compatibility if your product does not adhere to the mandatory requirements of `PBS-CONFORMANCE-01`.

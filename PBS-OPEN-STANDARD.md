@@ -79,7 +79,7 @@ PBSF does not develop mission-specific software, operate networks, or deploy inf
 
 Commercial entities may build products, services, and mission systems that implement or extend the PBS Open Standard.
 
-This includes, but is not limited to, products and services developed by **Pale Blue Systems Inc.**
+This includes, but is not limited to, products and services developed by **Pale Blue Systems**
 
 Commercial implementations may:
 

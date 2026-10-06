@@ -47,14 +47,14 @@ PBSF does not develop mission-specific software, operate networks, or deploy inf
 
 ---
 
-### 3.2 Pale Blue Systems Inc.
+### 3.2 Pale Blue Systems
 
-Pale Blue Systems Inc. is a **commercial entity** that may:
+Pale Blue Systems is a **commercial entity** that may:
 - build proprietary implementations of PBS Core
 - offer products, services, and infrastructure compatible with PBS
 - contribute proposals and reference implementations under PBSF governance
 
-Pale Blue Systems Inc. has **no special authority** over PBS Core beyond that of any other contributor.
+Pale Blue Systems has **no special authority** over PBS Core beyond that of any other contributor.
 
 ---
 
