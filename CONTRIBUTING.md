@@ -1,10 +1,8 @@
 # Contributing to the Pale Blue Systems Open Standard
 
-Thank you for your interest in contributing to the **Pale Blue Systems (PBS) Open Standard**.
+This document describes how to report defects in and propose changes to the **Pale Blue Systems (PBS) Open Standard**.
 
-The PBS Foundation maintains this standard to enable reliable, interoperable communication for space, lunar, and extreme environments. We welcome contributions from engineers, researchers, agencies, and commercial developers who share this mission.
-
-To ensure the long-term stability, neutrality, and legal safety of the standard, we ask that all contributors adhere to the following guidelines.
+The PBS Foundation maintains this standard for communication in space, lunar, and other delay- and disruption-prone environments. Contributions from engineers, researchers, agencies, and commercial developers follow the rules below.
 
 ---
 
@@ -21,8 +19,8 @@ To ensure the long-term stability, neutrality, and legal safety of the standard,
 ## 2. How to Contribute
 
 ### Reporting Issues
-* **Bugs/Ambiguities:** If you find a typo, logical error, or ambiguous statement in a specification, please [Open an Issue](https://github.com/pale-blue-systems/pale-blue-systems/issues).
-* **Tagging:** Please use tags (e.g., `typo`, `clarification`, `technical-defect`) to help us triage.
+* **Defects and ambiguities:** Report a typo, logical error, or ambiguous statement in a specification by opening an issue at <https://github.com/Pale-Blue-Systems/PBS-PROTOCOL-OPEN/issues>. Name the specification ID and section in the title (for example, `PBS-ENV-01 s13.1: CRC32 procedure`).
+* **Labels:** Suggest a label in the issue body (`typo`, `clarification`, `technical-defect`) to help triage.
 
 ### Submitting Changes (Pull Requests)
 1.  **Fork** the repository.
@@ -30,28 +28,28 @@ To ensure the long-term stability, neutrality, and legal safety of the standard,
 3.  **Edit** the relevant Markdown files.
 4.  **Submit** a Pull Request targeting `main`.
 
-**Note:** For small fixes (typos, formatting), a PR is sufficient. For substantive changes to the protocol logic, please see "The RFC Process" below.
+Small fixes (typos, formatting) need only a PR. Substantive changes to protocol behavior follow the RFC process in Section 3.
 
 ---
 
 ## 3. The RFC Process (For Substantive Changes)
 
-Because PBS is a core infrastructure standard, stability is paramount. We cannot accept "breaking changes" or major new features lightly.
+PBS Core semantics and the 44-byte PBS-ENV-01 header are stable for all v1.x releases (PBS-CONFORMANCE-01 Section 12). Changes that affect them follow the PBS-GOV-01 Section 5 lifecycle.
 
-If you want to:
+The RFC process applies when you want to:
 * Add a new Frame Type (to MUX, POS, or CAPS)
-* Change a mandatory behavior (MUST/MUST NOT)
-* Add a new Security Model
+* Change a mandatory behavior (MUST/SHALL or MUST NOT/SHALL NOT)
+* Add a new security profile
 
-**Please follow these steps:**
+**Steps:**
 
-1.  **Open an Issue First:** Start a discussion titled `RFC Proposal: [Topic]`. Explain the problem you are solving and why existing mechanisms are insufficient.
-2.  **Draft:** Once the discussion shows consensus, draft your changes.
-    * If adding a feature, ensure it is **Backwards Compatible**.
-    * If changing a core behavior, acknowledge that this may require a **Major Version** increment (v2.0).
-3.  **Review:** The governance body and community will review your proposal for:
-    * **Necessity:** Is this strictly needed?
-    * **Simplicity:** Does it add unnecessary complexity?
+1.  **Open an issue first:** Title it `RFC Proposal: [Topic]`. State the problem and why existing mechanisms do not solve it.
+2.  **Draft:** Once the discussion reaches consensus, draft the change.
+    * A new feature in v1.x is an additive change and remains backward compatible (PBS-GOV-01 Section 5.2).
+    * A backward-incompatible change requires a new major version (PBS-GOV-01 Section 6; PBS-CONFORMANCE-01 Section 12).
+3.  **Review:** The governance body and community review the proposal for:
+    * **Necessity:** Is the change required?
+    * **Simplicity:** Does it add complexity the problem does not require?
     * **Neutrality:** Does it favor one vendor over others?
 
 ---
@@ -59,23 +57,22 @@ If you want to:
 ## 4. Style Guide
 
 * **Format:** All specifications are written in Markdown.
-* **Language:** Use RFC 2119 keywords (**MUST**, **SHOULD**, **MAY**) strictly and correctly.
-* **Diagrams:** Use ASCII diagrams or Mermaid.js code blocks where possible to ensure they are version-controllable text.
-* **Tone:** Maintain a professional, neutral, and technical tone. Avoid marketing language or vendor-specific terminology.
+* **Language:** Use the requirement keywords of RFC 2119 and RFC 8174 (MUST/SHALL, MUST NOT/SHALL NOT, SHOULD, MAY) in uppercase only where a statement is normative.
+* **Identifiers:** Give each new normative requirement a unique identifier in the form `PBS-<SPEC>-REQ-<nnn>` and reference specifications by their declared IDs.
+* **Diagrams:** Use ASCII diagrams or Mermaid.js code blocks so diagrams remain version-controlled text.
+* **Tone:** Write declaratively and technically. No marketing language or vendor-specific terminology.
 
 ---
 
 ## 5. Community Code of Conduct
 
-We are building infrastructure for humanity's future in space. We expect all contributors to interact with:
+Contributors are expected to interact with:
 * **Professionalism:** Disagreement is fine; disrespect is not.
 * **Patience:** Not everyone shares your context or background.
 * **Neutrality:** Leave corporate rivalries at the door.
 
 ---
 
-## 6. Questions?
+## 6. Questions
 
-If you have questions about governance, trademarks, or the roadmap, please file an issue with the `governance` label or contact the maintainers directly via the repository details.
-
-Thank you for helping build the backbone of the next era of exploration.
+File questions about governance, trademarks, or the roadmap as an issue and suggest the `governance` label.
