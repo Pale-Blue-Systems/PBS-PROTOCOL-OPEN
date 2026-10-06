@@ -31,17 +31,19 @@ NASA's *FY26 Civil Space Shortfall Prioritization* [1] consolidates the shortfal
 | 15.03 | “Achieve safe, efficient human-robot interactions for exploration missions, secure command and control over high-latency, bandwidth-limited networks, or implement reliable automated safing sequences.” | SF15 (10) | No |
 | 24.05 | “Develop a lunar position, navigation, and timing architecture capable of scaling to long term operational needs.” | SF24 Provide tracking and navigation of crew and assets in space (8) | Yes |
 
+The allocations under each need statement are the implementing specifications listed in the PBS-TRACE-NASA-FY26-01 Allocation column for that need statement's rows.
+
 ### Need 15.01 — Lunar Surface Communications
 
-PBS supplies a common application semantic contract across participating elements and preserves it across surface access technologies and LunaNet access points (PBS-LNIS-REQ-001, PBS-LNIS-REQ-004).
+PBS supplies a common application semantic contract across participating elements and preserves it across surface access technologies and LunaNet access points (PBS-LNIS-REQ-001, PBS-LNIS-REQ-004). PBS-ENV-01 defines the transport-independent envelope (PBS-NASA-1501-001); PBS-DTN-MAP-02 defines PBS carriage over BPv7 (PBS-NASA-1501-003).
 
-**PBS allocations:** PBS-SVC-01, PBS-LNIS-01, PBS-CONFORMANCE-02.
+**PBS allocations:** PBS-ENV-01, PBS-SVC-01, PBS-LNIS-01, PBS-DTN-MAP-02, PBS-CONFORMANCE-02.
 
 ### Need 13.09 — Responsive Multi-Spacecraft Networking
 
-PBS Service Intent expresses priority, freshness, deadline, persistence, delivery mode, acknowledgement, disruption tolerance, degradation policy and security requirement as independently encoded application semantics (PBS-SVC-REQ-001). PBS-QOS-MAP-01 converts these semantics into authorized network-treatment requests.
+PBS Service Intent expresses priority, freshness, deadline, persistence, delivery mode, acknowledgement, disruption tolerance, degradation policy and security requirement as independently encoded application semantics (PBS-SVC-REQ-001). PBS-QOS-MAP-01 converts these semantics into authorized network-treatment requests. PBS-PRIO-01 defines the envelope priority classes (PBS-NASA-1309-002); PBS-CAPS-01 defines capability advertisement among distributed mission elements (PBS-NASA-1309-003).
 
-**PBS allocations:** PBS-SVC-01, PBS-QOS-MAP-01, PBS-DTN-MAP-02.
+**PBS allocations:** PBS-SVC-01, PBS-PRIO-01, PBS-QOS-MAP-01, PBS-CAPS-01.
 
 ### Need 15.03 — Secure Command and Control
 
@@ -53,7 +55,7 @@ PBS authenticated mission messaging binds command data to source identity, autho
 
 PBS carries reference-frame, time-reference, epoch, uncertainty, provenance, validity and quality context with mission PNT data. LunaNet-aligned deployments bind these identifiers to the lunar reference system and LunaNet Reference Time defined by governing LunaNet documents (PBS-PNT-REQ-006; LNIS V005 Section 2.1).
 
-**PBS allocations:** PBS-PNT-CTX-01, PBS-LNIS-01.
+**PBS allocations:** PBS-PNT-CTX-01.
 
 ## Multi-Provider Interoperability
 
