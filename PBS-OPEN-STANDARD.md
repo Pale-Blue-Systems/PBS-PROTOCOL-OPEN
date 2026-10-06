@@ -34,7 +34,7 @@ These elements together define **how messages behave and are interpreted**, inde
 
 All PBS specifications are maintained in the `PBS-RFC-LIB/` directory.
 
-The **PBS Core** is the set of specifications a PBS Core conformant implementation must implement: PBS-ENV-01, PBS-PRIO-01 and PBS-SEC-A-01 (PBS-CONFORMANCE-01 Section 3). The other specifications are optional extensions and profiles; an implementation that claims one implements it fully (PBS-CONFORMANCE-01 Section 3.1).
+The **PBS Core** comprises the four specifications with Status Core: PBS-ENV-01, PBS-PRIO-01 and PBS-SEC-A-01, which a PBS Core conformant implementation must implement (PBS-CONFORMANCE-01 Section 3), and PBS-CONFORMANCE-01, whose Sections 4–9 and 12 state further MUST requirements (PBS-CONFORMANCE-01 Section 2). The other specifications are optional extensions and profiles; an implementation that claims one implements it fully (PBS-CONFORMANCE-01 Section 3.1).
 
 PBS Core covers:
 
@@ -79,7 +79,7 @@ PBSF does not develop mission-specific software, operate networks, or deploy inf
 
 Commercial entities may build products, services, and mission systems that implement or extend the PBS Open Standard.
 
-This includes, but is not limited to, products and services developed by **Pale Blue Systems**
+This includes, but is not limited to, products and services developed by **Pale Blue Systems**.
 
 Commercial implementations may:
 

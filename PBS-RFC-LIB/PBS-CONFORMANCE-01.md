@@ -3,7 +3,7 @@
 
 **Status:** Core
 **Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.3 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B (44 bytes) with the CRC32 field zeroed, as PBS-ENV-01 Section 13 and PBS-SEC-A-01 Section 3 specify; Section 3 updated to cite PBS-PRIO-01 v1.4 (v1.4 added no MUST requirements to v1.3; Section 10 corrected by the v1.4.1 erratum), to list PBS-ADDR-01 and PBS-MUX-01 as optional, as the v1.3.0 changelog records, to list the seven optional specifications added in v1.4, and to use each specification's declared title; Section 11.1 linked to the PBS_LINK SDK. Wire format unchanged.
+**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.3 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B (44 bytes) with the CRC32 field zeroed, as PBS-ENV-01 Section 13 and PBS-SEC-A-01 Section 3 specify; Section 3 updated to cite PBS-PRIO-01 v1.4 (PBS-PRIO-01 v1.4 added no MUST requirements to v1.3; PBS-PRIO-01 Section 10 is corrected by its own v1.4.1 erratum), to list PBS-ADDR-01 and PBS-MUX-01 as optional, as the v1.3.0 changelog records, to list the seven optional specifications added in v1.4, and to use each specification's declared title, and to refer implementations claiming the v1.4 alignment profile to PBS-CONFORMANCE-02; Section 11.1 linked to the PBS_LINK SDK. Wire format unchanged.
 **Applies to:** All PBS Core Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01
 

@@ -10,6 +10,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 Errata and documentation release of PBS v1.4. No wire-format change.
 
+Change category (PBS-GOV-01 Sections 5.2 and 6): patch release of clarifications and corrections. Each erratum resolves a conflict between clauses of the same release in favour of the rule another clause already states: the CRC32 coverage of PBS-ENV-01 Section 13 and PBS-SEC-A-01 Section 3, the payload priority rule of PBS-PRIO-01 Section 9, and the v1.3 header and security baseline of PBS-ENV-01 and PBS-SEC-A-01. The known issues below have no controlling clause and are deferred to the PBS-GOV-01 Section 5 process.
+
 ### Errata (normative text corrected; wire format unchanged)
 
 Each corrected document carries an **Errata** line under its Version line (Baseline Date for the matrix). Version values are unchanged.
@@ -50,12 +52,14 @@ Each corrected document carries an **Errata** line under its Version line (Basel
 
 ### Known issues (not corrected in v1.4.1)
 
-The following defects in normative text are recorded for resolution through the PBS-GOV-01 Section 5 process. Correcting them changes requirements, so v1.4.1 leaves the text unchanged.
+The following defects in normative text are recorded for resolution through the PBS-GOV-01 Section 5 process. No clause of v1.4.1 resolves them, so correcting them changes requirements; v1.4.1 leaves the text unchanged.
 
-- **TTL handling at relays.** PBS-ENV-01 Section 15 ("MUST decrement TTL appropriately") and PBS-CONFORMANCE-01 Section 8 ("Decrement TTL appropriately during store-and-forward") require TTL decrement. PBS-ENV-01 Section 12.3 permits either method and marks the timestamp-based method, which does not modify TTL, as RECOMMENDED. Neither specification states how the Section 15 and Section 8 clauses apply to a relay that uses the timestamp-based method.
+- **TTL handling at relays.** PBS-ENV-01 Section 15 ("MUST decrement TTL appropriately") and PBS-CONFORMANCE-01 Section 8 ("Decrement TTL appropriately during store-and-forward") require TTL decrement. PBS-ENV-01 Section 12.3 permits either method and marks the timestamp-based method, which does not modify TTL, as RECOMMENDED. Neither specification states how the Section 15 and Section 8 clauses apply to a relay that uses the timestamp-based method. PBS-DTN-MAP-01 Section 7.3 (“PBS `ttl` continues decrementing within PBS-native hops”) also presumes the decrement method.
 - **LOW priority in the BPv7 mapping.** The PBS-DTN-MAP-01 Section 6.3 table maps CRITICAL, HIGH, NORMAL and BULK and has no row for LOW (3), which PBS-PRIO-01 Section 4 defines.
 - **No BPv7 class-of-service field.** PBS-DTN-MAP-01 Sections 6.1 and 6.3 map PBS Priority to a bundle Class of Service. The BPv7 primary block has no class-of-service field (RFC 9171 Section 4.3.1); the class-of-service bundle processing control flags (bits 7–8) are registered for Bundle Protocol version 6 only (RFC 9171 Section 9.3). PBS-DTN-MAP-02 Section 5 instead preserves PBS priority unchanged, selects network treatment through BP QoS mechanisms and service-provider policy, and requires a mapping profile to document the mechanism.
 - **Bundle lifetime for TTL 0.** PBS-ENV-01 Section 12.1 defines TTL `0` as no expiry. PBS-DTN-MAP-01 Section 6.1 converts TTL to bundle lifetime, and PBS-DTN-MAP-02 Section 4 bounds lifetime only for finite deadlines or freshness limits. Neither defines the bundle lifetime for TTL `0`. RFC 9171 Section 4.3.1 defines lifetime as an unsigned integer number of milliseconds past the creation time and defines no value for an unlimited lifetime.
+- **TTL 0 under the decrement method.** PBS-ENV-01 Section 12.3 steps 1–3 compute `new_ttl = original_ttl − storage_seconds` and discard the envelope when `new_ttl <= 0`. For TTL `0`, which Section 12.1 defines as no expiry and Section 12.4 assigns to critical alerts, any storage interval gives `new_ttl <= 0`, so a relay using the decrement method discards the envelope. A decrement-based relay also leaves Timestamp unchanged (Section 15), so a downstream node applying the Section 12.2 timestamp-based check subtracts the stored interval a second time and expires the envelope early.
+- **Sequence in the BPv7 creation timestamp.** PBS-DTN-MAP-01 Section 6.1 maps the PBS `Sequence` field to the bundle sequence number. RFC 9171 Section 4.2.7 requires that number to be the latest value of a monotonically increasing positive integer counter managed by the source node's bundle protocol agent. The PBS Sequence is assigned by the PBS source, is 16 bits wide and rolls over from 65535 to 0 (PBS-ENV-01 Section 8), so it meets neither condition.
 
 ---
 

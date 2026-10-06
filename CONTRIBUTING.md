@@ -2,7 +2,7 @@
 
 This document describes how to report defects in and propose changes to the **Pale Blue Systems (PBS) Open Standard**.
 
-The PBS Foundation maintains this standard for communication in space, lunar, and other delay- and disruption-prone environments. Contributions from engineers, researchers, agencies, and commercial developers follow the rules below.
+The Pale Blue Systems Foundation (PBSF) maintains this standard for communication in space, lunar, and other delay- and disruption-prone environments. Contributions from engineers, researchers, agencies, and commercial developers follow the rules below.
 
 ---
 

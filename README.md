@@ -42,7 +42,7 @@ Source: <https://www.nasa.gov/wp-content/uploads/2026/05/fy26-civil-space-shortf
 
 ### Specifications
 
-[`PBS-RFC-LIB/`](PBS-RFC-LIB/) contains 19 specifications. PBS Core conformance requires three specifications: PBS-ENV-01, PBS-PRIO-01 and PBS-SEC-A-01 (PBS-CONFORMANCE-01 Section 3). PBS-CONFORMANCE-01 defines that conformance. The remaining specifications are optional extensions, interoperability and conformance profiles, and governance.
+[`PBS-RFC-LIB/`](PBS-RFC-LIB/) contains 19 specifications. PBS Core comprises four specifications with Status Core. A PBS Core conformant implementation implements PBS-ENV-01, PBS-PRIO-01 and PBS-SEC-A-01 (PBS-CONFORMANCE-01 Section 3) and meets the further MUST requirements of PBS-CONFORMANCE-01 Sections 4–9 and 12. The remaining specifications are optional extensions, interoperability and conformance profiles, and governance.
 
 ### Reference Implementation
 
