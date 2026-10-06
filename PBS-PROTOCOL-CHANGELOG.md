@@ -6,6 +6,43 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.5.0] - <release date>
+
+Corrective release. Resolves the six known issues recorded in [1.4.1]. No wire-format change: Magic `0x10`, the 44-byte header and every field encoding are unchanged, and PBS-ENV-01 Sections 12.1 and 12.2 keep their v1.4.1 meaning.
+
+Change category (PBS-GOV-01 Sections 5.2 and 6): corrective, released as a minor version. Each change resolves a conflict between clauses, or with RFC 9171, for which no clause of v1.4.1 stated the controlling rule ([1.4.1], Known issues), so the change set alters requirements and specification versions. PBS-GOV-01 v1.5 adds the Corrective category and assigns such changes to minor versions. PBSF accepted this release and that amendment through the PBS-GOV-01 Section 5.1 process on <decision date>.
+
+### Changed
+
+- **PBS-ENV-01 v1.5** — TTL is the lifetime of the envelope counted from Timestamp and is not modified in transit (Sections 4, 12.1, 12.3 and 15). Relays and gateways evaluate expiry with the Section 12.2 check and forward the 44 header bytes as received, so the originator's CRC32 is verified at every hop. The decrement-based method of Section 12.3 is removed: it discarded every envelope with TTL `0`, and, because Timestamp was unchanged, later nodes counted the storage interval a second time. An envelope with TTL `0` is never discarded as TTL-expired (Section 12.1). Section 12.5 adds TTL test cases.
+- **PBS-SEC-A-01 v1.5** — Section 5 requires every header field, including TTL and CRC32, to be forwarded unmodified. Section 5.1 replaces CRC32 recalculation with end-to-end verification of the originator's CRC32.
+- **PBS-CONFORMANCE-01 v1.5** — Sections 5.2 and 8 replace the TTL decrement and CRC32 recalculation requirements with header preservation and Timestamp-based expiry, and add test statements for TTL `30` and TTL `0`. Section 3 cites PBS-ENV-01 v1.5 and PBS-SEC-A-01 v1.5. Section 12 permits corrective changes in minor versions.
+- **PBS-ROUTE-01 v1.5** — Section 10 bounds forwarding by the expiry instant, forbids TTL modification, and adds loop detection with time-bounded state for envelopes with TTL `0`. Section 12 requires relays to preserve every header field.
+- **PBS-SEC-B-01 v1.5** — Section 5 states that PBS-ENV-01 header fields, including TTL, are not mutable network-layer fields; lifetime stays in the protected data.
+- **PBS-DTN-MAP-01 v1.5** — Section 6.1: for TTL > 0 the bundle lifetime does not exceed the time remaining until the envelope expires; new Section 6.1.1 sets the bundle lifetime for TTL `0` (greater than 0 ms, not less than any lifetime the gateway assigns for TTL > 0, at most `4294967295000` ms, no overflow in the bundle protocol agent's expiration time, documented); the gateway's bundle protocol agent assigns the creation timestamp (RFC 9171 Section 4.2.7) and the sequence number is not derived from `Sequence`; no primary block field carries `Priority`. Section 6.3 prohibits conveying priority in reserved or unassigned bundle processing control flags, requires a PBS-DTN-MAP-02 Section 5 mapping profile for priority-based network treatment covering all five priority classes, and maps LOW (3) to Bulk where the Expedited, Normal and Bulk classes of RFC 4838 Section 3.5 are requested. Section 7.3 evaluates PBS expiry against Timestamp, including time spent in the DTN domain.
+- **PBS-DTN-MAP-02 v1.5** — Section 4 sets the bundle lifetime when no finite TTL, deadline, maximum age or mission expiry limit applies, under the same conditions as PBS-DTN-MAP-01 Section 6.1.1. Sections 6 and 10 updated.
+- **PBS-CONFORMANCE-02 v1.5** — test PBS-C02-T002 requires a byte-identical PBS-ENV-01 header after BPv7 carriage; test PBS-C02-T016 (no-expiry lifetime) added.
+- **PBS-GOV-01 v1.5** — Section 5.2 adds the Corrective category. Section 6 assigns a corrective change to a patch version when another clause of the release states the controlling rule, as in [1.4.1], and to a minor version otherwise.
+- **README** — Status names PBS v1.5.0 and links the v1.5.0 Known issues; Quick Links and the DTN section give the new versions; the DTN section states that PBS-DTN-MAP-01 references PBS-DTN-MAP-02.
+- **CONTRIBUTING** — Section 3 describes corrective changes.
+
+Each revised specification records its changes in a **Changes** line, which replaces any **Errata** line and incorporates the PBS v1.4.1 errata.
+
+### Migration
+
+- Relays and gateways that decrement TTL: stop modifying TTL and recalculating CRC32, forward the 44 header bytes as received, and apply the PBS-ENV-01 Section 12.2 check before forwarding (PBS-ENV-01 Section 12.3). A receiver cannot detect a TTL reduced by a v1.4.1 decrement-based relay. Until every such relay on a path is migrated, envelopes crossing it expire early and envelopes with TTL `0` are discarded there. PBS_LINK 0.1.3 and the PBS Edge Adapter worked example do not decrement TTL.
+- PBS-DTN-MAP-01 gateways: bound each lifetime for TTL > 0 by the remaining interval (Section 6.1) instead of TTL × 1000 ms; set and document the lifetime for TTL `0` (Section 6.1.1); take the creation timestamp from the bundle protocol agent and stop deriving the sequence number from `Sequence`; stop setting bundle processing control flag bits 7 and 8; where DTN classes are requested, map LOW (3) to Bulk and document the mechanism in a mapping profile (Section 6.3).
+- PBS-DTN-MAP-02 adapters: document the no-expiry lifetime in the mapping profile (Section 4).
+- PBS-SEC-B-01 binding profiles that excluded TTL as a mutable field: include it in the protected data.
+
+### Known issues (not corrected in v1.5.0)
+
+The following defect in normative text is recorded for resolution through the PBS-GOV-01 Section 5 process. No clause of v1.5.0 resolves it, so correcting it changes requirements; v1.5.0 leaves the text unchanged.
+
+- **Source EID of a node other than the gateway.** PBS-DTN-MAP-01 Section 8 maps each Source ID to a source EID and states that "Exact EID syntax is implementation-defined but MUST be stable within a deployment." RFC 9171 Section 5.2 Step 1 requires the source node ID of a bundle to be the null endpoint ID or "the EID of a singleton endpoint whose only member is the node of which the BPA is a component". A mapping to an EID of another node produces bundles that do not conform to RFC 9171, and the creation timestamp assigned by the gateway's bundle protocol agent (Section 6.1) is then no longer unique for that source node ID (RFC 9171 Section 4.2.7; RFC 9758 Section 5.1).
+
+---
+
 ## [1.4.1] - 2026-10-06
 
 Errata and documentation release of PBS v1.4. No wire-format change.

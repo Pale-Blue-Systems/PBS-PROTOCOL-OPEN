@@ -2,7 +2,8 @@
 ## Governance, Stewardship, and Evolution of the PBS Open Standard
 
 **Status:** Informational (Normative Governance)
-**Version:** 1.3
+**Version:** 1.5
+**Changes:** <release date> (PBS v1.5.0): Section 5.2 adds the Corrective category and requires migration guidance for a corrective change that makes a permitted behavior non-conformant. Section 6 assigns a corrective change to a patch version when another clause of the release states the controlling rule, and to a minor version otherwise.
 **Applies to:** Pale Blue Systems Open Standard
 **Related:** PBS-OPEN-STANDARD.md, PBS-CONFORMANCE-01, All PBS Core RFCs
 
@@ -106,9 +107,10 @@ Changes are classified as:
 
 - **Editorial:** Clarifications, formatting, non-semantic changes.
 - **Additive:** New optional features or extensions.
+- **Corrective:** Changes to normative text that resolve a conflict between clauses, or with a normatively referenced standard, without changing the wire format.
 - **Breaking:** Semantic changes requiring a new major version.
 
-Breaking changes require a **new major version** and explicit migration guidance.
+Breaking changes require a **new major version** and explicit migration guidance. A corrective change that makes non-conformant a behavior the corrected text permitted requires explicit migration guidance.
 
 ---
 
@@ -117,8 +119,8 @@ Breaking changes require a **new major version** and explicit migration guidance
 PBS follows semantic versioning at the standard level:
 
 - **Major version:** Backward-incompatible changes.
-- **Minor version:** Backward-compatible feature additions.
-- **Patch version:** Clarifications and corrections.
+- **Minor version:** Backward-compatible feature additions, and corrective changes (Section 5.2) where no clause of the release states the controlling rule.
+- **Patch version:** Clarifications, and corrective changes (Section 5.2) that apply the rule another clause of the release already states.
 
 PBS Core v1 semantics SHALL remain stable.
 

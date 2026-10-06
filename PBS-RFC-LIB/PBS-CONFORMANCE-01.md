@@ -2,8 +2,8 @@
 ## Conformance, Interoperability, and Mandatory Baselines
 
 **Status:** Core
-**Version:** 1.3
-**Errata:** 2026-10-06 (PBS v1.4.1): Sections 4.3 and 5.1 corrected to compute CRC32 over bytes 0x00–0x2B (44 bytes) with the CRC32 field zeroed, as PBS-ENV-01 Section 13 and PBS-SEC-A-01 Section 3 specify; Section 3 updated to cite PBS-PRIO-01 v1.4 (PBS-PRIO-01 v1.4 added no MUST requirements to v1.3; PBS-PRIO-01 Section 10 is corrected by its own v1.4.1 erratum), to list PBS-ADDR-01 and PBS-MUX-01 as optional, as the v1.3.0 changelog records, to list the seven optional specifications added in v1.4, and to use each specification's declared title, and to refer implementations claiming the v1.4 alignment profile to PBS-CONFORMANCE-02; Section 11.1 linked to the PBS_LINK SDK. Wire format unchanged.
+**Version:** 1.5
+**Changes:** <release date> (PBS v1.5.0): Sections 5.2 and 8 replace TTL decrement and CRC32 recalculation with header preservation and Timestamp-based expiry (PBS-ENV-01 Sections 12.3 and 15) and add test statements for TTL `30` and TTL `0`; Section 3 cites PBS-ENV-01 v1.5 and PBS-SEC-A-01 v1.5; Section 11.1 references the PBS-ENV-01 Section 12.5 test cases; Section 12 permits corrective changes in minor versions (PBS-GOV-01 Section 5.2). The PBS v1.4.1 errata to Sections 3, 4.3, 5.1 and 11.1 are incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Applies to:** All PBS Core Implementations
 **Related:** PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01
 
@@ -39,9 +39,9 @@ A PBS Core conformant implementation MUST correctly implement the following spec
 
 | Specification | Description | Status |
 |---------------|-------------|--------|
-| PBS-ENV-01 v1.3 | Core Message Envelope (44-byte header) | Mandatory |
+| PBS-ENV-01 v1.5 | Core Message Envelope (44-byte header) | Mandatory |
 | PBS-PRIO-01 v1.4 | Priority Classification and Deterministic Handling | Mandatory |
-| PBS-SEC-A-01 v1.3 | Integrity Verification and Security Boundaries (CRC32) | Mandatory |
+| PBS-SEC-A-01 v1.5 | Integrity Verification and Security Boundaries (CRC32) | Mandatory |
 
 ### 3.1 Optional Specifications
 
@@ -104,7 +104,7 @@ Implementations MUST:
 
 ### 5.1 Mandatory CRC32
 
-PBS Core v1.3 conformance REQUIRES support for CRC32 integrity verification.
+PBS Core conformance REQUIRES support for CRC32 integrity verification.
 
 Implementations MUST:
 - Calculate CRC32 using IEEE 802.3 polynomial (0xEDB88320, reflected)
@@ -112,11 +112,9 @@ Implementations MUST:
 - Verify CRC32 before processing any envelope
 - Discard envelopes failing CRC32 verification
 
-### 5.2 CRC32 Recalculation
+### 5.2 CRC32 in Transit
 
-When modifying the TTL field, implementations MUST:
-- Recalculate CRC32 after TTL modification
-- Update the CRC32 field at offset 0x28
+Relays and gateways do not modify the TTL field or any other header field (Section 8). They forward the CRC32 computed by the originator unchanged and do not recalculate it (PBS-ENV-01 Sections 12.3 and 15; PBS-SEC-A-01 Section 5.1).
 
 ---
 
@@ -154,14 +152,18 @@ Relay and gateway implementations MUST:
 
 - Verify CRC32 before forwarding
 - Discard envelopes with invalid CRC32
-- Decrement TTL appropriately during store-and-forward
-- Recalculate CRC32 after TTL modification
-- Preserve all header fields except TTL
+- Check TTL expiration against Timestamp before forwarding stored envelopes (PBS-ENV-01 Section 12.2)
 - Discard envelopes with expired TTL
+- Forward the 44 header bytes as received (PBS-ENV-01 Section 15)
 
-Relays MUST NOT:
-- Modify Priority, Flags, Sequence, Source ID, Timestamp, or Size
+Relay and gateway implementations MUST NOT:
+- Modify any header field, including Priority, Flags, Sequence, Source ID, Timestamp, Size, TTL and CRC32 (PBS-ENV-01 Section 15)
+- Discard an envelope with TTL `0` as TTL-expired (PBS-ENV-01 Section 12.1)
 - Forward envelopes with invalid structure
+
+Test statements (PBS-ENV-01 Section 12.5):
+- A relay receives the PBS-ENV-01 Section 13.2 envelope (Timestamp `1767225600000000`, TTL `30`, CRC32 `0x588721ED`) and stores it. At `current_time` `1767225630` it forwards the envelope, and the 44 header bytes it forwards equal the bytes it received. At `current_time` `1767225631` it discards the envelope as expired (PBS-ENV-01 Section 12.2).
+- A relay receives the same envelope with TTL `0` (CRC32 `0x8757080E`), stores it for any interval, and forwards it. The 44 header bytes it forwards equal the bytes it received, and no receiver discards the envelope as TTL-expired (PBS-ENV-01 Section 12.1).
 
 ---
 
@@ -200,7 +202,7 @@ The PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, ver
 - Envelope encoder and parser: `PBS_LINK/core.py`
 - Unit tests (68): `TESTS/test_torture.py`
 
-PBS-ENV-01 Section 13.2 provides a CRC32 test vector.
+PBS-ENV-01 Section 13.2 provides a CRC32 test vector. PBS-ENV-01 Section 12.5 provides TTL test cases for store-and-forward and for TTL `0`.
 
 ### 11.2 Conformance Testing
 
@@ -220,6 +222,7 @@ Rules:
 - The 44-byte header structure SHALL remain unchanged for v1.x
 - Backward-incompatible changes require a new major version
 - Minor versions MAY add optional features without breaking conformance
+- Minor versions MAY make corrective changes (PBS-GOV-01 Section 5.2) that leave the wire format unchanged; the release states the migration for any behavior the change makes non-conformant
 
 Implementations MUST:
 - Reject envelopes with unrecognized Magic byte
@@ -231,7 +234,7 @@ Implementations MUST:
 
 Implementations claiming PBS Core conformance SHOULD:
 
-- Identify the supported PBS Core version (e.g., "PBS Core v1.3 Conformant")
+- Identify the supported PBS Core version (e.g., "PBS Core v1.5 Conformant")
 - Identify supported optional specifications
 - Identify any proprietary extensions
 - Distinguish proprietary behavior from PBS Core behavior
@@ -242,7 +245,7 @@ False or misleading conformance claims undermine interoperability.
 
 ## 14. Summary
 
-PBS-CONFORMANCE-01 v1.3 defines the **minimum, enforceable requirements** for interoperable implementations of the Pale Blue Systems Open Standard.
+PBS-CONFORMANCE-01 defines the **minimum, enforceable requirements** for interoperable implementations of the Pale Blue Systems Open Standard.
 
 Key requirements:
 - Fixed 44-byte header (PBS-ENV-01 v1.3)

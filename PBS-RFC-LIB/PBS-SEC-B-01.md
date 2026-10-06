@@ -2,8 +2,8 @@
 ## Authenticated Mission Messaging
 
 **Status:** Optional Security Profile
-**Version:** 1.4
-**Errata:** 2026-10-06 (PBS v1.4.1): Section 9 cited LNIS requirement 008 by an identifier without its REQ segment, which matches no definition; it now cites PBS-LNIS-REQ-008, defined in PBS-LNIS-01 Section 3. Wire format unchanged.
+**Version:** 1.5
+**Changes:** <release date> (PBS v1.5.0): Section 5 states that PBS-ENV-01 header fields, including TTL, are not mutable network-layer fields (PBS-ENV-01 Section 15). The PBS v1.4.1 Section 9 erratum is incorporated (PBS-PROTOCOL-CHANGELOG.md, [1.4.1]). Wire format unchanged.
 **Related:** PBS-ENV-01, PBS-AUTH-01, PBS-SVC-01, PBS-DTN-MAP-02
 
 ## 1. Purpose
@@ -52,7 +52,7 @@ The security suite SHALL authenticate a canonical representation containing:
 4. PNT Context when the application marks PNT context as protected;
 5. application payload.
 
-Mutable network-layer fields are excluded according to the applicable binding profile.
+Mutable network-layer fields are excluded according to the applicable binding profile. Relays and gateways do not modify the PBS-ENV-01 header (PBS-ENV-01 Section 15); its fields, including TTL, are not mutable network-layer fields.
 
 ## 6. Requirements
 
