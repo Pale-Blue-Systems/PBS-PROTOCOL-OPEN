@@ -113,7 +113,7 @@ At the boundary:
 
 The header CRC32 does not cover the payload and provides no authentication (PBS-ENV-01 Section 16.2, PBS-SEC-A-01). Payload integrity and authentication come from PBS-SEC-B-01 or the application.
 
-The PBS_LINK Python SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.1; `from PBS_LINK import PBSLink`) implements the PBS-ENV-01 envelope.
+The PBS_LINK Python SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.2; `from PBS_LINK import PBSLink`) implements the PBS-ENV-01 envelope.
 
 Internally, your data remains unchanged.
 

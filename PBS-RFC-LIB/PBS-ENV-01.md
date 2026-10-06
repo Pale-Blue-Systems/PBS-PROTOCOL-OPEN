@@ -356,7 +356,7 @@ Rules:
 
 ## 19. Reference Implementation
 
-The PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.1) implements this envelope in Python. The import package is `PBS_LINK` (`from PBS_LINK import PBSLink`).
+The PBS_LINK reference SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, version 0.1.2) implements this envelope in Python. The import package is `PBS_LINK` (`from PBS_LINK import PBSLink`).
 
 The following function builds an envelope according to Sections 4 and 13.1. Its output parses with `PBS_LINK.parse_envelope` and is byte-identical to the output of `PBS_LINK.build_envelope` for the same timestamp.
 
@@ -398,7 +398,7 @@ def build_envelope(source_id, priority, payload, ttl=0, sequence=0, require_ack=
     return header + payload_bytes
 ```
 
-Section 9 limits the Source ID to 16 bytes of UTF-8. The function truncates a longer encoding at byte 16, as PBS_LINK 0.1.1 does; the truncation can split a multi-byte character and produce invalid UTF-8.
+Section 9 limits the Source ID to 16 bytes of UTF-8. The function truncates a longer encoding at byte 16, as PBS_LINK 0.1.2 does; the truncation can split a multi-byte character and produce invalid UTF-8.
 
 ---
 
