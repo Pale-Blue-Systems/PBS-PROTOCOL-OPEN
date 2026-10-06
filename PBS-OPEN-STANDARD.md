@@ -61,7 +61,7 @@ In this context, “open standard” means:
 
 ## Stewardship and Governance
 
-The PBS Open Standard is stewarded by the **Pale Blue Systems Foundation (PBSF)**, an independent, foundation-led organization.
+The PBS Open Standard is stewarded by the **Pale Blue Systems Foundation (PBSF)** (PBS-GOV-01 Section 3.1).
 
 PBSF is responsible for:
 

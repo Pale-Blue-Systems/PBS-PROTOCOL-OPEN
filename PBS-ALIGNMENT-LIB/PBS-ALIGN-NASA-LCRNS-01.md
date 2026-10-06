@@ -84,7 +84,7 @@ PBS-CONFORMANCE-02 verifies PBS at the application interface with test cases PBS
 The paper states that the cislunar networking and interoperability approach lays the groundwork for similar capabilities for Mars and other deep-space missions (Section 1).
 
 **PBS alignment:**  
-PBS-PNT-CTX-01 covers lunar, cislunar, planetary, terrestrial and local mission frames (Section 1). PBS Core (PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01) contains no body-specific field. LunaNet-specific requirements are confined to PBS-LNIS-01, PBS-CONFORMANCE-02 and PBS-PNT-REQ-006.
+PBS-PNT-CTX-01 covers lunar, cislunar, planetary, terrestrial and local mission frames (Section 1). PBS Core (PBS-ENV-01, PBS-PRIO-01, PBS-SEC-A-01) contains no body-specific field. LunaNet-specific requirements appear only in optional specifications: PBS-LNIS-01, PBS-CONFORMANCE-02, PBS-PNT-CTX-01 (PBS-PNT-REQ-006), PBS-POS-01 Section 13 and PBS-DTN-MAP-02 Section 7.
 
 **Alignment Reference:** `PBS-ALIGN-LCRNS-FUT-06`
 

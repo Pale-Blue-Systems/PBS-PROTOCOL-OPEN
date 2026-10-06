@@ -172,7 +172,7 @@ PBS adoption affects:
 
 - partner onboarding: a partner that implements PBS needs no bespoke message format
 - integration cost: one interface implementation serves multiple partners
-- readiness for NASA/LunaNet programs: PBS v1.4 traces to NASA FY26 need statements 13.09, 15.01, 15.03 and 24.05 and to LNIS V005 (PBS-TRACE-NASA-FY26-01)
+- NASA/LunaNet traceability: PBS v1.4 traces to NASA FY26 need statements 13.09, 15.01, 15.03 and 24.05 and to LNIS V005 (PBS-TRACE-NASA-FY26-01). No PBS-CONFORMANCE-02 verification records are published.
 
 ---
 

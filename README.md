@@ -2,7 +2,7 @@
 
 This repository contains the **open communication standards stewarded by the Pale Blue Systems Foundation (PBSF)**: the PBS protocol specifications, their conformance profiles, the governance documents, and the alignment and traceability records that relate PBS to external sources.
 
-The PBS specifications define a fixed 44-byte message envelope and a set of optional extensions. Together they carry mission semantics with the data: source identity, priority, timestamp and lifetime, Service Intent, authority context, security profile and PNT context. The semantics are the same over IP, BPv7 and mission-specific links and across independently operated service providers.
+The PBS specifications define a fixed 44-byte message envelope and a set of optional extensions. Together they carry mission semantics with the data: source identity, priority, timestamp and lifetime, Service Intent, authority context, security profile and PNT context. The specifications define the same semantics over IP, BPv7 and mission-specific links and across independently operated service providers.
 
 ---
 
@@ -76,7 +76,7 @@ Provider / Link Infrastructure
 (LNSPs, Relays, RF, Optical, 3GPP, Wi-Fi, Ground)
 ```
 
-PBS envelopes are user-application data to the network services below them (PBS-LNIS-01 Section 2). Provider and path transitions preserve Source ID, authority context, priority, Service Intent and protected payload (PBS-LNIS-REQ-007).
+PBS envelopes are user-application data to the network services below them (PBS-LNIS-01 Section 2). PBS-LNIS-REQ-007 requires provider transitions to preserve Source ID, authority context, priority, Service Intent and protected application payload.
 
 ---
 
@@ -84,7 +84,7 @@ PBS envelopes are user-application data to the network services below them (PBS-
 
 PBS operates over IP, over BPv7, or through a gateway that selects between them (PBS-LNIS-01 Sections 2 and 4). Two optional specifications define carriage over BPv7. Neither references nor supersedes the other.
 
-- **PBS-DTN-MAP-01** (v1.3) defines a gateway translation between PBS-native domains and DTN domains. Each PBS envelope maps to exactly one bundle (Section 5.1). The complete envelope, 44-byte header and payload, is placed unmodified in a single BPv7 payload block (Section 6.2). TTL converts to bundle lifetime and Priority maps to a class of service (Sections 6.1 and 6.3). Source IDs map deterministically to endpoint identifiers (Section 8).
+- **PBS-DTN-MAP-01** (v1.3) defines a gateway translation between PBS-native domains and DTN domains. Each PBS envelope maps to exactly one bundle (Section 5.1). The complete envelope, 44-byte header and payload, is placed unmodified in a single BPv7 payload block (Section 6.2). TTL converts to bundle lifetime (Section 6.1). Source IDs map deterministically to endpoint identifiers (Section 8).
 - **PBS-DTN-MAP-02** (v1.4) defines carriage of v1.4 mission semantics over BPv7 for gateways and endpoints. One PBS protocol data unit SHOULD map to one BP application data unit (Section 2). Bundle lifetime SHALL be bounded by the remaining PBS deadline or expiry (Section 4). The adapter preserves PBS priority unchanged; network treatment is selected through BP QoS mechanisms and provider policy (Section 5). Section 6 maps Service Intent values to BPv7 adapter behavior.
 
 PBS-LNIS-01, PBS-CONFORMANCE-02 and the NASA FY26 traceability matrix reference PBS-DTN-MAP-02. PBS-CONFORMANCE-01 Section 3.1 lists PBS-DTN-MAP-01 as optional.
@@ -93,7 +93,7 @@ PBS-LNIS-01, PBS-CONFORMANCE-02 and the NASA FY26 traceability matrix reference 
 
 ## External Alignment
 
-Each alignment document identifies one external source, summarizes what it states, and maps those statements to PBS specification sections. No source names PBS, and no alignment claims endorsement.
+Each alignment document identifies its external sources, summarizes what they state, and maps those statements to PBS specification sections. No source names PBS, and no alignment claims endorsement.
 
 | Alignment ID | Source | Identifier |
 | :--- | :--- | :--- |

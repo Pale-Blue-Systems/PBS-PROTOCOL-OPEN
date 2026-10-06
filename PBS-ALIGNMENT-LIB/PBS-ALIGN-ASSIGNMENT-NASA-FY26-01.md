@@ -1,10 +1,9 @@
 # PBS Alignment Assignment — NASA FY26 Civil Space Shortfalls / LunaNet
 
 **Document ID:** PBS-ALIGN-ASSIGNMENT-NASA-FY26-01  
-**Status:** Active Engineering Assignment  
+**Status:** Delivered in PBS v1.4 (2026-09-22; pull request #1, git tag v1.4.0)  
 **Baseline Date:** 2026-09-22  
-**Protocol Baseline:** PBS v1.3 (git tag v1.3.0)  
-**Working Branch:** `alignment/nasa-fy26-lunanet`
+**Protocol Baseline:** PBS v1.3 (git tag v1.3.0)
 
 ## 1. Goal
 
@@ -87,7 +86,7 @@ Every normative requirement:
 
 ## 6. Acceptance Criteria
 
-The assignment reaches review-ready status when:
+Acceptance criteria:
 
 - each targeted NASA need has bidirectional traceability to PBS requirements;
 - the PBS/LunaNet interface is explicit and testable;

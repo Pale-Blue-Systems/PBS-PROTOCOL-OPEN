@@ -58,7 +58,7 @@ The RFC process applies when you want to:
 
 * **Format:** All specifications are written in Markdown.
 * **Language:** Use the requirement keywords of RFC 2119 and RFC 8174 (MUST/SHALL, MUST NOT/SHALL NOT, SHOULD, MAY) in uppercase only where a statement is normative.
-* **Identifiers:** Give each new normative requirement a unique identifier in the form `PBS-<SPEC>-REQ-<nnn>` and reference specifications by their declared IDs.
+* **Identifiers:** Give each new normative requirement a unique identifier `PBS-<ABBR>-REQ-<nnn>`, where `<ABBR>` is the abbreviation the specification already uses (for example, `PBS-SECB-REQ-001` in PBS-SEC-B-01). Traceability-matrix rows use the matrix's own scheme (for example, `PBS-NASA-1501-001`). Reference specifications by their declared IDs.
 * **Diagrams:** Use ASCII diagrams or Mermaid.js code blocks so diagrams remain version-controlled text.
 * **Tone:** Write declaratively and technically. No marketing language or vendor-specific terminology.
 

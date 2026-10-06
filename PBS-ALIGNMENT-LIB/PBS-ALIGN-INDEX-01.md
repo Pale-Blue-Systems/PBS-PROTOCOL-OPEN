@@ -10,7 +10,7 @@
 
 ## Purpose
 
-This index lists the PBS alignment documents in `PBS-ALIGNMENT-LIB/`. Each document identifies its external source by DOI or official URL, summarizes what the source states with section references, and maps those statements to PBS specification sections.
+This index lists the PBS alignment documents in `PBS-ALIGNMENT-LIB/`. Each document identifies its external sources by DOI or official URL, summarizes what they state with section references, and maps those statements to PBS specification sections.
 
 An alignment records correspondence between a source and PBS. No source names PBS, and no alignment claims endorsement by a source's authors or institutions.
 
@@ -76,7 +76,7 @@ NASA, ESA, and JAXA. *LunaNet Interoperability Specification Document*, Version 
 LTP throughput rises with segment size even when IP fragmentation occurs: a factor of 2 to 3 for HDTN depending on path MTU and a factor of 10 or more for ION. Segmentation offload and kernel-resident LTP segmentation are projected to give HDTN a factor of 4 over the LTP base case (Sections V, VI and X).
 
 **PBS Alignment:**  
-PBS maps one envelope to one bundle (PBS-DTN-MAP-01 Section 5.1; PBS-DTN-MAP-02 Section 2) and leaves convergence-layer selection to the DTN network service (PBS-DTN-MAP-02 Section 8). Convergence-layer improvements apply beneath PBS without a PBS change.
+PBS-DTN-MAP-01 Section 5.1 maps each envelope to exactly one bundle; PBS-DTN-MAP-02 Section 2 specifies that one PBS protocol data unit SHOULD map to one BP application data unit unless a registered segmentation profile applies. PBS-DTN-MAP-02 Section 8 leaves convergence-layer selection to the DTN network service. Convergence-layer improvements apply beneath PBS without a PBS change.
 
 **MLA Citation:**  
 Templin, Fred, et al. “High Performance DTN Using Larger Packets and Kernel Resident Convergence Layers.” *2025 IEEE Aerospace Conference*, IEEE, 2025, pp. 1–12, doi:10.1109/AERO63441.2025.11068517.
@@ -143,7 +143,7 @@ Zhang, Jingrui, et al. “LEO Mega Constellations: Review of Development, Impact
 
 ---
 
-### 8. Hybrid Organisations in Space Governance (Beaumier et al., 2024)
+### 8. Hybrid Organisations in Space Governance (Beaumier et al., 2025)
 
 **Alignment ID:** `PBS-ALIGN-TF-GOVERNANCE-2024-01`
 

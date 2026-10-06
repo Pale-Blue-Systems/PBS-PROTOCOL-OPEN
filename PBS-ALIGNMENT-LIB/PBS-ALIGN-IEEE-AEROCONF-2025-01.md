@@ -48,7 +48,7 @@ PBS-DTN-MAP-02 places the PBS envelope in the BPv7 payload and the convergence-l
 The paper notes that bundles are often 100 KB, 1 MB or larger, in contrast to IP packets (Section I), and shows that LTP throughput rises with segment size.
 
 **PBS alignment:**  
-PBS-DTN-MAP-01 Section 5.1 maps each PBS envelope to exactly one bundle and prohibits fragmenting an envelope across bundles; PBS-DTN-MAP-02 Section 2 maps one PBS protocol data unit to one BP application data unit unless a registered segmentation profile applies. Bundle size is therefore the envelope size: the 44-byte PBS-ENV-01 header plus the payload, whose maximum is implementation-defined (PBS-ENV-01 Section 16.3).
+PBS-DTN-MAP-01 Section 5.1 maps each PBS envelope to exactly one bundle and prohibits fragmenting an envelope across bundles; PBS-DTN-MAP-02 Section 2 specifies that one PBS protocol data unit SHOULD map to one BP application data unit unless a registered segmentation profile defines segmentation and reassembly. Under PBS-DTN-MAP-01 the BPv7 payload block therefore carries exactly one envelope: the 44-byte PBS-ENV-01 header plus the payload, whose maximum is implementation-defined (PBS-ENV-01 Section 16.3). The bundle adds the primary block and any extension blocks (RFC 9171 Sections 4.1 and 4.3).
 
 **Alignment Reference:** `PBS-ALIGN-AEROCONF-SIZE-02`
 
@@ -59,7 +59,7 @@ PBS-DTN-MAP-01 Section 5.1 maps each PBS envelope to exactly one bundle and proh
 Section IX observes that a 32-bit frame check sequence loses effectiveness for data sets larger than 9 KB and proposes IP parcels, which protect headers plus an integrity block so that intact segments are delivered when others are corrupted.
 
 **PBS alignment:**  
-The PBS-ENV-01 CRC32 covers only the fixed 44-byte header (PBS-ENV-01 Sections 13 and 16.2). Payload integrity is assigned to the application or to PBS-SEC-B-01 authenticated messaging (PBS-ENV-01 Section 16.2). PBS-DTN-MAP-01 Section 6.4 permits BPSec at the bundle layer in addition to the PBS header CRC32.
+The PBS-ENV-01 CRC32 covers only the fixed 44-byte header (PBS-ENV-01 Sections 13 and 16.2). Payload integrity is the application's responsibility (PBS-ENV-01 Section 16.2); PBS-SEC-B-01 authenticates the application payload when that profile applies (PBS-SEC-B-01 Section 5). PBS-DTN-MAP-01 Section 6.4 permits BPSec at the bundle layer in addition to the PBS header CRC32.
 
 **Alignment Reference:** `PBS-ALIGN-AEROCONF-INTEG-03`
 
@@ -67,7 +67,7 @@ The PBS-ENV-01 CRC32 covers only the fixed 44-byte header (PBS-ENV-01 Sections 1
 
 ## Alignment Summary
 
-Templin et al. show that DTN throughput over LTP depends on segment size, path MTU and where segmentation is performed. PBS sits above that layer: it maps one envelope to one bundle, leaves convergence-layer selection to the DTN network service, and limits its own header CRC32 to 44 bytes.
+Templin et al. show that DTN throughput over LTP depends on segment size, path MTU and where segmentation is performed. PBS sits above that layer: PBS-DTN-MAP-01 maps one envelope to one bundle, PBS-DTN-MAP-02 leaves convergence-layer selection to the DTN network service, and the PBS header CRC32 covers 44 bytes.
 
 ---
 

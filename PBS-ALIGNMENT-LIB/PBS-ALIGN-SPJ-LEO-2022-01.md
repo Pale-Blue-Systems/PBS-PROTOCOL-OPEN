@@ -57,17 +57,6 @@ PBS-PRIO-01 Section 4 defines five priority classes, from 0 CRITICAL (life- or s
 
 ---
 
-### Surveillance and Governance Mechanisms
-
-The paper states that space environment stability in LEO must be maintained through more rational surveillance and governance mechanisms.
-
-**PBS alignment:**  
-PBS-GOV-01 Sections 2 and 3 separate stewardship of the PBS specifications from commercial implementation, and the specifications are public under the Apache License 2.0.
-
-**Alignment Reference:** `PBS-ALIGN-SPJ-LEO-GOV-04`
-
----
-
 ## Alignment Summary
 
 Zhang et al. find that sustainable LEO activity requires more rational surveillance and governance mechanisms, and review space surveillance, situational awareness and end-of-life deorbiting as responses. PBS defines message formats for the information such coordination exchanges: authority context (PBS-AUTH-01), position with explicit reference frame and time (PBS-POS-01, PBS-PNT-CTX-01) and priority (PBS-PRIO-01).

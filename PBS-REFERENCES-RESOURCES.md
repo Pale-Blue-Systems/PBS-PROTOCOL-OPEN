@@ -69,7 +69,7 @@ ION is the open-source DTN implementation developed by NASA's Jet Propulsion Lab
 - **ION-DTN repository (nasa-jpl)**  
   https://github.com/nasa-jpl/ION-DTN  
 
-PBS-DTN-MAP-01 Section 11 names ION as an example of NASA DTN infrastructure. Templin et al. (2025 IEEE Aerospace Conference; `PBS-ALIGN-IEEE-AEROCONF-2025-01`) report ION and NASA Glenn HDTN throughput over LTP.
+PBS-DTN-MAP-01 Section 11 names ION as an example of NASA DTN infrastructure. Templin et al., “High Performance DTN Using Larger Packets and Kernel Resident Convergence Layers”, 2025 IEEE Aerospace Conference, doi:10.1109/AERO63441.2025.11068517 (`PBS-ALIGN-IEEE-AEROCONF-2025-01`), report ION and NASA Glenn HDTN throughput over LTP.
 
 ---
 
