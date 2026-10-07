@@ -236,6 +236,8 @@ A PBS Core conformant system implementing PBS-DTN-MAP-01 can:
 - interoperate with international and commercial DTN-enabled systems
 - preserve PBS semantics across interplanetary links
 
+PBS-DTN-MAP ensures **compatibility without coupling**.
+
 ---
 
 ## 12. Power and Compute Considerations

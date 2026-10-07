@@ -218,3 +218,5 @@ Rules:
 ## 14. Summary
 
 PBS-ADDR-01 defines a **scope-aware, TLV-encoded addressing model** for the PBS Open Standard.
+
+By enforcing a deterministic wire format while separating identity from routing and location, PBS addressing enables interoperable, multi-actor communication across space and extreme environments while allowing implementation-specific optimization above the protocol layer.

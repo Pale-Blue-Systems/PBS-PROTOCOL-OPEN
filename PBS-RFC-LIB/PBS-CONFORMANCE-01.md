@@ -256,3 +256,5 @@ Key requirements:
 - Big-endian, 4-byte aligned encoding
 
 This document defines the parsing, CRC32 verification and conformance-claim rules for PBS Core implementations.
+
+By establishing deterministic parsing rules, mandatory CRC32 verification, and clear conformance boundaries, this document ensures that PBS Core remains reliable infrastructure while allowing innovation above the protocol layer.

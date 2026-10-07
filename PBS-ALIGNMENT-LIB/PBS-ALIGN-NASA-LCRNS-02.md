@@ -10,7 +10,7 @@ NASA's Lunar Communications Relay and Navigation Systems (LCRNS) project [6] pro
 
 PBS defines the mission semantics that applications carry over those network services: identity and authority, priority, Service Intent, freshness, security requirements and PNT context.
 
-PBS provides the mission-semantic interoperability standard used by mission applications across those network services. PBS gives independently developed spacecraft, rovers, habitats, robots, sensors, autonomous systems, and ground applications a common representation for mission intent and application-level handling requirements.
+**Concept of operations:** PBS provides the mission-semantic interoperability standard used by mission applications across those network services. PBS gives independently developed spacecraft, rovers, habitats, robots, sensors, autonomous systems, and ground applications a common representation for mission intent and application-level handling requirements.
 
 ## Architectural Allocation
 

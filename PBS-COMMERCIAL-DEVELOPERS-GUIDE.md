@@ -70,6 +70,8 @@ At that boundary PBS gives your system a common format to:
 - integrate with civil infrastructure
 - operate in shared environments without a separate adapter per partner
 
+This model is analogous to how IP enabled the internet while allowing companies to build proprietary applications on top.
+
 ---
 
 ## 5. Where PBS Fits in a Commercial Architecture
