@@ -35,6 +35,7 @@ An alignment records correspondence between a source and PBS. No source names PB
 | PBS-ALIGN-IEEE-AEROCONF-2025-01 | IEEE Aerospace Conf. 2025 | Space Network Architecture | Validates modular, layered, non-monolithic comms architectures |
 | PBS-ALIGN-IEEE-AEROCONF-OBP-02 | IEEE AeroConf – Onboard Processing | Edge / Onboard Computing | Confirms shift toward autonomous, local processing with constrained backhaul |
 | PBS-ALIGN-IEEE-TNTN-2025-03 | IEEE Open Journal of ComSoc (2025) | T/NTN Testbeds | Demonstrates necessity of interoperable overlays across heterogeneous networks |
+| PBS-ALIGN-SCIENCE-2022-SPACE-04 | *Science Partner Journal*, 2022 | Space–Air–Ground Integration | Aligns with PBS abstraction of Space–Air–Ground as a single interoperable system |
 | PBS-ALIGN-TF-GOVERNANCE-2024-01 | *Journal of European Public Policy*, 2024 | Space Governance | Frames space as a fragmented, multi-actor domain requiring coordination without central authority |
 
 Requirements traceability for the v1.4 NASA alignment is in [`PBS-TRACE-NASA-FY26-01`](PBS-TRACE-NASA-FY26-01.md), under the engineering assignment [`PBS-ALIGN-ASSIGNMENT-NASA-FY26-01`](PBS-ALIGN-ASSIGNMENT-NASA-FY26-01.md).
