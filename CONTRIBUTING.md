@@ -2,7 +2,7 @@
 
 This document describes how to report defects in and propose changes to the **Pale Blue Systems (PBS) Open Standard**.
 
-The Pale Blue Systems Foundation (PBSF) maintains this standard for communication in space, lunar, and other delay- and disruption-prone environments. Contributions from engineers, researchers, agencies, and commercial developers follow the rules below.
+The PBS Foundation maintains this standard to enable reliable, interoperable communication for space, lunar, and extreme environments. We welcome contributions from engineers, researchers, agencies, and commercial developers who share this mission. Contributions follow the rules below.
 
 ---
 
@@ -67,7 +67,7 @@ The RFC process applies when you want to:
 
 ## 5. Community Code of Conduct
 
-Contributors are expected to interact with:
+We are building infrastructure for humanity's future in space. We expect all contributors to interact with:
 * **Professionalism:** Disagreement is fine; disrespect is not.
 * **Patience:** Not everyone shares your context or background.
 * **Neutrality:** Leave corporate rivalries at the door.
@@ -77,3 +77,5 @@ Contributors are expected to interact with:
 ## 6. Questions
 
 File questions about governance, trademarks, or the roadmap as an issue and suggest the `governance` label.
+
+Thank you for helping build the backbone of the next era of exploration.

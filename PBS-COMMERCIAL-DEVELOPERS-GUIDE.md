@@ -17,13 +17,16 @@ It explains:
 - what the Pale Blue Systems Open Standard (PBS) defines at a system level
 - how a commercial system integrates with PBS while keeping its internal design proprietary
 - which PBS specifications apply at each integration step
-- how PBS relates to NASA and LunaNet architectures
+- why a shared, open communication layer reduces risk and expands opportunity
+- how PBS aligns with current and future civil and commercial space architectures, including NASA and LunaNet architectures
 
 The normative requirements are in `PBS-RFC-LIB/`; this guide does not change them.
 
 ---
 
 ## 2. The Problem Commercial Developers Face
+
+As commercial activity expands beyond Earth, systems are increasingly required to operate in environments that differ fundamentally from terrestrial networks.
 
 Systems beyond Earth operate under conditions that terrestrial networks do not impose:
 
@@ -149,6 +152,14 @@ PBS changes integration cost and dependency in specific ways:
 - **Stability:** the 44-byte header and PBS Core semantics are stable for all v1.x releases (PBS-CONFORMANCE-01 Section 12)
 - **Verification:** conformance requirements are public (PBS-CONFORMANCE-01, PBS-CONFORMANCE-02)
 
+Design targets:
+
+- **Regulatory risk:** Alignment with architectures recognized by civil agencies
+- **Vendor risk:** Freedom to change internal implementations without breaking interoperability
+- **Longevity risk:** Stability across multi-decade mission horizons
+
+PBS shifts interoperability from a per-partner cost to a shared infrastructure benefit.
+
 ---
 
 ## 8. What Remains Proprietary
@@ -174,9 +185,23 @@ PBS adoption affects:
 - integration cost: one interface implementation serves multiple partners
 - NASA/LunaNet traceability: PBS v1.4 traces to NASA FY26 need statements 13.09, 15.01, 15.03 and 24.05 and to LNIS V005 (PBS-TRACE-NASA-FY26-01). No PBS-CONFORMANCE-02 verification records are published.
 
+PBS adoption is also intended to support:
+
+- improved readiness for government and international collaboration
+- participation in shared lunar and cislunar infrastructure
+- alignment with future exploration architectures
+
+PBS should be viewed as **infrastructure insurance** for a growing space economy.
+
 ---
 
 ## 10. References
+
+PBS is informed by and aligned with:
+- NASA-identified technology shortfalls
+- DTN and CCSDS standards
+- active lunar and Mars exploration architectures
+- commercial and international space initiatives
 
 PBS v1.4 traces to:
 - NASA *FY26 Civil Space Shortfall Prioritization* need statements 13.09, 15.01, 15.03 and 24.05 (PBS-TRACE-NASA-FY26-01)
@@ -197,3 +222,12 @@ All referenced documents are publicly available.
 ## 11. Summary
 
 PBS is an open communication standard that commercial systems implement at their external interfaces. Inside that boundary, each system keeps its own design, data models and intellectual property.
+
+By adopting PBS as an external communication layer, commercial developers gain access to a broader ecosystem—civil, commercial, and international—without surrendering control, differentiation, or intellectual property.
+
+PBS enables a future where **innovation scales because communication is shared, predictable, and trusted**.
+
+---
+
+**Pale Blue Systems Open Standard**
+A common language for interoperable systems beyond Earth.

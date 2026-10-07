@@ -65,6 +65,32 @@ The PBS-ENV-01 CRC32 covers only the fixed 44-byte header (PBS-ENV-01 Sections 1
 
 ---
 
+## Planned Architecture (in development)
+
+Pale Blue Systems (PBS) is building a governance-aware interoperability and coordination layer capable of operating across heterogeneous, intermittently connected mission, relay, and ground networks. PBS complements mission architectures by enabling policy-consistent data exchange and coordination without imposing centralized control or constraining internal system designs.
+
+### Mission-Centric, Federated Architecture
+
+PBS is designed to operate in federated, mission-centric environments, enabling interoperable data exchange across autonomous systems while preserving mission ownership, operational independence, and organizational boundaries.
+
+### Heterogeneous and Intermittent Communications
+
+PBS is delay-tolerant by design and assumes heterogeneous, disruption-prone links as the baseline. Its interoperability mechanisms support coordinated operations across inconsistent connectivity without requiring continuous end-to-end links.
+
+### Separation of Mission Logic from Transport Infrastructure
+
+PBS operates above transport and relay layers, reinforcing this separation by allowing missions to evolve communications technologies without refactoring mission logic or cross-system coordination mechanisms.
+
+### Multi-Authority and Multi-Stakeholder Operations
+
+PBS is explicitly designed for multi-authority interoperability. It provides policy-aware mediation between independently governed systems, enabling coordination without requiring shared control planes or internal disclosure.
+
+### Forward Extensibility and Reuse
+
+PBS is mission-agnostic and orbit-agnostic, designed to persist across mission eras and domains. Its architecture supports progressive expansion without requiring architectural reset as mission scope evolves.
+
+---
+
 ## Alignment Summary
 
 Templin et al. show that DTN throughput over LTP depends on segment size, path MTU and where segmentation is performed. PBS sits above that layer: PBS-DTN-MAP-01 maps one envelope to one bundle, PBS-DTN-MAP-02 leaves convergence-layer selection to the DTN network service, and the PBS header CRC32 covers 44 bytes.

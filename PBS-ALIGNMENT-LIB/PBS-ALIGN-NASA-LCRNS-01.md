@@ -20,6 +20,8 @@ Esper et al. describe the LCRNS project of NASA's Space Communications and Navig
 
 PBS is application-layer protocol data carried over the network services such relays provide (PBS-LNIS-01 Section 2). The dimensions below map statements in the paper to PBS specification sections.
 
+**Planned architecture (in development):** Pale Blue Systems (PBS) aligns with the LCRNS architecture by providing a governance-aware interoperability and translation layer capable of operating across independently governed lunar, cislunar, and terrestrial networks. PBS complements LCRNS by enabling policy-aware coordination among heterogeneous systems without imposing centralized control or constraining internal provider architectures.
+
 ---
 
 ## Alignment Dimensions
@@ -90,9 +92,43 @@ PBS-PNT-CTX-01 covers lunar, cislunar, planetary, terrestrial and local mission 
 
 ---
 
+## Planned Architecture (in development)
+
+Pale Blue Systems is building PBS to the following architecture for LCRNS and LunaNet environments.
+
+### Network-of-Networks Architecture
+
+PBS is architected to operate within network-of-networks environments, enabling interoperable data exchange across autonomous systems while preserving operational independence. PBS provides a neutral interstitial layer that allows cooperating networks to coordinate without requiring shared internal designs.
+
+### Interoperability and Open Standards
+
+PBS operates above CCSDS, IETF, DTN, IP, and related standards, enabling translation and coordination across compliant systems without requiring identical implementations. PBS preserves payload opacity while mediating routing and exchange context across domains.
+
+### Commercial Multi-Provider Ecosystem
+
+NASA positions LCRNS as a commercially provided service environment, where NASA acts as one customer among many. Providers retain independent internal architectures and compete on performance, coverage, and service offerings.
+
+**PBS alignment:**  
+PBS is designed to support commercial multi-provider ecosystems by enabling interoperability at defined exchange boundaries. It allows providers to maintain proprietary internal systems while participating in a shared interoperable lunar communications environment.
+
+### Governance, Authority, and Safety
+
+PBS provides explicit authority-context handling and policy-aware routing, enabling deterministic interoperability across independently governed systems. Its design supports auditability and safety without requiring payload inspection or centralized trust.
+
+### Strategic Extensibility: Moon to Mars
+
+NASA frames LCRNS as a foundational architecture extensible beyond lunar operations toward future Moon-to-Mars and deep-space networked missions.
+
+**PBS alignment:**  
+PBS is orbit-agnostic and mission-agnostic, designed to persist across mission eras and celestial domains. Its architecture supports progressive expansion without requiring architectural reset as operational scope evolves.
+
+---
+
 ## Alignment Summary
 
 Esper et al. describe LCRNS as commercially provided, LNIS-interoperable lunar relay and navigation services with onboard routing, store-and-forward storage and interface-level verification. PBS carries mission semantics over those services and specifies, for the user side, semantic preservation across providers (PBS-LNIS-01), disruption and lifetime handling (PBS-SVC-01, PBS-DTN-MAP-02), PNT reference identification (PBS-PNT-CTX-01) and interface-level verification (PBS-CONFORMANCE-02).
+
+**Planned architecture (in development):** Pale Blue Systems aligns with this architecture by providing a governance-aware interoperability layer that enables policy-consistent data exchange across autonomous lunar, cislunar, and terrestrial networks. Together, LCRNS defines the interoperable lunar infrastructure, while PBS enables scalable, multi-authority coordination within that environment.
 
 ---
 

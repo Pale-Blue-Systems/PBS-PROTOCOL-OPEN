@@ -4,7 +4,7 @@
 **Document ID:** `PBS-ALIGN-INDEX-01`  
 **Status:** Living Document  
 **Scope:** Technical, Operational, Governance, and Architectural Alignment  
-**Last Updated:** 2026-10-06
+**Last Updated:** 2026-10-07
 
 ---
 
@@ -47,6 +47,9 @@ Cislunar space has no existing communications, PNT or timing infrastructure. LCR
 **PBS Alignment:**  
 PBS-LNIS-01 preserves PBS semantics across LunaNet Service Provider boundaries (PBS-LNIS-REQ-001, PBS-LNIS-REQ-007). PBS-SVC-01 and PBS-DTN-MAP-02 carry disruption, persistence and lifetime policy. PBS-PNT-CTX-01 identifies PNT reference frames and time references. PBS-CONFORMANCE-02 verifies PBS at the application interface.
 
+**Planned architecture (in development):**  
+PBS provides a neutral interoperability layer that enables routing, identity, and policy awareness across independently governed lunar systems without imposing mission redesign or centralized control.
+
 **MLA Citation:**  
 Esper, Jaime, et al. “NASA’s Lunar Communications Relay and Navigation Systems (LCRNS).” *18th International Conference on Space Operations (SpaceOps 2025)*, Montreal, 26–30 May 2025, NASA Technical Reports Server 20250003321, ntrs.nasa.gov/citations/20250003321.
 
@@ -78,6 +81,9 @@ LTP throughput rises with segment size even when IP fragmentation occurs: a fact
 **PBS Alignment:**  
 PBS-DTN-MAP-01 Section 5.1 maps each envelope to exactly one bundle; PBS-DTN-MAP-02 Section 2 specifies that one PBS protocol data unit SHOULD map to one BP application data unit unless a registered segmentation profile applies. PBS-DTN-MAP-02 Section 8 leaves convergence-layer selection to the DTN network service. Convergence-layer improvements apply beneath PBS without a PBS change.
 
+**Planned architecture (in development):**  
+PBS is explicitly layered, sitting above transport and below mission logic, enabling reuse across missions, orbits, and operators.
+
 **MLA Citation:**  
 Templin, Fred, et al. “High Performance DTN Using Larger Packets and Kernel Resident Convergence Layers.” *2025 IEEE Aerospace Conference*, IEEE, 2025, pp. 1–12, doi:10.1109/AERO63441.2025.11068517.
 
@@ -93,6 +99,9 @@ LCRNS relays provide the LNIS real-time frame, real-time IP and store-and-forwar
 **PBS Alignment:**  
 PBS carries the user-side information with the data: disruption policy (PBS-SVC-01 Section 9), priority and data class (PBS-PRIO-01 Section 4, PBS-SVC-01 Section 4), endpoint-to-EID mapping (PBS-DTN-MAP-02 Section 3) and end-to-end authentication (PBS-SEC-B-01).
 
+**Planned architecture (in development):**  
+PBS assumes intermittent connectivity and supports autonomous operation with delayed synchronization, rather than continuous ground dependence.
+
 **MLA Citation:**  
 Verville, Jonathan, and Wesley Eddy. “Onboard Processing for LunaNet Data Services.” *2025 IEEE Aerospace Conference*, IEEE, 2025, pp. 1–12, doi:10.1109/AERO63441.2025.11068727.
 
@@ -107,6 +116,9 @@ Experimental testbeds for integrated T/NTNs are built from software-defined radi
 
 **PBS Alignment:**  
 PBS is application data independent of the access technology, including 3GPP links (PBS-LNIS-01 Section 5, PBS-LNIS-REQ-004). PBS-CONFORMANCE-02 Section 4 requires the emulator and link-impairment configuration of each verification run to be recorded.
+
+**Planned architecture (in development):**  
+PBS operates as an overlay that allows proprietary and open systems to interoperate without altering their internal implementations.
 
 **MLA Citation:**  
 Carbonara, Salvatore, et al. “Hands-On Solutions for Testing Integrated Terrestrial and Non-Terrestrial Networks: A Comprehensive Survey.” *IEEE Open Journal of the Communications Society*, vol. 6, 2025, pp. 10729–10760, doi:10.1109/OJCOMS.2025.3646364.
@@ -138,6 +150,9 @@ Unrestrained deployment of LEO mega constellations strains orbital resources and
 **PBS Alignment:**  
 PBS-AUTH-01, PBS-POS-01 with PBS-PNT-CTX-01, and PBS-PRIO-01 define the authority, position and priority information exchanged between independently operated systems.
 
+**Planned architecture (in development):**  
+PBS treats Space–Air–Ground as a continuous system, enabling seamless message flow across domains while preserving domain-specific constraints.
+
 **MLA Citation:**  
 Zhang, Jingrui, et al. “LEO Mega Constellations: Review of Development, Impact, Surveillance, and Governance.” *Space: Science & Technology*, vol. 2022, 2022, doi:10.34133/2022/9865174.
 
@@ -153,6 +168,9 @@ Organisations in governance systems multiply, diversify and cluster by type. Hyb
 **PBS Alignment:**  
 PBS-AUTH-01 carries the authority context of each protected message and requires authority translation across administrative domains to be explicit and policy-controlled (PBS-AUTH-REQ-004).
 
+**Planned architecture (in development):**  
+PBS embeds authority context and policy boundaries into its interoperability model, enabling coordination without governance collapse or forced unification.
+
 **MLA Citation:**  
 Beaumier, Guillaume, et al. “Hybrid Organisations and Governance Systems: The Case of the European Space Agency.” *Journal of European Public Policy*, vol. 32, no. 4, 2025, pp. 1004–1034, doi:10.1080/13501763.2024.2325647.
 
@@ -164,6 +182,10 @@ Beaumier, Guillaume, et al. “Hybrid Organisations and Governance Systems: The 
 - The sources describe the conditions PBS is specified for: multi-provider lunar networks built to LNIS (alignments 1, 2 and 4), DTN carriage over BP and LTP (3 and 6), 3GPP non-terrestrial links (5) and multi-organisation operation and governance (7 and 8).
 - Each alignment maps statements in its source to PBS specification sections.
 - Requirements-level traceability exists for the NASA FY26 alignment only (PBS-TRACE-NASA-FY26-01). The other alignments are informative.
+- PBS aligns with **independently identified needs**, not speculative futures.
+- Alignment spans **technical**, **operational**, and **governance** layers.
+- No dependency on a single agency, vendor, or political framework.
+- Clear evidence that PBS fits naturally into emerging space and lunar ecosystems.
 
 
 **End of Document**

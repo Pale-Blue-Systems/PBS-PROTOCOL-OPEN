@@ -12,9 +12,9 @@ This document lists the external standards, agency documents and programs that t
 
 1. **Networking protocols and standards** that PBS is carried over or maps to
 2. **Agency need statements and specifications** that PBS v1.4 traces to
-3. **Programs and organizations** whose operating conditions PBS addresses
+3. **Programs, missions, and initiatives**—public and commercial—that demonstrate the relevance and necessity of PBS-style solutions  
 
-Each link was checked on 2026-10-06.
+All links reference publicly available, validated sources. Each link was checked on 2026-10-06.
 
 ---
 
@@ -70,6 +70,8 @@ ION is the open-source DTN implementation developed by NASA's Jet Propulsion Lab
   https://github.com/nasa-jpl/ION-DTN  
 
 PBS-DTN-MAP-01 Section 11 names ION as an example of NASA DTN infrastructure. Templin et al., “High Performance DTN Using Larger Packets and Kernel Resident Convergence Layers”, 2025 IEEE Aerospace Conference, doi:10.1109/AERO63441.2025.11068517 (`PBS-ALIGN-IEEE-AEROCONF-2025-01`), report ION and NASA Glenn HDTN throughput over LTP.
+
+ION serves as a primary interoperability target for PBS-DTN-MAP.
 
 ---
 
@@ -132,6 +134,8 @@ PBS-LNIS-01 defines PBS operation over LunaNet IP and BPv7 network services.
 - **Gateway**  
   https://www.nasa.gov/mission/gateway/  
 
+These programs involve distributed systems, multiple partners, and intermittent connectivity—conditions PBS is designed to address.
+
 - **Commercial Lunar Payload Services (CLPS)**  
   https://www.nasa.gov/commercial-lunar-payload-services/  
 
@@ -149,6 +153,8 @@ PBS-LNIS-01 defines PBS operation over LunaNet IP and BPv7 network services.
   https://www.nasa.gov/directorates/somd/space-communications-navigation-program/what-is-the-deep-space-network/  
 
 PBS-PRIO-01 Section 14 gives an informative mapping from DSN priority levels to PBS priority classes. PBS operates at the packet layer within DSN-allocated link time and requires no DSN modification (Section 14.3).
+
+PBS complements DSN and deep-space relay systems by providing a standardized application-layer communication model.
 
 ---
 
@@ -172,6 +178,11 @@ NASA, ESA and JAXA wrote and approved LNIS V005 (LNIS V005 Section 1.1).
 - **IRTF Delay-Tolerant Networking Research Group (DTNRG)** (concluded)  
   https://www.irtf.org/concluded/dtnrg.html  
 
+- **Humanitarian and Disaster Networking (DTN Use Cases)**  
+  https://www.ietf.org/proceedings/  
+
+PBS draws on lessons learned from terrestrial DTN deployments in disaster response, remote research, and infrastructure-poor regions.
+
 ---
 
 ## 8. Open Standards Bodies
@@ -189,4 +200,16 @@ These organizations maintain open standards or open-source projects under vendor
 
 ---
 
-**Pale Blue Systems Foundation**
+## 9. Summary
+
+The Pale Blue Systems Open Standard is grounded in:
+- established space and networking protocols  
+- publicly identified mission needs and technology gaps  
+- real-world programs spanning civil, commercial, and international space activity  
+
+PBS builds on this foundation to provide a coherent, interoperable communication layer designed for humanity’s sustained presence beyond Earth.
+
+---
+
+**Pale Blue Systems Foundation**  
+Stewarding open, interoperable communication standards for humanity’s future in space.

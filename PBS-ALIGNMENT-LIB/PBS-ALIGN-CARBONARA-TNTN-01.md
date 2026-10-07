@@ -66,9 +66,41 @@ PBS-LNIS-01 Section 5 covers 3GPP surface links in LunaNet-aligned deployments. 
 
 ---
 
+## Planned Architecture (in development)
+
+Pale Blue Systems is building PBS to the following architecture for integrated terrestrial and non-terrestrial environments.
+
+### Integrated Terrestrial and Non-Terrestrial Networking
+
+PBS is designed for interoperability across terrestrial, aerial, orbital, lunar, and deep-space networks. Its architecture treats integrated T/NTNs as the default operating environment rather than a special case, enabling coordinated data exchange across these domains while preserving segment-specific constraints.
+
+### Heterogeneity Across Network Segments
+
+PBS is architected with heterogeneity as a first-order design assumption. Its interoperability layer operates above diverse physical and network implementations, allowing independently designed systems to interconnect without requiring uniform technologies or configurations.
+
+### Experimental Validation and Testbeds as Core Infrastructure
+
+PBS aligns with this emphasis by providing an architectural layer that can be exercised across heterogeneous testbeds and experimental environments. Its design enables interoperability and coordination among independently operated platforms, supporting end-to-end validation across the types of systems surveyed in the study.
+
+### Layered Architectural Separation
+
+PBS is positioned above these layers as an interoperability and governance mechanism. It remains agnostic to specific radio, access, and core network implementations, enabling lower-layer innovation without disrupting inter-system coordination.
+
+### Multi-Actor and Multi-Authority Participation
+
+PBS is designed to support interoperability in multi-actor, multi-authority environments. Its architecture enables independently governed systems to exchange data and coordinate through policy-aware interfaces without requiring centralized ownership or unified control.
+
+### Scalability from Testbeds to Operational Systems
+
+PBS supports this progression by providing a consistent interoperability framework that can be applied across experimental, pilot, and operational deployments, enabling continuity as systems scale in size, scope, and complexity.
+
+---
+
 ## Alignment Summary
 
 Carbonara et al. catalogue the tools for building integrated T/NTN testbeds and report that experimental work on specific T/NTN functions is still limited. PBS sits above the 3GPP links those testbeds emulate, and PBS-CONFORMANCE-02 requires the emulator and link-impairment configuration of any PBS verification run to be recorded.
+
+**Planned architecture (in development):** Pale Blue Systems aligns with this work by providing an architectural interoperability and governance layer capable of operating across the diverse testbeds, platforms, and network segments surveyed in the study, supporting scalable coordination in 6G-and-beyond environments.
 
 ---
 

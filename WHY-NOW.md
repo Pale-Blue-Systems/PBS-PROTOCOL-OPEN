@@ -1,6 +1,25 @@
 # Why Now — Context for PBS Open Protocols
 
-PBS addresses **interoperability across multiple independent authorities operating beyond Earth**. This document states why the specifications are published now.
+The PBS Open Protocols repository exists to address a foreseeable challenge in the future of space communications: **interoperability across multiple independent authorities operating beyond Earth**.
+
+This work does not respond to a present operational deficiency.  
+It anticipates an environment that has been repeatedly described in long-range space architecture planning but has not yet fully materialized.
+
+This document states why the specifications are published now.
+
+---
+
+## The Future Operating Context
+
+Space systems are evolving toward an environment that includes:
+
+- multiple national space agencies operating concurrently,
+- commercial operators with independent technical stacks,
+- scientific, industrial, and tourism activities,
+- shared relays, shared spectrum, and shared physical infrastructure,
+- missions and systems that persist beyond individual programs.
+
+In such an environment, **no single organization can reasonably assume global authority**, even when cooperation exists.
 
 ---
 
@@ -34,7 +53,11 @@ Open, inspectable specifications allow:
 
 - conflicting assumptions to be found before deployment,
 - review by organizations that will implement them,
-- independent implementations that share semantics.
+- collaborative refinement before deployment pressure exists,
+- experimentation without commitment,
+- coexistence of diverse implementations under shared semantics.
+
+Publishing protocol concepts early enables discussion **before interoperability becomes a constraint rather than a choice**.
 
 ---
 
@@ -42,9 +65,17 @@ Open, inspectable specifications allow:
 
 This repository exists to:
 
-1. State interoperability requirements for mission semantics explicitly, with identifiers and verification methods (PBS-TRACE-NASA-FY26-01, PBS-CONFORMANCE-02).
-2. Provide a vendor-neutral specification set under the governance of PBS-GOV-01.
-3. Allow the specifications to be reviewed and revised in public through the RFC process of PBS-GOV-01 Section 5.
+1. Make future interoperability concerns explicit and discussable. The interoperability requirements for mission semantics are stated with identifiers and verification methods (PBS-TRACE-NASA-FY26-01, PBS-CONFORMANCE-02).
+2. Provide a neutral foundation for collaboration across organizations: a vendor-neutral specification set under the governance of PBS-GOV-01.
+3. Allow protocol ideas to evolve in the open before they are required, through the RFC process of PBS-GOV-01 Section 5.
+
+---
+
+## Summary
+
+PBS Open Protocols are published now because future space operations are expected to be **multi-authority by default**.
+
+Early clarity in protocol design helps ensure that future systems remain interoperable, adaptable, and resilient as participation expands.
 
 ---
 

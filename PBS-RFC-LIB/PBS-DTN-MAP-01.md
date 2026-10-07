@@ -261,3 +261,7 @@ Rules:
 ## 14. Summary
 
 PBS-DTN-MAP-01 defines the gateway mapping between PBS Core envelopes and BPv7 bundles. DTN applies at gateway boundaries only; PBS-native domains do not require DTN wrapping (Section 2).
+
+PBS-DTN-MAP-01 defines a **clean, minimal, and deterministic bridge** between PBS Core and DTN environments.
+
+By treating DTN as a boundary transport rather than an internal dependency, PBS enables commercial, civil, and international systems to interoperate across Earth, lunar, and deep-space domains while preserving performance, security, and architectural independence.

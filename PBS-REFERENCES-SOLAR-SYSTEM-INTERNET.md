@@ -82,6 +82,34 @@ The report identifies time determination across the solar system as an open stan
 
 **PBS alignment:** PBS-PNT-CTX-01 requires time-bearing PNT data to identify its time reference (PBS-PNT-REQ-002) and LunaNet-aligned deployments to support the lunar time reference identifiers defined by governing LunaNet documents (PBS-PNT-REQ-006).
 
+### Planned Architecture (in development)
+
+Pale Blue Systems is building the PBS interoperability layer to the following architecture.
+
+#### Federated Network Architecture
+
+PBS adopts a **federated internetwork model** consistent with the paper’s framing of the Solar System Internet as a collection of autonomous networks interconnected through negotiated interfaces. PBS assumes that space, lunar, and terrestrial systems will continue to be operated by independent civil, commercial, and defense authorities, and it is designed to enable interoperability across these domains without requiring shared ownership, centralized control, or uniform internal architectures.
+
+#### Gateway-Centric Design
+
+In alignment with the document’s emphasis on gateways as the primary interoperability mechanism, PBS is architected around **policy-aware gateway components**. These gateways perform protocol translation, authority context resolution, and policy enforcement at network boundaries, allowing data to traverse heterogeneous systems while preserving mission-specific constraints and operational autonomy.
+
+#### Authority-Scoped Naming and Identity
+
+PBS reflects the paper’s treatment of naming and identity as governance-sensitive concerns by implementing **authority-scoped identifiers** and namespace separation within its interoperability layer. Rather than relying only on the flat 16-byte Source ID of the PBS-ENV-01 header, PBS enables naming and resolution decisions to be evaluated in the context of administrative authority, operational scope, and policy domain (PBS-AUTH-01, PBS-ADDR-01).
+
+#### Policy-Driven Routing and Exchange
+
+Consistent with the paper’s conclusion that routing in space networks is shaped by policy as much as by topology, PBS supports **policy-driven routing and data exchange**. Decisions regarding connectivity, data flow, and interoperability are mediated at gateway boundaries, allowing technical exchange to remain aligned with legal, mission, commercial, and organizational requirements.
+
+#### Security and Trust Context
+
+PBS aligns with the document’s contextual trust model by treating security as **authority-scoped and situational**. Trust relationships are established and enforced at interoperability boundaries rather than assumed globally, and encrypted payloads may traverse PBS gateways without requiring inspection or modification.
+
+#### Long-Term Extensibility
+
+In accordance with the paper’s emphasis on future-proofing early architectural decisions, PBS is designed as an extensible interoperability layer that can evolve alongside emerging transport protocols, mission architectures, and governance frameworks. Its position above specific transport implementations enables adaptation to future cislunar, planetary, and deep-space networking scenarios without requiring redesign of endpoint systems.
+
 ---
 
 ## References (MLA)

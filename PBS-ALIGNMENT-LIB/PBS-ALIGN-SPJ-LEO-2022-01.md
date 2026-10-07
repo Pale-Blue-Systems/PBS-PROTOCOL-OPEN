@@ -57,6 +57,32 @@ PBS-PRIO-01 Section 4 defines five priority classes, from 0 CRITICAL (life- or s
 
 ---
 
+## Planned Architecture (in development)
+
+Pale Blue Systems (PBS) is building a governance-aware interoperability layer that enables asynchronous coordination and policy-consistent data exchange across autonomous, independently operated space systems. PBS complements autonomous system architectures by enabling cooperation without centralized control or continuous connectivity.
+
+### Autonomy as a Structural Requirement
+
+PBS is designed for environments where autonomous systems generate decisions and data products locally. Its architecture supports coordination among such systems without reliance on real-time ground intervention.
+
+### Distributed and Multi-Agent Space Systems
+
+PBS enables multi-agent interoperability by allowing independently operated systems to exchange coordination signals and mission-relevant data products while preserving internal autonomy and implementation independence.
+
+### Governance Pressure from Scale and Complexity
+
+PBS directly addresses this pressure through explicit authority-context handling and policy-aware exchange, enabling cooperation across systems governed by different organizations, missions, or regulatory regimes.
+
+### Temporal Decoupling and Asynchronous Coordination
+
+PBS is inherently delay-tolerant and supports asynchronous coordination, enabling systems to exchange information and coordinate actions without assuming simultaneity or continuous connectivity.
+
+### Architecture-Level Focus
+
+PBS operates at an architectural abstraction level, remaining agnostic to underlying transport protocols, hardware, and processing implementations while enabling coherent system-level coordination.
+
+---
+
 ## Alignment Summary
 
 Zhang et al. find that sustainable LEO activity requires more rational surveillance and governance mechanisms, and review space surveillance, situational awareness and end-of-life deorbiting as responses. PBS defines message formats for the information such coordination exchanges: authority context (PBS-AUTH-01), position with explicit reference frame and time (PBS-POS-01, PBS-PNT-CTX-01) and priority (PBS-PRIO-01).
