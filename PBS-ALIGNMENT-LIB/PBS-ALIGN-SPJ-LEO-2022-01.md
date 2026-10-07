@@ -20,6 +20,8 @@ Zhang et al. review the growth of low Earth orbit (LEO) mega constellations and 
 
 PBS does not perform surveillance, collision avoidance or debris removal. It defines message formats for authority, position and priority information exchanged between independently operated systems.
 
+The Science Partner Journal paper (2022) examines the increasing necessity of autonomy, distributed decision-making, and multi-agent coordination in future space systems. It frames autonomy not as an optional enhancement, but as a structural requirement driven by scale, latency, operational complexity, and the expansion of missions beyond Earth orbit.
+
 ---
 
 ## Alignment Dimensions
@@ -54,6 +56,32 @@ The paper analyses the impact of mega constellations on spacecraft safety in orb
 PBS-PRIO-01 Section 4 defines five priority classes, from 0 CRITICAL (life- or safety-critical data) to 4 BULK, carried in the envelope header independently of transport.
 
 **Alignment Reference:** `PBS-ALIGN-SPJ-LEO-PRIO-03`
+
+---
+
+## Planned Architecture (in development)
+
+Pale Blue Systems (PBS) is building a governance-aware interoperability layer that enables asynchronous coordination and policy-consistent data exchange across autonomous, independently operated space systems. PBS complements autonomous system architectures by enabling cooperation without centralized control or continuous connectivity.
+
+### Autonomy as a Structural Requirement
+
+PBS is designed for environments where autonomous systems generate decisions and data products locally. Its architecture supports coordination among such systems without reliance on real-time ground intervention.
+
+### Distributed and Multi-Agent Space Systems
+
+PBS enables multi-agent interoperability by allowing independently operated systems to exchange coordination signals and mission-relevant data products while preserving internal autonomy and implementation independence.
+
+### Governance Pressure from Scale and Complexity
+
+PBS directly addresses this pressure through explicit authority-context handling and policy-aware exchange, enabling cooperation across systems governed by different organizations, missions, or regulatory regimes.
+
+### Temporal Decoupling and Asynchronous Coordination
+
+PBS is inherently delay-tolerant and supports asynchronous coordination, enabling systems to exchange information and coordinate actions without assuming simultaneity or continuous connectivity.
+
+### Architecture-Level Focus
+
+PBS operates at an architectural abstraction level, remaining agnostic to underlying transport protocols, hardware, and processing implementations while enabling coherent system-level coordination.
 
 ---
 

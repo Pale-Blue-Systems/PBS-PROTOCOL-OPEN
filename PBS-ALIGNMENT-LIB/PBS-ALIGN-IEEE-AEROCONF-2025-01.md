@@ -28,6 +28,8 @@ Findings:
 - Segmentation offload and a kernel-resident LTP segmentation function are projected to give HDTN a factor of 4 over the LTP base case (Section X).
 - On the International Space Station, BP runs over TCP, LTP, UDP and STCP convergence layers selected per link (Section IV).
 
+The IEEE Aerospace Conference 2025 paper presents a mission-oriented space systems architecture emphasizing distributed assets, heterogeneous communications, and coordinated operations across independently operated systems. The architecture assumes intermittent connectivity, variable latency, and mixed relay and direct communication paths as baseline operating conditions. It further separates mission logic and data workflows from underlying transport and relay mechanisms to support extensibility and reuse across future missions.
+
 ---
 
 ## Alignment Dimensions
@@ -62,6 +64,35 @@ Section IX observes that a 32-bit frame check sequence loses effectiveness for d
 The PBS-ENV-01 CRC32 covers only the fixed 44-byte header (PBS-ENV-01 Sections 13 and 16.2). Payload integrity is the application's responsibility (PBS-ENV-01 Section 16.2); PBS-SEC-B-01 authenticates the application payload when that profile applies (PBS-SEC-B-01 Section 5). PBS-DTN-MAP-01 Section 6.4 permits BPSec at the bundle layer in addition to the PBS header CRC32.
 
 **Alignment Reference:** `PBS-ALIGN-AEROCONF-INTEG-03`
+
+---
+
+## Planned Architecture (in development)
+
+Pale Blue Systems (PBS) is building a governance-aware interoperability and coordination layer capable of operating across heterogeneous, intermittently connected mission, relay, and ground networks. PBS complements mission architectures by enabling policy-consistent data exchange and coordination without imposing centralized control or constraining internal system designs.
+
+### Mission-Centric, Federated Architecture
+
+PBS is designed to operate in federated, mission-centric environments, enabling interoperable data exchange across autonomous systems while preserving mission ownership, operational independence, and organizational boundaries.
+
+### Heterogeneous and Intermittent Communications
+
+PBS is delay-tolerant by design and assumes heterogeneous, disruption-prone links as the baseline. Its interoperability mechanisms support coordinated operations across inconsistent connectivity without requiring continuous end-to-end links.
+
+### Separation of Mission Logic from Transport Infrastructure
+
+PBS operates above transport and relay layers, reinforcing this separation by allowing missions to evolve communications technologies without refactoring mission logic or cross-system coordination mechanisms.
+
+### Multi-Authority and Multi-Stakeholder Operations
+
+PBS is explicitly designed for multi-authority interoperability. It provides policy-aware mediation between independently governed systems, enabling coordination without requiring shared control planes or internal disclosure.
+
+### Forward Extensibility and Reuse
+
+The paper positions its architecture as reusable across future missions and adaptable to expanding operational domains, including cislunar and deeper-space environments.
+
+**PBS alignment:**  
+PBS is mission-agnostic and orbit-agnostic, designed to persist across mission eras and domains. Its architecture supports progressive expansion without requiring architectural reset as mission scope evolves.
 
 ---
 

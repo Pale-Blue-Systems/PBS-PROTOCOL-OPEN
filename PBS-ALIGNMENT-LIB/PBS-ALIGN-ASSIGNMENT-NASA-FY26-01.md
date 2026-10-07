@@ -104,6 +104,7 @@ Acceptance criteria:
 3. NASA Goddard Space Flight Center, Exploration and Space Communications. *LCRNS*. <https://www.nasa.gov/goddard/esc/lcrns/>; Esper, J., G. Heckler, J. Verville, and G. Ryden. “NASA’s Lunar Communications Relay and Navigation Systems (LCRNS).” SpaceOps 2025. <https://ntrs.nasa.gov/citations/20250003321>
 4. NASA Space Communications and Navigation. *Delay/Disruption Tolerant Networking*. <https://www.nasa.gov/communicating-with-missions/delay-disruption-tolerant-networking/>
 5. Kearns, M. “NASA Wideband Demo Completes Primary Mission, Extends Operations” (PExT). NASA, 1 June 2026. <https://www.nasa.gov/blogs/smallsatellites/2026/06/01/nasa-wideband-demo-completes-primary-mission-extends-operations/>
+6. NASA. *Moon Base Systems* communications and PNT architecture, 2026.
 6. NASA. *2026 Civil Space Shortfalls*. Released 12 January 2026. <https://www.nasa.gov/wp-content/uploads/2026/03/2026-civil-space-shortfalls.pdf>
 7. IETF. RFC 9171, *Bundle Protocol Version 7*, and RFC 9172, *Bundle Protocol Security (BPSec)*. <https://www.rfc-editor.org/rfc/rfc9171>, <https://www.rfc-editor.org/rfc/rfc9172>
 8. CCSDS 734.2-P-1.1, *CCSDS Bundle Protocol Specification* (draft Recommended Standard), cited by LNIS V005 as applicable document [AD19].

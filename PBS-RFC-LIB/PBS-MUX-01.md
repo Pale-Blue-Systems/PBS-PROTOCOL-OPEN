@@ -220,3 +220,5 @@ Rules:
 ## 11. Summary
 
 PBS-MUX-01 defines a **TLV-based multiplexing container** for PBS payloads.
+
+By allowing multiple independent semantic frames to share a single envelope while preserving deterministic parsing, skipping, and padding behavior, PBS-MUX enables efficient, resilient communication across constrained and delay-tolerant environments.

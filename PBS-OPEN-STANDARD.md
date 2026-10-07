@@ -14,6 +14,8 @@ The PBS Open Standard defines a **shared communication language** for systems op
 
 Its purpose is to let independently developed systems—civil, commercial, and international—exchange data with consistent meaning across heterogeneous networks without shared vendors, shared hardware, or proprietary disclosure.
 
+**Design target:** The standard is designed to function as durable infrastructure, suitable for long-lived missions and multi-party operational environments.
+
 ---
 
 ## Scope of the Open Standard
@@ -55,7 +57,9 @@ In this context, “open standard” means:
 - the protocol specifications are publicly available under the Apache License 2.0  
 - the semantics and wire formats are versioned and reviewable  
 - no single commercial entity controls the evolution of the standard (PBS-GOV-01 Section 3.2)  
-- independent implementations are permitted, open or proprietary (PBS-GOV-01 Section 10)  
+- multiple independent implementations are expected and encouraged; they are permitted, open or proprietary (PBS-GOV-01 Section 10)  
+
+The PBS Open Standard exists to enable an ecosystem, not to define a product.
 
 ---
 
@@ -101,9 +105,13 @@ The separation between standard stewardship and commercial activity is intention
 
 Under this separation, an implementer depends on the published specifications, not on a particular vendor's implementation.
 
+This separation ensures that the PBS Open Standard can be adopted with confidence by government agencies, international partners, and commercial operators without vendor lock-in or dependency on a single organization.
+
 ---
 
 ## Evolution of the Standard
+
+The PBS Open Standard is expected to evolve gradually in response to operational experience and new mission requirements.
 
 Changes to the PBS Open Standard follow the RFC lifecycle of PBS-GOV-01 Section 5. Changes to PBS Core are governed by:
 
@@ -112,6 +120,14 @@ Changes to the PBS Open Standard follow the RFC lifecycle of PBS-GOV-01 Section 
 - backward-compatibility guarantees  
 
 Experimental features, mission-specific adaptations, and proprietary extensions are not part of PBS Core (PBS-GOV-01 Section 7).
+
+---
+
+## Long-Term Intent (Design Target)
+
+The PBS Open Standard is designed for **multi-decade relevance**.
+
+Space infrastructure often outlives individual missions, programs, and companies. By separating protocol semantics from implementation and stewardship from commercialization, the PBS Open Standard is structured to remain usable, trustworthy, and interoperable over long time horizons.
 
 ---
 
@@ -134,3 +150,7 @@ It does not contain mission software or commercial implementations. The PBS_LINK
 The PBS Open Standard defines a vendor-neutral message envelope and extensions for space and other delay- and disruption-prone environments.
 
 It is stewarded by the Pale Blue Systems Foundation (PBSF) under PBS-GOV-01 and may be implemented by any party.
+
+Intended model: it is stewarded by an independent foundation, implemented by a diverse ecosystem, and designed to support sustained, multi-party exploration and operations beyond Earth.
+
+The standard exists to enable cooperation, reliability, and clarity in environments where assumptions common to terrestrial networking do not apply.

@@ -10,6 +10,8 @@ NASA's Lunar Communications Relay and Navigation Systems (LCRNS) project [6] pro
 
 PBS defines the mission semantics that applications carry over those network services: identity and authority, priority, Service Intent, freshness, security requirements and PNT context.
 
+**Concept of operations:** PBS provides the mission-semantic interoperability standard used by mission applications across those network services. PBS gives independently developed spacecraft, rovers, habitats, robots, sensors, autonomous systems, and ground applications a common representation for mission intent and application-level handling requirements.
+
 ## Architectural Allocation
 
 | Layer | Allocation |
@@ -63,9 +65,15 @@ LCRNS, ESA's Moonlight and JAXA's Lunar Navigation Satellite System providers ar
 
 NASA's Polylingual Experimental Terminal (PExT) completed its primary objectives in December 2025 by returning data through NASA's Tracking and Data Relay Satellite system and commercial relay networks operated by Viasat and SES Space and Defense. Its extended mission, through April 2027, includes direct-to-Earth links through SSC Space ground stations and a planned enterprise service management demonstration with Aalyria's Spacetime software [7]. PBS operates at the application semantic boundary above such service-management functions.
 
+NASA's PExT demonstrations further establish multi-network terminal operation and enterprise service management across government and commercial communications services. PBS integrates at the application semantic boundary above those service-management functions.
+
 ## Verification Alignment
 
 LCRNS is developing an Interoperability and Performance Testbed (IPT), a hardware-in-the-loop testbed that emulates a universal lunar user terminal to verify by test LCRNS relay service performance and interoperability requirements [4, Section 5]. PBS-CONFORMANCE-02 verifies PBS at the application interface: test cases PBS-C02-T001 to PBS-C02-T016 cover IP and BPv7 carriage, provider transition, deadline expiration, authentication, replay protection, command authorization, PNT context, QoS policy, disruption, capacity constraint, BPSec layering and no-expiry bundle lifetime (Section 3).
+
+NASA's LCRNS Interoperability & Performance Testbed validates commercial relay performance and LunaNet interoperability.
+
+**Design target:** PBS-CONFORMANCE-02 applies the same engineering principle at the application-semantic boundary through hardware/software-in-the-loop capable tests for IP, BPv7, disruption, provider transition, security, PNT context, deadline handling, and constrained-capacity operation.
 
 ## Traceability
 

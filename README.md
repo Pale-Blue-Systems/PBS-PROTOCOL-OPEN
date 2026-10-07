@@ -2,21 +2,27 @@
 
 This repository contains the **open communication standards stewarded by the Pale Blue Systems Foundation (PBSF)**: the PBS protocol specifications, their conformance profiles, the governance documents, and the alignment and traceability records that relate PBS to external sources.
 
+The standards in this repository define a shared **mission-semantic interoperability language** that allows spacecraft, rovers, habitats, autonomous systems, and ground applications to preserve mission meaning, authority, service intent, priority, freshness, security requirements, and PNT context across heterogeneous networks and independently operated service providers.
+
 The PBS specifications define a fixed 44-byte message envelope and a set of optional extensions. Together they carry mission semantics with the data: source identity, priority, timestamp and lifetime, Service Intent, authority context, security profile and PNT context. The specifications define the same semantics over IP, BPv7 and mission-specific links and across independently operated service providers.
 
 ---
 
 ## Context and Intent
 
+Pale Blue Systems publishes these standards in anticipation of a future space environment that includes **multiple space agencies, commercial operators, scientific missions, private infrastructure, and long-lived off-Earth systems operating concurrently**.
+
 PBS addresses an operating environment in which space agencies, commercial operators and science missions run independently built systems that exchange data over shared relays and networks. For the Moon, the LunaNet Interoperability Specification (LNIS V005, NASA, ESA and JAXA, 29 January 2025) describes LunaNet as a network of cooperating networks on which LunaNet Service Providers deliver communications, PNT and other services, and expects user needs to be met by a combination of interoperable providers (LNIS V005 Preface and Section 1).
 
-[`WHY-NOW.md`](WHY-NOW.md) gives the reasons for publishing these standards now.
+This repository establishes a durable mission-semantic interoperability standard for the multi-provider lunar, cislunar, planetary, and deep-space operating environment. It makes interoperability, authority, service intent, and coordination requirements **explicit and addressable early**, before architectural assumptions become embedded in deployed infrastructure.
+
+Additional context on why this work is published now, and the long-term architectural motivations behind it, is available in [`WHY-NOW.md`](WHY-NOW.md).
 
 ---
 
 ## Why This Repository Exists
 
-Lunar, cislunar and Mars operations involve distributed systems operating across:
+As space operations move toward sustained lunar presence, cislunar infrastructure, and Mars exploration, missions increasingly depend on distributed systems operating across:
 
 - long and variable communication delays
 - intermittent or scheduled connectivity
@@ -24,6 +30,10 @@ Lunar, cislunar and Mars operations involve distributed systems operating across
 - human-rated, safety-critical environments
 
 Under these conditions, data must be stored and forwarded between contacts, and its meaning, priority and authority must survive the transfer between organizations.
+
+Strategic analysis has formally identified communications, networking, and coordination as critical technology shortfalls for future exploration architectures, including the need for systems that operate reliably across deep-space and planetary environments.
+
+PBSF exists to steward open standards that directly address these conditions.
 
 NASA's *FY26 Civil Space Shortfall Prioritization* (Space Technology Mission Directorate, May 2026) includes four need statements that PBS v1.4 traces to:
 
@@ -110,12 +120,29 @@ Each alignment document identifies its external sources, summarizes what they st
 
 ---
 
+## External Alignment & Validation
+
+The Pale Blue Systems Open Standard is explicitly aligned with authoritative, peer-reviewed architectures from major space agencies and technical bodies.
+
+| Alignment ID | External Source | Domain |
+| :--- | :--- | :--- |
+| **PBS-ALIGN-NASA-LCRNS-01** | NASA LCRNS (Esper, 2025) | Lunar & Cislunar Networking |
+| **PBS-ALIGN-IEEE-AEROCONF-2025** | IEEE Aerospace Conference | Space Network Architecture |
+| **PBS-ALIGN-IEEE-TNTN-2025** | IEEE ComSoc | Integrated T/NTN Networks |
+
+---
+
 ## Open Standards and Stewardship
+
+PBSF is intentionally structured as a neutral foundation stewarding open standards and reference specifications.
 
 - The specifications are public under the Apache License 2.0.
 - PBS-GOV-01 Sections 2 and 3 separate stewardship of the specifications from commercial implementation.
 - Changes to PBS Core follow the RFC lifecycle of PBS-GOV-01 Section 5. A backward-incompatible change requires a new major version, except a corrective change, which leaves the wire format unchanged and is released in a patch or minor version with migration guidance where needed (PBS-GOV-01 Sections 5.2 and 6).
 - Implementations may extend PBS above the protocol layer. Proprietary extensions are not PBS Core (PBS-GOV-01 Section 7).
+- Commercial products and mission systems may implement or extend the standards without altering the core language.
+
+This model enables adoption across civil, commercial, and international space programs while allowing innovation and competition above the protocol layer.
 
 ---
 
@@ -223,4 +250,4 @@ See [`TRADEMARK-USAGE-POLICY.md`](TRADEMARK-USAGE-POLICY.md) for guidelines.
 
 ## About the Foundation
 
-The Pale Blue Systems Foundation stewards the PBS specifications in this repository under the governance model of PBS-GOV-01.
+The Pale Blue Systems Foundation stewards open, interoperable communication standards to support humanity’s expansion into space through cooperation, reliability, and technical clarity. It stewards the PBS specifications in this repository under the governance model of PBS-GOV-01.
