@@ -27,6 +27,10 @@ Carbonara et al. (Politecnico di Bari, CNIT, NEC Laboratories Europe) survey the
 
 The authors report that, at the time of writing, very few contributions had explored specific T/NTN functions through experimental tests (Section VII).
 
+The study emphasizes the necessity of experimental platforms, hardware-in-the-loop systems, emulation environments, and cross-domain testbeds to move space communications research from theory into deployable, scalable systems.
+
+The work situates integrated T/NTNs as a foundational architectural condition for 6G and beyond, highlighting heterogeneity, multi-segment integration, and real-world validation as essential requirements.
+
 The survey concerns 3GPP radio access and core networks. It does not address delay-tolerant networking, application-layer protocols or governance.
 
 ---

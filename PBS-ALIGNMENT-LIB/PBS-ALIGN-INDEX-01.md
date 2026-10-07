@@ -29,6 +29,14 @@ An alignment records correspondence between a source and PBS. No source names PB
 | [PBS-ALIGN-SPJ-LEO-2022-01](PBS-ALIGN-SPJ-LEO-2022-01.md) | Zhang et al., *Space: Science & Technology* (2022) | Journal article | Orbital Congestion and Space Governance | Sustainable LEO activity requires more rational surveillance and governance mechanisms |
 | [PBS-ALIGN-TF-GOVERNANCE-2024-01](PBS-ALIGN-TF-GOVERNANCE-2024-01.md) | Beaumier et al., *Journal of European Public Policy* (2025, online 2024) | Journal article | Space Governance | Hybrid organisations such as ESA bridge clusters of diverse organisations in the space governance system |
 
+| Alignment ID | External Source | Domain | Alignment Summary |
+|-------------|----------------|--------|------------------|
+| PBS-ALIGN-NASA-LCRNS-01 | NASA / DoD – LCRNS (Esper, 2025) | Lunar & Cislunar Networking | Identifies need for standardized, authority-aware relay and routing layers across lunar assets |
+| PBS-ALIGN-IEEE-AEROCONF-2025-01 | IEEE Aerospace Conf. 2025 | Space Network Architecture | Validates modular, layered, non-monolithic comms architectures |
+| PBS-ALIGN-IEEE-AEROCONF-OBP-02 | IEEE AeroConf – Onboard Processing | Edge / Onboard Computing | Confirms shift toward autonomous, local processing with constrained backhaul |
+| PBS-ALIGN-IEEE-TNTN-2025-03 | IEEE Open Journal of ComSoc (2025) | T/NTN Testbeds | Demonstrates necessity of interoperable overlays across heterogeneous networks |
+| PBS-ALIGN-TF-GOVERNANCE-2024-01 | *Journal of European Public Policy*, 2024 | Space Governance | Frames space as a fragmented, multi-actor domain requiring coordination without central authority |
+
 Requirements traceability for the v1.4 NASA alignment is in [`PBS-TRACE-NASA-FY26-01`](PBS-TRACE-NASA-FY26-01.md), under the engineering assignment [`PBS-ALIGN-ASSIGNMENT-NASA-FY26-01`](PBS-ALIGN-ASSIGNMENT-NASA-FY26-01.md).
 
 Alignment `PBS-ALIGN-SSIAG-01`, with the IPNSIG report *Solar System Internet Architecture and Governance* (2023), is recorded in [`PBS-REFERENCES-SOLAR-SYSTEM-INTERNET.md`](../PBS-REFERENCES-SOLAR-SYSTEM-INTERNET.md).
@@ -43,6 +51,8 @@ Alignment `PBS-ALIGN-SSIAG-01`, with the IPNSIG report *Solar System Internet Ar
 
 **Core Finding:**  
 Cislunar space has no existing communications, PNT or timing infrastructure. LCRNS procures interoperable commercial relay and navigation services built to LNIS, with onboard routing and store-and-forward storage; NASA is expected to be one of many users of those services (Sections 1, 2 and 4).
+
+NASA identifies the absence of a common, interoperable communications layer across lunar assets operated by multiple agencies and vendors.
 
 **PBS Alignment:**  
 PBS-LNIS-01 preserves PBS semantics across LunaNet Service Provider boundaries (PBS-LNIS-REQ-001, PBS-LNIS-REQ-007). PBS-SVC-01 and PBS-DTN-MAP-02 carry disruption, persistence and lifetime policy. PBS-PNT-CTX-01 identifies PNT reference frames and time references. PBS-CONFORMANCE-02 verifies PBS at the application interface.
@@ -78,6 +88,8 @@ NASA, ESA, and JAXA. *LunaNet Interoperability Specification Document*, Version 
 **Core Finding:**  
 LTP throughput rises with segment size even when IP fragmentation occurs: a factor of 2 to 3 for HDTN depending on path MTU and a factor of 10 or more for ION. Segmentation offload and kernel-resident LTP segmentation are projected to give HDTN a factor of 4 over the LTP base case (Sections V, VI and X).
 
+Future space systems require modular, layered architectures rather than tightly coupled, mission-specific stacks.
+
 **PBS Alignment:**  
 PBS-DTN-MAP-01 Section 5.1 maps each envelope to exactly one bundle; PBS-DTN-MAP-02 Section 2 specifies that one PBS protocol data unit SHOULD map to one BP application data unit unless a registered segmentation profile applies. PBS-DTN-MAP-02 Section 8 leaves convergence-layer selection to the DTN network service. Convergence-layer improvements apply beneath PBS without a PBS change.
 
@@ -96,6 +108,8 @@ Templin, Fred, et al. “High Performance DTN Using Larger Packets and Kernel Re
 **Core Finding:**  
 LCRNS relays provide the LNIS real-time frame, real-time IP and store-and-forward Bundle Protocol services through onboard processing and routing. User missions coordinate endpoint identifiers, QoS treatment and storage policy with the LNSP and are responsible for the security of their own data (Sections 1, 3 and 4).
 
+Onboard autonomy and edge processing are required due to latency, bandwidth, and resilience constraints.
+
 **PBS Alignment:**  
 PBS carries the user-side information with the data: disruption policy (PBS-SVC-01 Section 9), priority and data class (PBS-PRIO-01 Section 4, PBS-SVC-01 Section 4), endpoint-to-EID mapping (PBS-DTN-MAP-02 Section 3) and end-to-end authentication (PBS-SEC-B-01).
 
@@ -113,6 +127,8 @@ Verville, Jonathan, and Wesley Eddy. “Onboard Processing for LunaNet Data Serv
 
 **Core Finding:**  
 Experimental testbeds for integrated T/NTNs are built from software-defined radios, channel emulators, commercial user equipment, open-source core and radio-access software and remotely accessible platforms. At the time of writing, few studies had tested specific T/NTN functions experimentally (Sections III to VII).
+
+T/NTN integration demands interoperable overlays across SDRs, satellites, UAVs, and terrestrial infrastructure.
 
 **PBS Alignment:**  
 PBS is application data independent of the access technology, including 3GPP links (PBS-LNIS-01 Section 5, PBS-LNIS-REQ-004). PBS-CONFORMANCE-02 Section 4 requires the emulator and link-impairment configuration of each verification run to be recorded.
@@ -147,6 +163,8 @@ Ntontin, Konstantinos, et al. “A Vision, Survey, and Roadmap Toward Space Comm
 **Core Finding:**  
 Unrestrained deployment of LEO mega constellations strains orbital resources and affects the safety of in-orbit operations. Sustainable LEO activity requires more rational surveillance and governance mechanisms; the paper reviews space situational awareness and end-of-life deorbiting as responses (Abstract).
 
+Space, air, and ground systems are converging into a single operational domain requiring unified coordination models.
+
 **PBS Alignment:**  
 PBS-AUTH-01, PBS-POS-01 with PBS-PNT-CTX-01, and PBS-PRIO-01 define the authority, position and priority information exchanged between independently operated systems.
 
@@ -164,6 +182,8 @@ Zhang, Jingrui, et al. “LEO Mega Constellations: Review of Development, Impact
 
 **Core Finding:**  
 Organisations in governance systems multiply, diversify and cluster by type. Hybrid organisations such as ESA bridge those clusters as brokers and keep the space governance system cohesive (Abstract).
+
+Space governance is fragmented, multi-actor, and coordination-based rather than centralized.
 
 **PBS Alignment:**  
 PBS-AUTH-01 carries the authority context of each protected message and requires authority translation across administrative domains to be explicit and policy-controlled (PBS-AUTH-REQ-004).

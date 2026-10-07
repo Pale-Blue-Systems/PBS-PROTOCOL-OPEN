@@ -58,6 +58,8 @@ PBS-DTN-MAP-01 and PBS-DTN-MAP-02 define PBS carriage over BPv7. Within PBS-nati
 
 LNIS V005 Section 3.1.2 cites the CCSDS profile of BPv7, CCSDS 734.2-P-1.1 (draft Recommended Standard), as applicable document [AD19].
 
+CCSDS standards form the backbone of interoperable space communications across international agencies.
+
 ---
 
 ## 3. DTN Implementations
@@ -66,12 +68,14 @@ LNIS V005 Section 3.1.2 cites the CCSDS profile of BPv7, CCSDS 734.2-P-1.1 (draf
 
 ION is the open-source DTN implementation developed by NASA's Jet Propulsion Laboratory.
 
+ION is NASA/JPL’s reference implementation of DTN for space missions.
+
 - **ION-DTN repository (nasa-jpl)**  
   https://github.com/nasa-jpl/ION-DTN  
 
 PBS-DTN-MAP-01 Section 11 names ION as an example of NASA DTN infrastructure. Templin et al., “High Performance DTN Using Larger Packets and Kernel Resident Convergence Layers”, 2025 IEEE Aerospace Conference, doi:10.1109/AERO63441.2025.11068517 (`PBS-ALIGN-IEEE-AEROCONF-2025-01`), report ION and NASA Glenn HDTN throughput over LTP.
 
-ION serves as a primary interoperability target for PBS-DTN-MAP.
+ION demonstrates operational DTN across flight and ground systems and serves as a primary interoperability target for PBS-DTN-MAP.
 
 ---
 
@@ -82,6 +86,8 @@ ION serves as a primary interoperability target for PBS-DTN-MAP.
 
 - **NASA Delay/Disruption Tolerant Networking**  
   https://www.nasa.gov/communicating-with-missions/delay-disruption-tolerant-networking/  
+
+These efforts validate DTN as a critical component of future space architectures.
 
 ---
 
@@ -97,6 +103,8 @@ ION serves as a primary interoperability target for PBS-DTN-MAP.
 
 - **NASA, *2026 Civil Space Shortfall Ranking*** (call for stakeholder feedback, 12 January – 20 February 2026)  
   https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/2026-civil-space-shortfall-ranking/  
+
+This document identifies technology gaps requiring development to support future exploration, including communications, autonomy, and distributed systems.
 
 The prioritization defines a shortfall as “a technology area requiring further development to meet future exploration, science, and other mission needs”, consolidates the shortfalls into 32 categories, and ranks them. PBS v1.4 traces to need statements 13.09, 15.01, 15.03 and 24.05 (`PBS-TRACE-NASA-FY26-01`; texts quoted in `PBS-ALIGN-NASA-LCRNS-02`).
 
@@ -122,6 +130,8 @@ PBS-LNIS-01 defines PBS operation over LunaNet IP and BPv7 network services.
 - **NASA Moon to Mars Architecture**  
   https://www.nasa.gov/moontomarsarchitecture/  
 
+The Moon to Mars strategy explicitly depends on interoperable, extensible, and evolvable communications spanning Earth, lunar, and Mars domains.
+
 ---
 
 ## 5. Related NASA Programs
@@ -141,6 +151,8 @@ These programs involve distributed systems, multiple partners, and intermittent 
 
 - **NASA Commercial Space**  
   https://www.nasa.gov/humans-in-space/commercial-space/  
+
+These initiatives highlight the need for interoperable communication frameworks across multiple independent operators.
 
 ---
 

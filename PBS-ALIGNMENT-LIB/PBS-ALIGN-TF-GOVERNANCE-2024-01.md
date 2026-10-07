@@ -22,6 +22,8 @@ Beaumier, Couette and Morin argue that the organisations in a governance system 
 
 The article concerns institutions, not communications technology. PBS relates to it at one point: the exchange of information between organisations of different types.
 
+The Taylor & Francis (2024) paper examines outer space as a politically governed, institutionally fragmented domain characterized by the participation of states, commercial actors, and hybrid public–private entities.
+
 **Planned architecture (in development):** Pale Blue Systems (PBS) aligns with this analysis by providing a governance-aware interoperability layer that enables policy-consistent coordination across independently governed space systems. PBS operationalizes institutional and political realities at the systems level, enabling cooperation without requiring centralized authority or uniform governance regimes.
 
 ---
@@ -60,6 +62,9 @@ PBS is explicitly designed for multi-actor environments, enabling interoperable 
 
 ### Governance Fragmentation as a Structural Condition
 
+A central argument of the paper is that space governance is inherently fragmented across treaties, regulatory bodies, market mechanisms, and operational practices, and that this fragmentation is unlikely to resolve into a single unified framework.
+
+**PBS alignment:**  
 PBS treats governance fragmentation as a baseline architectural condition. Its interoperability mechanisms are policy-aware and authority-scoped, enabling coordination across fragmented governance structures without requiring consolidation or harmonization.
 
 ### Coordination Without Centralized Authority
@@ -68,6 +73,9 @@ PBS enables coordination without centralized authority by mediating interactions
 
 ### Infrastructure as a Governance Mechanism
 
+The paper highlights how governance increasingly occurs through operational practices and infrastructure, particularly where formal institutional frameworks lag behind technological and commercial developments.
+
+**PBS alignment:**  
 PBS functions as governance-enabling infrastructure. By embedding policy awareness and authority context into interoperability mechanisms, PBS allows governance to be expressed and enforced through operational systems rather than solely through formal institutional arrangements.
 
 ### Long-Term Stability and Sustainability (Design Target)

@@ -20,6 +20,8 @@ Zhang et al. review the growth of low Earth orbit (LEO) mega constellations and 
 
 PBS does not perform surveillance, collision avoidance or debris removal. It defines message formats for authority, position and priority information exchanged between independently operated systems.
 
+The Science Partner Journal paper (2022) examines the increasing necessity of autonomy, distributed decision-making, and multi-agent coordination in future space systems. It frames autonomy not as an optional enhancement, but as a structural requirement driven by scale, latency, operational complexity, and the expansion of missions beyond Earth orbit.
+
 ---
 
 ## Alignment Dimensions

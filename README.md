@@ -31,6 +31,10 @@ As space operations move toward sustained lunar presence, cislunar infrastructur
 
 Under these conditions, data must be stored and forwarded between contacts, and its meaning, priority and authority must survive the transfer between organizations.
 
+Strategic analysis has formally identified communications, networking, and coordination as critical technology shortfalls for future exploration architectures, including the need for systems that operate reliably across deep-space and planetary environments.
+
+PBSF exists to steward open standards that directly address these conditions.
+
 NASA's *FY26 Civil Space Shortfall Prioritization* (Space Technology Mission Directorate, May 2026) includes four need statements that PBS v1.4 traces to:
 
 | Need ID | Need statement |
@@ -113,6 +117,18 @@ Each alignment document identifies its external sources, summarizes what they st
 | [PBS-ALIGN-TF-GOVERNANCE-2024-01](PBS-ALIGNMENT-LIB/PBS-ALIGN-TF-GOVERNANCE-2024-01.md) | Beaumier, Couette and Morin, “Hybrid Organisations and Governance Systems: The Case of the European Space Agency”, *Journal of European Public Policy*, 2025 | doi:10.1080/13501763.2024.2325647 |
 
 [PBS-ALIGN-INDEX-01](PBS-ALIGNMENT-LIB/PBS-ALIGN-INDEX-01.md) summarizes each alignment. [PBS-TRACE-NASA-FY26-01](PBS-ALIGNMENT-LIB/PBS-TRACE-NASA-FY26-01.md) traces 19 PBS requirements to the FY26 need statements, LNIS V005 and RFC 9171.
+
+---
+
+## External Alignment & Validation
+
+The Pale Blue Systems Open Standard is explicitly aligned with authoritative, peer-reviewed architectures from major space agencies and technical bodies.
+
+| Alignment ID | External Source | Domain |
+| :--- | :--- | :--- |
+| **PBS-ALIGN-NASA-LCRNS-01** | NASA LCRNS (Esper, 2025) | Lunar & Cislunar Networking |
+| **PBS-ALIGN-IEEE-AEROCONF-2025** | IEEE Aerospace Conference | Space Network Architecture |
+| **PBS-ALIGN-IEEE-TNTN-2025** | IEEE ComSoc | Integrated T/NTN Networks |
 
 ---
 

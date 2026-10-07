@@ -27,6 +27,8 @@ Verville (NASA GSFC, LCRNS Data Systems lead) and Eddy (MTI Systems) describe th
 
 Unlike TDRSS bent-pipe relays, LCRNS relays demodulate user signals, process link-layer and higher-layer protocols, and route on the contents of frames, packets or bundles (Section 3). The LCRNS requirements imply throughput in the 100 Mbps range per node (Section 1) and Ka-band rates up to 50 Mbps (Section 5).
 
+The IEEE Aerospace Conference 2025 paper on onboard processing presents an architectural vision in which future space missions rely on distributed, autonomous computation performed directly on spacecraft and mission assets. The work emphasizes reduced dependence on continuous ground connectivity, selective data forwarding, and localized decision-making driven by latency, bandwidth, and operational constraints.
+
 PBS does not run on the relays. PBS is user application data carried over the LunaNet IP and BPv7 network services the paper describes (PBS-LNIS-01 Section 2). The dimensions below identify where the paper's service model sets requirements on the user data that PBS carries.
 
 ---
@@ -121,6 +123,9 @@ PBS incorporates explicit authority-context handling and policy-aware exchange m
 
 ### Scalability to Cislunar and Deep-Space Missions
 
+The paper frames onboard processing as increasingly critical as missions expand beyond Earth orbit, where latency and bandwidth constraints intensify.
+
+**PBS alignment:**  
 PBS is orbit-agnostic and supports scalable, distributed operations across lunar, cislunar, and deep-space environments. Its architecture aligns with missions that rely on onboard autonomy as distance from Earth increases.
 
 ---
