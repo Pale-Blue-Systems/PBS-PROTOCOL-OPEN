@@ -1,0 +1,137 @@
+(footprint "J3_Coaxial_antenna_port_2_4_GHz_mesh"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Coaxial antenna port: 2.4 GHz mesh")
+	(tags "PBS generic placeholder")
+	(property "Reference" "J3"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "1ca733ff-f547-418b-84ac-95106f1729e7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Coaxial antenna port: 2.4 GHz mesh"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e1799108-9e5b-44a8-accd-43466281af79")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "772912e2-12e3-4c51-85fe-5d2b7ca600a5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "56ec95fc-6467-4ffc-9477-3b7cac9fa841")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.9 -1.9)
+		(end 1.9 1.9)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "9a3bad1a-9209-41c1-bda0-3a76fd29ccb7")
+	)
+	(fp_rect
+		(start -2.15 -2.15)
+		(end 2.15 2.15)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "37b5a421-1480-4538-ab35-5d412c19ff18")
+	)
+	(fp_rect
+		(start -1.75 -1.75)
+		(end 1.75 1.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "3e1eb2a1-71f5-4ffa-911a-2e33559f5a5b")
+	)
+	(fp_text user "J3"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "5c5da83e-5ca2-4216-a006-b1e8001fbc7f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "J3"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "40e51737-9f64-4565-80ff-0fb55bb61614")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.3 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "8a1e0d5d-a6b4-4815-b40d-5c9616508e64")
+	)
+	(pad "2" smd rect
+		(at 1.3 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "52f35b6f-d242-4aad-8555-ead117cb2daa")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/J3_Coaxial_antenna_port_2_4_GHz_mesh.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

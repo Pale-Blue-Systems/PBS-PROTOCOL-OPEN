@@ -1,0 +1,181 @@
+(footprint "H1_Polyimide_film_heater_zone_A_radios"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Polyimide film heater, zone A (radios)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "H1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d2999ced-f134-4e7f-81b3-2f7c0ef30e2a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Polyimide film heater, zone A (radios)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5ae7762e-5831-476a-b779-c80d13f7713f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9f2314e3-d896-4495-b244-843444986b0c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a94f3084-dcd6-40b5-bcd8-2301ae297728")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -19.15 -16.149999)
+		(end 19.15 16.149999)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "fd925ec3-0621-4dcf-b7eb-3dbd453e9501")
+	)
+	(fp_rect
+		(start -19.4 -16.399999)
+		(end 19.4 16.399999)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "03be78f7-b438-44c5-b33d-571726b9301e")
+	)
+	(fp_rect
+		(start -19 -16)
+		(end 19 16)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "5e18882c-c3fe-4d44-a7d5-4597d5f070b1")
+	)
+	(fp_text user "H1"
+		(at 0 -14.36 0)
+		(layer "F.SilkS")
+		(uuid "1fdd4bae-b251-4a68-9732-b84c4f4e1de7")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "Polyimide film heater, zone A"
+		(at 0 -12.32 0)
+		(layer "F.SilkS")
+		(uuid "bca79122-d947-495a-a337-e7d1de65e3be")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "(radios)"
+		(at 0 -10.46 0)
+		(layer "F.SilkS")
+		(uuid "daa9520e-7d4a-4b03-8835-74b31df613af")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "H1"
+		(at 0 -14.36 0)
+		(layer "F.Fab")
+		(uuid "03af4df6-1271-4176-9497-e2df234620cf")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "Polyimide film heater, zone A"
+		(at 0 -12.32 0)
+		(layer "F.Fab")
+		(uuid "39d67442-e9d9-480b-bbd6-7445fafb5298")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "(radios)"
+		(at 0 -10.46 0)
+		(layer "F.Fab")
+		(uuid "e2c4eb09-d97d-4402-8e92-3d3ccd13467c")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -18.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "b2311525-f9c1-4f22-8332-e53dd34294e3")
+	)
+	(pad "2" smd rect
+		(at 18.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "54f0d55e-8e15-4893-b775-1b871c384079")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/H1_Polyimide_film_heater_zone_A_radios.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

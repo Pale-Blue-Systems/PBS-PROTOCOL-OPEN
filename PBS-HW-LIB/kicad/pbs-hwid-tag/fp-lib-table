@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PBS_Generic")(type "KiCad")(uri "${KIPRJMOD}/PBS_Generic.pretty")(options "")(descr "PBS generic placeholders"))
+)

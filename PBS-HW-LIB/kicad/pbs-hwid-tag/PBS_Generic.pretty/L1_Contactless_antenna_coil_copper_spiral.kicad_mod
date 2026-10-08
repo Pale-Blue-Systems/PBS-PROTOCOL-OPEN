@@ -1,0 +1,102 @@
+(footprint "L1_Contactless_antenna_coil_copper_spiral"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Contactless antenna coil (copper spiral)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "L1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "48f47d9b-9827-4249-96a7-a4d9f81de062")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Contactless antenna coil (copper spiral)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4c1348bc-e278-4f3d-950a-ae526495e03f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "008df5dc-1e21-43fb-913b-3796784694b3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "381ce12d-b4a8-41d4-8804-693fab17b476")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr exclude_from_pos_files)
+	(net_tie_pad_groups "1,2")
+	(fp_poly
+		(pts
+			(xy 8.05 8.05) (xy 7.75 8.05) (xy -7.75 8.05) (xy -8.05 8.05) (xy -8.05 -7.45) (xy -7.75 -7.45) (xy 7.45 -7.45)
+			(xy 7.45 7.45) (xy 7.15 7.45) (xy -7.15 7.45) (xy -7.45 7.45) (xy -7.45 -6.85) (xy -7.15 -6.85) (xy 6.85 -6.85)
+			(xy 6.85 6.85) (xy 6.55 6.85) (xy -6.55 6.85) (xy -6.85 6.85) (xy -6.85 -6.25) (xy -6.55 -6.25) (xy 6.25 -6.25)
+			(xy 6.25 6.25) (xy 5.95 6.25) (xy -5.95 6.25) (xy -6.25 6.25) (xy -6.25 -5.65) (xy -5.95 -5.65) (xy -5.95 5.95)
+			(xy 5.95 5.95) (xy 5.95 -5.95) (xy -6.55 -5.95) (xy -6.55 6.55) (xy 6.55 6.55) (xy 6.55 -6.55) (xy -7.15 -6.55)
+			(xy -7.15 7.15) (xy 7.15 7.15) (xy 7.15 -7.15) (xy -7.75 -7.15) (xy -7.75 7.75) (xy 7.75 7.75) (xy 7.75 -7.75)
+			(xy -8.05 -7.75) (xy -8.05 -8.05) (xy 8.05 -8.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Cu")
+		(uuid "53ee10d5-9d4c-4c0b-88f7-19cbe62da134")
+	)
+	(fp_text user "L1 contactless antenna coil, 4 turns"
+		(at 0 8.9 0)
+		(layer "F.Fab")
+		(uuid "f3428711-3bfd-481c-b304-21e226c50357")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.08)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -7.9 -7.9)
+		(size 0.4 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "0f5f55a4-cb04-4107-b746-4baa68c5855b")
+	)
+	(pad "2" smd rect
+		(at -6.1 -5.5)
+		(size 0.4 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "c86aa549-9056-4680-8b30-5a5ea41ace81")
+	)
+	(embedded_fonts no)
+)

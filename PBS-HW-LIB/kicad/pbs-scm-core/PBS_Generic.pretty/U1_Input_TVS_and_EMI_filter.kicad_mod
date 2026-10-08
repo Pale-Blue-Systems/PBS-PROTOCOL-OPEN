@@ -1,0 +1,217 @@
+(footprint "U1_Input_TVS_and_EMI_filter"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Input TVS and EMI filter")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "2bb91319-dd85-49be-889b-5ebc2e6c253e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Input TVS and EMI filter"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "83c004c2-0af8-4047-aa84-956155b66059")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cc56784e-6f98-48ed-9ad6-3d384043a768")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "370758bf-05e6-49a2-985d-8979913742ba")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -4.65 -3.15)
+		(end 4.65 3.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "28c25404-7078-4f1f-a7fc-6d9a38b910d8")
+	)
+	(fp_rect
+		(start -4.9 -3.4)
+		(end 4.9 3.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "6b6b401d-279e-4499-ad48-0bf3a5d82aa0")
+	)
+	(fp_rect
+		(start -4.5 -3)
+		(end 4.5 3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "20a31d73-ded9-4b45-a90a-c60ab7a62c2a")
+	)
+	(fp_text user "and EMI"
+		(at 0 0.76 0)
+		(layer "F.SilkS")
+		(uuid "006739dd-bfdf-4af0-a93a-08948c2732e8")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "Input TVS"
+		(at 0 -0.48 0)
+		(layer "F.SilkS")
+		(uuid "0a8e0170-90ef-4e29-8a97-413510301b6f")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "filter"
+		(at 0 2 0)
+		(layer "F.SilkS")
+		(uuid "12f850fc-a9ea-4de4-8aa3-fbb3080e3e23")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "U1"
+		(at 0 -1.84 0)
+		(layer "F.SilkS")
+		(uuid "bcd29520-0efb-4d9d-beab-4cbf6a325d15")
+		(effects
+			(font
+				(size 0.919999 0.919999)
+				(thickness 0.165599)
+			)
+		)
+	)
+	(fp_text user "filter"
+		(at 0 2 0)
+		(layer "F.Fab")
+		(uuid "475e26ee-9d3d-4a9a-a036-6a1fddffa3bd")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "and EMI"
+		(at 0 0.76 0)
+		(layer "F.Fab")
+		(uuid "9c45869f-59f2-496d-a831-f44abfd675f9")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "U1"
+		(at 0 -1.84 0)
+		(layer "F.Fab")
+		(uuid "b280a99f-db0e-41c4-92cd-01c7b6072773")
+		(effects
+			(font
+				(size 0.919999 0.919999)
+				(thickness 0.165599)
+			)
+		)
+	)
+	(fp_text user "Input TVS"
+		(at 0 -0.48 0)
+		(layer "F.Fab")
+		(uuid "bed992c3-cdd2-4e83-bc94-b30fa8d0db4b")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.05 -1.4)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "f6e27fd4-cfaa-4104-9ac5-3689c7506842")
+	)
+	(pad "2" smd rect
+		(at -4.05 1.399999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "ea669a6c-9699-4ba2-9836-919bfed580ad")
+	)
+	(pad "3" smd rect
+		(at 4.05 -1.4)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "9d6d5223-de1a-40c9-aab5-97cba4eab66d")
+	)
+	(pad "4" smd rect
+		(at 4.05 1.399999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "f5ad25c0-b8d0-4237-96fb-bc477d4c93c8")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U1_Input_TVS_and_EMI_filter.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

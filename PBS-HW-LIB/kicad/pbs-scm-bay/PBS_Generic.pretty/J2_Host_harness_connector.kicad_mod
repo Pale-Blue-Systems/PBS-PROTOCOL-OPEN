@@ -1,0 +1,237 @@
+(footprint "J2_Host_harness_connector"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Host harness connector")
+	(tags "PBS generic placeholder")
+	(property "Reference" "J2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "52100ed7-4d6f-463b-811e-bc855cdd7433")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Host harness connector"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "acd57472-368d-42bf-8348-50d986430032")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "806a3b78-c34e-41c7-81ca-d4d15d5f522e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f755eaf9-6356-4a74-b4b6-839c4cd79355")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -12.15 -4.15)
+		(end 12.15 4.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "308b738a-346f-40e2-bdec-7c83d20c6bf0")
+	)
+	(fp_rect
+		(start -12.4 -4.4)
+		(end 12.4 4.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "86579bc9-00d9-4356-b9ab-f136fa36167e")
+	)
+	(fp_rect
+		(start -12 -4)
+		(end 12 4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "8ba68a08-43e0-4d2e-b69c-9cb8f7a8ad62")
+	)
+	(fp_text user "J2"
+		(at 0 -2.36 0)
+		(layer "F.SilkS")
+		(uuid "3c6125f2-cd1e-4d7a-8d8c-c8bfe89bfde4")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "connector"
+		(at 0 1.54 0)
+		(layer "F.SilkS")
+		(uuid "7a4bc8d0-752f-467d-a6e4-0bcebfe1c4e1")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "Host harness"
+		(at 0 -0.319999 0)
+		(layer "F.SilkS")
+		(uuid "d92b1f3d-a75d-4732-b010-b3bd0278458e")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "Host harness"
+		(at 0 -0.319999 0)
+		(layer "F.Fab")
+		(uuid "179aaea5-a83e-4aeb-8921-e0971a90f524")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "J2"
+		(at 0 -2.36 0)
+		(layer "F.Fab")
+		(uuid "8907d6cb-142c-47cf-b9e1-f5694ddbd252")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "connector"
+		(at 0 1.54 0)
+		(layer "F.Fab")
+		(uuid "ae555ea1-7f86-4bdb-97cb-fadde01bfa28")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -11.549999 -3.04)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "db445383-0176-41c4-9fb7-2e38c477091e")
+	)
+	(pad "2" smd rect
+		(at -11.549999 -1.519999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "71693d68-58f5-42f5-a09c-df383925909a")
+	)
+	(pad "3" smd rect
+		(at -11.549999 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "df7d0ca4-030f-4749-bfc5-8cce18579496")
+	)
+	(pad "4" smd rect
+		(at -11.549999 1.52)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "46a2b6a0-a83a-449f-98eb-f8161e5353c3")
+	)
+	(pad "5" smd rect
+		(at -11.549999 3.04)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "fe175cd9-55e8-4022-9ae1-6d5040dc7962")
+	)
+	(pad "6" smd rect
+		(at 11.549999 -3.04)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "8f0e3cee-1508-47fc-a66e-9ec2277c92be")
+	)
+	(pad "7" smd rect
+		(at 11.549999 -1.519999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "67ac1d28-449b-4916-8f27-5dc971c2716a")
+	)
+	(pad "8" smd rect
+		(at 11.549999 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "6c4d7382-0d65-4f11-98fa-77adee0a5549")
+	)
+	(pad "9" smd rect
+		(at 11.549999 1.52)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "e60c4c8e-fc73-4c92-b724-61b814511a3d")
+	)
+	(pad "10" smd rect
+		(at 11.549999 3.04)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "0834f746-d54e-4c5b-a2df-c9cfa8a1b794")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/J2_Host_harness_connector.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,268 @@
+(footprint "U6_Point_of_load_regulators_3_3_V_1_8_V_1_0_V"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Point-of-load regulators (3.3 V, 1.8 V, 1.0 V)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U6"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "4e88b43f-c69d-4c70-879d-8daa27683731")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Point-of-load regulators (3.3 V, 1.8 V, 1.0 V)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e62fc8b7-7422-495d-bdf2-c0ff9cdf2c01")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9af0aa9e-1364-43a9-87af-fe61a52dcc31")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "99241254-4ea4-4141-baa1-fab56c83e8df")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -4.65 -4.65)
+		(end 4.65 4.65)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "e6cfd1f6-09d8-49d5-9d33-a86601083ff2")
+	)
+	(fp_rect
+		(start -4.9 -4.9)
+		(end 4.9 4.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "44f27100-ca8e-4858-9347-b0d8c33cfd07")
+	)
+	(fp_rect
+		(start -4.5 -4.5)
+		(end 4.5 4.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "1d24eb1a-69fa-4826-bdbf-069e5a3fdc72")
+	)
+	(fp_text user "(3.3 V, 1.8"
+		(at 0 0.984999 0)
+		(layer "F.SilkS")
+		(uuid "3091d07b-1219-4880-a8e8-4d5800cbc746")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "regulators"
+		(at 0 -0.1 0)
+		(layer "F.SilkS")
+		(uuid "3c1b0561-0c8d-458c-bc31-435dbd73fc1b")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "load"
+		(at 0 -1.185 0)
+		(layer "F.SilkS")
+		(uuid "86991531-8292-4cb8-a6ff-b2fa841cd5e2")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "Point-of-"
+		(at 0 -2.27 0)
+		(layer "F.SilkS")
+		(uuid "be7470f9-43e3-4ac0-a5bc-6196c41e137a")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "V, 1.0 V)"
+		(at 0 2.069999 0)
+		(layer "F.SilkS")
+		(uuid "f1e3d840-df33-4333-8e1a-cfdd9efc13f8")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "U6"
+		(at 0 -3.46 0)
+		(layer "F.SilkS")
+		(uuid "fc67fed0-70ba-4819-a082-87221ef2ef27")
+		(effects
+			(font
+				(size 0.804999 0.804999)
+				(thickness 0.144899)
+			)
+		)
+	)
+	(fp_text user "Point-of-"
+		(at 0 -2.27 0)
+		(layer "F.Fab")
+		(uuid "33f868c2-df6c-43e6-b3e4-3f77a650ec16")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "regulators"
+		(at 0 -0.1 0)
+		(layer "F.Fab")
+		(uuid "4d97e101-b0f1-46a6-b074-bd9308ac384b")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "(3.3 V, 1.8"
+		(at 0 0.984999 0)
+		(layer "F.Fab")
+		(uuid "52f85b9d-51eb-4643-94d1-f6d536135d6e")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "load"
+		(at 0 -1.185 0)
+		(layer "F.Fab")
+		(uuid "d729cc80-8800-46b9-b86b-3b055f3a8cd8")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "V, 1.0 V)"
+		(at 0 2.069999 0)
+		(layer "F.Fab")
+		(uuid "e526e414-b37a-479d-bc71-09aeb33a0bf7")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "U6"
+		(at 0 -3.46 0)
+		(layer "F.Fab")
+		(uuid "fd94e48e-7fa0-472e-8c9a-1e91173382ee")
+		(effects
+			(font
+				(size 0.804999 0.804999)
+				(thickness 0.144899)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.05 -2.15)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "79ddc104-b398-4d95-afdd-831e44db678e")
+	)
+	(pad "2" smd rect
+		(at -4.05 2.149999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "859f21e0-403d-4c50-a296-3874e16c030d")
+	)
+	(pad "3" smd rect
+		(at 4.05 -2.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "764b9150-fe83-4038-a9be-12cf22c145ee")
+	)
+	(pad "4" smd rect
+		(at 4.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "4f36cd9d-98b6-4046-9cbc-feb169d3cca2")
+	)
+	(pad "5" smd rect
+		(at 4.05 2.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "370cf229-cd78-4932-89b9-e565e1ddc0cc")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U6_Point_of_load_regulators_3_3_V_1_8_V_1_0_V.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

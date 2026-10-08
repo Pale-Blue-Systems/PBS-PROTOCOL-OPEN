@@ -1,0 +1,144 @@
+(footprint "Q1_Heater_driver_low_side_MOSFET"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Heater driver, low-side MOSFET")
+	(tags "PBS generic placeholder")
+	(property "Reference" "Q1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "0c979573-8e88-4da7-8920-0db031532a69")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Heater driver, low-side MOSFET"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "185b3aee-d909-41e0-a94a-35684cfdad33")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "36488ebe-f85c-4ad4-ac85-e2af2e4b220e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c99222e8-a9c5-4e5e-a700-48ff5a767200")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.65 -2.15)
+		(end 2.65 2.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "b733a5eb-5971-4684-971b-ae85fff8665d")
+	)
+	(fp_rect
+		(start -2.9 -2.4)
+		(end 2.9 2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9b46307f-09dc-4025-9098-d593213687e0")
+	)
+	(fp_rect
+		(start -2.5 -2)
+		(end 2.5 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "caaf0e19-a619-4c65-a27a-2fcf9a0f649c")
+	)
+	(fp_text user "Q1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "540e9f8a-628d-4e72-b5b8-e7b917acf97d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "Q1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "344e818b-4e4d-453b-9fb8-0758cfb2bb5f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.05 -0.9)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "62663020-05e3-49ea-b1aa-1fbbc7028ce5")
+	)
+	(pad "2" smd rect
+		(at -2.05 0.9)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "8f1c1577-4945-4b55-8ba6-96d2b52f0882")
+	)
+	(pad "3" smd rect
+		(at 2.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "ebc4a745-4ee1-48d7-aa56-f6eb847105d4")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/Q1_Heater_driver_low_side_MOSFET.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

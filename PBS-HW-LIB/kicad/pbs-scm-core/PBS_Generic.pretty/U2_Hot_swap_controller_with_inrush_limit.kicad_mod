@@ -1,0 +1,158 @@
+(footprint "U2_Hot_swap_controller_with_inrush_limit"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Hot-swap controller with inrush limit")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f523e49f-d861-4ceb-9d46-215f85dc87a7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Hot-swap controller with inrush limit"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4a01f047-e9da-4227-802c-2a5c6bd6ac9c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "478a9568-2493-4db5-acbf-0248eeec7b22")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "845dddc3-82e2-4a74-be9a-a365be5d1a9f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -2.65)
+		(end 3.15 2.65)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "56587ede-33b2-481f-ba56-5b9e52914252")
+	)
+	(fp_rect
+		(start -3.4 -2.9)
+		(end 3.4 2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "8b87ebaf-db15-468c-b4e1-e4a7044d06ab")
+	)
+	(fp_rect
+		(start -3 -2.5)
+		(end 3 2.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c9c30854-15ef-40da-ab4c-f02c5985b102")
+	)
+	(fp_text user "U2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "8e18d634-c6b1-44e6-b3d6-a0a257f5ff20")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U2"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "d5135af9-01d4-40ab-a762-fb5f35750cb9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 -1.533333)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "9fab0fc5-369e-4653-a1ca-e340be82c943")
+	)
+	(pad "2" smd rect
+		(at -2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "c28d4792-e84c-47f9-9075-8f28c25140a3")
+	)
+	(pad "3" smd rect
+		(at -2.55 1.533333)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "f1550e3d-1c2f-49ae-9dc6-84c2d6f4c401")
+	)
+	(pad "4" smd rect
+		(at 2.55 -1.15)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "f29ecab9-b006-4970-9b9d-4695c0979f49")
+	)
+	(pad "5" smd rect
+		(at 2.55 1.15)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "2a069a44-5831-4a3d-8b99-8214c5090048")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U2_Hot_swap_controller_with_inrush_limit.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

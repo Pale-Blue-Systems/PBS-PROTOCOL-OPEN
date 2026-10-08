@@ -1,0 +1,158 @@
+(footprint "U4_Hold_up_controller_ideal_diode_and_supercapacitor_charger"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Hold-up controller (ideal diode and supercapacitor charger)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U4"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "394ccff5-7afd-431a-8aeb-8e5b86e327d1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Hold-up controller (ideal diode and supercapacitor charger)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cd5069d3-e54a-4613-9cce-906190bddadb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5c1619de-2b5e-467e-aade-f9097f87d1b6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6b437e77-5012-472e-a341-f50e96d78c74")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -3.15)
+		(end 3.15 3.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "619358a6-1f33-4070-a400-4e597be98301")
+	)
+	(fp_rect
+		(start -3.4 -3.4)
+		(end 3.4 3.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9405817a-c73a-4e4e-857f-0a8e0c70c5a6")
+	)
+	(fp_rect
+		(start -3 -3)
+		(end 3 3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "93826b9a-f988-4d66-a910-2f88ea832635")
+	)
+	(fp_text user "U4"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "a7ba091a-850b-46e2-b690-fe335d347114")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U4"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "3a4fea22-d7a7-4d7c-8bf1-242b4af89d9e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 -1.4)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "fee55483-c933-4451-9a21-9f57e8a02543")
+	)
+	(pad "2" smd rect
+		(at -2.55 1.399999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "c4cc75b7-2fc2-4303-9a69-a161c398140e")
+	)
+	(pad "3" smd rect
+		(at 2.55 -1.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "dada6637-b72c-498d-b61e-7c2a859ec3b9")
+	)
+	(pad "4" smd rect
+		(at 2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "9cf36dcb-b409-457f-b7d6-022b3404d6be")
+	)
+	(pad "5" smd rect
+		(at 2.55 1.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "861c5395-6732-4c63-afb4-59aba40b9d18")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U4_Hold_up_controller_ideal_diode_and_supercapacitor_charger.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

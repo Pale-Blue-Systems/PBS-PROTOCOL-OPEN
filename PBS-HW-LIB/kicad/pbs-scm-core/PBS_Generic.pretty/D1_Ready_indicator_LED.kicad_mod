@@ -1,0 +1,137 @@
+(footprint "D1_Ready_indicator_LED"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Ready indicator LED")
+	(tags "PBS generic placeholder")
+	(property "Reference" "D1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a124f0f0-3870-41b6-8e34-fdba40f07449")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Ready indicator LED"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "83ee73d3-6545-42af-be34-0a98616c244c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f813376a-0d8a-4834-ab72-e288489a8128")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "842cdd25-c419-4a09-b0d0-7e0ec17e57dd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.4 -1.15)
+		(end 1.4 1.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "14bcebdf-4bda-4310-80d8-ec889ad8782b")
+	)
+	(fp_rect
+		(start -1.65 -1.4)
+		(end 1.65 1.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "93536f6f-c48a-4a05-b456-b7403231339c")
+	)
+	(fp_rect
+		(start -1.25 -1)
+		(end 1.25 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c2798f86-d965-4153-95c2-9ded53ef667f")
+	)
+	(fp_text user "D1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "989d02b6-6c68-49e8-b314-75174c9f7645")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "D1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "2a2d7d78-ec84-4ea5-a7c7-292162086d4e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.874999 0)
+		(size 0.449999 0.449999)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "8a36b2a4-c0cc-4a91-80d3-aa06d8c41de4")
+	)
+	(pad "2" smd rect
+		(at 0.874999 0)
+		(size 0.449999 0.449999)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3cf86da9-8ced-47f0-9b01-78d048937bde")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/D1_Ready_indicator_LED.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

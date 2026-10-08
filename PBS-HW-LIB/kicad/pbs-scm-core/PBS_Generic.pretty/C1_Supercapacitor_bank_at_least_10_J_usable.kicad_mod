@@ -1,0 +1,203 @@
+(footprint "C1_Supercapacitor_bank_at_least_10_J_usable"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Supercapacitor bank, at least 10 J usable")
+	(tags "PBS generic placeholder")
+	(property "Reference" "C1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c9f0c453-e8b1-48b5-93c6-234fb08e4105")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Supercapacitor bank, at least 10 J usable"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0bba2999-6caf-489f-9e33-b78e489600ec")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "771cdacd-5a53-47ac-9add-c98387df3c26")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "35a9a80a-fdf3-4903-a88e-68a70082ae21")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -11.15 -5.65)
+		(end 11.15 5.65)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2902d9d0-0db4-4881-9cd0-08996358668d")
+	)
+	(fp_rect
+		(start -11.4 -5.9)
+		(end 11.4 5.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "10ccfcd8-5d89-4545-9a51-2b45550c3042")
+	)
+	(fp_rect
+		(start -11 -5.5)
+		(end 11 5.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "97b010a8-2c07-4f74-8ba3-b322a874f0ed")
+	)
+	(fp_text user "usable"
+		(at 0 1.899999 0)
+		(layer "F.SilkS")
+		(uuid "04e0cc34-e7a9-4418-9c2b-c54859758e9a")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "Supercapacitor"
+		(at 0 -1.82 0)
+		(layer "F.SilkS")
+		(uuid "abcc0001-f47b-46c1-ab4c-1d637bc4ecce")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "bank, at least 10 J"
+		(at 0 0.039999 0)
+		(layer "F.SilkS")
+		(uuid "b1bdd164-c42a-45e4-87d6-ce13a8ebc54f")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "C1"
+		(at 0 -3.86 0)
+		(layer "F.SilkS")
+		(uuid "fdea1aba-245d-4e8e-a10a-492b30f326d2")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "bank, at least 10 J"
+		(at 0 0.039999 0)
+		(layer "F.Fab")
+		(uuid "91fd49dc-b694-44e2-a2e2-4c028d1a34d7")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "usable"
+		(at 0 1.899999 0)
+		(layer "F.Fab")
+		(uuid "c419957a-7e8e-45ca-bac3-c14747a7d027")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "C1"
+		(at 0 -3.86 0)
+		(layer "F.Fab")
+		(uuid "f7e464a1-84bf-43e8-8046-ce023660f7b9")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "Supercapacitor"
+		(at 0 -1.82 0)
+		(layer "F.Fab")
+		(uuid "f81abdbc-54e8-4408-8a6c-5b78a84bafe1")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -10.549999 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "b35112b8-d79d-4d67-babd-62f0df6179cf")
+	)
+	(pad "2" smd rect
+		(at 10.549999 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "4ece9658-8056-4910-9167-8087d0d1e66e")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/C1_Supercapacitor_bank_at_least_10_J_usable.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

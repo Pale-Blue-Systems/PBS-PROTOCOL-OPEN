@@ -1,0 +1,261 @@
+(footprint "U5_Wide_input_DC_DC_buck_converter_VSYS_to_5_V"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Wide-input DC-DC buck converter (VSYS to 5 V)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U5"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f38fa4f9-aabb-404b-8a7c-542952366fe9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Wide-input DC-DC buck converter (VSYS to 5 V)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "edbcfb35-44be-42c1-9b33-54eb67b9daad")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "145a829b-7832-4078-98d9-baedb721d269")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "56383fe2-4043-46f2-86d1-e8678213e7b5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -4.65 -4.65)
+		(end 4.65 4.65)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "4a317d93-b9a1-4608-ad2a-8a015286b757")
+	)
+	(fp_rect
+		(start -4.9 -4.9)
+		(end 4.9 4.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9757d967-8cf8-422c-b2c0-b4a8dd10cc5d")
+	)
+	(fp_rect
+		(start -4.5 -4.5)
+		(end 4.5 4.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "62df4069-635d-461b-9981-74494cf62194")
+	)
+	(fp_text user "DC-DC buck"
+		(at 0 -1.185 0)
+		(layer "F.SilkS")
+		(uuid "3f6744ca-cf91-4030-b491-5931e32ac6bd")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "converter"
+		(at 0 -0.1 0)
+		(layer "F.SilkS")
+		(uuid "53d3a0fb-56fc-46f7-93cb-3fb2966f2b61")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "U5"
+		(at 0 -3.46 0)
+		(layer "F.SilkS")
+		(uuid "69a80434-437b-48fc-bb88-bb4fdb945d5b")
+		(effects
+			(font
+				(size 0.804999 0.804999)
+				(thickness 0.144899)
+			)
+		)
+	)
+	(fp_text user "V)"
+		(at 0 2.069999 0)
+		(layer "F.SilkS")
+		(uuid "9cb84cb8-be3c-4fb8-be92-d0c5e2f16883")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "(VSYS to 5"
+		(at 0 0.984999 0)
+		(layer "F.SilkS")
+		(uuid "a3e5b863-d872-45c8-820a-1771d3bcf08d")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "Wide-input"
+		(at 0 -2.27 0)
+		(layer "F.SilkS")
+		(uuid "cc9b76e8-1e87-41c9-b1d1-78af87220af2")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "V)"
+		(at 0 2.069999 0)
+		(layer "F.Fab")
+		(uuid "41db7f16-21f8-495f-8520-e7f0bc109577")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "U5"
+		(at 0 -3.46 0)
+		(layer "F.Fab")
+		(uuid "66363ef9-589e-484b-ab28-7acd62c91427")
+		(effects
+			(font
+				(size 0.804999 0.804999)
+				(thickness 0.144899)
+			)
+		)
+	)
+	(fp_text user "(VSYS to 5"
+		(at 0 0.984999 0)
+		(layer "F.Fab")
+		(uuid "6d803f8e-6a1d-4d96-9b99-dca6b6a88a31")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "Wide-input"
+		(at 0 -2.27 0)
+		(layer "F.Fab")
+		(uuid "c465f00f-b1ab-49d3-8736-835f9a42b65b")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "DC-DC buck"
+		(at 0 -1.185 0)
+		(layer "F.Fab")
+		(uuid "c57080da-5693-4c0b-8b4d-c15806740ca3")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "converter"
+		(at 0 -0.1 0)
+		(layer "F.Fab")
+		(uuid "e6bee1fa-9c64-4c8c-8546-ae29f4a5125d")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.05 -2.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "10c1622b-3526-4cf6-b67e-3964c31160e6")
+	)
+	(pad "2" smd rect
+		(at -4.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "96904193-d280-4e54-a578-55c8f0253a40")
+	)
+	(pad "3" smd rect
+		(at -4.05 2.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "1434bdfb-f144-4347-aed9-8167436c533a")
+	)
+	(pad "4" smd rect
+		(at 4.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3ac4d4a4-a766-4e9d-8e03-d81478a334cb")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U5_Wide_input_DC_DC_buck_converter_VSYS_to_5_V.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

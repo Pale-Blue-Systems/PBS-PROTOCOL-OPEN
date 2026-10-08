@@ -1,0 +1,246 @@
+(footprint "U23_Low_power_FPGA_waveform_processing"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Low-power FPGA (waveform processing)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U23"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "faebb4b2-d655-4861-80c3-33b5bcf8926b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Low-power FPGA (waveform processing)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0a08f588-4b7e-4f9c-9205-f083cac8dc08")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "92d744ba-9894-47e9-ae41-9bf292cfd98e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "00ebbf96-b8e0-4e4f-b879-021556176f6a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -5.15 -5.15)
+		(end 5.15 5.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "9ae70986-6bf5-4ec4-a53f-23519ba2b82e")
+	)
+	(fp_rect
+		(start -5.4 -5.4)
+		(end 5.4 5.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "48fd50f1-ac29-4892-8e1f-eebefb9095de")
+	)
+	(fp_rect
+		(start -5 -5)
+		(end 5 5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b769564e-d808-4a9e-a0a1-75a9c4c81584")
+	)
+	(fp_text user "FPGA"
+		(at 0 -1.239999 0)
+		(layer "F.SilkS")
+		(uuid "7cc5e7aa-4e60-4cb2-9bf2-277721784984")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "processing)"
+		(at 0 1.24 0)
+		(layer "F.SilkS")
+		(uuid "8c9ca082-4e4e-477c-813d-612b7bdf1770")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "U23"
+		(at 0 -3.84 0)
+		(layer "F.SilkS")
+		(uuid "c5fa0201-2932-418f-9494-aac44d7cf084")
+		(effects
+			(font
+				(size 0.919999 0.919999)
+				(thickness 0.165599)
+			)
+		)
+	)
+	(fp_text user "(waveform"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "e1f92328-9e64-40bf-bdff-8edda20ca6a2")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "Low-power"
+		(at 0 -2.479999 0)
+		(layer "F.SilkS")
+		(uuid "f9d235d4-ba86-408c-a947-fe2259e0043f")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "processing)"
+		(at 0 1.24 0)
+		(layer "F.Fab")
+		(uuid "5b969467-2fe6-42f9-bc1e-6a3c20871295")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "(waveform"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "83c74c47-1873-4bef-b000-c25a11834726")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "U23"
+		(at 0 -3.84 0)
+		(layer "F.Fab")
+		(uuid "a442ca3f-dcbb-4f26-9845-38899463cfc6")
+		(effects
+			(font
+				(size 0.919999 0.919999)
+				(thickness 0.165599)
+			)
+		)
+	)
+	(fp_text user "FPGA"
+		(at 0 -1.239999 0)
+		(layer "F.Fab")
+		(uuid "b5e2061b-546e-4ca2-96a2-1b6d60ad975e")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "Low-power"
+		(at 0 -2.479999 0)
+		(layer "F.Fab")
+		(uuid "eb335c99-f28e-4f9d-81d6-2e3560bd86e9")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.55 -3.2)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3be0e11c-1ba7-48cd-b6a6-5ad701308cda")
+	)
+	(pad "2" smd rect
+		(at -4.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "7df6b83b-8492-43a2-b846-f07b5da748c4")
+	)
+	(pad "3" smd rect
+		(at -4.55 3.199999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3e42b4bc-6b48-4cbf-a797-6c8c2c34c786")
+	)
+	(pad "4" smd rect
+		(at 4.55 -2.4)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "6022ae2b-9ddb-434a-870a-5151392f2ea2")
+	)
+	(pad "5" smd rect
+		(at 4.55 2.399999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "719582d6-b0a3-42ea-9c3f-fd801a86d193")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U23_Low_power_FPGA_waveform_processing.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

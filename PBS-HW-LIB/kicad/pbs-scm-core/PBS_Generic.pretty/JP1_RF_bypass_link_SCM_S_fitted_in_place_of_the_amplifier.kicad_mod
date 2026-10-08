@@ -1,0 +1,137 @@
+(footprint "JP1_RF_bypass_link_SCM_S_fitted_in_place_of_the_amplifier"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: RF bypass link (SCM-S: fitted in place of the amplifier)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "JP1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "6877f593-5640-4ef5-ae63-f85402df5e0a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RF bypass link (SCM-S: fitted in place of the amplifier)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "499c496a-cc83-4459-a442-8867afb75a62")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ce714f0a-7d81-476c-a530-ca896c13bebb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "41531cf6-e117-44f0-9945-e502c047f87d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.4 -0.9)
+		(end 1.4 0.9)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "f459f523-d343-4606-93c6-a48ba4b6d935")
+	)
+	(fp_rect
+		(start -1.65 -1.15)
+		(end 1.65 1.15)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d5810317-0080-4954-9e3e-b28e44f30104")
+	)
+	(fp_rect
+		(start -1.25 -0.75)
+		(end 1.25 0.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "1df47344-4d0f-41a1-882e-32a2655b92e4")
+	)
+	(fp_text user "JP1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "3577283e-f355-40de-b294-b26a13a1f41e")
+		(effects
+			(font
+				(size 0.825 0.825)
+				(thickness 0.1485)
+			)
+		)
+	)
+	(fp_text user "JP1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "5f85dc7d-5a7c-4079-8d4e-ca74c9f5cbd7")
+		(effects
+			(font
+				(size 0.825 0.825)
+				(thickness 0.1485)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.874999 0)
+		(size 0.449999 0.449999)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "2dd33c2c-3d45-4458-8a44-29096f4d1024")
+	)
+	(pad "2" smd rect
+		(at 0.874999 0)
+		(size 0.449999 0.449999)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "4d67b65e-05a6-4efe-9b7c-f8abc33a87ad")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/JP1_RF_bypass_link_SCM_S_fitted_in_place_of_the_amplifier.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

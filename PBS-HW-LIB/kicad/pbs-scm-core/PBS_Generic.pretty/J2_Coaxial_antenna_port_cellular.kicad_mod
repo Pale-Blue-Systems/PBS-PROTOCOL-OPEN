@@ -1,0 +1,137 @@
+(footprint "J2_Coaxial_antenna_port_cellular"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Coaxial antenna port: cellular")
+	(tags "PBS generic placeholder")
+	(property "Reference" "J2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "57a96e65-50f0-40c0-a41e-8f4660a0371d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Coaxial antenna port: cellular"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a2dc2a0a-1ff4-4e12-a071-c0b88867cc9b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "668e92f6-3e5d-4093-b583-77adcedcb979")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2f3311ba-1fdd-4dcf-a70c-6e25f8bcf94b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.9 -1.9)
+		(end 1.9 1.9)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "c6d92456-53ac-49a8-bb7d-bfec74160bad")
+	)
+	(fp_rect
+		(start -2.15 -2.15)
+		(end 2.15 2.15)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "b6bdf2c8-4fce-4d1d-8ebc-1838238dd480")
+	)
+	(fp_rect
+		(start -1.75 -1.75)
+		(end 1.75 1.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "90e47bdc-8006-4f0e-9e6f-c56914062525")
+	)
+	(fp_text user "J2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "10b2f971-dab0-4020-8e50-389056dc8c2b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "J2"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "d76c42f0-811c-465e-838e-eb2170ddabef")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.3 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "82d2548c-5a53-4467-9812-e7a2affd07d0")
+	)
+	(pad "2" smd rect
+		(at 1.3 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "ef0452e2-217f-4490-9a28-8ccd2725794f")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/J2_Coaxial_antenna_port_cellular.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,158 @@
+(footprint "U16_Single_pair_Ethernet_PHY_100BASE_T1"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Single-pair Ethernet PHY (100BASE-T1)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U16"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "e0b4137a-9a00-4343-a58d-82496e0d55ee")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Single-pair Ethernet PHY (100BASE-T1)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7e0b7d8d-b49a-4571-981e-86a2c4495121")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "176d93a4-7edb-4d4c-8b90-77ab7f47df44")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bda7a360-55f5-46b5-b09e-b271f3e442d2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -3.15)
+		(end 3.15 3.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "522d520c-87b2-4602-9cbd-1672b7fce194")
+	)
+	(fp_rect
+		(start -3.4 -3.4)
+		(end 3.4 3.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "0a19255f-c45e-4ae1-b46d-c9074815f527")
+	)
+	(fp_rect
+		(start -3 -3)
+		(end 3 3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "76a682a2-ff7c-4370-8194-05b1c338ed5e")
+	)
+	(fp_text user "U16"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "fdc6acb2-246e-45de-a6f7-74f8ce545613")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U16"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "fcd26794-c941-4c9c-a526-70dbfec09269")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 -1.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "60dd83d1-ddba-4c7b-8f0a-175607a0fff6")
+	)
+	(pad "2" smd rect
+		(at -2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "f4f57f70-2c94-44ed-90fa-d4791e5add4f")
+	)
+	(pad "3" smd rect
+		(at -2.55 1.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "997a7911-e0d4-4673-af69-1fc431d9d3d0")
+	)
+	(pad "4" smd rect
+		(at 2.55 -1.4)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "21375d2a-03a9-4324-b8cf-05e2735aee0e")
+	)
+	(pad "5" smd rect
+		(at 2.55 1.399999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "38c5d2b6-6b92-4bd9-bd88-1c171b215fa7")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U16_Single_pair_Ethernet_PHY_100BASE_T1.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
