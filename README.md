@@ -58,6 +58,10 @@ Source: <https://www.nasa.gov/wp-content/uploads/2026/05/fy26-civil-space-shortf
 
 The PBS_LINK Python SDK (<https://github.com/Pale-Blue-Systems/PBS_LINK>, distribution `pbs-link` 0.1.3, import package `PBS_LINK`) implements the PBS-ENV-01 v1.3 envelope. It is maintained in its own repository.
 
+### Hardware Reference Designs
+
+[`PBS-HW-LIB/`](PBS-HW-LIB/) holds open reference designs for hardware that carries PBS traffic: a swappable surface communication module (PBS-HW-SCM-01) and a master device identity tag that can be fitted to any unit (PBS-HW-ID-01). They are informational and do not affect PBS conformance.
+
 ### Governance and Alignment
 
 [`PBS-OPEN-STANDARD.md`](PBS-OPEN-STANDARD.md) and [`PBS-GOV-01`](PBS-RFC-LIB/PBS-GOV-01.md) define the stewardship and change process. [`PBS-ALIGNMENT-LIB/`](PBS-ALIGNMENT-LIB/) holds the alignment documents and the NASA FY26 traceability matrix.
