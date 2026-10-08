@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "394ccff5-7afd-431a-8aeb-8e5b86e327d1")
+		(uuid "09b2bccb-6007-4b37-8175-26e4341a9d33")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "cd5069d3-e54a-4613-9cce-906190bddadb")
+		(uuid "a73f4a71-3aba-4faa-b8f7-68900b5bae02")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5c1619de-2b5e-467e-aade-f9097f87d1b6")
+		(uuid "e403ca86-f0be-45cb-9383-c08af0159e4f")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6b437e77-5012-472e-a341-f50e96d78c74")
+		(uuid "0193bbfe-2911-4444-a112-9c9e9887d1ac")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "619358a6-1f33-4070-a400-4e597be98301")
+		(uuid "37d8287d-16b1-4831-aa1f-dcaf3eca0752")
 	)
 	(fp_rect
 		(start -3.4 -3.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "9405817a-c73a-4e4e-857f-0a8e0c70c5a6")
+		(uuid "c3d7b41f-4d5c-4570-9ecf-21c166c9f422")
 	)
 	(fp_rect
 		(start -3 -3)
@@ -84,12 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "93826b9a-f988-4d66-a910-2f88ea832635")
+		(uuid "8097af01-afca-495a-905e-6a040576949d")
 	)
 	(fp_text user "U4"
 		(at 0 0 0)
 		(layer "F.SilkS")
-		(uuid "a7ba091a-850b-46e2-b690-fe335d347114")
+		(uuid "4e7fb9d4-87c0-4fb4-870f-879fc017d1b3")
 		(effects
 			(font
 				(size 1 1)
@@ -100,7 +100,7 @@
 	(fp_text user "U4"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "3a4fea22-d7a7-4d7c-8bf1-242b4af89d9e")
+		(uuid "c7c83ed9-c3b2-40e3-9360-9a51700d0038")
 		(effects
 			(font
 				(size 1 1)
@@ -113,35 +113,35 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "fee55483-c933-4451-9a21-9f57e8a02543")
+		(uuid "e06677a2-6dad-4764-a224-36cb1e0664f4")
 	)
 	(pad "2" smd rect
 		(at -2.55 1.399999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "c4cc75b7-2fc2-4303-9a69-a161c398140e")
+		(uuid "5f78a289-554c-4148-944a-24035b0bd281")
 	)
 	(pad "3" smd rect
 		(at 2.55 -1.866666)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "dada6637-b72c-498d-b61e-7c2a859ec3b9")
+		(uuid "c5cd4093-871b-41b0-9ca0-7a9564f79250")
 	)
 	(pad "4" smd rect
 		(at 2.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "9cf36dcb-b409-457f-b7d6-022b3404d6be")
+		(uuid "c8e7f2b5-1a2c-4a50-b90e-238e0660a17a")
 	)
 	(pad "5" smd rect
 		(at 2.55 1.866666)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "861c5395-6732-4c63-afb4-59aba40b9d18")
+		(uuid "1f829b68-4622-48f6-9099-48f889a6aa0b")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/U4_Hold_up_controller_ideal_diode_and_supercapacitor_charger.wrl"

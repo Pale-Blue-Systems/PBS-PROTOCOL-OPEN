@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "48f47d9b-9827-4249-96a7-a4d9f81de062")
+		(uuid "f5c003ee-54ec-415a-a87f-b2a56b29cb0d")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "4c1348bc-e278-4f3d-950a-ae526495e03f")
+		(uuid "8811ce9b-167f-49f3-af3e-4aa105af42e4")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "008df5dc-1e21-43fb-913b-3796784694b3")
+		(uuid "89709611-e6a7-4b6e-b4a9-19f3741216e6")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "381ce12d-b4a8-41d4-8804-693fab17b476")
+		(uuid "99316b95-1c6f-4b92-b0c1-fc285ae076ae")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -71,12 +71,12 @@
 		)
 		(fill yes)
 		(layer "F.Cu")
-		(uuid "53ee10d5-9d4c-4c0b-88f7-19cbe62da134")
+		(uuid "127dec85-1a08-4e34-940e-4953c73af98b")
 	)
 	(fp_text user "L1 contactless antenna coil, 4 turns"
 		(at 0 8.9 0)
 		(layer "F.Fab")
-		(uuid "f3428711-3bfd-481c-b304-21e226c50357")
+		(uuid "6e6d62e9-db65-4220-be25-b6a775c4a30f")
 		(effects
 			(font
 				(size 0.6 0.6)
@@ -89,14 +89,14 @@
 		(size 0.4 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "0f5f55a4-cb04-4107-b746-4baa68c5855b")
+		(uuid "68177969-c85b-4120-9fce-23f33be49c55")
 	)
 	(pad "2" smd rect
 		(at -6.1 -5.5)
 		(size 0.4 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "c86aa549-9056-4680-8b30-5a5ea41ace81")
+		(uuid "8927f2fe-f610-4300-9ea2-1e4f500c248b")
 	)
 	(embedded_fonts no)
 )

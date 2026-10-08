@@ -30,10 +30,12 @@ from dataclasses import dataclass, field
 
 import pcbnew
 
+import connector as CON
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DATE = "2026-10-08"
-REV = "0.2"
+REV = "0.3"
 COMPANY = "Pale Blue Systems Foundation"
 SCH_VERSION = "20231120"   # KiCad 8 schematic format
 SYM_VERSION = "20231120"
@@ -127,15 +129,24 @@ def antport(ref: str, net: str, what: str, region: str) -> Block:
                  [("RF", net)], [("GND", "GND")], (3.5, 3.5), 2.5, region=region)
 
 
+def host_connector(ref: str, half: str, nets: dict, fixed) -> Block:
+    """The host connector as a block whose pin numbers are the contact numbers of PBS-HW-CON-01."""
+    pins = [(c.name, nets.get(c.name, c.name)) for c in CON.CONTACTS]
+    if half == "module":
+        return Block(ref, "Host connector, module half: contact pads and guide bushings (PBS-HW-CON-01)",
+                     "interface", "power", pins[:9], pins[9:], (58, 18), 0.0, side="B", fixed=fixed,
+                     footprint="contact_module")
+    return Block(ref, "Host connector, bay half: spring contacts, cover plate and guide pins (PBS-HW-CON-01)",
+                 "interface", "bay", pins[:9], pins[9:], (58, 18), 0.0, fixed=fixed, footprint="contact_bay")
+
+
 def core_project() -> Project:
     B: list[Block] = []
-    # Host connector, contact order per PBS-HW-SCM-01 REQ-010.
-    B.append(Block("J1", "Host connector, blind-mate, shuttered (PBS-HW-SCM-01 Section 5.2)", "interface", "power",
-        [("CHASSIS", "CHASSIS"), ("SHIELD", "CHASSIS"), ("VIN+", "VIN_RAW"), ("VIN_RTN", "GND"),
-         ("T1_P", "T1_P"), ("T1_N", "T1_N"), ("TX+", "RS422_TX_P"), ("TX-", "RS422_TX_N"), ("RX+", "RS422_RX_P")],
-        [("RX-", "RS422_RX_N"), ("ID_3V3", "ID_3V3"), ("ID_GND", "GND"), ("ID_SCL", "ID_SCL"), ("ID_SDA", "ID_SDA"),
-         ("DET_A", "DET_A"), ("DET_B", "DET_B"), ("RF_HOST", "RF_HOST")],
-        (48, 8), 6.0, fixed=(46, 85.5), footprint="connector"))
+    # Host connector, module half (PBS-HW-CON-01): contact pads on the back of the board,
+    # centred on the module base, with the two guide bushings passing through the board.
+    B.append(host_connector("J1", "module", {
+        "CHASSIS": "CHASSIS", "SHIELD": "CHASSIS", "VIN+": "VIN_RAW", "VIN_RTN": "GND", "ID_GND": "GND"},
+        fixed=(46, 46)))
     for i, (x, y) in enumerate([(4, 4), (88, 4), (4, 88), (88, 88)], 1):
         B.append(Block(f"MH{i}", "Mounting hole, chassis bonded", "mech", "power", [("MH", "CHASSIS")], [],
                        (6.4, 6.4), 0.0, fixed=(x, y), footprint="hole"))
@@ -238,9 +249,9 @@ def core_project() -> Project:
         Block("Q1", "Heater driver, low-side MOSFET", "thermal", "thermal",
               [("G", "HEAT_PWM"), ("S", "GND")], [("D", "HEAT_RTN")], (5, 4), 1.5, region="power"),
         Block("H1", "Polyimide film heater, zone A (radios)", "thermal", "thermal",
-              [("+", "VSYS")], [("-", "HEAT_RTN")], (38, 32), 0.3, side="B", fixed=(28, 25)),
+              [("+", "VSYS")], [("-", "HEAT_RTN")], (72, 24), 0.3, side="B", fixed=(46, 20)),
         Block("H2", "Polyimide film heater, zone B (power and control)", "thermal", "thermal",
-              [("+", "VSYS")], [("-", "HEAT_RTN")], (38, 32), 0.3, side="B", fixed=(68, 62)),
+              [("+", "VSYS")], [("-", "HEAT_RTN")], (72, 24), 0.3, side="B", fixed=(46, 72)),
         Block("RT1", "Platinum RTD temperature sensor (radio zone)", "thermal", "thermal",
               [("A", "TEMP1")], [("B", "GND")], (3.2, 1.6), 0.6, region="mesh"),
         Block("RT2", "Platinum RTD temperature sensor (power zone)", "thermal", "thermal",
@@ -259,9 +270,9 @@ def core_project() -> Project:
         notes=[
             "Reference design: every block is a placeholder named by the common type of part that goes there.",
             "Replace each placeholder footprint with the footprint of the chosen part; the nets do not change.",
-            "Connector contact groups and mating order: PBS-HW-SCM-01 REQ-010 (pad length = mating order).",
+            "J1 is the module half of the host connector (PBS-HW-CON-01): contact pads on the back, centred on the module base.",
             "Fit: 'Class M only' parts are omitted in Class H; U24 is fitted in SCM-L, JP1 in SCM-S.",
-            "Heaters H1 and H2 are film heaters bonded to the back of the board.",
+            "Heaters H1 and H2 are film heaters bonded to the back of the board, either side of J1.",
         ],
     )
 
@@ -270,12 +281,9 @@ def core_project() -> Project:
 
 def bay_project() -> Project:
     B = [
-        Block("J1", "Module receptacle, blind-mate, shuttered (PBS-HW-SCM-01 Section 5.2)", "interface", "bay",
-              [("CHASSIS", "CHASSIS"), ("SHIELD", "CHASSIS"), ("VIN+", "VIN"), ("VIN_RTN", "GND"),
-               ("T1_P", "T1_P"), ("T1_N", "T1_N"), ("TX+", "RS422_TX_P"), ("TX-", "RS422_TX_N"), ("RX+", "RS422_RX_P")],
-              [("RX-", "RS422_RX_N"), ("ID_3V3", "ID_3V3"), ("ID_GND", "GND"), ("ID_SCL", "ID_SCL"), ("ID_SDA", "ID_SDA"),
-               ("DET_A", "DET_LOOP"), ("DET_B", "DET_LOOP"), ("RF_HOST", "RF_HOST")],
-              (48, 8), 6.0, fixed=(56, 7.5), footprint="connector"),
+        host_connector("J1", "bay", {
+            "CHASSIS": "CHASSIS", "SHIELD": "CHASSIS", "VIN+": "VIN", "VIN_RTN": "GND", "ID_GND": "GND",
+            "DET_A": "DET_LOOP", "DET_B": "DET_LOOP"}, fixed=(56, 11)),
         Block("J2", "Host harness connector", "interface", "bay",
               [("VIN", "VIN"), ("GND", "GND"), ("CHASSIS", "CHASSIS"), ("T1_P", "T1_P_H"), ("T1_N", "T1_N_H")],
               [("TX+", "RS422_TX_P_H"), ("TX-", "RS422_TX_N_H"), ("RX+", "RS422_RX_P_H"), ("RX-", "RS422_RX_N_H"), ("SEATED_N", "SEATED_N")],
@@ -590,6 +598,138 @@ def vrml_box(path: str, w: float, h: float, z: float, rgb, z0: float = 0.0):
                 f" geometry Box {{ size {2 * hx:.5f} {2 * hy:.5f} {2 * hz:.5f} }} }} ] }}\n")
 
 
+ORDER_RGB = {1: (0.18, 0.49, 0.20), 2: (0.78, 0.16, 0.16), 3: (0.08, 0.40, 0.75), 4: (0.42, 0.11, 0.60)}
+GOLD = (0.83, 0.69, 0.22)
+
+
+def vrml_shapes(path: str, shapes: list[dict]):
+    """Boxes, cylinders and cones in mm; z0..z1 along the board normal. KiCad VRML unit = 2.54 mm."""
+    s = 1 / 2.54
+    out = ["#VRML V2.0 utf8\n"]
+    for sh in shapes:
+        r, g, bl = sh["rgb"]
+        mat = (f"appearance Appearance {{ material Material {{ diffuseColor {r} {g} {bl} specularColor 0.3 0.3 0.3"
+               f" shininess 0.4 transparency {sh.get('transparency', 0.0)} }} }}")
+        z0, z1 = sh["z"]
+        cz = (z0 + z1) / 2 * s
+        hz = abs(z1 - z0) * s
+        x, y = sh["xy"]
+        if sh["kind"] == "box":
+            w, h = sh["size"]
+            geo = f"Box {{ size {w * s:.5f} {h * s:.5f} {hz:.5f} }}"
+            out.append(f"Transform {{ translation {x * s:.5f} {y * s:.5f} {cz:.5f} children [ Shape {{ {mat} geometry {geo} }} ] }}\n")
+        else:
+            # cylinder or cone as a faceted solid (KiCad reads IndexedFaceSet, not the VRML primitives)
+            n = 24
+            r0 = sh["dia"] / 2
+            r1 = r0 if sh["kind"] == "cyl" else CON.GUIDE_TIP_DIA / 2
+            pts = []
+            for zz, rr in ((z0, r0), (z1, r1)):
+                for k in range(n):
+                    t = 2 * math.pi * k / n
+                    pts.append(f"{(x + rr * math.cos(t)) * s:.5f} {(y + rr * math.sin(t)) * s:.5f} {zz * s:.5f}")
+            faces = [f"{k} {(k + 1) % n} {n + (k + 1) % n} {n + k} -1" for k in range(n)]
+            faces.append(" ".join(str(k) for k in reversed(range(n))) + " -1")
+            faces.append(" ".join(str(n + k) for k in range(n)) + " -1")
+            out.append(f"Shape {{ {mat} geometry IndexedFaceSet {{ solid FALSE coord Coordinate {{ point [ {', '.join(pts)} ] }}"
+                       f" coordIndex [ {' '.join(faces)} ] }} }}\n")
+    with open(path, "w") as f:
+        f.write("".join(out))
+
+
+def connector_footprint(fp, b: Block, pad, model_dir: str):
+    """Both halves of the host connector, placed from the frame of PBS-HW-CON-01.
+
+    KiCad top view of either board shows frame x to the right and frame +y towards the top of
+    the drawing (the module front). The bay half sits on the front of the bay board; the module
+    half is drawn in the module-face view and flipped onto the back of the core board.
+    """
+    bay = b.footprint == "contact_bay"
+    sx = 1 if bay else -1                        # native footprint coordinates before any flip
+    P = lambda x, y: (sx * x, -y)
+    fab, silk, crt = pcbnew.F_Fab, pcbnew.F_SilkS, pcbnew.F_CrtYd
+    shapes = []
+    for c in CON.CONTACTS:
+        x, y = P(c.x, c.y)
+        if bay:
+            if c.cls == CON.RF:
+                pad(str(c.no), x, y, 1.6, 1.6, pcbnew.PAD_SHAPE_CIRCLE, smd=False, drill=0.9)
+                shapes.append({"kind": "cyl", "xy": (c.x, c.y), "dia": 4.5, "z": (0, CON.BAY_P_ABOVE_BOARD + CON.RF_BAY_REF_FREE), "rgb": (0.75, 0.75, 0.78)})
+            else:
+                big = c.cls == CON.POWER
+                pad(str(c.no), x, y, 3.6 if big else 1.9, 3.6 if big else 1.9, pcbnew.PAD_SHAPE_CIRCLE, smd=False,
+                    drill=2.4 if big else 1.2)
+                top = CON.BAY_P_ABOVE_BOARD + CON.FREE_HEIGHT[c.order]
+                shapes.append({"kind": "cyl", "xy": (c.x, c.y), "dia": CON.TIP_DIA[c.cls], "z": (0, top), "rgb": ORDER_RGB[c.order]})
+        else:
+            if c.cls == CON.RF:
+                pad(str(c.no), x, y, 1.2, 1.2, pcbnew.PAD_SHAPE_CIRCLE, layers=[pcbnew.F_Cu, pcbnew.F_Mask])
+                shapes.append({"kind": "cyl", "xy": (-c.x, c.y), "dia": 4.0, "z": (0, 1.0), "rgb": (0.75, 0.75, 0.78)})
+            else:
+                d = CON.PAD_DIA[c.cls]
+                pad(str(c.no), x, y, d, d, pcbnew.PAD_SHAPE_CIRCLE, layers=[pcbnew.F_Cu, pcbnew.F_Mask])
+                shapes.append({"kind": "cyl", "xy": (-c.x, c.y), "dia": d, "z": (0, 0.06), "rgb": GOLD})
+            add_shape(fp, fab, (x, y), (x + CON.APERTURE_DIA[c.cls] / 2, y), 0.05, pcbnew.SHAPE_T_CIRCLE)
+        # labels: contact number on silk, name and mating order on the assembly layer
+        dy = -(CON.PAD_DIA.get(c.cls, CON.RF_KEEPOUT_DIA) / 2 + 0.55) if c.cls != CON.RF else -(CON.RF_KEEPOUT_DIA / 2 + 0.55)
+        add_text(fp, silk, str(c.no), x, y + dy, 0.6, bold=True)
+        add_text(fp, fab, f"{c.name} ({c.order})", x, y - dy + (0.1 if c.cls == CON.SIGNAL else 0), 0.35)
+    # RF keep-out
+    rx, ry = P(CON.by_name("RF_HOST").x, CON.by_name("RF_HOST").y)
+    add_shape(fp, fab, (rx, ry), (rx + CON.RF_KEEPOUT_DIA / 2, ry), 0.08, pcbnew.SHAPE_T_CIRCLE)
+    # guide pins (bay) / bushings through the board (module)
+    for name, g in CON.GUIDE.items():
+        gx, gy = P(g["x"], 0)
+        h = pcbnew.PAD(fp)
+        h.SetAttribute(pcbnew.PAD_ATTRIB_NPTH)
+        h.SetShape(pcbnew.PAD_SHAPE_CIRCLE)
+        dia = g["pin"] if bay else CON.BUSHING_OD
+        h.SetSize(V(dia, dia))
+        h.SetDrillSize(V(dia, dia))
+        h.SetLayerSet(pcbnew.PAD.UnplatedHoleMask())
+        h.SetPosition(V(gx, gy))
+        fp.Add(h)
+        if bay:
+            add_shape(fp, silk, (gx, gy), (gx + g["pin"] / 2 + 0.5, gy), 0.15, pcbnew.SHAPE_T_CIRCLE)
+            add_text(fp, silk, f"GUIDE {name}  D{g['pin']:.2f}", gx, gy + 4.2, 0.7, bold=True)
+            pin_top = CON.BAY_P_ABOVE_BOARD + CON.GUIDE_LENGTH
+            shapes.append({"kind": "cyl", "xy": (g["x"], 0), "dia": g["pin"], "z": (0, pin_top - CON.GUIDE_NOSE), "rgb": (0.62, 0.64, 0.66)})
+            shapes.append({"kind": "cone", "xy": (g["x"], 0), "dia": g["pin"], "z": (pin_top - CON.GUIDE_NOSE, pin_top), "rgb": (0.62, 0.64, 0.66)})
+        else:
+            add_shape(fp, fab, (gx, gy), (gx + CON.BUSHING_ENTRY_DIA / 2, gy), 0.08, pcbnew.SHAPE_T_CIRCLE)
+            add_text(fp, silk, f"BUSHING {name}  BORE D{g['bore']:.2f}", gx, gy + 6.0, 0.7, bold=True)
+            shapes.append({"kind": "cyl", "xy": (-g["x"], 0), "dia": CON.BUSHING_OD,
+                           "z": (CON.PAD_RECESS, CON.PAD_RECESS - CON.BUSHING_DEPTH), "rgb": (0.62, 0.64, 0.66)})
+    # outlines
+    fx0, fy0, fx1, fy1 = CON.FACE
+    a, e = P(fx0, fy0), P(fx1, fy1)
+    add_shape(fp, crt, (min(a[0], e[0]), min(a[1], e[1])), (max(a[0], e[0]), max(a[1], e[1])), 0.05)
+    add_shape(fp, fab, (min(a[0], e[0]), min(a[1], e[1])), (max(a[0], e[0]), max(a[1], e[1])), 0.1)
+    px0, py0, px1, py1 = CON.PLATE
+    a, e = P(px0, py0), P(px1, py1)
+    add_shape(fp, silk if bay else fab, (min(a[0], e[0]), min(a[1], e[1])), (max(a[0], e[0]), max(a[1], e[1])), 0.12)
+    add_shape(fp, fab, (-0.8, 0), (0.8, 0), 0.05, pcbnew.SHAPE_T_SEGMENT)
+    add_shape(fp, fab, (0, -0.8), (0, 0.8), 0.05, pcbnew.SHAPE_T_SEGMENT)
+    fy_top = min(P(0, fy1)[1], P(0, fy0)[1])
+    title = ("BAY HALF  PBS-HW-CON-01  front ^  order: 1 chassis / 2 power / 3 data, ID, RF / 4 detect" if bay else
+             "MODULE HALF  PBS-HW-CON-01  module-face view  front ^")
+    add_text(fp, silk, f"{b.ref}  {title}", 0, fy_top + 0.9, 0.7, bold=True)
+    if bay:
+        # carrier body below the plate, and the cover plate in its unmated position (translucent)
+        body = CON.BAY_P_ABOVE_BOARD - CON.PLATE_THICK
+        cxp, cyp = (px0 + px1) / 2, (py0 + py1) / 2
+        shapes.insert(0, {"kind": "box", "xy": (cxp, cyp), "size": (px1 - px0, py1 - py0), "z": (0, body), "rgb": (0.30, 0.30, 0.33)})
+        top = CON.BAY_P_ABOVE_BOARD + CON.PLATE_FREE
+        shapes.append({"kind": "box", "xy": (cxp, cyp), "size": (px1 - px0, py1 - py0), "z": (top - CON.PLATE_THICK, top),
+                       "rgb": (0.85, 0.85, 0.80), "transparency": 0.65})
+    name = f"{b.fp_name}.wrl"
+    vrml_shapes(os.path.join(model_dir, name), shapes)
+    m = pcbnew.FP_3DMODEL()
+    m.m_Filename = "${KIPRJMOD}/3d/" + name
+    m.m_Show = True
+    fp.Models().push_back(m)
+
+
 def make_footprint(board, b: Block, nets: dict, model_dir: str):
     fp = pcbnew.FOOTPRINT(board)
     fp.SetFPID(pcbnew.LIB_ID(LIB, b.fp_name))
@@ -631,37 +771,8 @@ def make_footprint(board, b: Block, nets: dict, model_dir: str):
         add_shape(fp, pcbnew.F_CrtYd, (-3.25, -3.25), (3.25, 3.25), 0.05)
         add_shape(fp, pcbnew.B_CrtYd, (-3.25, -3.25), (3.25, 3.25), 0.05)
         fp.SetAttributes(pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES)
-    elif b.footprint == "connector":
-        # One row of contacts along the board edge; pad length shows mating order
-        # (longer = earlier): chassis 1, power 2, data 3, detect 4 (PBS-HW-SCM-01 REQ-010).
-        order = {"CHASSIS": 1, "SHIELD": 1, "VIN+": 2, "VIN_RTN": 2, "DET_A": 4, "DET_B": 4}
-        length = {1: 4.0, 2: 3.4, 3: 2.8, 4: 2.2}
-        pitch = 2.4
-        x0 = -(len(pins) - 1) * pitch / 2
-        for i, (num, pname, net) in enumerate(pins):
-            o = order.get(pname, 3)
-            L = length[o]
-            x = x0 + i * pitch
-            if pname == "RF_HOST":
-                pad(num, x, 1.0, 1.6, 1.6, pcbnew.PAD_SHAPE_CIRCLE)
-            else:
-                pad(num, x, 3.0 - L / 2, 1.4, L)
-            add_text(fp, pcbnew.F_Fab, pname, x, -2.6, 0.45).SetTextAngleDegrees(90)
-            add_text(fp, pcbnew.F_SilkS, str(o), x, -1.1 - L / 2 + 0.3 if L > 3 else -0.6, 0.6)
-        for gx in (-22.2, 22.2):
-            g = pcbnew.PAD(fp)
-            g.SetAttribute(pcbnew.PAD_ATTRIB_NPTH)
-            g.SetShape(pcbnew.PAD_SHAPE_CIRCLE)
-            g.SetSize(V(3.0, 3.0))
-            g.SetDrillSize(V(3.0, 3.0))
-            g.SetLayerSet(pcbnew.PAD.UnplatedHoleMask())
-            g.SetPosition(V(gx, 0))
-            fp.Add(g)
-        add_shape(fp, pcbnew.F_Fab, (-w / 2, -h / 2), (w / 2, h / 2), 0.1)
-        add_shape(fp, pcbnew.F_SilkS, (-w / 2 - 0.2, -h / 2 - 0.2), (w / 2 + 0.2, h / 2 + 0.2), 0.15)
-        add_shape(fp, pcbnew.F_CrtYd, (-w / 2 - 0.5, -h / 2 - 0.5), (w / 2 + 0.5, h / 2 + 0.5), 0.05)
-        add_text(fp, pcbnew.F_SilkS, f"{b.ref}  HOST CONNECTOR - MATING ORDER 1 CHASSIS / 2 POWER / 3 DATA / 4 DETECT",
-                 0, -h / 2 - 1.4, 0.9, bold=True)
+    elif b.footprint in ("contact_bay", "contact_module"):
+        connector_footprint(fp, b, pad, model_dir)
     elif b.footprint == "coil":
         # Square spiral on the front copper; the coil is a net tie between COIL_A and COIL_B.
         turns, tw, gap = 4, 0.3, 0.3
@@ -807,6 +918,9 @@ def build_board(p: Project, d: str):
             pos[b.ref] = b.fixed
             if b.side == "F" and b.footprint != "coil":
                 fixed_obs.append((b.fixed[0], b.fixed[1], b.size[0], b.size[1]))
+            if b.footprint == "contact_module":   # guide bushings pass through the board
+                for g in CON.GUIDE.values():
+                    fixed_obs.append((b.fixed[0] + g["x"], b.fixed[1], CON.BUSHING_OD + 2, CON.BUSHING_OD + 2))
     for rname, region in p.regions.items():
         rb = [b for b in p.blocks if b.region == rname and not b.fixed]
         placed = pack(rb, region, fixed_obs)
@@ -836,10 +950,10 @@ def build_board(p: Project, d: str):
             add_shape(board, pcbnew.Dwgs_User, a, e, 0.15)
             add_text(board, pcbnew.Dwgs_User, name, (a[0] + e[0]) / 2, a[1] - 0.9, 0.8)
         # keep the S-band lid antenna feed clear of copper pour
-        add_text(board, pcbnew.F_SilkS, "PBS-HW-SCM-01 CORE  rev 0.2  OPEN REFERENCE DESIGN", ox + 46, oy + 92 - 1.2, 1.0, bold=True)
+        add_text(board, pcbnew.F_SilkS, "PBS-HW-SCM-01 CORE  rev 0.3  OPEN REFERENCE DESIGN", ox + 46, oy + 92 - 1.2, 1.0, bold=True)
         add_text(board, pcbnew.B_SilkS, "BACK: FILM HEATERS H1 / H2  -  PBS-HW-SCM-01", ox + 46, oy + 92 - 1.6, 1.2, bold=True, mirror=True)
     elif p.name == "pbs-scm-bay":
-        add_text(board, pcbnew.F_SilkS, "PBS-HW-SCM-01 BAY INTERFACE  rev 0.2", ox + 56, oy + 16.5, 1.0, bold=True)
+        add_text(board, pcbnew.F_SilkS, "PBS-HW-SCM-01 BAY INTERFACE  rev 0.3", ox + 56, oy + 30.8, 1.0, bold=True)
     elif p.name == "pbs-hwid-tag":
         add_text(board, pcbnew.F_SilkS, "hwid:", ox + 12.5, oy + 5.2, 0.8, bold=True)
         add_text(board, pcbnew.F_SilkS, "PBS-HW-ID-01", ox + 12.5, oy + 19.6, 0.7)

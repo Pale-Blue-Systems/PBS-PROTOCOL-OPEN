@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "d2999ced-f134-4e7f-81b3-2f7c0ef30e2a")
+		(uuid "3c574d22-4042-4ca1-a028-adc3587f3067")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5ae7762e-5831-476a-b779-c80d13f7713f")
+		(uuid "0864ffb3-0c34-49c2-b0d4-e1fc1614a28c")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "9f2314e3-d896-4495-b244-843444986b0c")
+		(uuid "9ed92dc5-578b-47cf-9444-4eae5d2f5204")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "a94f3084-dcd6-40b5-bcd8-2301ae297728")
+		(uuid "1d0639a5-f491-4ff8-b328-91a2271f76ca")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -54,64 +54,42 @@
 		)
 	)
 	(fp_rect
-		(start -19.15 -16.149999)
-		(end 19.15 16.149999)
+		(start -36.15 -12.15)
+		(end 36.15 12.15)
 		(stroke
 			(width 0.12)
 			(type default)
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "fd925ec3-0621-4dcf-b7eb-3dbd453e9501")
+		(uuid "0ec3c3f4-7487-4434-9873-7c577ebcb685")
 	)
 	(fp_rect
-		(start -19.4 -16.399999)
-		(end 19.4 16.399999)
+		(start -36.4 -12.4)
+		(end 36.4 12.4)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "03be78f7-b438-44c5-b33d-571726b9301e")
+		(uuid "327050a8-fcdd-4029-a4e7-cad87f71489d")
 	)
 	(fp_rect
-		(start -19 -16)
-		(end 19 16)
+		(start -36 -12)
+		(end 36 12)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "5e18882c-c3fe-4d44-a7d5-4597d5f070b1")
+		(uuid "9225a1ad-0e58-4c91-a12f-d732dc7b9901")
 	)
-	(fp_text user "H1"
-		(at 0 -14.36 0)
+	(fp_text user "Polyimide film heater, zone A (radios)"
+		(at 0 -8.32 0)
 		(layer "F.SilkS")
-		(uuid "1fdd4bae-b251-4a68-9732-b84c4f4e1de7")
-		(effects
-			(font
-				(size 1.38 1.38)
-				(thickness 0.248399)
-			)
-		)
-	)
-	(fp_text user "Polyimide film heater, zone A"
-		(at 0 -12.32 0)
-		(layer "F.SilkS")
-		(uuid "bca79122-d947-495a-a337-e7d1de65e3be")
-		(effects
-			(font
-				(size 1.2 1.2)
-				(thickness 0.156)
-			)
-		)
-	)
-	(fp_text user "(radios)"
-		(at 0 -10.46 0)
-		(layer "F.SilkS")
-		(uuid "daa9520e-7d4a-4b03-8835-74b31df613af")
+		(uuid "58305c66-d46a-414c-b66a-aa6f46c755b5")
 		(effects
 			(font
 				(size 1.2 1.2)
@@ -120,9 +98,9 @@
 		)
 	)
 	(fp_text user "H1"
-		(at 0 -14.36 0)
-		(layer "F.Fab")
-		(uuid "03af4df6-1271-4176-9497-e2df234620cf")
+		(at 0 -10.36 0)
+		(layer "F.SilkS")
+		(uuid "7a84a986-2cd4-4507-ad48-a9e24f5d0fa2")
 		(effects
 			(font
 				(size 1.38 1.38)
@@ -130,10 +108,10 @@
 			)
 		)
 	)
-	(fp_text user "Polyimide film heater, zone A"
-		(at 0 -12.32 0)
+	(fp_text user "Polyimide film heater, zone A (radios)"
+		(at 0 -8.32 0)
 		(layer "F.Fab")
-		(uuid "39d67442-e9d9-480b-bbd6-7445fafb5298")
+		(uuid "d564ac8f-fbfa-4882-8ca2-2eafec2b1589")
 		(effects
 			(font
 				(size 1.2 1.2)
@@ -141,30 +119,30 @@
 			)
 		)
 	)
-	(fp_text user "(radios)"
-		(at 0 -10.46 0)
+	(fp_text user "H1"
+		(at 0 -10.36 0)
 		(layer "F.Fab")
-		(uuid "e2c4eb09-d97d-4402-8e92-3d3ccd13467c")
+		(uuid "eaa10562-2813-4e0a-801f-140448e8c97a")
 		(effects
 			(font
-				(size 1.2 1.2)
-				(thickness 0.156)
+				(size 1.38 1.38)
+				(thickness 0.248399)
 			)
 		)
 	)
 	(pad "1" smd rect
-		(at -18.55 0)
+		(at -35.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "b2311525-f9c1-4f22-8332-e53dd34294e3")
+		(uuid "da87635e-b858-45c4-a2d7-2c8fc29dc194")
 	)
 	(pad "2" smd rect
-		(at 18.55 0)
+		(at 35.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "54f0d55e-8e15-4893-b775-1b871c384079")
+		(uuid "f21fe608-0fc6-4fc4-8bcf-ad0556df10b1")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/H1_Polyimide_film_heater_zone_A_radios.wrl"

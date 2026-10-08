@@ -10,7 +10,7 @@
 	(title_block
 		(title "PBS-HW-ID-01 master device identity tag")
 		(date "2026-10-08")
-		(rev "0.2")
+		(rev "0.3")
 		(company "Pale Blue Systems Foundation")
 		(comment 1 "PBS-HW-ID-01 open reference design; generic placeholders, no part numbers")
 		(comment 2 "Placeholders are not routed; nets show the required interconnect")
@@ -97,309 +97,9 @@
 	(net 8 "V_HARV")
 	(net 9 "V_IN")
 	(net 10 "V_PROT")
-	(footprint "PBS_Generic:U2_ISO_IEC_15693_contactless_front_end_with_energy_harvest"
-		(layer "F.Cu")
-		(uuid "02d03fb6-5533-4da2-a179-1a931533ca3f")
-		(at 64.8 63)
-		(descr "Generic placeholder: ISO/IEC 15693 contactless front end with energy harvest")
-		(tags "PBS generic placeholder")
-		(property "Reference" "U2"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "1365ae68-0409-44d5-a618-ebeb327efe86")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "ISO/IEC 15693 contactless front end with energy harvest"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "2d18f41e-7b83-4cdb-951a-4db9b9bf38cf")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "725c7ee0-6b54-427e-b5de-c772f0e0dbf6")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "39b647d8-b729-47e9-8db1-023f73d2dea3")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(fp_rect
-			(start -1.9 -1.9)
-			(end 1.9 1.9)
-			(stroke
-				(width 0.12)
-				(type default)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "e7078dd2-5991-456d-ae3f-7e6d2e43d532")
-		)
-		(fp_rect
-			(start -2.15 -2.15)
-			(end 2.15 2.15)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(fill no)
-			(layer "F.CrtYd")
-			(uuid "d19841f9-f764-4c91-9956-d3689323a351")
-		)
-		(fp_rect
-			(start -1.75 -1.75)
-			(end 1.75 1.75)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "07b5ab2a-86b6-4085-8268-a78dcfd58a5c")
-		)
-		(fp_text user "U2"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(uuid "184e316c-eb0a-444d-ae85-e10c83c5b28e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.18)
-				)
-			)
-		)
-		(fp_text user "U2"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(uuid "dfc32b17-edc5-42c8-9aba-2090de7a4a9c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.18)
-				)
-			)
-		)
-		(pad "1" smd rect
-			(at -1.315833 -1.033333)
-			(size 0.568333 0.568333)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 6 "COIL_A")
-			(thermal_bridge_angle 45)
-			(uuid "3393c7a7-dcac-49ba-855c-a69a90b9ec7f")
-		)
-		(pad "2" smd rect
-			(at -1.315833 0)
-			(size 0.568333 0.568333)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 7 "COIL_B")
-			(thermal_bridge_angle 45)
-			(uuid "5fe0c5c6-af2f-447f-9f52-a949dfb48f31")
-		)
-		(pad "3" smd rect
-			(at -1.315833 1.033333)
-			(size 0.568333 0.568333)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 4 "GND")
-			(thermal_bridge_angle 45)
-			(uuid "98c8f0be-6ef7-4a28-af9e-ce7434f9577a")
-		)
-		(pad "4" smd rect
-			(at 1.3 -0.775)
-			(size 0.6 0.6)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 5 "SE_LINK")
-			(thermal_bridge_angle 45)
-			(uuid "867b2060-b495-4a9f-8ae6-1fb844e79ef4")
-		)
-		(pad "5" smd rect
-			(at 1.3 0.775)
-			(size 0.6 0.6)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 8 "V_HARV")
-			(thermal_bridge_angle 45)
-			(uuid "17c0632a-70ed-442e-b9ea-4412fbc84f80")
-		)
-		(embedded_fonts no)
-		(model "${KIPRJMOD}/3d/U2_ISO_IEC_15693_contactless_front_end_with_energy_harvest.wrl"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
-	(footprint "PBS_Generic:C1_Antenna_tuning_capacitor"
-		(layer "F.Cu")
-		(uuid "10bc5962-649a-477b-bec7-509f294740ce")
-		(at 62.5 66.2)
-		(descr "Generic placeholder: Antenna tuning capacitor")
-		(tags "PBS generic placeholder")
-		(property "Reference" "C1"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "e76e5057-fb84-48a7-803f-5a742ce948fe")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "Antenna tuning capacitor"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "edc419c2-9003-43fa-b200-c87baa41d700")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "77a111a7-91a7-471b-8764-6edcb6973a7e")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "882f476c-0294-41b9-80fe-01f142f8b0a3")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(fp_rect
-			(start -0.75 -0.55)
-			(end 0.75 0.55)
-			(stroke
-				(width 0.12)
-				(type default)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "3e46f879-2af2-4d09-890e-9ef1dfcafc0d")
-		)
-		(fp_rect
-			(start -1 -0.8)
-			(end 1 0.8)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(fill no)
-			(layer "F.CrtYd")
-			(uuid "ebdc0517-86f5-4147-9fb9-fe199fb7020c")
-		)
-		(fp_rect
-			(start -0.6 -0.4)
-			(end 0.6 0.4)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "099604ae-9d0e-4d4b-859a-ded72e033963")
-		)
-		(fp_text user "C1"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(uuid "d7d5fce1-1822-42bc-8984-751c11602ba3")
-			(effects
-				(font
-					(size 0.5 0.5)
-					(thickness 0.09)
-				)
-			)
-		)
-		(fp_text user "C1"
-			(at 0 0 0)
-			(layer "F.Fab")
-			(uuid "1d09031c-253c-4e90-9dcf-7a1580a06d53")
-			(effects
-				(font
-					(size 0.5 0.5)
-					(thickness 0.09)
-				)
-			)
-		)
-		(pad "1" smd rect
-			(at -0.324999 0)
-			(size 0.25 0.25)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 6 "COIL_A")
-			(thermal_bridge_angle 45)
-			(uuid "6931bfa8-186a-4435-b7a1-74a8eea4d825")
-		)
-		(pad "2" smd rect
-			(at 0.324999 0)
-			(size 0.25 0.25)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 7 "COIL_B")
-			(thermal_bridge_angle 45)
-			(uuid "2c84dadf-e5b7-48a2-b0d6-d9a729047da9")
-		)
-		(embedded_fonts no)
-		(model "${KIPRJMOD}/3d/C1_Antenna_tuning_capacitor.wrl"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
 	(footprint "PBS_Generic:U3_Current_limiter_latch_up_protection"
 		(layer "F.Cu")
-		(uuid "485d84b6-2cf9-42b1-8ca5-058dc262bf31")
+		(uuid "bde2dac7-5d2c-479c-95fe-79c630f041cb")
 		(at 60.5 59.2)
 		(descr "Generic placeholder: Current limiter (latch-up protection)")
 		(tags "PBS generic placeholder")
@@ -407,7 +107,7 @@
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "aae9a3c8-1d78-430a-86ea-804b499a605d")
+			(uuid "dc6f96e0-1f10-4e55-bfe8-60bdc8bcb004")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -419,7 +119,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c2be77ff-317b-4c69-bbab-3f6ae7f0a4c3")
+			(uuid "06b17aca-c844-4606-a457-42a7a2a8a572")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -431,7 +131,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d314f6fe-5828-4a78-b171-86084b033a2d")
+			(uuid "ee98bdd5-4272-4e6e-9225-c257753ca1c9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -443,7 +143,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b818139b-05a1-412a-9bcb-e60859db01d0")
+			(uuid "11be1ecd-d6ef-49be-8038-50110a025b64")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -460,7 +160,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "d04769bc-68e1-44ba-8d62-402b91553fcf")
+			(uuid "faba05b4-5ce3-4b01-a1c5-40b2d54c9c8a")
 		)
 		(fp_rect
 			(start -1.4 -1.4)
@@ -471,7 +171,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "8c8a3493-6733-4f90-8c36-30d782a94d8e")
+			(uuid "8be27265-069e-467b-aa58-0a505e36c1db")
 		)
 		(fp_rect
 			(start -1 -1)
@@ -482,12 +182,12 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "09d537be-7159-43d5-9e14-6deb3a65eacb")
+			(uuid "f3d9e7e6-76b4-49fe-ab7c-a703c216db88")
 		)
 		(fp_text user "U3"
 			(at 0 0 0)
 			(layer "F.SilkS")
-			(uuid "0316a255-12f6-499e-be45-87cfece5c097")
+			(uuid "d90932a3-65a0-4ff8-837a-d7db9f1c00a1")
 			(effects
 				(font
 					(size 0.90909 0.90909)
@@ -498,7 +198,7 @@
 		(fp_text user "U3"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "972f57e1-5983-45bc-a69b-b0cdc6fb34fd")
+			(uuid "6850f72d-e367-4fe7-ae8d-c6288d20ba13")
 			(effects
 				(font
 					(size 0.90909 0.90909)
@@ -512,7 +212,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 9 "V_IN")
 			(thermal_bridge_angle 45)
-			(uuid "3d894b50-e3b4-4a8d-bd70-1f51460d9dc5")
+			(uuid "7cfbe19f-4ee2-449a-af7a-187342d14836")
 		)
 		(pad "2" smd rect
 			(at -0.67 0.4)
@@ -520,7 +220,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 4 "GND")
 			(thermal_bridge_angle 45)
-			(uuid "c5debaff-390e-4d9c-b53a-de2b79d97dcf")
+			(uuid "93426eec-992c-4db5-b6e5-27b42229f91b")
 		)
 		(pad "3" smd rect
 			(at 0.67 0)
@@ -528,7 +228,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 10 "V_PROT")
 			(thermal_bridge_angle 45)
-			(uuid "bc1e62d1-e71f-453c-a962-8c52638c3072")
+			(uuid "9cc68fac-75b0-4da7-b7b5-9f1f3c09f34e")
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/3d/U3_Current_limiter_latch_up_protection.wrl"
@@ -543,17 +243,17 @@
 			)
 		)
 	)
-	(footprint "PBS_Generic:L1_Contactless_antenna_coil_copper_spiral"
+	(footprint "PBS_Generic:U4_Power_OR_ing_dual_ideal_diode"
 		(layer "F.Cu")
-		(uuid "694d0a2e-f6ae-44db-ad25-02e23543c5c1")
-		(at 62.5 62.5)
-		(descr "Generic placeholder: Contactless antenna coil (copper spiral)")
+		(uuid "c6baabd5-c274-4650-9ead-048921eff8f8")
+		(at 64.5 59.2)
+		(descr "Generic placeholder: Power OR-ing (dual ideal diode)")
 		(tags "PBS generic placeholder")
-		(property "Reference" "L1"
+		(property "Reference" "U4"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "48f47d9b-9827-4249-96a7-a4d9f81de062")
+			(uuid "55dc0bc3-7778-4aea-8efb-31853a1b00f5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -561,11 +261,11 @@
 				)
 			)
 		)
-		(property "Value" "Contactless antenna coil (copper spiral)"
+		(property "Value" "Power OR-ing (dual ideal diode)"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4c1348bc-e278-4f3d-950a-ae526495e03f")
+			(uuid "bdb41d65-8667-40df-bb42-09b3128cd8ba")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -577,7 +277,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "008df5dc-1e21-43fb-913b-3796784694b3")
+			(uuid "9d333669-42e0-40f3-9a69-cdca9488dd34")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -589,7 +289,161 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "381ce12d-b4a8-41d4-8804-693fab17b476")
+			(uuid "3818053a-2e53-4119-8ac1-1bfc30823864")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_rect
+			(start -1.15 -1.15)
+			(end 1.15 1.15)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "dc360f58-991b-42b5-8a61-b73887b58ab2")
+		)
+		(fp_rect
+			(start -1.4 -1.4)
+			(end 1.4 1.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "1e56fb7b-bbbb-440c-84ec-804e3f3083c4")
+		)
+		(fp_rect
+			(start -1 -1)
+			(end 1 1)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "4b1b9242-9132-4b07-9911-68d35b4b5992")
+		)
+		(fp_text user "U4"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(uuid "41ea6e39-e977-4b85-84f5-23a895c30396")
+			(effects
+				(font
+					(size 0.90909 0.90909)
+					(thickness 0.163636)
+				)
+			)
+		)
+		(fp_text user "U4"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "fe1b971d-e70c-4c9f-b555-4e9f33330835")
+			(effects
+				(font
+					(size 0.90909 0.90909)
+					(thickness 0.163636)
+				)
+			)
+		)
+		(pad "1" smd rect
+			(at -0.67 -0.4)
+			(size 0.36 0.36)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 10 "V_PROT")
+			(thermal_bridge_angle 45)
+			(uuid "8c47d4b3-50d8-4711-a461-c364baf9f3ff")
+		)
+		(pad "2" smd rect
+			(at -0.67 0.4)
+			(size 0.36 0.36)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 8 "V_HARV")
+			(thermal_bridge_angle 45)
+			(uuid "5d1758cc-7f0a-452c-b30d-029f736f834f")
+		)
+		(pad "3" smd rect
+			(at 0.67 -0.4)
+			(size 0.36 0.36)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "V_SE")
+			(thermal_bridge_angle 45)
+			(uuid "ac5e3f74-06e0-4abf-add4-01bf46711da5")
+		)
+		(pad "4" smd rect
+			(at 0.67 0.4)
+			(size 0.36 0.36)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 4 "GND")
+			(thermal_bridge_angle 45)
+			(uuid "20fd13a5-2e26-407d-b16b-3b143486741c")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/U4_Power_OR_ing_dual_ideal_diode.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "PBS_Generic:L1_Contactless_antenna_coil_copper_spiral"
+		(layer "F.Cu")
+		(uuid "ccb476e4-50c8-4fad-8d1a-c029016a0d8c")
+		(at 62.5 62.5)
+		(descr "Generic placeholder: Contactless antenna coil (copper spiral)")
+		(tags "PBS generic placeholder")
+		(property "Reference" "L1"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f5c003ee-54ec-415a-a87f-b2a56b29cb0d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Contactless antenna coil (copper spiral)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8811ce9b-167f-49f3-af3e-4aa105af42e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "89709611-e6a7-4b6e-b4a9-19f3741216e6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "99316b95-1c6f-4b92-b0c1-fc285ae076ae")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -615,12 +469,12 @@
 			)
 			(fill yes)
 			(layer "F.Cu")
-			(uuid "53ee10d5-9d4c-4c0b-88f7-19cbe62da134")
+			(uuid "127dec85-1a08-4e34-940e-4953c73af98b")
 		)
 		(fp_text user "L1 contactless antenna coil, 4 turns"
 			(at 0 8.9 0)
 			(layer "F.Fab")
-			(uuid "f3428711-3bfd-481c-b304-21e226c50357")
+			(uuid "6e6d62e9-db65-4220-be25-b6a775c4a30f")
 			(effects
 				(font
 					(size 0.6 0.6)
@@ -634,7 +488,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 6 "COIL_A")
 			(thermal_bridge_angle 45)
-			(uuid "0f5f55a4-cb04-4107-b746-4baa68c5855b")
+			(uuid "68177969-c85b-4120-9fce-23f33be49c55")
 		)
 		(pad "2" smd rect
 			(at -6.1 -5.5)
@@ -642,21 +496,21 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 7 "COIL_B")
 			(thermal_bridge_angle 45)
-			(uuid "c86aa549-9056-4680-8b30-5a5ea41ace81")
+			(uuid "8927f2fe-f610-4300-9ea2-1e4f500c248b")
 		)
 		(embedded_fonts no)
 	)
-	(footprint "PBS_Generic:U1_Secure_element_Ed25519_on_chip_key_generation_I2C"
+	(footprint "PBS_Generic:C1_Antenna_tuning_capacitor"
 		(layer "F.Cu")
-		(uuid "7293443e-4251-441d-bbc3-845aed479c8b")
-		(at 60.2 63)
-		(descr "Generic placeholder: Secure element (Ed25519, on-chip key generation, I2C)")
+		(uuid "d3345744-4bfa-4ca1-b755-1af75fb6df3b")
+		(at 62.5 66.2)
+		(descr "Generic placeholder: Antenna tuning capacitor")
 		(tags "PBS generic placeholder")
-		(property "Reference" "U1"
+		(property "Reference" "C1"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "be277ac8-1050-43f8-9c4f-6ddd0f87fc6f")
+			(uuid "6ea3b96a-4c56-4fa6-bc08-a478f70dd26b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -664,11 +518,11 @@
 				)
 			)
 		)
-		(property "Value" "Secure element (Ed25519, on-chip key generation, I2C)"
+		(property "Value" "Antenna tuning capacitor"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3e69a62b-97f4-4796-a0b4-dc07a4f3c6c1")
+			(uuid "b65ee22d-2336-470a-8cce-415cbda86f31")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -680,7 +534,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c9183aa5-3035-4b76-96a4-8969ff04f1f0")
+			(uuid "1fa1472b-f097-4dd6-a65b-7c4ff706e254")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -692,7 +546,145 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f0e9a6e7-1d6e-49ed-b6ce-422de93f7580")
+			(uuid "5b483151-2e23-4905-9b41-7b66dbbfa82f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_rect
+			(start -0.75 -0.55)
+			(end 0.75 0.55)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "5216d4cd-2bb3-4e3f-bb1b-e2f7ab01c1b4")
+		)
+		(fp_rect
+			(start -1 -0.8)
+			(end 1 0.8)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "a97faefa-e6d8-414c-a172-3015e6d0b18c")
+		)
+		(fp_rect
+			(start -0.6 -0.4)
+			(end 0.6 0.4)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "7a6ec166-32d2-4b85-b329-974b8c0c243f")
+		)
+		(fp_text user "C1"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(uuid "679a2849-d0a2-43b5-b72b-49e900030509")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.09)
+				)
+			)
+		)
+		(fp_text user "C1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c3ae9ec0-1417-462f-86b0-0b6f8f0412cc")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.09)
+				)
+			)
+		)
+		(pad "1" smd rect
+			(at -0.324999 0)
+			(size 0.25 0.25)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 6 "COIL_A")
+			(thermal_bridge_angle 45)
+			(uuid "89cc2331-05af-48af-b36b-2cf9547db067")
+		)
+		(pad "2" smd rect
+			(at 0.324999 0)
+			(size 0.25 0.25)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 7 "COIL_B")
+			(thermal_bridge_angle 45)
+			(uuid "8619d9be-558f-4072-aa98-9c3c45733990")
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/C1_Antenna_tuning_capacitor.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "PBS_Generic:U1_Secure_element_Ed25519_on_chip_key_generation_I2C"
+		(layer "F.Cu")
+		(uuid "eb85619d-3f0e-4d8a-a6d7-8ba977e8d78d")
+		(at 60.2 63)
+		(descr "Generic placeholder: Secure element (Ed25519, on-chip key generation, I2C)")
+		(tags "PBS generic placeholder")
+		(property "Reference" "U1"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7abcd29e-2bcf-40e4-a6d4-86e49d29640c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Secure element (Ed25519, on-chip key generation, I2C)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f0716056-d749-46bd-bc67-cc0ba106595e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "66542bd0-ae04-4781-a1dc-593a498f9004")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8c4d21d2-827d-470b-a38f-4b6babe901e2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -709,7 +701,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "88574d96-5e98-456d-8438-c6f3f1425c5a")
+			(uuid "4a2f45b5-b09a-4388-9913-9e07e5b74124")
 		)
 		(fp_rect
 			(start -2.15 -2.15)
@@ -720,7 +712,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "7e8cd85c-bf35-44b9-ac17-0f9ede5eac94")
+			(uuid "c1d201cb-b599-4d56-8520-b51e948fc13a")
 		)
 		(fp_rect
 			(start -1.75 -1.75)
@@ -731,12 +723,12 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "59409757-a734-4ece-9d30-daf545c654c6")
+			(uuid "1846f064-9d7f-4c98-b3a9-d8f2c5a80a86")
 		)
 		(fp_text user "U1"
 			(at 0 0 0)
 			(layer "F.SilkS")
-			(uuid "9d9f3257-bea2-4fac-9bd1-6501eac2c4fe")
+			(uuid "cba5d311-66ee-4fb8-98c8-458e7f7f3c6b")
 			(effects
 				(font
 					(size 1 1)
@@ -747,7 +739,7 @@
 		(fp_text user "U1"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "5a59c3a6-d654-45fb-adfb-6bc18e6c7b29")
+			(uuid "f1997d2e-ff51-40e2-b31e-59ecdd010567")
 			(effects
 				(font
 					(size 1 1)
@@ -761,7 +753,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 1 "V_SE")
 			(thermal_bridge_angle 45)
-			(uuid "6f18e001-edcf-4d6d-b06d-d69c5b9abc87")
+			(uuid "fef74392-6c7f-4f0d-b2c5-cc7fec07d6b5")
 		)
 		(pad "2" smd rect
 			(at -1.386875 -0.387499)
@@ -769,7 +761,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 2 "SCL")
 			(thermal_bridge_angle 45)
-			(uuid "38aa49be-e5b9-483d-bc1e-3dd029605109")
+			(uuid "77ce79fd-2783-484f-8b57-89a18a92270b")
 		)
 		(pad "3" smd rect
 			(at -1.386875 0.387499)
@@ -777,7 +769,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 3 "SDA")
 			(thermal_bridge_angle 45)
-			(uuid "937ba078-d9d7-492e-807f-9a0d9acb4b80")
+			(uuid "fcfadbd3-f959-462e-9259-bdbe3025ee9b")
 		)
 		(pad "4" smd rect
 			(at -1.386875 1.162499)
@@ -785,7 +777,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 4 "GND")
 			(thermal_bridge_angle 45)
-			(uuid "00fda0c7-45c8-48c6-bb30-a509e9c68e41")
+			(uuid "35a32fc5-9921-451e-abd5-005f2a670327")
 		)
 		(pad "5" smd rect
 			(at 1.3 0)
@@ -793,7 +785,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 5 "SE_LINK")
 			(thermal_bridge_angle 45)
-			(uuid "32b6b07f-fb26-4119-aed0-40e0d303fc6a")
+			(uuid "139c433c-3e67-40db-abc0-256db9de6c61")
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/3d/U1_Secure_element_Ed25519_on_chip_key_generation_I2C.wrl"
@@ -808,17 +800,17 @@
 			)
 		)
 	)
-	(footprint "PBS_Generic:U4_Power_OR_ing_dual_ideal_diode"
+	(footprint "PBS_Generic:U2_ISO_IEC_15693_contactless_front_end_with_energy_harvest"
 		(layer "F.Cu")
-		(uuid "835ad48d-6255-4dca-96c3-a8ad34435508")
-		(at 64.5 59.2)
-		(descr "Generic placeholder: Power OR-ing (dual ideal diode)")
+		(uuid "f3d7da8d-106c-48ba-95b3-e3661b59ddf0")
+		(at 64.8 63)
+		(descr "Generic placeholder: ISO/IEC 15693 contactless front end with energy harvest")
 		(tags "PBS generic placeholder")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "a64edbf8-949d-427f-96c1-02b2fae04116")
+			(uuid "b2156c87-eab0-43ab-83c7-0ce65e684fdb")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -826,11 +818,11 @@
 				)
 			)
 		)
-		(property "Value" "Power OR-ing (dual ideal diode)"
+		(property "Value" "ISO/IEC 15693 contactless front end with energy harvest"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "003f33d0-78aa-446f-8608-973fb4985c3c")
+			(uuid "0ca91fec-7131-44c1-b66e-94b5e43a3ce5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -842,7 +834,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0c1c518e-035e-4a22-95ba-60dc21fd4d4e")
+			(uuid "b9fc0e79-3ef2-439f-889e-1913019dbbf8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -854,7 +846,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "abc39775-7002-40dd-89b7-e82c7e6c33e9")
+			(uuid "b7fceea2-40b7-431d-878e-2e49a796a7a5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -863,94 +855,102 @@
 			)
 		)
 		(fp_rect
-			(start -1.15 -1.15)
-			(end 1.15 1.15)
+			(start -1.9 -1.9)
+			(end 1.9 1.9)
 			(stroke
 				(width 0.12)
 				(type default)
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "bcdb5c58-ec45-4e99-a22a-bed814717e28")
+			(uuid "e1021663-6c45-46df-92cc-fd632f141e22")
 		)
 		(fp_rect
-			(start -1.4 -1.4)
-			(end 1.4 1.4)
+			(start -2.15 -2.15)
+			(end 2.15 2.15)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "f1e63c22-5f30-4a18-802f-a79c23f34a53")
+			(uuid "0ec25a10-0a9b-4b87-a8fd-dad59e04b0a6")
 		)
 		(fp_rect
-			(start -1 -1)
-			(end 1 1)
+			(start -1.75 -1.75)
+			(end 1.75 1.75)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "e052d65d-42ce-4b6f-8358-0f063010ee59")
+			(uuid "d4be4764-2223-4e3b-8496-eefeb319b4b3")
 		)
-		(fp_text user "U4"
+		(fp_text user "U2"
 			(at 0 0 0)
 			(layer "F.SilkS")
-			(uuid "775a5734-57a2-4587-8e94-390d06ccc185")
+			(uuid "3cc33477-459d-4352-8378-a377228a6471")
 			(effects
 				(font
-					(size 0.90909 0.90909)
-					(thickness 0.163636)
+					(size 1 1)
+					(thickness 0.18)
 				)
 			)
 		)
-		(fp_text user "U4"
+		(fp_text user "U2"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "3f6744e1-3dfc-4737-9ec4-6f1adb7fd33a")
+			(uuid "9ac6247e-0ae3-4538-a9cf-11fe41e4dcc3")
 			(effects
 				(font
-					(size 0.90909 0.90909)
-					(thickness 0.163636)
+					(size 1 1)
+					(thickness 0.18)
 				)
 			)
 		)
 		(pad "1" smd rect
-			(at -0.67 -0.4)
-			(size 0.36 0.36)
+			(at -1.315833 -1.033333)
+			(size 0.568333 0.568333)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 10 "V_PROT")
+			(net 6 "COIL_A")
 			(thermal_bridge_angle 45)
-			(uuid "eafb311c-e096-464d-b63f-1a40be96f863")
+			(uuid "b96b3eac-ce1e-4956-9f97-f8dc83d27a53")
 		)
 		(pad "2" smd rect
-			(at -0.67 0.4)
-			(size 0.36 0.36)
+			(at -1.315833 0)
+			(size 0.568333 0.568333)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 8 "V_HARV")
+			(net 7 "COIL_B")
 			(thermal_bridge_angle 45)
-			(uuid "b1ce3806-9ea1-40c2-8962-dd82a597b02b")
+			(uuid "2c3fb1d1-05a7-4ce6-ad02-d53fafab23d6")
 		)
 		(pad "3" smd rect
-			(at 0.67 -0.4)
-			(size 0.36 0.36)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 1 "V_SE")
-			(thermal_bridge_angle 45)
-			(uuid "11c7429d-264c-40dd-b5f5-3f6d52f8b7be")
-		)
-		(pad "4" smd rect
-			(at 0.67 0.4)
-			(size 0.36 0.36)
+			(at -1.315833 1.033333)
+			(size 0.568333 0.568333)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 4 "GND")
 			(thermal_bridge_angle 45)
-			(uuid "5a326614-b4ca-49d6-9f0e-347f043034d0")
+			(uuid "b2b186e3-a7c0-4cd7-a7dd-6cb5746ca5c5")
+		)
+		(pad "4" smd rect
+			(at 1.3 -0.775)
+			(size 0.6 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 5 "SE_LINK")
+			(thermal_bridge_angle 45)
+			(uuid "027f7683-17d6-4627-b1f1-a1e8c2ce5f6a")
+		)
+		(pad "5" smd rect
+			(at 1.3 0.775)
+			(size 0.6 0.6)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 8 "V_HARV")
+			(thermal_bridge_angle 45)
+			(uuid "d346444a-cff6-4261-96af-712cafc4a07b")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/3d/U4_Power_OR_ing_dual_ideal_diode.wrl"
+		(model "${KIPRJMOD}/3d/U2_ISO_IEC_15693_contactless_front_end_with_energy_harvest.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -964,7 +964,7 @@
 	)
 	(footprint "PBS_Generic:J1_Wired_interface_pads_3_3_V_GND_SCL_SDA_PBS_HW_ID_01_Section_5_3"
 		(layer "B.Cu")
-		(uuid "a57bcdcd-9e53-40fa-8c3a-5161354b74a1")
+		(uuid "6f01864e-a80e-40bf-b454-57c1ad3b460b")
 		(at 62.5 62.5 180)
 		(descr "Generic placeholder: Wired interface pads: 3.3 V, GND, SCL, SDA (PBS-HW-ID-01 Section 5.3)")
 		(tags "PBS generic placeholder")
@@ -972,7 +972,7 @@
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "1d70ac6a-5d6a-4e65-ad1c-aaac454490e3")
+			(uuid "5decaf21-fcc4-460c-99a9-d4812dc86974")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -985,7 +985,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a95bf7d5-8975-482e-a33b-19d51adc8401")
+			(uuid "0bc44597-d28c-4984-9cd1-1526d8fdb545")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -998,7 +998,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a4de7052-1612-4fa5-b136-bbb07e2e3d22")
+			(uuid "9ac81a01-b30e-4912-8917-cebd230825a3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1011,7 +1011,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "fd03a52f-36e2-4811-bb7b-c2ff1357747d")
+			(uuid "3bb8ab67-8d9d-42d9-bc80-6725ad842ff4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1029,7 +1029,7 @@
 			)
 			(fill no)
 			(layer "B.CrtYd")
-			(uuid "9b030532-75e0-4e48-8485-c379d0ccd12c")
+			(uuid "f53e16f0-bccc-4914-b83c-04ecdf3bf95a")
 		)
 		(fp_rect
 			(start -6 2)
@@ -1040,12 +1040,12 @@
 			)
 			(fill no)
 			(layer "B.Fab")
-			(uuid "7f880fdb-13b8-4e7e-9f1c-b44bce867232")
+			(uuid "4a244976-093d-4958-beae-92bba30e7c4d")
 		)
-		(fp_text user "SDA"
-			(at 4.5 -2.6 0)
+		(fp_text user "SCL"
+			(at 1.5 -2.6 0)
 			(layer "B.SilkS")
-			(uuid "0dd74958-f1ae-480e-9a35-c84fc4f9ff37")
+			(uuid "2df6649b-fd6e-4639-ada8-6644d4076a0f")
 			(effects
 				(font
 					(size 0.7 0.7)
@@ -1054,10 +1054,10 @@
 				(justify mirror)
 			)
 		)
-		(fp_text user "GND"
-			(at -1.5 -2.6 0)
+		(fp_text user "SDA"
+			(at 4.5 -2.6 0)
 			(layer "B.SilkS")
-			(uuid "58a5369d-2e59-4d5d-b8dd-935e7b2ba123")
+			(uuid "45b7e833-75a3-4251-a2c5-4b2fec6b82c7")
 			(effects
 				(font
 					(size 0.7 0.7)
@@ -1069,7 +1069,7 @@
 		(fp_text user "WIRED INTERFACE"
 			(at 0 2.8 0)
 			(layer "B.SilkS")
-			(uuid "5e449a9f-d348-4960-bd21-46365811b80e")
+			(uuid "7b869781-dbd7-472e-adba-1eb0de1841c2")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -1078,10 +1078,10 @@
 				(justify mirror)
 			)
 		)
-		(fp_text user "SCL"
-			(at 1.5 -2.6 0)
+		(fp_text user "3V3"
+			(at -4.5 -2.6 0)
 			(layer "B.SilkS")
-			(uuid "b41fad27-8302-46c3-a3be-3d57e3f1c863")
+			(uuid "c57db56a-c38c-4057-85f4-20588c7f48b9")
 			(effects
 				(font
 					(size 0.7 0.7)
@@ -1090,10 +1090,10 @@
 				(justify mirror)
 			)
 		)
-		(fp_text user "3V3"
-			(at -4.5 -2.6 0)
+		(fp_text user "GND"
+			(at -1.5 -2.6 0)
 			(layer "B.SilkS")
-			(uuid "ce57275b-22ae-4d7f-ac64-ad6555214b83")
+			(uuid "e6cc187a-4d90-4e96-9bd6-b7003612df30")
 			(effects
 				(font
 					(size 0.7 0.7)
@@ -1108,7 +1108,7 @@
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net 9 "V_IN")
 			(thermal_bridge_angle 45)
-			(uuid "2d383fec-49af-4844-8b35-63d0d9fe7584")
+			(uuid "1d42cf4e-997a-446a-ad06-9f389f984a48")
 		)
 		(pad "2" smd rect
 			(at -1.5 0 180)
@@ -1116,7 +1116,7 @@
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net 4 "GND")
 			(thermal_bridge_angle 45)
-			(uuid "d977a5cb-417f-4860-9732-3c2a23a6924c")
+			(uuid "509de65a-51b0-43c8-a9b4-ba31c93e9860")
 		)
 		(pad "3" smd rect
 			(at 1.5 0 180)
@@ -1124,7 +1124,7 @@
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net 2 "SCL")
 			(thermal_bridge_angle 45)
-			(uuid "c9b0e37d-569f-4424-bbe2-0f3a16f88298")
+			(uuid "55a5f983-cbde-4b50-942f-26f8101ebfa5")
 		)
 		(pad "4" smd rect
 			(at 4.5 0 180)
@@ -1132,7 +1132,7 @@
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net 3 "SDA")
 			(thermal_bridge_angle 45)
-			(uuid "efbeb5d1-1c7a-4cfd-961d-1191958419ce")
+			(uuid "d2720d43-302c-4640-8f34-fa9cc9cbee8b")
 		)
 		(embedded_fonts no)
 	)
@@ -1145,7 +1145,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "0e8fb529-e08b-4baa-979c-23fed483f9ff")
+		(uuid "19d0e9ef-8cda-419b-88f5-ef6adca33394")
 	)
 	(gr_rect
 		(start 59.5 66.2)
@@ -1156,7 +1156,7 @@
 		)
 		(fill no)
 		(layer "B.SilkS")
-		(uuid "405359ab-de70-4456-b43b-e75f34d068b2")
+		(uuid "3a0009d1-4917-4c5d-b164-b7d1befca38b")
 	)
 	(gr_circle
 		(center 62.5 62.5)
@@ -1167,12 +1167,12 @@
 		)
 		(fill no)
 		(layer "Edge.Cuts")
-		(uuid "7f02c0dc-16ca-4c0a-9b89-10f1bf39e802")
+		(uuid "b60ab814-c0a4-4f49-a56c-ad63d47982a3")
 	)
 	(gr_text "PBS-HW-ID-01"
 		(at 62.5 69.6 0)
 		(layer "F.SilkS")
-		(uuid "226ada36-cd68-4280-92ab-e8409496d107")
+		(uuid "dc69cc51-744f-4b70-8bd6-52ee74698994")
 		(effects
 			(font
 				(size 0.7 0.7)
@@ -1183,7 +1183,7 @@
 	(gr_text "hwid:"
 		(at 62.5 55.2 0)
 		(layer "F.SilkS")
-		(uuid "1086b4d3-84e9-4ed9-b6e7-37e6c96888f0")
+		(uuid "aa4785ee-b2da-49c4-b646-9a9e04e7aa48")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -1194,7 +1194,7 @@
 	(gr_text "DATA MATRIX"
 		(at 62.5 69.2 0)
 		(layer "B.SilkS")
-		(uuid "66fd41a0-7cc0-4f0e-ae16-20818edfbf8b")
+		(uuid "49800231-82b6-4685-b929-97b5a4a1a03a")
 		(effects
 			(font
 				(size 0.6 0.6)
@@ -1206,7 +1206,7 @@
 	(gr_text "U1     Secure element (Ed25519, on-chip key generation, I2C)"
 		(at 81 54.1 0)
 		(layer "Dwgs.User")
-		(uuid "77629e6b-a41e-4af5-bb8a-343367d27e61")
+		(uuid "c9e19a68-4d15-419f-b5d5-3565a5b57112")
 		(effects
 			(font
 				(size 1 1)
@@ -1218,7 +1218,7 @@
 	(gr_text "U2     ISO/IEC 15693 contactless front end with energy harvest"
 		(at 81 55.85 0)
 		(layer "Dwgs.User")
-		(uuid "cc51899c-be87-4ff6-98fc-972dd98cd4bf")
+		(uuid "b9e303c0-53b5-4bf2-8763-f574c94f9857")
 		(effects
 			(font
 				(size 1 1)
@@ -1230,7 +1230,7 @@
 	(gr_text "U3     Current limiter (latch-up protection)"
 		(at 81 57.6 0)
 		(layer "Dwgs.User")
-		(uuid "a6b343fb-48f8-4acb-a5a2-6b0f85425a07")
+		(uuid "a5d602eb-0921-482a-b44f-a208af23378e")
 		(effects
 			(font
 				(size 1 1)
@@ -1242,7 +1242,7 @@
 	(gr_text "U4     Power OR-ing (dual ideal diode)"
 		(at 81 59.35 0)
 		(layer "Dwgs.User")
-		(uuid "1de34dda-1f46-4910-a1bf-c19d1688c537")
+		(uuid "2557cdd0-3c8e-4d5b-95bf-36b002ae33e4")
 		(effects
 			(font
 				(size 1 1)
@@ -1254,7 +1254,7 @@
 	(gr_text "C1     Antenna tuning capacitor"
 		(at 81 61.1 0)
 		(layer "Dwgs.User")
-		(uuid "31d44bbe-6fed-4131-8c3d-e053e6c3fb18")
+		(uuid "a15f6617-ae1c-40fa-9f55-9a69d3c53e35")
 		(effects
 			(font
 				(size 1 1)
@@ -1266,7 +1266,7 @@
 	(gr_text "L1     Contactless antenna coil (copper spiral)"
 		(at 81 62.85 0)
 		(layer "Dwgs.User")
-		(uuid "3502fdcd-6fb6-44eb-a226-b1a24653dbfc")
+		(uuid "aa68b3f6-ddc2-49c4-bc34-4da318fb62c0")
 		(effects
 			(font
 				(size 1 1)
@@ -1278,7 +1278,7 @@
 	(gr_text "J1     Wired interface pads: 3.3 V, GND, SCL, SDA (PBS-HW-ID-01 Section 5.3)  (back)"
 		(at 81 64.599999 0)
 		(layer "Dwgs.User")
-		(uuid "b7951ded-3d42-41b0-80cc-30388175c4a7")
+		(uuid "726a51c2-258f-4329-8734-7c06bad01e72")
 		(effects
 			(font
 				(size 1 1)
@@ -1290,7 +1290,7 @@
 	(gr_text "PART TYPES (generic placeholders, no part numbers)"
 		(at 81 51.5 0)
 		(layer "Dwgs.User")
-		(uuid "4a50324a-959b-4391-98fa-218b53fc9b5e")
+		(uuid "b2ef089b-920c-46af-98d2-7b6b2a56a36d")
 		(effects
 			(font
 				(size 1.2 1.2)
@@ -1302,7 +1302,7 @@
 	(gr_text "Data Matrix code area (ISO/IEC 16022) and hwid text: marked on the exposed face"
 		(at 62.5 76.2 0)
 		(layer "F.Fab")
-		(uuid "379f8fa6-8633-4d78-9e8e-8e4fff1087e5")
+		(uuid "630f6817-8bc0-415f-afc3-24f583814289")
 		(effects
 			(font
 				(size 0.5 0.5)

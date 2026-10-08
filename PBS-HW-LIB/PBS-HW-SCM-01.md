@@ -2,10 +2,10 @@
 ## Surface Communication Module: Open Reference Design
 
 **Status:** Draft Reference Design (Informational)
-**Version:** 0.2
+**Version:** 0.3
 **Date:** 2026-10-08
 **Applies to:** Small and mid-size lunar surface vehicles (rovers, hoppers, remotely driven vehicles), fixed surface infrastructure, and orbital relay nodes that carry PBS traffic
-**Related:** PBS-HW-ID-01, PBS-ENV-01, PBS-PRIO-01, PBS-ROUTE-01, PBS-CAPS-01, PBS-SEC-B-01, PBS-DTN-MAP-01, PBS-LNIS-01, PBS-PNT-CTX-01
+**Related:** PBS-HW-CON-01, PBS-HW-ID-01, PBS-ENV-01, PBS-PRIO-01, PBS-ROUTE-01, PBS-CAPS-01, PBS-SEC-B-01, PBS-DTN-MAP-01, PBS-LNIS-01, PBS-PNT-CTX-01
 
 ---
 
@@ -81,7 +81,7 @@ Both shells carry the connector on the same face, centred, so that one bay desig
 
 ### 5.2 Connector contacts
 
-PBS-SCM-REQ-010 [I]: Both shells MUST use one connector with the following contact groups, mating in the order given on insertion and breaking in reverse order on removal.
+PBS-SCM-REQ-010 [I]: Both shells MUST use the module host connector of PBS-HW-CON-01, which has the following contact groups, mating in the order given on insertion and breaking in reverse order on removal.
 
 | Order | Group | Contacts | Electrical interface |
 |---|---|---|---|
@@ -93,7 +93,7 @@ PBS-SCM-REQ-010 [I]: Both shells MUST use one connector with the following conta
 | 4 | Detect | Swap-detect pair (2 contacts) | Closed circuit through the bay when fully mated |
 | 3 | RF (SCM-L only) | One coaxial contact, 50 Ω | Passes a host antenna to the module |
 
-The mechanical drawing of the connector face (contact positions, sizes and guide-pin geometry) is to be published with version 1.0 (Section 14).
+PBS-HW-CON-01 fixes the contact positions and sizes, the mating heights that set this order, the guide pins and keying, the covers, the forces and the electrical ratings.
 
 ### 5.3 Connector mechanics
 
@@ -381,7 +381,7 @@ This section shows one arrangement that meets the requirements. It is an example
 
 ## 14. Open Issues
 
-1. **Mechanical drawings.** Connector face, guide-pin geometry, grapple feature and bay dimensions are to be published with version 1.0.
+1. **Mechanical drawings.** The grapple feature, the shell rails and the bay dimensions are to be published with version 1.0. The connector is defined in PBS-HW-CON-01.
 2. **Cover-point payload format** (REQ-092), to be published with version 1.0.
 3. **WRC-27 outcome.** Agenda item 1.15 may narrow the bands of REQ-110.
 4. **Ultra-wideband ranging band** (Section 10.4).

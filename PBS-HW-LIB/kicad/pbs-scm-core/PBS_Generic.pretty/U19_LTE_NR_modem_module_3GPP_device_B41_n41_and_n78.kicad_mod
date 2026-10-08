@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "9e070308-2810-4271-988a-69ed940882a3")
+		(uuid "5a7a335b-653a-416f-877f-82823430ed01")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1a7a3e03-52f8-4037-9550-ef9a052f40d8")
+		(uuid "646ea976-2565-424a-b5e9-099a127a46d2")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "2d6aa129-c88f-4001-93b9-f6a2ce466619")
+		(uuid "f8145abb-f177-4853-952a-0082f4b27b43")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "48a3321a-4bcf-45c2-8140-d2d21562844a")
+		(uuid "4d5a611b-39df-4202-8028-7db34f430b26")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "c981f21a-9c6e-4fdf-b4e7-31c1b99c1613")
+		(uuid "bb787331-adab-44b6-a943-76cf4182170b")
 	)
 	(fp_rect
 		(start -15.4 -15.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "839618d1-d530-4fe8-ac83-9ce3ac39b910")
+		(uuid "ab2638e8-5192-4b54-b668-d0a4831c8358")
 	)
 	(fp_rect
 		(start -15 -15)
@@ -84,12 +84,23 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "3b559ae6-83f6-4ab6-84c1-2b530b4d6604")
+		(uuid "f08b5dc2-7d40-434d-878d-fe49880be406")
+	)
+	(fp_text user "LTE/NR modem module (3GPP"
+		(at 0 -11.32 0)
+		(layer "F.SilkS")
+		(uuid "05b08bfe-5200-477b-b920-4e4f571bc53d")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
 	)
 	(fp_text user "U19"
 		(at 0 -13.36 0)
 		(layer "F.SilkS")
-		(uuid "1bc2c4b5-4e50-4729-a65e-c5c6a00ed0fa")
+		(uuid "3120a76a-2349-48ac-a5a3-120d8132dd7f")
 		(effects
 			(font
 				(size 1.38 1.38)
@@ -97,10 +108,10 @@
 			)
 		)
 	)
-	(fp_text user "LTE/NR modem module (3GPP"
-		(at 0 -11.32 0)
+	(fp_text user "device, B41/n41 and n78)"
+		(at 0 -9.46 0)
 		(layer "F.SilkS")
-		(uuid "4b9651a6-cd84-4aef-b427-2c6a86145a63")
+		(uuid "353094d7-f0e2-4915-bf3a-d20d322a48f6")
 		(effects
 			(font
 				(size 1.2 1.2)
@@ -111,40 +122,7 @@
 	(fp_text user "[Class M only]"
 		(at 0 -7.6 0)
 		(layer "F.SilkS")
-		(uuid "56b03252-5237-4c1c-afa4-8df95e8eb6ae")
-		(effects
-			(font
-				(size 1.2 1.2)
-				(thickness 0.156)
-			)
-		)
-	)
-	(fp_text user "device, B41/n41 and n78)"
-		(at 0 -9.46 0)
-		(layer "F.SilkS")
-		(uuid "d0df3871-c055-4836-a685-f5329a38b7aa")
-		(effects
-			(font
-				(size 1.2 1.2)
-				(thickness 0.156)
-			)
-		)
-	)
-	(fp_text user "LTE/NR modem module (3GPP"
-		(at 0 -11.32 0)
-		(layer "F.Fab")
-		(uuid "0868a84f-914d-465b-ba5d-745183791cb3")
-		(effects
-			(font
-				(size 1.2 1.2)
-				(thickness 0.156)
-			)
-		)
-	)
-	(fp_text user "device, B41/n41 and n78)"
-		(at 0 -9.46 0)
-		(layer "F.Fab")
-		(uuid "17638df4-b08e-4bdd-99ce-e74c31d6f95e")
+		(uuid "6b6c7d57-22bf-4e3d-ba68-a399c820eb76")
 		(effects
 			(font
 				(size 1.2 1.2)
@@ -155,7 +133,7 @@
 	(fp_text user "U19"
 		(at 0 -13.36 0)
 		(layer "F.Fab")
-		(uuid "176dd231-3f53-4b05-bd5c-845a6687c7e6")
+		(uuid "23c9558d-9870-4961-a8de-b385a219aa5f")
 		(effects
 			(font
 				(size 1.38 1.38)
@@ -163,10 +141,32 @@
 			)
 		)
 	)
+	(fp_text user "LTE/NR modem module (3GPP"
+		(at 0 -11.32 0)
+		(layer "F.Fab")
+		(uuid "4d0e77ab-8e68-4b03-aaeb-dfd277cec70d")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
 	(fp_text user "[Class M only]"
 		(at 0 -7.6 0)
 		(layer "F.Fab")
-		(uuid "2fb15610-43cd-4e83-be0d-3a4568646eb2")
+		(uuid "b2f79e50-a0da-4afb-adcc-e9bde0dac27a")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "device, B41/n41 and n78)"
+		(at 0 -9.46 0)
+		(layer "F.Fab")
+		(uuid "b33ca13f-082f-45bb-98eb-8c63cb7570fc")
 		(effects
 			(font
 				(size 1.2 1.2)
@@ -179,35 +179,35 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "3954579f-4649-4f74-a706-23a172d77d81")
+		(uuid "b04b3f18-8dfb-45b7-9389-e352808fc6ff")
 	)
 	(pad "2" smd rect
 		(at -14.549999 -3.699999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "05a00509-0778-4a85-b898-3c90cb5ab0e2")
+		(uuid "1c96cbd0-8e6c-4b58-85e8-597ee04d08cf")
 	)
 	(pad "3" smd rect
 		(at -14.549999 3.699999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "90ee96cc-38cc-456e-a663-2765ee19759a")
+		(uuid "780b1ce7-d812-493c-a936-7689f211ee30")
 	)
 	(pad "4" smd rect
 		(at -14.549999 11.1)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "8f668670-57cf-416f-8173-9a7758247d56")
+		(uuid "82a476b8-f9c9-47a0-ac73-298838e7c607")
 	)
 	(pad "5" smd rect
 		(at 14.549999 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "a20dce30-4b8a-480d-b033-45fe9427c27c")
+		(uuid "d249fc2b-64e3-4d02-b54f-29be38d58008")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/U19_LTE_NR_modem_module_3GPP_device_B41_n41_and_n78.wrl"

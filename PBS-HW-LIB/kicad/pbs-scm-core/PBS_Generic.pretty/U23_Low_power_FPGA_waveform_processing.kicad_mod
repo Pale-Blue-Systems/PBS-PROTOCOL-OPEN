@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "faebb4b2-d655-4861-80c3-33b5bcf8926b")
+		(uuid "51b43bbf-5bc9-4020-af34-3be63a2f4a8b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "0a08f588-4b7e-4f9c-9205-f083cac8dc08")
+		(uuid "059361a4-15f1-4c53-b6df-fa6d51a88d24")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "92d744ba-9894-47e9-ae41-9bf292cfd98e")
+		(uuid "a61d077c-5c27-49a9-bc24-c5fc317f3dc2")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "00ebbf96-b8e0-4e4f-b879-021556176f6a")
+		(uuid "13fa448f-6253-41b7-b27c-54d21dbbc744")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "9ae70986-6bf5-4ec4-a53f-23519ba2b82e")
+		(uuid "a9d05408-33da-46d5-8a45-0f464c1a927a")
 	)
 	(fp_rect
 		(start -5.4 -5.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "48fd50f1-ac29-4892-8e1f-eebefb9095de")
+		(uuid "39f86562-95b3-4507-b75a-f79f4a6c68c4")
 	)
 	(fp_rect
 		(start -5 -5)
@@ -84,45 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "b769564e-d808-4a9e-a0a1-75a9c4c81584")
+		(uuid "3ef13b84-843e-4e1c-9bbb-3f215ca0f602")
 	)
 	(fp_text user "FPGA"
 		(at 0 -1.239999 0)
 		(layer "F.SilkS")
-		(uuid "7cc5e7aa-4e60-4cb2-9bf2-277721784984")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.104)
-			)
-		)
-	)
-	(fp_text user "processing)"
-		(at 0 1.24 0)
-		(layer "F.SilkS")
-		(uuid "8c9ca082-4e4e-477c-813d-612b7bdf1770")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.104)
-			)
-		)
-	)
-	(fp_text user "U23"
-		(at 0 -3.84 0)
-		(layer "F.SilkS")
-		(uuid "c5fa0201-2932-418f-9494-aac44d7cf084")
-		(effects
-			(font
-				(size 0.919999 0.919999)
-				(thickness 0.165599)
-			)
-		)
-	)
-	(fp_text user "(waveform"
-		(at 0 0 0)
-		(layer "F.SilkS")
-		(uuid "e1f92328-9e64-40bf-bdff-8edda20ca6a2")
+		(uuid "22911231-3ff3-4fef-8bf0-c856c82a76a5")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -133,29 +100,7 @@
 	(fp_text user "Low-power"
 		(at 0 -2.479999 0)
 		(layer "F.SilkS")
-		(uuid "f9d235d4-ba86-408c-a947-fe2259e0043f")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.104)
-			)
-		)
-	)
-	(fp_text user "processing)"
-		(at 0 1.24 0)
-		(layer "F.Fab")
-		(uuid "5b969467-2fe6-42f9-bc1e-6a3c20871295")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.104)
-			)
-		)
-	)
-	(fp_text user "(waveform"
-		(at 0 0 0)
-		(layer "F.Fab")
-		(uuid "83c74c47-1873-4bef-b000-c25a11834726")
+		(uuid "32001ad2-337b-4e07-80a5-90b24b98495b")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -165,8 +110,8 @@
 	)
 	(fp_text user "U23"
 		(at 0 -3.84 0)
-		(layer "F.Fab")
-		(uuid "a442ca3f-dcbb-4f26-9845-38899463cfc6")
+		(layer "F.SilkS")
+		(uuid "6c13086a-be79-4154-8efb-6bf2a62561e4")
 		(effects
 			(font
 				(size 0.919999 0.919999)
@@ -174,10 +119,32 @@
 			)
 		)
 	)
+	(fp_text user "(waveform"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "cb147970-40ed-43c2-a92f-18aadc863b53")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "processing)"
+		(at 0 1.24 0)
+		(layer "F.SilkS")
+		(uuid "d8a092c8-5c63-414c-85e6-98ecaab9fa98")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
 	(fp_text user "FPGA"
 		(at 0 -1.239999 0)
 		(layer "F.Fab")
-		(uuid "b5e2061b-546e-4ca2-96a2-1b6d60ad975e")
+		(uuid "82fd16cf-f418-44df-8197-ea044b9a8376")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -188,7 +155,40 @@
 	(fp_text user "Low-power"
 		(at 0 -2.479999 0)
 		(layer "F.Fab")
-		(uuid "eb335c99-f28e-4f9d-81d6-2e3560bd86e9")
+		(uuid "85d93e89-8f4a-4b5d-a0f8-deb92147df6e")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "processing)"
+		(at 0 1.24 0)
+		(layer "F.Fab")
+		(uuid "9009f4be-f43d-4052-bd86-4fa2a726b45f")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.104)
+			)
+		)
+	)
+	(fp_text user "U23"
+		(at 0 -3.84 0)
+		(layer "F.Fab")
+		(uuid "97a10f5a-2c65-4e08-8161-57a453f1ee90")
+		(effects
+			(font
+				(size 0.919999 0.919999)
+				(thickness 0.165599)
+			)
+		)
+	)
+	(fp_text user "(waveform"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "cfc56f14-a0ad-42ff-b5ec-101b3d8a26e6")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -201,35 +201,35 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "3be0e11c-1ba7-48cd-b6a6-5ad701308cda")
+		(uuid "3438f6b7-a093-4aa8-869f-535d3187de10")
 	)
 	(pad "2" smd rect
 		(at -4.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "7df6b83b-8492-43a2-b846-f07b5da748c4")
+		(uuid "588bcf03-a384-40c8-b070-afc3c1cbe612")
 	)
 	(pad "3" smd rect
 		(at -4.55 3.199999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "3e42b4bc-6b48-4cbf-a797-6c8c2c34c786")
+		(uuid "8ee30c39-1da6-4423-8f81-c7d4db4d39e3")
 	)
 	(pad "4" smd rect
 		(at 4.55 -2.4)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "6022ae2b-9ddb-434a-870a-5151392f2ea2")
+		(uuid "2ba0c52a-c462-4925-b49e-7367a02e1913")
 	)
 	(pad "5" smd rect
 		(at 4.55 2.399999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "719582d6-b0a3-42ea-9c3f-fd801a86d193")
+		(uuid "467d5c02-1cbd-4ce0-a94a-50a1f833e0f6")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/U23_Low_power_FPGA_waveform_processing.wrl"
