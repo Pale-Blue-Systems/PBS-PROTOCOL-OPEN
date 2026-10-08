@@ -4,7 +4,7 @@ Open reference designs for hardware that carries PBS traffic. They are informati
 
 | Document | Title | Status | Version |
 |---|---|---|---|
-| [PBS-HW-SCM-01](PBS-HW-SCM-01.md) | Surface Communication Module: Open Reference Design | Draft Reference Design | 0.1 |
-| [PBS-HW-ID-01](PBS-HW-ID-01.md) | Master Device Identity Tag: Open Reference Design | Draft Reference Design | 0.1 |
+| [PBS-HW-SCM-01](PBS-HW-SCM-01.md) | Surface Communication Module: Open Reference Design | Draft Reference Design | 0.2 |
+| [PBS-HW-ID-01](PBS-HW-ID-01.md) | Master Device Identity Tag: Open Reference Design | Draft Reference Design | 0.2 |
 
-Normative statements in these documents bind only implementations that claim to follow the design. Figures marked [A] are design assumptions, to be replaced by measured values.
+These documents let anyone build the hardware and make independently built parts work together. They specify interoperability requirements, marked [I], which must be met exactly (connectors, contacts, bands, protocols, formats, behaviour), and minimum performance, marked [P], which builders may exceed. They name no components or manufacturers. Normative statements bind only implementations that claim to follow a document.
