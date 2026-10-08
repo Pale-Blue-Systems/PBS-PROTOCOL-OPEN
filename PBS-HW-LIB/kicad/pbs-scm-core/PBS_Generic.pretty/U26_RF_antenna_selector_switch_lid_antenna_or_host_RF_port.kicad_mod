@@ -1,0 +1,158 @@
+(footprint "U26_RF_antenna_selector_switch_lid_antenna_or_host_RF_port"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: RF antenna selector switch (lid antenna or host RF port)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U26"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "4caaa085-f834-4e58-a773-1ae830ffc80a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RF antenna selector switch (lid antenna or host RF port)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "adcf97dd-452f-48f1-b386-31fc811c9bd8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dc45919c-1907-4e76-83b7-29d73bc6615d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "816282ba-f078-4018-a54d-0dfea82cfe8a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.15 -2.15)
+		(end 2.15 2.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "7ba111d9-b3a5-48dc-af02-4e7040597c1f")
+	)
+	(fp_rect
+		(start -2.4 -2.4)
+		(end 2.4 2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "fbc3d2bc-fbf4-467d-9fdb-9903ee910767")
+	)
+	(fp_rect
+		(start -2 -2)
+		(end 2 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "ea71f4de-1849-4cd5-87a8-a586a678240b")
+	)
+	(fp_text user "U26"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "1c944017-ff71-4546-a414-f5db4213d900")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U26"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "c83f48e8-17c8-4767-940a-ddabfbba7c94")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.55 -1.2)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "d51746b9-bf03-4aa5-8ba1-48a7a746ab18")
+	)
+	(pad "2" smd rect
+		(at -1.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "92a88da8-2801-43dc-b6d1-30e8196be37a")
+	)
+	(pad "3" smd rect
+		(at -1.55 1.2)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "e60602ae-f394-43f6-8043-aca3041584c2")
+	)
+	(pad "4" smd rect
+		(at 1.55 -0.9)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "10efb9b2-42cb-4cbb-8fc1-3a805bf5eb72")
+	)
+	(pad "5" smd rect
+		(at 1.55 0.9)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "1ae869f1-ef3b-486b-a461-8d806c8778f8")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U26_RF_antenna_selector_switch_lid_antenna_or_host_RF_port.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

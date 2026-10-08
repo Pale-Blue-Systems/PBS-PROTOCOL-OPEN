@@ -1,0 +1,276 @@
+(footprint "U15_Store_and_forward_memory_at_least_64_MB_EDAC_MRAM_or_SRAM"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Store-and-forward memory, at least 64 MB, EDAC (MRAM or SRAM)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U15"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "60cf468a-07e2-43a5-9d53-7faf4594f383")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Store-and-forward memory, at least 64 MB, EDAC (MRAM or SRAM)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "38f61d26-28c8-4ac1-9853-6e435fda0525")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e4244571-73a0-4f43-a297-0d44058f97ca")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a930a66-bd0d-42ff-99d2-8c5b91dad2de")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -6.15 -6.15)
+		(end 6.15 6.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "92b5fab4-9099-419e-aa82-b71c32de282c")
+	)
+	(fp_rect
+		(start -6.4 -6.4)
+		(end 6.4 6.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "241b5223-0a64-47e9-b2c6-226223443fe5")
+	)
+	(fp_rect
+		(start -6 -6)
+		(end 6 6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "269491b9-fa97-4786-a4d2-d2f65ef4ba11")
+	)
+	(fp_text user "Store-and-"
+		(at 0 -3.189999 0)
+		(layer "F.SilkS")
+		(uuid "1b7cfd10-3f84-456c-bf84-6ccc2c78a792")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "EDAC (MRAM"
+		(at 0 2.39 0)
+		(layer "F.SilkS")
+		(uuid "33454707-ca5e-43a9-bb07-d6d612390396")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "U15"
+		(at 0 -4.72 0)
+		(layer "F.SilkS")
+		(uuid "3fe1ac60-7b1d-43e8-b9a9-7e203c1f89be")
+		(effects
+			(font
+				(size 1.034999 1.034999)
+				(thickness 0.186299)
+			)
+		)
+	)
+	(fp_text user "least 64 MB,"
+		(at 0 0.995 0)
+		(layer "F.SilkS")
+		(uuid "4a78497a-7b19-4c65-8000-681086d9c6ca")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "forward"
+		(at 0 -1.794999 0)
+		(layer "F.SilkS")
+		(uuid "6bac6c36-c58b-4884-8b07-6fde1a546e41")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "or SRAM)"
+		(at 0 3.785 0)
+		(layer "F.SilkS")
+		(uuid "6db2866d-d6f6-4b54-8771-13cc136f8303")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "memory, at"
+		(at 0 -0.399999 0)
+		(layer "F.SilkS")
+		(uuid "b75054c8-b272-4fbc-88f8-63392c6d68df")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "forward"
+		(at 0 -1.794999 0)
+		(layer "F.Fab")
+		(uuid "2e040694-4d1c-4f7c-859a-0657852e0406")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "U15"
+		(at 0 -4.72 0)
+		(layer "F.Fab")
+		(uuid "397c4552-98f4-4d48-ba38-cca93004a7ef")
+		(effects
+			(font
+				(size 1.034999 1.034999)
+				(thickness 0.186299)
+			)
+		)
+	)
+	(fp_text user "or SRAM)"
+		(at 0 3.785 0)
+		(layer "F.Fab")
+		(uuid "567d3c6a-49dd-417e-bf87-e9a2ba617793")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "EDAC (MRAM"
+		(at 0 2.39 0)
+		(layer "F.Fab")
+		(uuid "733552a8-6a66-427f-8438-d106b67adf0f")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "Store-and-"
+		(at 0 -3.189999 0)
+		(layer "F.Fab")
+		(uuid "98bc1c2d-7b9e-489d-aaa7-b6c0416e7520")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "least 64 MB,"
+		(at 0 0.995 0)
+		(layer "F.Fab")
+		(uuid "ad30fedf-91d7-407e-9cb3-319ada06b113")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "memory, at"
+		(at 0 -0.399999 0)
+		(layer "F.Fab")
+		(uuid "e8387de4-a358-48d1-85b5-30adb5f076bf")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -5.55 -2.9)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "12d8cc62-45c6-4c73-a00d-af00a1d52c18")
+	)
+	(pad "2" smd rect
+		(at -5.55 2.899999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "82057bf1-d8d2-4331-ad85-8370c22d89de")
+	)
+	(pad "3" smd rect
+		(at 5.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "36eced44-5080-4f8d-a820-10be7163e516")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U15_Store_and_forward_memory_at_least_64_MB_EDAC_MRAM_or_SRAM.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,172 @@
+(footprint "U18_Hot_swap_I2C_bus_buffer_with_tag_supply_switch"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Hot-swap I2C bus buffer with tag supply switch")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U18"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a326dce4-f35d-4ae8-aafa-7273533cbd6b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Hot-swap I2C bus buffer with tag supply switch"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c88886cf-74c9-4d0b-af83-d1ae5c1c24f3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "28844877-d6ef-414b-9981-49a23ae27ddc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0c89cb00-1bd0-4321-a4c1-07b148231270")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.4 -2.4)
+		(end 2.4 2.4)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "8e9b8bd3-5ccc-4497-ad1b-338e2edc8b6e")
+	)
+	(fp_rect
+		(start -2.65 -2.65)
+		(end 2.65 2.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "7d89f01b-9e3d-4d23-905f-2fc37215817d")
+	)
+	(fp_rect
+		(start -2.25 -2.25)
+		(end 2.25 2.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "80fc927a-5f46-4910-8e69-0fa10f4686a5")
+	)
+	(fp_text user "U18"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "778ad7c8-a4ba-4ba5-aab0-2deea2770a5d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U18"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "b76abb6e-260e-45e1-8ffa-e1fa64c9cd3a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.818125 -1.537499)
+		(size 0.56375 0.56375)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "f9251aed-0d0b-4ade-9125-493028cb7592")
+	)
+	(pad "2" smd rect
+		(at -1.818125 -0.512499)
+		(size 0.56375 0.56375)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "48e37e05-d082-4154-ba68-1f7f02e1c7ac")
+	)
+	(pad "3" smd rect
+		(at -1.818125 0.5125)
+		(size 0.56375 0.56375)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "52345134-99a8-438c-9bb0-852da35538b7")
+	)
+	(pad "4" smd rect
+		(at -1.818125 1.537499)
+		(size 0.56375 0.56375)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "26c8af41-6921-4b50-ad1c-fd65270ce9ce")
+	)
+	(pad "5" smd rect
+		(at 1.8 -1.366666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "ccf01340-522d-47ba-ba95-c702d39fcee6")
+	)
+	(pad "6" smd rect
+		(at 1.8 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "f895d6a7-99b9-4a31-94e3-6aa591d8f4b2")
+	)
+	(pad "7" smd rect
+		(at 1.8 1.366666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "66d11077-97b9-4e55-9e2a-1d5ca90b929d")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U18_Hot_swap_I2C_bus_buffer_with_tag_supply_switch.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

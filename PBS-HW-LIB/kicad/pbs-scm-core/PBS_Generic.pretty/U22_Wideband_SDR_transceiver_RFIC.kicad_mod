@@ -1,0 +1,267 @@
+(footprint "U22_Wideband_SDR_transceiver_RFIC"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Wideband SDR transceiver RFIC")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U22"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "dc90c338-5ff1-4cf6-8403-47b54f37e914")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Wideband SDR transceiver RFIC"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "90a5cd42-1d93-49f8-ada8-81516b56451d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b2dfd2f7-d84b-49ac-aad0-bf985c054e4a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e249d21c-0e1a-494d-8cea-1ac3a6bfe940")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -6.15 -6.15)
+		(end 6.15 6.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "9f081e2d-7961-43d7-ad7e-64cc430ca225")
+	)
+	(fp_rect
+		(start -6.4 -6.4)
+		(end 6.4 6.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d698b3d8-ff70-4a03-b71f-e885def137ff")
+	)
+	(fp_rect
+		(start -6 -6)
+		(end 6 6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c95686d8-fd40-43ae-9aa2-36138e81056d")
+	)
+	(fp_text user "SDR"
+		(at 0 -1.349999 0)
+		(layer "F.SilkS")
+		(uuid "18ed5c91-cefc-47b0-8622-1e6b75e0d1f7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "RFIC"
+		(at 0 1.75 0)
+		(layer "F.SilkS")
+		(uuid "6332a6ab-2d41-4279-9c86-0a43f2479582")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "Wideband"
+		(at 0 -2.899999 0)
+		(layer "F.SilkS")
+		(uuid "6a4b253e-a9f1-4802-a123-038531042840")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "transceiver"
+		(at 0 0.2 0)
+		(layer "F.SilkS")
+		(uuid "af3a9063-4d68-47af-a452-f7133e78251a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "U22"
+		(at 0 -4.6 0)
+		(layer "F.SilkS")
+		(uuid "d5266c86-0d3d-44d8-acf8-e15ed5bb5d34")
+		(effects
+			(font
+				(size 1.15 1.15)
+				(thickness 0.207)
+			)
+		)
+	)
+	(fp_text user "Wideband"
+		(at 0 -2.899999 0)
+		(layer "F.Fab")
+		(uuid "198a19a7-2b8e-44cb-b66f-60b4dfc588ba")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "U22"
+		(at 0 -4.6 0)
+		(layer "F.Fab")
+		(uuid "4d501fa8-5407-4cad-b9f8-462dabc2058a")
+		(effects
+			(font
+				(size 1.15 1.15)
+				(thickness 0.207)
+			)
+		)
+	)
+	(fp_text user "SDR"
+		(at 0 -1.349999 0)
+		(layer "F.Fab")
+		(uuid "5d41abb4-a446-488b-b3db-2a554ce0e3c6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "RFIC"
+		(at 0 1.75 0)
+		(layer "F.Fab")
+		(uuid "c88230fb-d635-4794-96f1-fc54ab4268bd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "transceiver"
+		(at 0 0.2 0)
+		(layer "F.Fab")
+		(uuid "fe74bdac-8f9a-47cc-b5e7-7580cecbad80")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -5.55 -4.64)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "05ffe4f3-d557-4ad3-89a1-ee39710ecd72")
+	)
+	(pad "2" smd rect
+		(at -5.55 -2.32)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "00d28b01-67d8-4108-9e36-0331da0b7276")
+	)
+	(pad "3" smd rect
+		(at -5.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "7cc0334c-26c4-4607-a7b4-978d1e0fd059")
+	)
+	(pad "4" smd rect
+		(at -5.55 2.319999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "cb2a4ae7-3d85-4cf5-931d-d6be8957d621")
+	)
+	(pad "5" smd rect
+		(at -5.55 4.64)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "ded31962-0598-4991-bf06-181dfc8cc9c1")
+	)
+	(pad "6" smd rect
+		(at 5.55 -3.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "76057128-8a9d-459b-84e9-4c5b485a734b")
+	)
+	(pad "7" smd rect
+		(at 5.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "87e4322d-1fd3-47aa-bb21-c7498f0b699f")
+	)
+	(pad "8" smd rect
+		(at 5.55 3.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "8b5bffad-f1a7-4f50-b1a4-a3c76b71642c")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U22_Wideband_SDR_transceiver_RFIC.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

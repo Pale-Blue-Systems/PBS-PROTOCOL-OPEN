@@ -1,0 +1,165 @@
+(footprint "U3_Swap_detect_conditioning_comparator"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Swap-detect conditioning (comparator)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U3"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "5b84c9fb-0052-4b3d-af84-9dbe7f9ee2f8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Swap-detect conditioning (comparator)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9fed5565-6dd0-469e-9e70-fc1f7e1277dc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "04de799a-4798-45af-b621-5c610659284a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5fbb1b5b-05a2-4317-8613-9f10fa832f02")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.65 -2.15)
+		(end 2.65 2.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "ee7d9523-d00a-4383-91d9-f87b0c6eaa36")
+	)
+	(fp_rect
+		(start -2.9 -2.4)
+		(end 2.9 2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "a574a9b7-7ba1-40cb-bb13-7ef0967a23ad")
+	)
+	(fp_rect
+		(start -2.5 -2)
+		(end 2.5 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "bd80154a-8739-45a2-921c-15464a88c73d")
+	)
+	(fp_text user "U3"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "50d2427c-f162-40f1-a99e-615fd0097d16")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U3"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "50de9eec-e365-4506-ac96-fa058ac602ec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.1025 -1.35)
+		(size 0.495 0.495)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "9c45fcbe-86bb-45ee-902f-0e71a874d0fc")
+	)
+	(pad "2" smd rect
+		(at -2.1025 -0.449999)
+		(size 0.495 0.495)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "01e82ee6-9ebc-45eb-b0a9-c025bcef7286")
+	)
+	(pad "3" smd rect
+		(at -2.1025 0.449999)
+		(size 0.495 0.495)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "72ba501d-bc6e-4b3b-8625-af29f19c1e9f")
+	)
+	(pad "4" smd rect
+		(at -2.1025 1.349999)
+		(size 0.495 0.495)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "a07fabd0-293c-46e0-840d-4afdc9043649")
+	)
+	(pad "5" smd rect
+		(at 2.05 -0.9)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "96a503de-9299-47a6-becc-b336ef96a9d2")
+	)
+	(pad "6" smd rect
+		(at 2.05 0.9)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "47ec17d6-6e99-4269-93dc-0c3e2ebed17b")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U3_Swap_detect_conditioning_comparator.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

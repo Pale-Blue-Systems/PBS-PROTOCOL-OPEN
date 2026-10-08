@@ -1,0 +1,144 @@
+(footprint "FL2_S_band_duplexer_2025_2110_2200_2290_MHz"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: S-band duplexer (2025-2110 / 2200-2290 MHz)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "FL2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "5d3d8fdc-a24b-4124-809b-b263beca00c5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "S-band duplexer (2025-2110 / 2200-2290 MHz)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aaeb6744-fd17-4d5e-8ba8-e992daf1ed61")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5c6c356a-d191-4c5a-aec6-79c11f737c78")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ec4e539d-778d-4309-a445-6e074f0f9702")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.65 -2.65)
+		(end 3.65 2.65)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "613cb654-0b53-4ae8-88b1-461140f0ea38")
+	)
+	(fp_rect
+		(start -3.9 -2.9)
+		(end 3.9 2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "5c501d61-02a3-44b4-b8b5-432f419c5173")
+	)
+	(fp_rect
+		(start -3.5 -2.5)
+		(end 3.5 2.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b8a67e14-a84d-4b42-8518-dc79225cae72")
+	)
+	(fp_text user "FL2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "82af413c-4530-4d51-879a-2595cc54ca2a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "FL2"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "7a2fc5a2-aa22-4fc2-97c9-b1411678f01b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.05 -1.15)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "d017e0f3-b572-4476-b41a-c56c69fc96f2")
+	)
+	(pad "2" smd rect
+		(at -3.05 1.15)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "9e6e6bc1-3a40-41ec-ac80-7adaa69cae66")
+	)
+	(pad "3" smd rect
+		(at 3.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "d13ac938-5c2b-4709-ae4d-80722a44ab7c")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/FL2_S_band_duplexer_2025_2110_2200_2290_MHz.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

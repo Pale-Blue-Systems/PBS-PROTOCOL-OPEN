@@ -1,0 +1,224 @@
+(footprint "U19_LTE_NR_modem_module_3GPP_device_B41_n41_and_n78"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: LTE/NR modem module (3GPP device, B41/n41 and n78)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U19"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9e070308-2810-4271-988a-69ed940882a3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "LTE/NR modem module (3GPP device, B41/n41 and n78)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1a7a3e03-52f8-4037-9550-ef9a052f40d8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2d6aa129-c88f-4001-93b9-f6a2ce466619")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "48a3321a-4bcf-45c2-8140-d2d21562844a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -15.15 -15.15)
+		(end 15.15 15.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "c981f21a-9c6e-4fdf-b4e7-31c1b99c1613")
+	)
+	(fp_rect
+		(start -15.4 -15.4)
+		(end 15.4 15.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "839618d1-d530-4fe8-ac83-9ce3ac39b910")
+	)
+	(fp_rect
+		(start -15 -15)
+		(end 15 15)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "3b559ae6-83f6-4ab6-84c1-2b530b4d6604")
+	)
+	(fp_text user "U19"
+		(at 0 -13.36 0)
+		(layer "F.SilkS")
+		(uuid "1bc2c4b5-4e50-4729-a65e-c5c6a00ed0fa")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "LTE/NR modem module (3GPP"
+		(at 0 -11.32 0)
+		(layer "F.SilkS")
+		(uuid "4b9651a6-cd84-4aef-b427-2c6a86145a63")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "[Class M only]"
+		(at 0 -7.6 0)
+		(layer "F.SilkS")
+		(uuid "56b03252-5237-4c1c-afa4-8df95e8eb6ae")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "device, B41/n41 and n78)"
+		(at 0 -9.46 0)
+		(layer "F.SilkS")
+		(uuid "d0df3871-c055-4836-a685-f5329a38b7aa")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "LTE/NR modem module (3GPP"
+		(at 0 -11.32 0)
+		(layer "F.Fab")
+		(uuid "0868a84f-914d-465b-ba5d-745183791cb3")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "device, B41/n41 and n78)"
+		(at 0 -9.46 0)
+		(layer "F.Fab")
+		(uuid "17638df4-b08e-4bdd-99ce-e74c31d6f95e")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(fp_text user "U19"
+		(at 0 -13.36 0)
+		(layer "F.Fab")
+		(uuid "176dd231-3f53-4b05-bd5c-845a6687c7e6")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "[Class M only]"
+		(at 0 -7.6 0)
+		(layer "F.Fab")
+		(uuid "2fb15610-43cd-4e83-be0d-3a4568646eb2")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -14.549999 -11.1)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3954579f-4649-4f74-a706-23a172d77d81")
+	)
+	(pad "2" smd rect
+		(at -14.549999 -3.699999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "05a00509-0778-4a85-b898-3c90cb5ab0e2")
+	)
+	(pad "3" smd rect
+		(at -14.549999 3.699999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "90ee96cc-38cc-456e-a663-2765ee19759a")
+	)
+	(pad "4" smd rect
+		(at -14.549999 11.1)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "8f668670-57cf-416f-8173-9a7758247d56")
+	)
+	(pad "5" smd rect
+		(at 14.549999 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "a20dce30-4b8a-480d-b033-45fe9427c27c")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U19_LTE_NR_modem_module_3GPP_device_B41_n41_and_n78.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

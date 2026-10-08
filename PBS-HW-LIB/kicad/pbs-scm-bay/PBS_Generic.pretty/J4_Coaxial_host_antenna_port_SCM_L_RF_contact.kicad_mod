@@ -1,0 +1,137 @@
+(footprint "J4_Coaxial_host_antenna_port_SCM_L_RF_contact"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Coaxial host antenna port (SCM-L RF contact)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "J4"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f365ba73-e92e-4c89-9468-420e5b0b6233")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Coaxial host antenna port (SCM-L RF contact)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6d996932-48d5-43ee-bd26-35ef0e503a80")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "986d9bd1-8587-463e-b41d-d5c2713a9f85")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b47044a9-b826-428c-a513-564880dea63b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -3.15)
+		(end 3.15 3.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "8702e16c-a7af-43e4-bc5e-66709307cf50")
+	)
+	(fp_rect
+		(start -3.4 -3.4)
+		(end 3.4 3.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "b9bd3fb5-d6bd-4cb9-8942-3a2f7f39daa2")
+	)
+	(fp_rect
+		(start -3 -3)
+		(end 3 3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "6dfeeff5-7fa6-40de-a6ea-18099a7dbff3")
+	)
+	(fp_text user "J4"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "6517482a-9ba4-41ae-8221-b9eb6a4cce61")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "J4"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "bf27fa0b-bb37-4767-9b7d-19bb0a37bc40")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "536e32af-cde0-4868-bd93-c3c4433fb611")
+	)
+	(pad "2" smd rect
+		(at 2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "6ac554d8-8e8a-4928-99d5-d84253c56249")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/J4_Coaxial_host_antenna_port_SCM_L_RF_contact.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

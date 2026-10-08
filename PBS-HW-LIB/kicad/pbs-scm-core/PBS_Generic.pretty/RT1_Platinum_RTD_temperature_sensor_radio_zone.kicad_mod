@@ -1,0 +1,137 @@
+(footprint "RT1_Platinum_RTD_temperature_sensor_radio_zone"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Platinum RTD temperature sensor (radio zone)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "RT1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d5e61cb6-a929-4ddb-87f1-2965dc30532e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Platinum RTD temperature sensor (radio zone)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f2b45795-f678-4157-9c3d-a6de39e245db")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6f679c5c-209f-4ebf-98ec-f295e472f9fb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cd495eef-044f-4e7a-a117-d03737d937c0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.75 -0.95)
+		(end 1.75 0.95)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "86bc509a-8c2f-4bf6-a2c8-f52adac5e218")
+	)
+	(fp_rect
+		(start -2 -1.2)
+		(end 2 1.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "45ee8929-73e7-46b5-90e8-e9e43165239d")
+	)
+	(fp_rect
+		(start -1.6 -0.8)
+		(end 1.6 0.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "364a1120-95ac-4da7-983c-e42442b4e531")
+	)
+	(fp_text user "RT1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "6e27013a-b2e3-4fd0-b421-0f5424546eae")
+		(effects
+			(font
+				(size 0.88 0.88)
+				(thickness 0.1584)
+			)
+		)
+	)
+	(fp_text user "RT1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "0168bbe7-e078-4ef5-9658-d2bfee8f002e")
+		(effects
+			(font
+				(size 0.88 0.88)
+				(thickness 0.1584)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.162 0)
+		(size 0.576 0.576)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "706e64fd-325e-44b1-b35e-3f7301c7e092")
+	)
+	(pad "2" smd rect
+		(at 1.162 0)
+		(size 0.576 0.576)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "39493ec9-3c64-48fd-845d-5d7406d1fd7c")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/RT1_Platinum_RTD_temperature_sensor_radio_zone.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

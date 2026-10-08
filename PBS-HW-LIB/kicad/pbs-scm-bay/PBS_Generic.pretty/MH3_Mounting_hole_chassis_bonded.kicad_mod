@@ -1,0 +1,88 @@
+(footprint "MH3_Mounting_hole_chassis_bonded"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Mounting hole, chassis bonded")
+	(tags "PBS generic placeholder")
+	(property "Reference" "MH3"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "ef9a476a-f8b1-4950-9784-aea175a6175d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Mounting hole, chassis bonded"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "84d23c4d-aa74-4532-9764-d98688ce639e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4326d46b-8da3-4db1-a6f6-7fb3c1dae32e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "14f63865-fcad-4c08-9eed-52e0e15ab226")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr exclude_from_pos_files exclude_from_bom)
+	(fp_rect
+		(start -3.25 -3.25)
+		(end 3.25 3.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "B.CrtYd")
+		(uuid "e227042b-41df-4579-8ccc-f9de3b5e7fc8")
+	)
+	(fp_rect
+		(start -3.25 -3.25)
+		(end 3.25 3.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "05bece10-9f55-4136-86d7-c1e05cbe9ca7")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 6 6)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "af6d1ff1-c24b-42e8-82b0-706d0edc028a")
+	)
+	(embedded_fonts no)
+)

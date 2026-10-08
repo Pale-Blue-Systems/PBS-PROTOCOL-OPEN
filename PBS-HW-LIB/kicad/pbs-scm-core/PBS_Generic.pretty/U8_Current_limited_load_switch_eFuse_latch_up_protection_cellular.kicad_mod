@@ -1,0 +1,158 @@
+(footprint "U8_Current_limited_load_switch_eFuse_latch_up_protection_cellular"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Current-limited load switch (eFuse), latch-up protection: cellular")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U8"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "2e3aaf2b-deb1-4ce9-83b1-055f2b705277")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Current-limited load switch (eFuse), latch-up protection: cellular"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2dcdd048-5280-4cbe-9356-e6c162eeb03c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c9ab6507-5cd8-418d-83f3-fbc87359df23")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "42c00473-dca6-4d47-b3ae-5107c5df94b2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.9 -1.9)
+		(end 1.9 1.9)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2dc106d0-76a1-4d31-a9d0-800a79942728")
+	)
+	(fp_rect
+		(start -2.15 -2.15)
+		(end 2.15 2.15)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "a6df9bd3-b51d-4c11-b93b-16a9cad34760")
+	)
+	(fp_rect
+		(start -1.75 -1.75)
+		(end 1.75 1.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "21dd5621-ae4b-4642-b966-7485b3bd406d")
+	)
+	(fp_text user "U8"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "d6b75fe3-40e2-44e2-9b53-98563751d85a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U8"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "7425e231-58a3-4f1a-9818-2ec4e00d7634")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.315833 -1.033333)
+		(size 0.568333 0.568333)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "46a84340-adaa-442b-b8b1-8b3aa6899b07")
+	)
+	(pad "2" smd rect
+		(at -1.315833 0)
+		(size 0.568333 0.568333)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "1977eaec-1840-4b96-8a9a-a2c1dd959392")
+	)
+	(pad "3" smd rect
+		(at -1.315833 1.033333)
+		(size 0.568333 0.568333)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "7218b92a-bea2-4750-ba33-8e224bba3149")
+	)
+	(pad "4" smd rect
+		(at 1.3 -0.775)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "9d4fd521-d4e9-4dfe-8469-3305fc7dd4d7")
+	)
+	(pad "5" smd rect
+		(at 1.3 0.775)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "bc9ed1c1-4ad7-4810-96f0-ee9bfb914bc0")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U8_Current_limited_load_switch_eFuse_latch_up_protection_cellular.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

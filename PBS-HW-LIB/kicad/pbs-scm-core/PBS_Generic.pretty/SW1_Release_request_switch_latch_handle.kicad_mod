@@ -1,0 +1,137 @@
+(footprint "SW1_Release_request_switch_latch_handle"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Release-request switch (latch handle)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "SW1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a7583f17-3e99-4414-8770-190ed92ffc06")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Release-request switch (latch handle)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "950ed44b-45ba-4e3d-a81f-31a222ad518f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fe588626-7940-49d4-9cf0-395ce127f81c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8b0c044c-3cc2-42d1-8cf7-a7551cdfacfd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -2.15)
+		(end 3.15 2.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "d3022259-ccc6-4618-8048-878436ca4246")
+	)
+	(fp_rect
+		(start -3.4 -2.4)
+		(end 3.4 2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "3433effe-e27c-4eb3-9ada-09af9a6a211e")
+	)
+	(fp_rect
+		(start -3 -2)
+		(end 3 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "e5bcb173-90dc-4721-aa15-3b344fdf0ef2")
+	)
+	(fp_text user "SW1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "0a746b21-b114-4ce0-bed8-57d739e146ea")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "SW1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "531535e7-37ef-431b-aaaa-e4be1d1cccfa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "43553853-1b33-4efc-a219-995c0faa396c")
+	)
+	(pad "2" smd rect
+		(at 2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "4d5269a3-0ae0-42f9-9c08-9f555c613a40")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/SW1_Release_request_switch_latch_handle.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

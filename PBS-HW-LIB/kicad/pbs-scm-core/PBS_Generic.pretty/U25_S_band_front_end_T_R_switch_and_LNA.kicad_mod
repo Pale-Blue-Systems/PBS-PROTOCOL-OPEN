@@ -1,0 +1,165 @@
+(footprint "U25_S_band_front_end_T_R_switch_and_LNA"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: S-band front end: T/R switch and LNA")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U25"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "e4dc56d6-c918-4a6f-87a4-c6a341f8f772")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "S-band front end: T/R switch and LNA"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b71af973-7b56-447a-8e8f-e9443924b169")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a7ba51d3-4240-4876-a01c-d9d919bc78f5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ed404e7f-966b-4055-84b6-d2c738d618b4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.65 -2.65)
+		(end 2.65 2.65)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "65787866-f534-4b15-9f20-58cc2de7162a")
+	)
+	(fp_rect
+		(start -2.9 -2.9)
+		(end 2.9 2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "18e2ae79-8475-45f7-a0fb-5321e5b707cf")
+	)
+	(fp_rect
+		(start -2.5 -2.5)
+		(end 2.5 2.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "8bb4f266-6879-43c1-a961-24e562ef8f12")
+	)
+	(fp_text user "U25"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "1e954e34-5c28-4ca1-a340-a6324a6213f4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U25"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "2211c9cf-7be7-4c52-9bb1-14ae81359994")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.097 -1.839999)
+		(size 0.506 0.506)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "2c2fedcc-b51b-445b-a338-aae29ccb7cca")
+	)
+	(pad "2" smd rect
+		(at -2.097 -0.919999)
+		(size 0.506 0.506)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "4d20495d-a5e5-4e9e-8046-25f94ce9e74b")
+	)
+	(pad "3" smd rect
+		(at -2.097 0)
+		(size 0.506 0.506)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "503e3669-c025-4856-996e-d6722d9ac3f6")
+	)
+	(pad "4" smd rect
+		(at -2.097 0.919999)
+		(size 0.506 0.506)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "c8bd5330-1c08-4964-91f4-843bfb58878a")
+	)
+	(pad "5" smd rect
+		(at -2.097 1.839999)
+		(size 0.506 0.506)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "2cc9ec68-a5ad-497e-a8d4-a4d07a544ca4")
+	)
+	(pad "6" smd rect
+		(at 2.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "4f789d60-2472-4d0a-84a6-5bccf96bd8af")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U25_S_band_front_end_T_R_switch_and_LNA.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

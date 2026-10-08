@@ -1,0 +1,151 @@
+(footprint "U24_S_band_power_amplifier_2_W"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: S-band power amplifier, 2 W")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U24"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "94d2a113-b63c-4896-b7a9-dc543fcd2696")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "S-band power amplifier, 2 W"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2ecd399f-8961-4eac-8a89-97d854bf4539")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "234a21c1-df29-4312-a221-556a0a5a9549")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "82297f2a-c909-4544-b60f-c8abc7a4715a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.65 -2.65)
+		(end 2.65 2.65)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "7c51575e-3780-4135-9b8e-a3bfe52fbc89")
+	)
+	(fp_rect
+		(start -2.9 -2.9)
+		(end 2.9 2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "73ac01d0-6889-489d-ad02-565a835c96db")
+	)
+	(fp_rect
+		(start -2.5 -2.5)
+		(end 2.5 2.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "6fd935d6-398d-411b-b40d-a06e8b524ad5")
+	)
+	(fp_text user "U24"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "8bb4a6db-f7d4-479b-9f50-9b7342b6c15b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U24"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "755f69f5-49b3-4567-90dd-0c6dfb1a148a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.05 -1.533333)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "076bb50a-3861-433a-bef5-9b81d8fdf06d")
+	)
+	(pad "2" smd rect
+		(at -2.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "2bb4408c-936f-4a8b-84ee-cc61ab5c5462")
+	)
+	(pad "3" smd rect
+		(at -2.05 1.533333)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3f1abd82-ab98-4287-a4b3-cc9a6dc78328")
+	)
+	(pad "4" smd rect
+		(at 2.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "f6c59c41-410c-4400-a5ae-197509c90983")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U24_S_band_power_amplifier_2_W.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

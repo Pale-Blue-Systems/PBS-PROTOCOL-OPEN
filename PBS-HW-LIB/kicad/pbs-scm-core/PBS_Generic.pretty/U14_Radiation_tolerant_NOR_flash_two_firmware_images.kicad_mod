@@ -1,0 +1,144 @@
+(footprint "U14_Radiation_tolerant_NOR_flash_two_firmware_images"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Radiation-tolerant NOR flash (two firmware images)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U14"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3cc5a21a-f10b-4d94-bb5d-ab402b2014ce")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Radiation-tolerant NOR flash (two firmware images)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c1d3174d-3361-4ad3-b7d7-4dca8b30e732")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5c705ec7-1e52-481d-8939-173595a1be48")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "edef17d3-cae2-415f-aec4-187112e609b9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -4.15)
+		(end 3.15 4.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "45140f4d-eebf-4a1b-9c78-b7ac93cfea28")
+	)
+	(fp_rect
+		(start -3.4 -4.4)
+		(end 3.4 4.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "a3a249c8-f005-498b-9209-3a10a2f2fa73")
+	)
+	(fp_rect
+		(start -3 -4)
+		(end 3 4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c47c5e84-faac-4ad6-ac78-14f19500d098")
+	)
+	(fp_text user "U14"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "9db6b7f6-64c1-4953-bcec-58b950a2a5f7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U14"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "10262f70-68f0-4408-9a1b-65e7808af33f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 -1.9)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3820ccac-1b7a-4576-9213-7a8800b2948c")
+	)
+	(pad "2" smd rect
+		(at -2.55 1.899999)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "77124952-031f-43fa-be90-c7eeae467e71")
+	)
+	(pad "3" smd rect
+		(at 2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "d0727912-c69e-4e34-b190-340ed8f1f7a2")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U14_Radiation_tolerant_NOR_flash_two_firmware_images.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

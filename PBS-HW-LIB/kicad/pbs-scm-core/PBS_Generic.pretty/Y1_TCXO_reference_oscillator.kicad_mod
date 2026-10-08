@@ -1,0 +1,144 @@
+(footprint "Y1_TCXO_reference_oscillator"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: TCXO reference oscillator")
+	(tags "PBS generic placeholder")
+	(property "Reference" "Y1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "11538f6d-55b9-4766-87cd-58311c8f7a76")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TCXO reference oscillator"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "83281746-bdc6-4a78-a43d-6d1620812641")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4e67b728-b1b4-4133-916d-a0bee9f81044")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0c29c4b5-17ea-4c0a-b010-068fa92c60ad")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.75 -1.4)
+		(end 1.75 1.4)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "786baaec-e79f-4a50-a1dd-fc95e4e92f3d")
+	)
+	(fp_rect
+		(start -2 -1.65)
+		(end 2 1.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "1333b7b3-bdb8-4ee7-b0d8-0bead1639baa")
+	)
+	(fp_rect
+		(start -1.6 -1.25)
+		(end 1.6 1.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "0f5f603a-1da9-4083-aee4-6831d9b3a1f9")
+	)
+	(fp_text user "Y1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "94b0479a-0d6f-4ccc-bafc-98565cd8f4b4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "Y1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "30c1bee0-f51c-4b87-a9ca-186f67e03db8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.162 -0.525)
+		(size 0.576 0.576)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "0efea525-c0ba-41e9-a798-0684be03d2df")
+	)
+	(pad "2" smd rect
+		(at -1.162 0.525)
+		(size 0.576 0.576)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "6377c6c2-3128-4607-9928-08a4717de628")
+	)
+	(pad "3" smd rect
+		(at 1.162 0)
+		(size 0.576 0.576)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "e76126f7-498a-45de-912e-4b3b4672b03b")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/Y1_TCXO_reference_oscillator.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

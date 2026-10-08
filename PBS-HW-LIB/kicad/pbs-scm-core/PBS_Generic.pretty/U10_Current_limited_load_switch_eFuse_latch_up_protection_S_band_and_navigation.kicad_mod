@@ -1,0 +1,158 @@
+(footprint "U10_Current_limited_load_switch_eFuse_latch_up_protection_S_band_and_navigation"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Current-limited load switch (eFuse), latch-up protection: S-band and navigation")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U10"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b50d80dd-ca1e-4a67-99b6-519ffe1cf34c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Current-limited load switch (eFuse), latch-up protection: S-band and navigation"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b1bb4f88-4972-4ea2-8a5a-5c7972328948")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "85a88ac3-1812-44d2-9d9d-8b6ea3526929")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2e7076fe-a04e-45e2-8fc1-8bfe2a24c495")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.9 -1.9)
+		(end 1.9 1.9)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "bcda3b04-4580-4bf5-baad-e9c14e95db90")
+	)
+	(fp_rect
+		(start -2.15 -2.15)
+		(end 2.15 2.15)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "92305dc1-2251-4ab6-a79d-1059254630c5")
+	)
+	(fp_rect
+		(start -1.75 -1.75)
+		(end 1.75 1.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "46e34195-d10c-405e-a2ff-5d62ecf2eda7")
+	)
+	(fp_text user "U10"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "68e699d6-0d6b-45b3-b093-cb4f86641615")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U10"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "1fdf7cc8-20f3-4ef1-81b6-212ea281eb2b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.315833 -1.033333)
+		(size 0.568333 0.568333)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "61dd8e8e-19b2-4271-adb4-f2e6a270aab3")
+	)
+	(pad "2" smd rect
+		(at -1.315833 0)
+		(size 0.568333 0.568333)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "25dcbeb0-ac6f-4ab1-b526-d5143b5ecad9")
+	)
+	(pad "3" smd rect
+		(at -1.315833 1.033333)
+		(size 0.568333 0.568333)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "0ed76be5-8a6e-4d6e-80ca-dc0c6009d40e")
+	)
+	(pad "4" smd rect
+		(at 1.3 -0.775)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "be70f1bd-811c-4d42-88f9-f0e433250943")
+	)
+	(pad "5" smd rect
+		(at 1.3 0.775)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "775311cd-4d21-467d-ac8e-fe81cdfa9c7f")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U10_Current_limited_load_switch_eFuse_latch_up_protection_S_band_and_navigation.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

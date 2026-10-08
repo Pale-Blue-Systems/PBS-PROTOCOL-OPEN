@@ -1,0 +1,151 @@
+(footprint "FL3_Navigation_band_SAW_filter_and_LNA_2483_5_2500_MHz"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Navigation band SAW filter and LNA (2483.5-2500 MHz)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "FL3"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "1ac20550-f551-408d-9f11-7bbea2d78517")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Navigation band SAW filter and LNA (2483.5-2500 MHz)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e6af7a28-48df-4c84-9c8e-e1441c153edb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "28224790-3e47-446e-a91a-55ef6ea126e2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9422c1ef-237d-4823-b301-bf74e65fd2b2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.65 -2.15)
+		(end 2.65 2.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "1a3cacba-b5eb-4ae1-b6df-ede395abdcb2")
+	)
+	(fp_rect
+		(start -2.9 -2.4)
+		(end 2.9 2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "53e61371-5dba-4eff-9851-c422571b4dcf")
+	)
+	(fp_rect
+		(start -2.5 -2)
+		(end 2.5 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b585e0e7-a518-4cee-84c6-102e2619059b")
+	)
+	(fp_text user "FL3"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "a5662a4c-9052-4b66-b2af-ae4df8293f78")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "FL3"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "473bad0b-4feb-430f-ab07-4889f2e73d6e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.05 -1.2)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "201bd292-51b3-401f-b6f6-36502955082f")
+	)
+	(pad "2" smd rect
+		(at -2.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "08e049cb-33ea-4d80-b9b3-c112edda41e1")
+	)
+	(pad "3" smd rect
+		(at -2.05 1.2)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3b83ddd5-c0ec-4654-bfe5-2f84f6832b0a")
+	)
+	(pad "4" smd rect
+		(at 2.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "18dd50d9-83fc-4084-b25b-6c9cb574a051")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/FL3_Navigation_band_SAW_filter_and_LNA_2483_5_2500_MHz.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

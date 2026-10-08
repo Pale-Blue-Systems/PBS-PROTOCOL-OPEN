@@ -1,0 +1,137 @@
+(footprint "SW1_Module_seated_switch_signal_to_host"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Module-seated switch (signal to host)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "SW1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3ed961ae-5177-479e-a929-092d152352c1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Module-seated switch (signal to host)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4fd9485a-99b0-40ef-b5e8-facf047eb583")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1517aaec-0a8b-414d-b0e4-9c308a2d568e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6a2e0dd2-87c8-4051-b654-e07f5654ac6d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -2.15)
+		(end 3.15 2.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "b4f9df67-78c2-41ff-9010-4076e93c7e8d")
+	)
+	(fp_rect
+		(start -3.4 -2.4)
+		(end 3.4 2.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "2617dd84-95dd-4e8a-bd44-5b47b0dbeee6")
+	)
+	(fp_rect
+		(start -3 -2)
+		(end 3 2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "d743a48b-d6c8-4260-b1cc-edf30cff949b")
+	)
+	(fp_text user "SW1"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "068eedd9-ea69-4efe-b95a-165396156585")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "SW1"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "bb30e80d-63bc-406a-ad07-e972d3d083e8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "ae575aa0-aa64-4aa9-b140-96df95c74d6f")
+	)
+	(pad "2" smd rect
+		(at 2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "c83e5bc3-e911-43d0-977f-73ffb434ead6")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/SW1_Module_seated_switch_signal_to_host.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

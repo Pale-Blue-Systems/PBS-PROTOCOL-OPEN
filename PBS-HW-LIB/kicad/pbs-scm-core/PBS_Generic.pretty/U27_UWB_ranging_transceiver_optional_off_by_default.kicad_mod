@@ -1,0 +1,151 @@
+(footprint "U27_UWB_ranging_transceiver_optional_off_by_default"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: UWB ranging transceiver (optional, off by default)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U27"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c99e4a58-c579-423e-937c-8f339e2daacd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "UWB ranging transceiver (optional, off by default)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "72cb404d-b86d-4a82-a804-3b6118f5b015")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4fa4f4b1-4d9d-4367-8e11-d64a4ba5577b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1e459a35-89d9-4389-b9ae-85a237e689d0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -3.15)
+		(end 3.15 3.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "c4e6f33c-beb1-410f-bef8-2e269b3059de")
+	)
+	(fp_rect
+		(start -3.4 -3.4)
+		(end 3.4 3.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "6cf60848-61bd-4f0d-87f8-05769f7dcbf8")
+	)
+	(fp_rect
+		(start -3 -3)
+		(end 3 3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "a4084860-1c19-4003-8da7-32f18ade9bf4")
+	)
+	(fp_text user "U27"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "1e581255-056b-4b3d-9a33-65c60e9d2c45")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U27"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "a06a6284-71a1-4cfe-8f38-c8dc043d3a8e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 -1.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "4eeac25c-1482-48d1-8df0-ea49a9879fca")
+	)
+	(pad "2" smd rect
+		(at -2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "d1cf0fd9-9155-490b-afa2-63d383070319")
+	)
+	(pad "3" smd rect
+		(at -2.55 1.866666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "2bc272be-1718-4754-9328-299a033ca907")
+	)
+	(pad "4" smd rect
+		(at 2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "0a57db5d-0920-4aef-b8f0-352c67cf2140")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U27_UWB_ranging_transceiver_optional_off_by_default.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,172 @@
+(footprint "U17_RS_422_transceiver"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: RS-422 transceiver")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U17"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3ed4f153-426f-409b-86ad-24f3a938fe96")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RS-422 transceiver"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "463eeb1d-6ff4-4431-8984-c7d0a03092c1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6fee3495-0240-4a46-9f2c-5d9d7186fed7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9d06d032-0068-4c89-bd39-0247f921fbe8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -2.65 -2.4)
+		(end 2.65 2.4)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "026ee468-a5d9-4d37-8e94-db2ec25cda74")
+	)
+	(fp_rect
+		(start -2.9 -2.65)
+		(end 2.9 2.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9d8dcd18-059b-4c27-940a-036cba549bfe")
+	)
+	(fp_rect
+		(start -2.5 -2.25)
+		(end 2.5 2.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "d421ebc5-bf52-4c48-9b15-0fe42961a7db")
+	)
+	(fp_text user "U17"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "d3384d74-dbcb-4e09-bbaa-8e546cebd8c2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U17"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "cb94031c-3d3a-4c2b-b337-425559e06e19")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.05 -1.366666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "dc0626ce-8674-48bd-9594-5f200daaf9b3")
+	)
+	(pad "2" smd rect
+		(at -2.05 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "cb853395-c2a3-44ac-b189-7d40ed547c77")
+	)
+	(pad "3" smd rect
+		(at -2.05 1.366666)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "60a3fb41-a769-4e1c-8b8e-db0801c9f345")
+	)
+	(pad "4" smd rect
+		(at 2.068125 -1.537499)
+		(size 0.56375 0.56375)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "456e4f7d-7964-4868-9c2a-f9f16d126b8e")
+	)
+	(pad "5" smd rect
+		(at 2.068125 -0.512499)
+		(size 0.56375 0.56375)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "71d87ced-b3dd-4604-94a6-0e3bf24a0b1c")
+	)
+	(pad "6" smd rect
+		(at 2.068125 0.5125)
+		(size 0.56375 0.56375)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "856e4267-7b88-49b7-8d2c-0adc25e15899")
+	)
+	(pad "7" smd rect
+		(at 2.068125 1.537499)
+		(size 0.56375 0.56375)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "e9de0289-ea41-424e-9a6d-b582737291cd")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U17_RS_422_transceiver.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,261 @@
+(footprint "U21_Wi_Fi_SoC_with_802_11s_mesh_2_4_GHz"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: Wi-Fi SoC with 802.11s mesh (2.4 GHz)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U21"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b9754d08-c185-47fa-bd8a-edcf3b0a63a1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Wi-Fi SoC with 802.11s mesh (2.4 GHz)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "18b66a8b-ca5b-43c4-bdc9-bd17c08a823a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5e4ef633-03ac-4dd3-bf93-cb48a7a59e27")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b68616f-ae42-4dee-b847-cfe94049efc8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -4.15 -4.15)
+		(end 4.15 4.15)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "987d2758-73d8-4abb-abce-d49499252c90")
+	)
+	(fp_rect
+		(start -4.4 -4.4)
+		(end 4.4 4.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "39bbe71a-39d3-4642-9bf9-60f7431796e9")
+	)
+	(fp_rect
+		(start -4 -4)
+		(end 4 4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "cfcf67ee-7df8-44f4-9a0b-d70118b90f22")
+	)
+	(fp_text user "U21"
+		(at 0 -2.96 0)
+		(layer "F.SilkS")
+		(uuid "13c99e8f-1ac1-47f9-84da-206cc5a7a0c2")
+		(effects
+			(font
+				(size 0.804999 0.804999)
+				(thickness 0.144899)
+			)
+		)
+	)
+	(fp_text user "Wi-Fi SoC"
+		(at 0 -1.77 0)
+		(layer "F.SilkS")
+		(uuid "1eda60ba-3c40-477b-91a5-5738690db6c7")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "802.11s"
+		(at 0 0.399999 0)
+		(layer "F.SilkS")
+		(uuid "30132ffb-f8f1-4edf-bea7-484401c7f3bd")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "with"
+		(at 0 -0.685 0)
+		(layer "F.SilkS")
+		(uuid "a55231e8-771b-4a62-bc29-e3626f22091f")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "GHz)"
+		(at 0 2.57 0)
+		(layer "F.SilkS")
+		(uuid "dd064f1a-c3e4-4661-8f30-28fcd231326a")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "mesh (2.4"
+		(at 0 1.484999 0)
+		(layer "F.SilkS")
+		(uuid "fca0c5ae-0838-4cbe-a852-7f5bb86441e3")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "Wi-Fi SoC"
+		(at 0 -1.77 0)
+		(layer "F.Fab")
+		(uuid "398574b6-7162-4662-9e3e-e23884bcac0d")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "U21"
+		(at 0 -2.96 0)
+		(layer "F.Fab")
+		(uuid "650ebeba-93d5-4dc4-9b65-d538826c3a2e")
+		(effects
+			(font
+				(size 0.804999 0.804999)
+				(thickness 0.144899)
+			)
+		)
+	)
+	(fp_text user "mesh (2.4"
+		(at 0 1.484999 0)
+		(layer "F.Fab")
+		(uuid "876e7170-c086-4cb4-a0a3-111a531f709c")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "802.11s"
+		(at 0 0.399999 0)
+		(layer "F.Fab")
+		(uuid "a86431ba-320d-41b3-89c4-f756d7fb2622")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "with"
+		(at 0 -0.685 0)
+		(layer "F.Fab")
+		(uuid "b326f945-c699-4864-9105-7cab078f58ec")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "GHz)"
+		(at 0 2.57 0)
+		(layer "F.Fab")
+		(uuid "e6b5b8f7-acf4-4d88-9986-9db0bf186cf8")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.55 -2.533333)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "603969e8-bf42-4fb0-bef0-4238f3b39a7c")
+	)
+	(pad "2" smd rect
+		(at -3.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "018c0bb1-bf54-4795-9202-523c34eb7276")
+	)
+	(pad "3" smd rect
+		(at -3.55 2.533333)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "3d57f1a3-ee34-4c09-8e76-774418fabf1b")
+	)
+	(pad "4" smd rect
+		(at 3.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "95a40b12-6908-4dcf-836d-95dacfd314ad")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U21_Wi_Fi_SoC_with_802_11s_mesh_2_4_GHz.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

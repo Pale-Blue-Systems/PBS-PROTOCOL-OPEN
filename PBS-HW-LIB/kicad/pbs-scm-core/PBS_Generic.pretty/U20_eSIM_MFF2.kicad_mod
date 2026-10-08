@@ -1,0 +1,144 @@
+(footprint "U20_eSIM_MFF2"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Generic placeholder: eSIM (MFF2)")
+	(tags "PBS generic placeholder")
+	(property "Reference" "U20"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "4371ffac-27f1-4569-b386-2a900af6e8dc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "eSIM (MFF2)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "18596f2b-2314-4dbd-9ae5-7043b0e758ed")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f6150fda-467a-4a23-a82a-511b9a58fa96")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9192b83e-a990-4dd9-9dd9-ed641cb7d920")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -3.15 -2.65)
+		(end 3.15 2.65)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "564b30c0-c534-45db-a0d2-185a9896a5cd")
+	)
+	(fp_rect
+		(start -3.4 -2.9)
+		(end 3.4 2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "91811ed9-e385-4475-a81f-3a63fac2b7cb")
+	)
+	(fp_rect
+		(start -3 -2.5)
+		(end 3 2.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "bec1b0cc-1eb9-42e3-8703-d7fe21e834a6")
+	)
+	(fp_text user "U20"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "b49998c5-c14a-466d-b9a8-ba6813d259b7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(fp_text user "U20"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "50923d3f-08a1-40cd-8c8c-46e89bea34ca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.18)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.55 -1.15)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "d52119bc-8f00-46af-8ebc-1da31ffa0120")
+	)
+	(pad "2" smd rect
+		(at -2.55 1.15)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "a722e33f-e710-4fa8-877e-a4f8070f4130")
+	)
+	(pad "3" smd rect
+		(at 2.55 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "40d02afd-64b8-40eb-b0dd-b65bd3551b70")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d/U20_eSIM_MFF2.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
