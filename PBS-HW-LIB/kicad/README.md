@@ -4,7 +4,7 @@ KiCad projects for the open reference designs of this library. Every part on the
 
 | Project | Document | Board |
 |---|---|---|
-| [`pbs-scm-core/`](pbs-scm-core/) | PBS-HW-SCM-01 | Module core board, 92 × 92 mm, shared by the SCM-S and SCM-L shells. Four schematic sheets: host interface and power; control function, storage, host data; radios and RF; heaters and temperature sensing |
+| [`pbs-scm-core/`](pbs-scm-core/) | PBS-HW-SCM-01 | Module core board, 92 × 92 mm, shared by the SCM-S and SCM-L shells, with the module half of the host connector on the back. Four schematic sheets: host interface and power; control function, storage, host data; radios and RF; heaters and temperature sensing |
 | [`pbs-scm-bay/`](pbs-scm-bay/) | PBS-HW-SCM-01 | Host bay interface board, 112 × 32 mm: the host side of the module connector, the swap-detect loop and the identity-tag connection |
 | [`pbs-hwid-tag/`](pbs-hwid-tag/) | PBS-HW-ID-01 | Identity tag, 25 mm round: secure element, contactless front end, antenna coil in copper, wired-interface pads on the back |
 
@@ -34,7 +34,8 @@ KiCad projects for the open reference designs of this library. Every part on the
 | Red | Heaters and temperature sensors |
 | Purple | Identity |
 
-- **Host connector (core J1, bay J1).** The contacts follow PBS-HW-SCM-01 REQ-010. Pad length shows mating order, longest first: 1 chassis, 2 power, 3 data and identity bus, 4 swap-detect. The two holes at the ends are the guide pins of REQ-011. The connector's mechanical drawing is an open issue of PBS-HW-SCM-01 (Section 14); the pad row shows contact assignment and order, not final geometry.
+- **Host connector (core J1, bay J1).** Both halves of the connector of PBS-HW-CON-01, at its true contact positions. Core J1 is the module half on the back of the core board, centred, drawn in the module-face view: hard-gold pads and the two guide-bushing holes. Bay J1 is the bay half: plated holes for the spring contacts and the RF plug, and the two guide-pin holes (A Ø4.00, B Ø3.00). Pad numbers are the contact numbers. The bay 3D model shows the spring contacts at their free heights, coloured by mating order (green 1 chassis, red 2 power, blue 3 data and identity bus, purple 4 detect), the guide pins, and the cover plate (translucent) in its unmated position. In both board views the top edge of the drawing is the module front (+y).
+- **Connector geometry.** `tools/connector.py` holds every connector dimension. The footprints, the 3D models and the drawings in [`../drawings/`](../drawings/) are generated from it.
 - **Fit.** Parts marked "Class M only" are omitted from Class H modules. U24 (S-band amplifier) is fitted in SCM-L; JP1 (RF bypass) in SCM-S. U27 (ultra-wideband) is optional and off by default.
 - **Not routed.** The placeholders are not routed. The design rule check reports unrouted nets as warnings and passes with no errors; the schematic check passes with no errors or warnings.
 - **Antenna coil (tag L1).** Drawn as one copper polygon in a net-tie footprint between COIL_A and COIL_B.
@@ -47,4 +48,4 @@ The projects are generated from one interconnect model:
 sh PBS-HW-LIB/kicad/tools/export.sh
 ```
 
-This runs `tools/generate.py` (requires KiCad 9 and its Python module), the KiCad checks, and every export above. Editing the projects in KiCad directly is also fine; regenerating overwrites them.
+This runs `tools/generate.py` (requires KiCad 9 and its Python module), the KiCad checks, every export above, and `tools/connector_drawing.py` (requires matplotlib), which draws the connector sheets. Editing the projects in KiCad directly is also fine; regenerating overwrites them.

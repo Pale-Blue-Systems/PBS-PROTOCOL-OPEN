@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "4caaa085-f834-4e58-a773-1ae830ffc80a")
+		(uuid "5290c3d8-6e86-4d68-bfa1-b4285ed6126e")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "adcf97dd-452f-48f1-b386-31fc811c9bd8")
+		(uuid "85c8fcfa-92c5-4a79-8a5c-01d1a4e7bbc9")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "dc45919c-1907-4e76-83b7-29d73bc6615d")
+		(uuid "f31963a2-6576-4c33-b034-1cafc78c8358")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "816282ba-f078-4018-a54d-0dfea82cfe8a")
+		(uuid "12baddb5-a417-4a2c-a967-06527e627747")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "7ba111d9-b3a5-48dc-af02-4e7040597c1f")
+		(uuid "048b05af-3d1a-4cb0-b62f-b96ea7261e48")
 	)
 	(fp_rect
 		(start -2.4 -2.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "fbc3d2bc-fbf4-467d-9fdb-9903ee910767")
+		(uuid "d7b940db-2193-476a-ab5d-cab98b01e641")
 	)
 	(fp_rect
 		(start -2 -2)
@@ -84,12 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "ea71f4de-1849-4cd5-87a8-a586a678240b")
+		(uuid "51f76e6d-1218-4f88-bc64-7c4f9426a33c")
 	)
 	(fp_text user "U26"
 		(at 0 0 0)
 		(layer "F.SilkS")
-		(uuid "1c944017-ff71-4546-a414-f5db4213d900")
+		(uuid "171ed0a9-46b6-4e83-81a9-c3e3c88cf42f")
 		(effects
 			(font
 				(size 1 1)
@@ -100,7 +100,7 @@
 	(fp_text user "U26"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "c83f48e8-17c8-4767-940a-ddabfbba7c94")
+		(uuid "99f60626-5c2a-49e9-b3be-a9718c7b80c5")
 		(effects
 			(font
 				(size 1 1)
@@ -113,35 +113,35 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "d51746b9-bf03-4aa5-8ba1-48a7a746ab18")
+		(uuid "74bb70fe-fd2f-4986-a5c1-827081b48e7f")
 	)
 	(pad "2" smd rect
 		(at -1.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "92a88da8-2801-43dc-b6d1-30e8196be37a")
+		(uuid "f809d8ae-587d-4361-ac7f-5609e96064e6")
 	)
 	(pad "3" smd rect
 		(at -1.55 1.2)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "e60602ae-f394-43f6-8043-aca3041584c2")
+		(uuid "049db632-c36a-458d-a996-5efc5a42bff8")
 	)
 	(pad "4" smd rect
 		(at 1.55 -0.9)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "10efb9b2-42cb-4cbb-8fc1-3a805bf5eb72")
+		(uuid "7b988356-f3ed-479f-a103-c60d508565c6")
 	)
 	(pad "5" smd rect
 		(at 1.55 0.9)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "1ae869f1-ef3b-486b-a461-8d806c8778f8")
+		(uuid "f9ebf425-d6c0-4b23-827f-e41d5e903a00")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/U26_RF_antenna_selector_switch_lid_antenna_or_host_RF_port.wrl"

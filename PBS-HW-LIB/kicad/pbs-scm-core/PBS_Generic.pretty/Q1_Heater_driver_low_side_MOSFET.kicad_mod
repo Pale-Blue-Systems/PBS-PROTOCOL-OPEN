@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "0c979573-8e88-4da7-8920-0db031532a69")
+		(uuid "43f20750-143e-4fbf-a3d8-181a4c473fd6")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "185b3aee-d909-41e0-a94a-35684cfdad33")
+		(uuid "a350c75e-30ad-4b0b-ad13-5fb392f47c64")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "36488ebe-f85c-4ad4-ac85-e2af2e4b220e")
+		(uuid "ad9fa79e-3e76-4c33-8c18-2e4e8451123e")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c99222e8-a9c5-4e5e-a700-48ff5a767200")
+		(uuid "65bdc5d5-ef2d-4837-a5d3-ffd4e8bfcba1")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "b733a5eb-5971-4684-971b-ae85fff8665d")
+		(uuid "7ce84a68-4379-4a7a-a559-d5cdae600b66")
 	)
 	(fp_rect
 		(start -2.9 -2.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "9b46307f-09dc-4025-9098-d593213687e0")
+		(uuid "80948915-73de-4507-b626-00459cb5993c")
 	)
 	(fp_rect
 		(start -2.5 -2)
@@ -84,12 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "caaf0e19-a619-4c65-a27a-2fcf9a0f649c")
+		(uuid "01228183-acd7-46e7-afff-8a76bed85839")
 	)
 	(fp_text user "Q1"
 		(at 0 0 0)
 		(layer "F.SilkS")
-		(uuid "540e9f8a-628d-4e72-b5b8-e7b917acf97d")
+		(uuid "7ef81ec8-040f-406a-8791-78a8fb505d9c")
 		(effects
 			(font
 				(size 1 1)
@@ -100,7 +100,7 @@
 	(fp_text user "Q1"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "344e818b-4e4d-453b-9fb8-0758cfb2bb5f")
+		(uuid "34f41b31-d5ec-4557-b81f-48ec2052cfa6")
 		(effects
 			(font
 				(size 1 1)
@@ -113,21 +113,21 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "62663020-05e3-49ea-b1aa-1fbbc7028ce5")
+		(uuid "828e34c3-2005-4170-985f-5826fc879200")
 	)
 	(pad "2" smd rect
 		(at -2.05 0.9)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "8f1c1577-4945-4b55-8ba6-96d2b52f0882")
+		(uuid "41373224-a51f-40bd-a075-8efe1046f900")
 	)
 	(pad "3" smd rect
 		(at 2.05 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "ebc4a745-4ee1-48d7-aa56-f6eb847105d4")
+		(uuid "4beff06c-86ad-4ace-b02a-c83c254fb01f")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/Q1_Heater_driver_low_side_MOSFET.wrl"

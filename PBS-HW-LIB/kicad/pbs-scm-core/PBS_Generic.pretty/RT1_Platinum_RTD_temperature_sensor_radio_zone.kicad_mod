@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "d5e61cb6-a929-4ddb-87f1-2965dc30532e")
+		(uuid "83a2f13a-1e0d-4a27-af8f-23a635c74ad2")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f2b45795-f678-4157-9c3d-a6de39e245db")
+		(uuid "22f78c79-0d12-42ee-acfa-5da01c9c96a4")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6f679c5c-209f-4ebf-98ec-f295e472f9fb")
+		(uuid "4bd3efb3-e6f6-4fdf-bbaf-10e00f309355")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "cd495eef-044f-4e7a-a117-d03737d937c0")
+		(uuid "84a7a0c0-d517-4cf9-b0a3-630d8b728344")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "86bc509a-8c2f-4bf6-a2c8-f52adac5e218")
+		(uuid "8e60dacb-3353-421d-8083-0f3999d25c7e")
 	)
 	(fp_rect
 		(start -2 -1.2)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "45ee8929-73e7-46b5-90e8-e9e43165239d")
+		(uuid "2e380e87-ea8b-4923-a5e3-05e6b3df0d31")
 	)
 	(fp_rect
 		(start -1.6 -0.8)
@@ -84,12 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "364a1120-95ac-4da7-983c-e42442b4e531")
+		(uuid "48a4505d-3fce-4601-9b90-7bf6dea25009")
 	)
 	(fp_text user "RT1"
 		(at 0 0 0)
 		(layer "F.SilkS")
-		(uuid "6e27013a-b2e3-4fd0-b421-0f5424546eae")
+		(uuid "0aec29d4-ccb9-412a-bfca-d2434dbe5b6e")
 		(effects
 			(font
 				(size 0.88 0.88)
@@ -100,7 +100,7 @@
 	(fp_text user "RT1"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "0168bbe7-e078-4ef5-9658-d2bfee8f002e")
+		(uuid "6fd0b9bf-ba9a-4cce-b99d-9b2be6e61a91")
 		(effects
 			(font
 				(size 0.88 0.88)
@@ -113,14 +113,14 @@
 		(size 0.576 0.576)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "706e64fd-325e-44b1-b35e-3f7301c7e092")
+		(uuid "7e430431-4787-4abe-a6e4-d2d67fd1867f")
 	)
 	(pad "2" smd rect
 		(at 1.162 0)
 		(size 0.576 0.576)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "39493ec9-3c64-48fd-845d-5d7406d1fd7c")
+		(uuid "6448e124-bc9f-4b6b-89f4-c1b1252eb846")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/RT1_Platinum_RTD_temperature_sensor_radio_zone.wrl"

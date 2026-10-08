@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "b9754d08-c185-47fa-bd8a-edcf3b0a63a1")
+		(uuid "fe056848-68c8-413a-8a02-395b7305200b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "18b66a8b-ca5b-43c4-bdc9-bd17c08a823a")
+		(uuid "f01d6222-4e5d-4052-917a-fe0723838168")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5e4ef633-03ac-4dd3-bf93-cb48a7a59e27")
+		(uuid "905ac406-03af-436f-b6ad-e9b3a6551906")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5b68616f-ae42-4dee-b847-cfe94049efc8")
+		(uuid "40ff528b-9c2a-4a0c-995c-23e94fff2d7d")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "987d2758-73d8-4abb-abce-d49499252c90")
+		(uuid "3d20d8a3-24de-4e06-ace0-9ca4227a0813")
 	)
 	(fp_rect
 		(start -4.4 -4.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "39bbe71a-39d3-4642-9bf9-60f7431796e9")
+		(uuid "5b43b269-f8f9-453c-8434-6e2c62f3184a")
 	)
 	(fp_rect
 		(start -4 -4)
@@ -84,45 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "cfcf67ee-7df8-44f4-9a0b-d70118b90f22")
-	)
-	(fp_text user "U21"
-		(at 0 -2.96 0)
-		(layer "F.SilkS")
-		(uuid "13c99e8f-1ac1-47f9-84da-206cc5a7a0c2")
-		(effects
-			(font
-				(size 0.804999 0.804999)
-				(thickness 0.144899)
-			)
-		)
+		(uuid "fb223006-11c8-4a24-a43d-0e22a8369443")
 	)
 	(fp_text user "Wi-Fi SoC"
 		(at 0 -1.77 0)
 		(layer "F.SilkS")
-		(uuid "1eda60ba-3c40-477b-91a5-5738690db6c7")
-		(effects
-			(font
-				(size 0.7 0.7)
-				(thickness 0.091)
-			)
-		)
-	)
-	(fp_text user "802.11s"
-		(at 0 0.399999 0)
-		(layer "F.SilkS")
-		(uuid "30132ffb-f8f1-4edf-bea7-484401c7f3bd")
-		(effects
-			(font
-				(size 0.7 0.7)
-				(thickness 0.091)
-			)
-		)
-	)
-	(fp_text user "with"
-		(at 0 -0.685 0)
-		(layer "F.SilkS")
-		(uuid "a55231e8-771b-4a62-bc29-e3626f22091f")
+		(uuid "19abb0a6-c9b4-4a95-8179-baa0aa5bfb5d")
 		(effects
 			(font
 				(size 0.7 0.7)
@@ -133,7 +100,29 @@
 	(fp_text user "GHz)"
 		(at 0 2.57 0)
 		(layer "F.SilkS")
-		(uuid "dd064f1a-c3e4-4661-8f30-28fcd231326a")
+		(uuid "4d8194ac-0ea9-48d3-8106-1657a9e069cc")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "802.11s"
+		(at 0 0.399999 0)
+		(layer "F.SilkS")
+		(uuid "5afd319f-a0e8-4f36-83ee-a11b8f672bca")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "with"
+		(at 0 -0.685 0)
+		(layer "F.SilkS")
+		(uuid "5ba8b5b5-41cf-4b41-ad10-7aa43167e0c2")
 		(effects
 			(font
 				(size 0.7 0.7)
@@ -144,18 +133,7 @@
 	(fp_text user "mesh (2.4"
 		(at 0 1.484999 0)
 		(layer "F.SilkS")
-		(uuid "fca0c5ae-0838-4cbe-a852-7f5bb86441e3")
-		(effects
-			(font
-				(size 0.7 0.7)
-				(thickness 0.091)
-			)
-		)
-	)
-	(fp_text user "Wi-Fi SoC"
-		(at 0 -1.77 0)
-		(layer "F.Fab")
-		(uuid "398574b6-7162-4662-9e3e-e23884bcac0d")
+		(uuid "70a60332-8f72-4e4f-9c4d-3de083204f2d")
 		(effects
 			(font
 				(size 0.7 0.7)
@@ -165,8 +143,8 @@
 	)
 	(fp_text user "U21"
 		(at 0 -2.96 0)
-		(layer "F.Fab")
-		(uuid "650ebeba-93d5-4dc4-9b65-d538826c3a2e")
+		(layer "F.SilkS")
+		(uuid "b0ec3b68-cecd-4ba1-867f-2d4ca84857f9")
 		(effects
 			(font
 				(size 0.804999 0.804999)
@@ -174,21 +152,10 @@
 			)
 		)
 	)
-	(fp_text user "mesh (2.4"
-		(at 0 1.484999 0)
+	(fp_text user "Wi-Fi SoC"
+		(at 0 -1.77 0)
 		(layer "F.Fab")
-		(uuid "876e7170-c086-4cb4-a0a3-111a531f709c")
-		(effects
-			(font
-				(size 0.7 0.7)
-				(thickness 0.091)
-			)
-		)
-	)
-	(fp_text user "802.11s"
-		(at 0 0.399999 0)
-		(layer "F.Fab")
-		(uuid "a86431ba-320d-41b3-89c4-f756d7fb2622")
+		(uuid "04baf28b-9ae6-4c98-a76b-9d1e7b749f24")
 		(effects
 			(font
 				(size 0.7 0.7)
@@ -199,7 +166,29 @@
 	(fp_text user "with"
 		(at 0 -0.685 0)
 		(layer "F.Fab")
-		(uuid "b326f945-c699-4864-9105-7cab078f58ec")
+		(uuid "21a1c64a-1039-4ebc-8aa6-bd645d0921e6")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "U21"
+		(at 0 -2.96 0)
+		(layer "F.Fab")
+		(uuid "305afa90-6d92-4dbe-b186-6f2fec41b0d9")
+		(effects
+			(font
+				(size 0.804999 0.804999)
+				(thickness 0.144899)
+			)
+		)
+	)
+	(fp_text user "mesh (2.4"
+		(at 0 1.484999 0)
+		(layer "F.Fab")
+		(uuid "7bbe2180-c278-49d8-826d-d794c9c4bdb9")
 		(effects
 			(font
 				(size 0.7 0.7)
@@ -210,7 +199,18 @@
 	(fp_text user "GHz)"
 		(at 0 2.57 0)
 		(layer "F.Fab")
-		(uuid "e6b5b8f7-acf4-4d88-9986-9db0bf186cf8")
+		(uuid "c8caea61-c473-4a8b-8f68-bf7d43eae01a")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.091)
+			)
+		)
+	)
+	(fp_text user "802.11s"
+		(at 0 0.399999 0)
+		(layer "F.Fab")
+		(uuid "e2f01326-ff55-4eba-b154-735c825777ea")
 		(effects
 			(font
 				(size 0.7 0.7)
@@ -223,28 +223,28 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "603969e8-bf42-4fb0-bef0-4238f3b39a7c")
+		(uuid "ef51b4d3-93b4-4bd8-96e1-e21b64d1c37f")
 	)
 	(pad "2" smd rect
 		(at -3.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "018c0bb1-bf54-4795-9202-523c34eb7276")
+		(uuid "83367d4e-7a54-4199-b108-ecaa86f39ee1")
 	)
 	(pad "3" smd rect
 		(at -3.55 2.533333)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "3d57f1a3-ee34-4c09-8e76-774418fabf1b")
+		(uuid "2c44f108-78bb-470f-b96e-c42205ac9d03")
 	)
 	(pad "4" smd rect
 		(at 3.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "95a40b12-6908-4dcf-836d-95dacfd314ad")
+		(uuid "a445ad7f-1784-4dfd-867a-3a2d16cbeeaf")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/U21_Wi_Fi_SoC_with_802_11s_mesh_2_4_GHz.wrl"

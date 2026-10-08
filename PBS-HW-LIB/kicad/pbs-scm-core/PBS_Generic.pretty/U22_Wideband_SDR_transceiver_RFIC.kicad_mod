@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "dc90c338-5ff1-4cf6-8403-47b54f37e914")
+		(uuid "7a1e8020-4379-491e-bf0f-26cc7fd65c4a")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "90a5cd42-1d93-49f8-ada8-81516b56451d")
+		(uuid "02b8387c-9b1b-431c-bce8-d381dcaf9523")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b2dfd2f7-d84b-49ac-aad0-bf985c054e4a")
+		(uuid "38d9c665-67c9-4415-95e0-1f623bbda1bd")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "e249d21c-0e1a-494d-8cea-1ac3a6bfe940")
+		(uuid "f44d5ba7-b83b-440b-b1f0-ad5bba5749b9")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "9f081e2d-7961-43d7-ad7e-64cc430ca225")
+		(uuid "5bc2f3d8-3368-4c31-a888-de7aec47def8")
 	)
 	(fp_rect
 		(start -6.4 -6.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "d698b3d8-ff70-4a03-b71f-e885def137ff")
+		(uuid "7e594318-3eba-46a5-b387-8a2db2f04f67")
 	)
 	(fp_rect
 		(start -6 -6)
@@ -84,45 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "c95686d8-fd40-43ae-9aa2-36138e81056d")
-	)
-	(fp_text user "SDR"
-		(at 0 -1.349999 0)
-		(layer "F.SilkS")
-		(uuid "18ed5c91-cefc-47b0-8622-1e6b75e0d1f7")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.13)
-			)
-		)
-	)
-	(fp_text user "RFIC"
-		(at 0 1.75 0)
-		(layer "F.SilkS")
-		(uuid "6332a6ab-2d41-4279-9c86-0a43f2479582")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.13)
-			)
-		)
-	)
-	(fp_text user "Wideband"
-		(at 0 -2.899999 0)
-		(layer "F.SilkS")
-		(uuid "6a4b253e-a9f1-4802-a123-038531042840")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.13)
-			)
-		)
+		(uuid "5124ad37-d020-4c4d-8086-dd89f6120d83")
 	)
 	(fp_text user "transceiver"
 		(at 0 0.2 0)
 		(layer "F.SilkS")
-		(uuid "af3a9063-4d68-47af-a452-f7133e78251a")
+		(uuid "3b5e6100-a28c-4145-afa6-d6766d5d410a")
 		(effects
 			(font
 				(size 1 1)
@@ -133,7 +100,7 @@
 	(fp_text user "U22"
 		(at 0 -4.6 0)
 		(layer "F.SilkS")
-		(uuid "d5266c86-0d3d-44d8-acf8-e15ed5bb5d34")
+		(uuid "3e105d4b-753d-48c8-8b3b-ee5725a78b2e")
 		(effects
 			(font
 				(size 1.15 1.15)
@@ -143,8 +110,8 @@
 	)
 	(fp_text user "Wideband"
 		(at 0 -2.899999 0)
-		(layer "F.Fab")
-		(uuid "198a19a7-2b8e-44cb-b66f-60b4dfc588ba")
+		(layer "F.SilkS")
+		(uuid "428c3825-eb03-4715-9237-2f191860f250")
 		(effects
 			(font
 				(size 1 1)
@@ -152,21 +119,10 @@
 			)
 		)
 	)
-	(fp_text user "U22"
-		(at 0 -4.6 0)
-		(layer "F.Fab")
-		(uuid "4d501fa8-5407-4cad-b9f8-462dabc2058a")
-		(effects
-			(font
-				(size 1.15 1.15)
-				(thickness 0.207)
-			)
-		)
-	)
 	(fp_text user "SDR"
 		(at 0 -1.349999 0)
-		(layer "F.Fab")
-		(uuid "5d41abb4-a446-488b-b3db-2a554ce0e3c6")
+		(layer "F.SilkS")
+		(uuid "ab4b0205-c709-4e4b-b92c-1ea76495a2d4")
 		(effects
 			(font
 				(size 1 1)
@@ -176,8 +132,8 @@
 	)
 	(fp_text user "RFIC"
 		(at 0 1.75 0)
-		(layer "F.Fab")
-		(uuid "c88230fb-d635-4794-96f1-fc54ab4268bd")
+		(layer "F.SilkS")
+		(uuid "dd3d6e84-14fe-4334-ae0c-bfa20beaecc2")
 		(effects
 			(font
 				(size 1 1)
@@ -188,7 +144,51 @@
 	(fp_text user "transceiver"
 		(at 0 0.2 0)
 		(layer "F.Fab")
-		(uuid "fe74bdac-8f9a-47cc-b5e7-7580cecbad80")
+		(uuid "1d6e67ff-b38e-411d-9220-9e6a88863c07")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "SDR"
+		(at 0 -1.349999 0)
+		(layer "F.Fab")
+		(uuid "22bdb8a6-256c-4c3a-ab1d-270669750a97")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "RFIC"
+		(at 0 1.75 0)
+		(layer "F.Fab")
+		(uuid "5e7e25f8-533c-4eb6-b60d-09a45d43ac99")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+		)
+	)
+	(fp_text user "U22"
+		(at 0 -4.6 0)
+		(layer "F.Fab")
+		(uuid "8d808cec-732a-46e5-8b8d-15a7c7af17c7")
+		(effects
+			(font
+				(size 1.15 1.15)
+				(thickness 0.207)
+			)
+		)
+	)
+	(fp_text user "Wideband"
+		(at 0 -2.899999 0)
+		(layer "F.Fab")
+		(uuid "dfd2c2aa-991b-49f9-85c9-48a717482a09")
 		(effects
 			(font
 				(size 1 1)
@@ -201,56 +201,56 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "05ffe4f3-d557-4ad3-89a1-ee39710ecd72")
+		(uuid "1ad3391a-9944-4a3f-bb59-b46fee59a795")
 	)
 	(pad "2" smd rect
 		(at -5.55 -2.32)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "00d28b01-67d8-4108-9e36-0331da0b7276")
+		(uuid "5c8c7b8e-7787-4219-8def-7c8c8db9eda8")
 	)
 	(pad "3" smd rect
 		(at -5.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "7cc0334c-26c4-4607-a7b4-978d1e0fd059")
+		(uuid "f14f7d04-515c-4286-9198-4e32ccde2e5a")
 	)
 	(pad "4" smd rect
 		(at -5.55 2.319999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "cb2a4ae7-3d85-4cf5-931d-d6be8957d621")
+		(uuid "1787eea4-9566-4bde-ade9-351c1ccfe609")
 	)
 	(pad "5" smd rect
 		(at -5.55 4.64)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "ded31962-0598-4991-bf06-181dfc8cc9c1")
+		(uuid "e705f437-3ff2-4847-806f-79597f41ccbe")
 	)
 	(pad "6" smd rect
 		(at 5.55 -3.866666)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "76057128-8a9d-459b-84e9-4c5b485a734b")
+		(uuid "45f46b99-ed27-42c4-93a9-41139b724d87")
 	)
 	(pad "7" smd rect
 		(at 5.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "87e4322d-1fd3-47aa-bb21-c7498f0b699f")
+		(uuid "6bcdca83-30b5-4130-bcd2-c44c3cbc891f")
 	)
 	(pad "8" smd rect
 		(at 5.55 3.866666)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "8b5bffad-f1a7-4f50-b1a4-a3c76b71642c")
+		(uuid "9d301dc3-c4af-4492-8cb9-fecb32444d0e")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/U22_Wideband_SDR_transceiver_RFIC.wrl"

@@ -4,6 +4,7 @@
 set -e
 cd "$(dirname "$0")/.."
 python3 tools/generate.py
+(cd tools && python3 connector_drawing.py)
 for p in pbs-scm-core pbs-scm-bay pbs-hwid-tag; do
   o="$p/output"; rm -rf "$o"; mkdir -p "$o"
   kicad-cli sch erc --severity-error --exit-code-violations -o "$o/$p-erc.rpt" "$p/$p.kicad_sch"

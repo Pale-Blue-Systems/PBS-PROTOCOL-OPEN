@@ -4,9 +4,10 @@ Open reference designs for hardware that carries PBS traffic. They are informati
 
 | Document | Title | Status | Version |
 |---|---|---|---|
-| [PBS-HW-SCM-01](PBS-HW-SCM-01.md) | Surface Communication Module: Open Reference Design | Draft Reference Design | 0.2 |
+| [PBS-HW-SCM-01](PBS-HW-SCM-01.md) | Surface Communication Module: Open Reference Design | Draft Reference Design | 0.3 |
+| [PBS-HW-CON-01](PBS-HW-CON-01.md) | Module Host Connector: Open Reference Design | Draft Reference Design | 0.3 |
 | [PBS-HW-ID-01](PBS-HW-ID-01.md) | Master Device Identity Tag: Open Reference Design | Draft Reference Design | 0.2 |
 
 These documents let anyone build the hardware and make independently built parts work together. They specify interoperability requirements, marked [I], which must be met exactly (connectors, contacts, bands, protocols, formats, behaviour), and minimum performance, marked [P], which builders may exceed. They name no components or manufacturers. Normative statements bind only implementations that claim to follow a document.
 
-KiCad projects for these designs (schematics, boards, renders and 3D models, with generic part-type placeholders) are in [`kicad/`](kicad/).
+KiCad projects for these designs (schematics, boards, renders and 3D models, with generic part-type placeholders) are in [`kicad/`](kicad/). Dimensioned drawings of the connector are in [`drawings/`](drawings/).

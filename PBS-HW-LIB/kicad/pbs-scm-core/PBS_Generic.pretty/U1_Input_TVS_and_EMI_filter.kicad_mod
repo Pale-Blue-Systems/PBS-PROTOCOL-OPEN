@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "2bb91319-dd85-49be-889b-5ebc2e6c253e")
+		(uuid "88cb2b91-4958-4e15-86ac-008b2a1b142c")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "83c004c2-0af8-4047-aa84-956155b66059")
+		(uuid "baff25ca-fbd7-4dd7-bdf8-9e9f782dad38")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "cc56784e-6f98-48ed-9ad6-3d384043a768")
+		(uuid "7bcff5a4-ad0b-4c9b-928c-ab677d06949b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "370758bf-05e6-49a2-985d-8979913742ba")
+		(uuid "8077f112-4860-4d9d-910b-77c1203595d3")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "28c25404-7078-4f1f-a7fc-6d9a38b910d8")
+		(uuid "4cd7f818-cd80-4023-a388-db517b76dc47")
 	)
 	(fp_rect
 		(start -4.9 -3.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "6b6b401d-279e-4499-ad48-0bf3a5d82aa0")
+		(uuid "3bf010ee-5f59-4e1a-9000-e285efe2458a")
 	)
 	(fp_rect
 		(start -4.5 -3)
@@ -84,12 +84,23 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "20a31d73-ded9-4b45-a90a-c60ab7a62c2a")
+		(uuid "c1e9642c-4e61-427b-aad2-10c6c5b58fdf")
+	)
+	(fp_text user "U1"
+		(at 0 -1.84 0)
+		(layer "F.SilkS")
+		(uuid "5685d5b0-ac15-4d58-96cb-08fc7c56131a")
+		(effects
+			(font
+				(size 0.919999 0.919999)
+				(thickness 0.165599)
+			)
+		)
 	)
 	(fp_text user "and EMI"
 		(at 0 0.76 0)
 		(layer "F.SilkS")
-		(uuid "006739dd-bfdf-4af0-a93a-08948c2732e8")
+		(uuid "a739bcd4-72b5-4962-9f14-acdd106a1a79")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -100,7 +111,7 @@
 	(fp_text user "Input TVS"
 		(at 0 -0.48 0)
 		(layer "F.SilkS")
-		(uuid "0a8e0170-90ef-4e29-8a97-413510301b6f")
+		(uuid "d79048ab-fa72-44a0-bcc5-3ad98568b2ba")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -111,7 +122,7 @@
 	(fp_text user "filter"
 		(at 0 2 0)
 		(layer "F.SilkS")
-		(uuid "12f850fc-a9ea-4de4-8aa3-fbb3080e3e23")
+		(uuid "ed0022c7-ead8-4965-9e51-ca9bd8da054d")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -119,21 +130,21 @@
 			)
 		)
 	)
-	(fp_text user "U1"
-		(at 0 -1.84 0)
-		(layer "F.SilkS")
-		(uuid "bcd29520-0efb-4d9d-beab-4cbf6a325d15")
+	(fp_text user "Input TVS"
+		(at 0 -0.48 0)
+		(layer "F.Fab")
+		(uuid "00b66079-ad8f-4d50-bfd7-8026ec192c4b")
 		(effects
 			(font
-				(size 0.919999 0.919999)
-				(thickness 0.165599)
+				(size 0.8 0.8)
+				(thickness 0.104)
 			)
 		)
 	)
 	(fp_text user "filter"
 		(at 0 2 0)
 		(layer "F.Fab")
-		(uuid "475e26ee-9d3d-4a9a-a036-6a1fddffa3bd")
+		(uuid "27281391-dbb0-4985-a7a2-cc95e3a42bc9")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -144,7 +155,7 @@
 	(fp_text user "and EMI"
 		(at 0 0.76 0)
 		(layer "F.Fab")
-		(uuid "9c45869f-59f2-496d-a831-f44abfd675f9")
+		(uuid "51509fd7-183c-4da9-9344-c50823045087")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -155,22 +166,11 @@
 	(fp_text user "U1"
 		(at 0 -1.84 0)
 		(layer "F.Fab")
-		(uuid "b280a99f-db0e-41c4-92cd-01c7b6072773")
+		(uuid "e30a8ae5-b558-4677-8f92-4aeab736e0f0")
 		(effects
 			(font
 				(size 0.919999 0.919999)
 				(thickness 0.165599)
-			)
-		)
-	)
-	(fp_text user "Input TVS"
-		(at 0 -0.48 0)
-		(layer "F.Fab")
-		(uuid "bed992c3-cdd2-4e83-bc94-b30fa8d0db4b")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.104)
 			)
 		)
 	)
@@ -179,28 +179,28 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "f6e27fd4-cfaa-4104-9ac5-3689c7506842")
+		(uuid "523085ff-eac1-4e55-afea-3a102ee6a23b")
 	)
 	(pad "2" smd rect
 		(at -4.05 1.399999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "ea669a6c-9699-4ba2-9836-919bfed580ad")
+		(uuid "68bd29e9-8ec0-4b44-89d6-aacd2235c4ec")
 	)
 	(pad "3" smd rect
 		(at 4.05 -1.4)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "9d6d5223-de1a-40c9-aab5-97cba4eab66d")
+		(uuid "507fb3f3-cb1f-41a6-b48b-5f430a1d53ce")
 	)
 	(pad "4" smd rect
 		(at 4.05 1.399999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "f5ad25c0-b8d0-4237-96fb-bc477d4c93c8")
+		(uuid "3ddc8c44-7586-47bd-84c7-6fabaf9a51e5")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/U1_Input_TVS_and_EMI_filter.wrl"

@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "5d3d8fdc-a24b-4124-809b-b263beca00c5")
+		(uuid "45bdcdc1-ea9f-43d6-86d8-7996c0201f1b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "aaeb6744-fd17-4d5e-8ba8-e992daf1ed61")
+		(uuid "7beb3194-2d7f-4894-8c12-ae12976b9ebe")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5c6c356a-d191-4c5a-aec6-79c11f737c78")
+		(uuid "ac4c4b84-3240-45e4-b61a-9aea95ee162e")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ec4e539d-778d-4309-a445-6e074f0f9702")
+		(uuid "4cc3702c-74bc-448e-b85d-2304fb14c753")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "613cb654-0b53-4ae8-88b1-461140f0ea38")
+		(uuid "a6dc54d3-a24d-41dc-903c-4df603830ff5")
 	)
 	(fp_rect
 		(start -3.9 -2.9)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "5c501d61-02a3-44b4-b8b5-432f419c5173")
+		(uuid "d23bf171-d06a-4854-a635-1babe33c17a5")
 	)
 	(fp_rect
 		(start -3.5 -2.5)
@@ -84,12 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "b8a67e14-a84d-4b42-8518-dc79225cae72")
+		(uuid "56d46064-d5d1-495e-9bf8-42f1192b6ded")
 	)
 	(fp_text user "FL2"
 		(at 0 0 0)
 		(layer "F.SilkS")
-		(uuid "82af413c-4530-4d51-879a-2595cc54ca2a")
+		(uuid "42d873a2-05e6-4b70-bbd6-afcc1290741c")
 		(effects
 			(font
 				(size 1 1)
@@ -100,7 +100,7 @@
 	(fp_text user "FL2"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "7a2fc5a2-aa22-4fc2-97c9-b1411678f01b")
+		(uuid "7a820946-6bab-4f04-87aa-df4680e017f2")
 		(effects
 			(font
 				(size 1 1)
@@ -113,21 +113,21 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "d017e0f3-b572-4476-b41a-c56c69fc96f2")
+		(uuid "994f9d51-e079-483b-bc40-4f039c1d1129")
 	)
 	(pad "2" smd rect
 		(at -3.05 1.15)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "9e6e6bc1-3a40-41ec-ac80-7adaa69cae66")
+		(uuid "dacc5a53-08b2-4600-bb6e-b2410bf99e3d")
 	)
 	(pad "3" smd rect
 		(at 3.05 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "d13ac938-5c2b-4709-ae4d-80722a44ab7c")
+		(uuid "87f39be7-4d25-4780-98f9-e8b80da6a0a0")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/FL2_S_band_duplexer_2025_2110_2200_2290_MHz.wrl"

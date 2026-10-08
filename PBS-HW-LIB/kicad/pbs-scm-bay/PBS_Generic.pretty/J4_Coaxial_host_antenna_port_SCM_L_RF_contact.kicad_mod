@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "f365ba73-e92e-4c89-9468-420e5b0b6233")
+		(uuid "a3bc3eed-48f0-4153-a9af-71659dfd2cfc")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6d996932-48d5-43ee-bd26-35ef0e503a80")
+		(uuid "44b7cc18-60a6-4599-bdf5-2eff7ca9b128")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "986d9bd1-8587-463e-b41d-d5c2713a9f85")
+		(uuid "e6cfa795-2307-485b-b2a6-50d378f2a2d0")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b47044a9-b826-428c-a513-564880dea63b")
+		(uuid "44dab416-c980-4869-8126-3edca82259c1")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "8702e16c-a7af-43e4-bc5e-66709307cf50")
+		(uuid "b4b48d3d-5444-4956-8bb9-73c474ce1832")
 	)
 	(fp_rect
 		(start -3.4 -3.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "b9bd3fb5-d6bd-4cb9-8942-3a2f7f39daa2")
+		(uuid "8e5faa72-7cab-440c-8e07-9cb4633fcbd3")
 	)
 	(fp_rect
 		(start -3 -3)
@@ -84,12 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "6dfeeff5-7fa6-40de-a6ea-18099a7dbff3")
+		(uuid "ae5502a1-84e6-4b19-a39e-e967a7a07d31")
 	)
 	(fp_text user "J4"
 		(at 0 0 0)
 		(layer "F.SilkS")
-		(uuid "6517482a-9ba4-41ae-8221-b9eb6a4cce61")
+		(uuid "ec47ad8a-2378-4e7f-a18b-5b011097e335")
 		(effects
 			(font
 				(size 1 1)
@@ -100,7 +100,7 @@
 	(fp_text user "J4"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "bf27fa0b-bb37-4767-9b7d-19bb0a37bc40")
+		(uuid "30865a6a-1974-4b2b-9be1-cde79745b63d")
 		(effects
 			(font
 				(size 1 1)
@@ -113,14 +113,14 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "536e32af-cde0-4868-bd93-c3c4433fb611")
+		(uuid "44dc458d-9466-4199-9033-036bcb012db2")
 	)
 	(pad "2" smd rect
 		(at 2.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "6ac554d8-8e8a-4928-99d5-d84253c56249")
+		(uuid "b23a8e70-5211-4ebd-9bf7-84f3a9baacd8")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/J4_Coaxial_host_antenna_port_SCM_L_RF_contact.wrl"

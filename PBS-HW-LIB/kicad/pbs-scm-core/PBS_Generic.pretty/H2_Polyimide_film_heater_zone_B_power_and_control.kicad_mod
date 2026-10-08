@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "6f2e0cc7-d9c5-417e-8f13-fcc5f132d3ca")
+		(uuid "01147278-b6a9-4998-9b87-085089d7e692")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8fd97cfc-b5d5-4681-8c49-4c5db77ea319")
+		(uuid "b730ffc4-c27e-4230-882a-d704c8fdc66c")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "0bb4840d-1862-4157-b513-0dacbd55f0de")
+		(uuid "7586d644-431c-4b93-8bc3-ddd352532433")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b1bb5080-36fe-448d-9c38-e070442bf519")
+		(uuid "379fa930-4dbc-498f-87c9-de0169c7bbbe")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -54,86 +54,42 @@
 		)
 	)
 	(fp_rect
-		(start -19.15 -16.149999)
-		(end 19.15 16.149999)
+		(start -36.15 -12.15)
+		(end 36.15 12.15)
 		(stroke
 			(width 0.12)
 			(type default)
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "8774d4f5-66d4-4bb7-a8f7-cd80269bc7f1")
+		(uuid "0fe890ac-ba85-4a07-8202-eb9423b7a989")
 	)
 	(fp_rect
-		(start -19.4 -16.399999)
-		(end 19.4 16.399999)
+		(start -36.4 -12.4)
+		(end 36.4 12.4)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "7e914378-8fbe-49c3-88d4-8bd61226c01c")
+		(uuid "3724c455-049d-4eea-a5a2-c3dcad77c411")
 	)
 	(fp_rect
-		(start -19 -16)
-		(end 19 16)
+		(start -36 -12)
+		(end 36 12)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "5d52c10a-3fd7-4a67-bf6d-5b13a6a880ec")
+		(uuid "12a4c2c1-4191-4dc7-ad4a-5ff2967082e6")
 	)
-	(fp_text user "H2"
-		(at 0 -14.36 0)
+	(fp_text user "Polyimide film heater, zone B (power and control)"
+		(at 0 -8.32 0)
 		(layer "F.SilkS")
-		(uuid "a57d9111-f7a6-4572-93f8-fa0f82be493c")
-		(effects
-			(font
-				(size 1.38 1.38)
-				(thickness 0.248399)
-			)
-		)
-	)
-	(fp_text user "Polyimide film heater, zone B"
-		(at 0 -12.32 0)
-		(layer "F.SilkS")
-		(uuid "dd9ff542-3bbd-4360-9e46-33faee8003d1")
-		(effects
-			(font
-				(size 1.2 1.2)
-				(thickness 0.156)
-			)
-		)
-	)
-	(fp_text user "(power and control)"
-		(at 0 -10.46 0)
-		(layer "F.SilkS")
-		(uuid "fdc50f3d-b0c6-4361-873b-fcb8ebd10569")
-		(effects
-			(font
-				(size 1.2 1.2)
-				(thickness 0.156)
-			)
-		)
-	)
-	(fp_text user "(power and control)"
-		(at 0 -10.46 0)
-		(layer "F.Fab")
-		(uuid "1ba510fc-d473-4153-87cb-de18b3180098")
-		(effects
-			(font
-				(size 1.2 1.2)
-				(thickness 0.156)
-			)
-		)
-	)
-	(fp_text user "Polyimide film heater, zone B"
-		(at 0 -12.32 0)
-		(layer "F.Fab")
-		(uuid "9dfdf156-b2ee-4a8b-af0a-931cbd6cda6f")
+		(uuid "b9805f8b-85ee-4ed4-9d58-06bf4b46c54d")
 		(effects
 			(font
 				(size 1.2 1.2)
@@ -142,29 +98,51 @@
 		)
 	)
 	(fp_text user "H2"
-		(at 0 -14.36 0)
-		(layer "F.Fab")
-		(uuid "c901704c-087a-4191-88e4-f967099c8fc2")
+		(at 0 -10.36 0)
+		(layer "F.SilkS")
+		(uuid "f1c18cef-da3a-45da-ad97-a378c21e426e")
 		(effects
 			(font
 				(size 1.38 1.38)
 				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "H2"
+		(at 0 -10.36 0)
+		(layer "F.Fab")
+		(uuid "369e10ea-5e9f-4309-b2e4-b7d1acb91c54")
+		(effects
+			(font
+				(size 1.38 1.38)
+				(thickness 0.248399)
+			)
+		)
+	)
+	(fp_text user "Polyimide film heater, zone B (power and control)"
+		(at 0 -8.32 0)
+		(layer "F.Fab")
+		(uuid "e4be2dbd-2eab-4aa0-adb2-b8cc5f0ff071")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.156)
 			)
 		)
 	)
 	(pad "1" smd rect
-		(at -18.55 0)
+		(at -35.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "2bd864e6-f41b-4d93-ab27-fad5add49776")
+		(uuid "8ad56f9f-d81e-4a40-9004-e862d9d946c2")
 	)
 	(pad "2" smd rect
-		(at 18.55 0)
+		(at 35.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "bacba841-ad0d-4f2c-bd92-0cd9a4b80030")
+		(uuid "504db79c-7bb5-4554-8437-7201c2a282e5")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/H2_Polyimide_film_heater_zone_B_power_and_control.wrl"

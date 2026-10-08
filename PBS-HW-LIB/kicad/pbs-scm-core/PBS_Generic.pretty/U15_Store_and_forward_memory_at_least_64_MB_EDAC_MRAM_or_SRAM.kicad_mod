@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "60cf468a-07e2-43a5-9d53-7faf4594f383")
+		(uuid "5ee9ea28-913e-465a-8d61-862591e9b335")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "38f61d26-28c8-4ac1-9853-6e435fda0525")
+		(uuid "a9d95ff0-a200-43a6-8e1c-a3709831baa2")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "e4244571-73a0-4f43-a297-0d44058f97ca")
+		(uuid "3a4842ff-7f62-4c5b-aa94-0243a32cd2db")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8a930a66-bd0d-42ff-99d2-8c5b91dad2de")
+		(uuid "82ed4cf9-2ac4-4de7-aa3c-d0643827c224")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "92b5fab4-9099-419e-aa82-b71c32de282c")
+		(uuid "3cfbff64-9f7e-4e16-87b5-913ee117f115")
 	)
 	(fp_rect
 		(start -6.4 -6.4)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "241b5223-0a64-47e9-b2c6-226223443fe5")
+		(uuid "b6de485e-8252-45ab-a913-643bab6eb39c")
 	)
 	(fp_rect
 		(start -6 -6)
@@ -84,45 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "269491b9-fa97-4786-a4d2-d2f65ef4ba11")
-	)
-	(fp_text user "Store-and-"
-		(at 0 -3.189999 0)
-		(layer "F.SilkS")
-		(uuid "1b7cfd10-3f84-456c-bf84-6ccc2c78a792")
-		(effects
-			(font
-				(size 0.9 0.9)
-				(thickness 0.117)
-			)
-		)
+		(uuid "39cb2a57-219c-41e4-9f63-3dfd94c8c056")
 	)
 	(fp_text user "EDAC (MRAM"
 		(at 0 2.39 0)
 		(layer "F.SilkS")
-		(uuid "33454707-ca5e-43a9-bb07-d6d612390396")
-		(effects
-			(font
-				(size 0.9 0.9)
-				(thickness 0.117)
-			)
-		)
-	)
-	(fp_text user "U15"
-		(at 0 -4.72 0)
-		(layer "F.SilkS")
-		(uuid "3fe1ac60-7b1d-43e8-b9a9-7e203c1f89be")
-		(effects
-			(font
-				(size 1.034999 1.034999)
-				(thickness 0.186299)
-			)
-		)
-	)
-	(fp_text user "least 64 MB,"
-		(at 0 0.995 0)
-		(layer "F.SilkS")
-		(uuid "4a78497a-7b19-4c65-8000-681086d9c6ca")
+		(uuid "062a963f-a9f6-4039-b101-da71ead91d05")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -133,7 +100,7 @@
 	(fp_text user "forward"
 		(at 0 -1.794999 0)
 		(layer "F.SilkS")
-		(uuid "6bac6c36-c58b-4884-8b07-6fde1a546e41")
+		(uuid "2abc05ad-7782-4b1b-b501-3934259cf2f2")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -144,7 +111,29 @@
 	(fp_text user "or SRAM)"
 		(at 0 3.785 0)
 		(layer "F.SilkS")
-		(uuid "6db2866d-d6f6-4b54-8771-13cc136f8303")
+		(uuid "35f6fd70-598c-4af2-89c6-dbaf6b3d17ae")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "U15"
+		(at 0 -4.72 0)
+		(layer "F.SilkS")
+		(uuid "631e382c-fa55-4ac7-b302-5bd134671701")
+		(effects
+			(font
+				(size 1.034999 1.034999)
+				(thickness 0.186299)
+			)
+		)
+	)
+	(fp_text user "Store-and-"
+		(at 0 -3.189999 0)
+		(layer "F.SilkS")
+		(uuid "9a3ba02b-ccd6-4075-99ae-f66fecff79b6")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -155,7 +144,7 @@
 	(fp_text user "memory, at"
 		(at 0 -0.399999 0)
 		(layer "F.SilkS")
-		(uuid "b75054c8-b272-4fbc-88f8-63392c6d68df")
+		(uuid "a705e322-dad1-4770-b0f7-95898f2c0ab5")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -163,10 +152,10 @@
 			)
 		)
 	)
-	(fp_text user "forward"
-		(at 0 -1.794999 0)
-		(layer "F.Fab")
-		(uuid "2e040694-4d1c-4f7c-859a-0657852e0406")
+	(fp_text user "least 64 MB,"
+		(at 0 0.995 0)
+		(layer "F.SilkS")
+		(uuid "cff4a753-6b66-44d7-be59-ac193e9004ad")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -177,7 +166,7 @@
 	(fp_text user "U15"
 		(at 0 -4.72 0)
 		(layer "F.Fab")
-		(uuid "397c4552-98f4-4d48-ba38-cca93004a7ef")
+		(uuid "3a5e1b0e-bc16-4723-bfb2-fc015427c0e2")
 		(effects
 			(font
 				(size 1.034999 1.034999)
@@ -185,21 +174,10 @@
 			)
 		)
 	)
-	(fp_text user "or SRAM)"
-		(at 0 3.785 0)
-		(layer "F.Fab")
-		(uuid "567d3c6a-49dd-417e-bf87-e9a2ba617793")
-		(effects
-			(font
-				(size 0.9 0.9)
-				(thickness 0.117)
-			)
-		)
-	)
 	(fp_text user "EDAC (MRAM"
 		(at 0 2.39 0)
 		(layer "F.Fab")
-		(uuid "733552a8-6a66-427f-8438-d106b67adf0f")
+		(uuid "4278ee7a-5f89-47c0-a7a7-9f6b249e79a2")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -207,10 +185,10 @@
 			)
 		)
 	)
-	(fp_text user "Store-and-"
-		(at 0 -3.189999 0)
+	(fp_text user "forward"
+		(at 0 -1.794999 0)
 		(layer "F.Fab")
-		(uuid "98bc1c2d-7b9e-489d-aaa7-b6c0416e7520")
+		(uuid "52807de0-01d4-4cfb-b8f3-123396270087")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -218,10 +196,10 @@
 			)
 		)
 	)
-	(fp_text user "least 64 MB,"
-		(at 0 0.995 0)
+	(fp_text user "or SRAM)"
+		(at 0 3.785 0)
 		(layer "F.Fab")
-		(uuid "ad30fedf-91d7-407e-9cb3-319ada06b113")
+		(uuid "82efd8a0-6dfd-423a-b732-2523ad832926")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -232,7 +210,29 @@
 	(fp_text user "memory, at"
 		(at 0 -0.399999 0)
 		(layer "F.Fab")
-		(uuid "e8387de4-a358-48d1-85b5-30adb5f076bf")
+		(uuid "9e460175-5cbd-49ca-90c5-ec01b283c2d5")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "Store-and-"
+		(at 0 -3.189999 0)
+		(layer "F.Fab")
+		(uuid "d064d9d8-58fd-410e-adde-541855f02614")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.117)
+			)
+		)
+	)
+	(fp_text user "least 64 MB,"
+		(at 0 0.995 0)
+		(layer "F.Fab")
+		(uuid "dbcceebc-78ab-479d-88e4-11e3ef8b17a7")
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -245,21 +245,21 @@
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "12d8cc62-45c6-4c73-a00d-af00a1d52c18")
+		(uuid "8aeb0ae6-1077-4230-970c-fdabb87f58c3")
 	)
 	(pad "2" smd rect
 		(at -5.55 2.899999)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "82057bf1-d8d2-4331-ad85-8370c22d89de")
+		(uuid "0dbc6976-f6f3-4458-8601-06a913a457e0")
 	)
 	(pad "3" smd rect
 		(at 5.55 0)
 		(size 0.6 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "36eced44-5080-4f8d-a820-10be7163e516")
+		(uuid "08411465-7c1e-46dc-b1dd-35d600279877")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/U15_Store_and_forward_memory_at_least_64_MB_EDAC_MRAM_or_SRAM.wrl"

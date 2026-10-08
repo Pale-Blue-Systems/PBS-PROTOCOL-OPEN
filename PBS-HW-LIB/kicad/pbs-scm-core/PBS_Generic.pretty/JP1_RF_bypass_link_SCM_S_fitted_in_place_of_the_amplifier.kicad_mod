@@ -9,7 +9,7 @@
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "6877f593-5640-4ef5-ae63-f85402df5e0a")
+		(uuid "3d9c4680-d313-4e56-8a4e-fd5d531c0848")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21,7 +21,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "499c496a-cc83-4459-a442-8867afb75a62")
+		(uuid "8229c7be-0ac7-4234-8fcd-12da3992b50b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ce714f0a-7d81-476c-a530-ca896c13bebb")
+		(uuid "862ab6e8-162a-4ae8-9880-1281fef4c6a9")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "41531cf6-e117-44f0-9945-e502c047f87d")
+		(uuid "7bdf58dd-e24d-4166-94fc-d12ea7aae16e")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -62,7 +62,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "f459f523-d343-4606-93c6-a48ba4b6d935")
+		(uuid "19ac0835-1718-4455-9ffa-9d5f9c8fa0c7")
 	)
 	(fp_rect
 		(start -1.65 -1.15)
@@ -73,7 +73,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "d5810317-0080-4954-9e3e-b28e44f30104")
+		(uuid "f932435e-759b-40d5-8a89-9603a575b4b5")
 	)
 	(fp_rect
 		(start -1.25 -0.75)
@@ -84,12 +84,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "1df47344-4d0f-41a1-882e-32a2655b92e4")
+		(uuid "2c8bfedb-e8c5-4c3b-a184-a417a5cc6ace")
 	)
 	(fp_text user "JP1"
 		(at 0 0 0)
 		(layer "F.SilkS")
-		(uuid "3577283e-f355-40de-b294-b26a13a1f41e")
+		(uuid "94a204b7-8f22-4845-8ff6-31a9ddb11ed4")
 		(effects
 			(font
 				(size 0.825 0.825)
@@ -100,7 +100,7 @@
 	(fp_text user "JP1"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "5f85dc7d-5a7c-4079-8d4e-ca74c9f5cbd7")
+		(uuid "e9520c61-98df-4161-be39-50b90544a6d9")
 		(effects
 			(font
 				(size 0.825 0.825)
@@ -113,14 +113,14 @@
 		(size 0.449999 0.449999)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "2dd33c2c-3d45-4458-8a44-29096f4d1024")
+		(uuid "8fb0532f-182f-4920-a9f9-097ebcbbf17c")
 	)
 	(pad "2" smd rect
 		(at 0.874999 0)
 		(size 0.449999 0.449999)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "4d67b65e-05a6-4efe-9b7c-f8abc33a87ad")
+		(uuid "9c1bf7e7-0f2c-4630-abb1-a9b8157185dc")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/JP1_RF_bypass_link_SCM_S_fitted_in_place_of_the_amplifier.wrl"
