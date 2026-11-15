@@ -150,7 +150,7 @@ The Epoch and Time quality fields of a PBS-PROX-01 BEACON are hints. A node uses
 | 4 | Another PBS-TIME-01 reference node over an authenticated session |
 | 5 | Local atomic or oven-controlled oscillator in holdover from a prior discipline |
 | 6 | LunaNet time service (PBS-PNT-CTX-01 REQ-006) |
-| 7 | Reserved |
+| 7 | Independent network of authenticated anchor clocks that witness each other, read over a ranging-capable link |
 
 - **PBS-TIME-REQ-030:** A reference node SHALL discipline its clock only while at least two sources from different rows agree within the sum of their uncertainties. Two GNSS constellations received through one antenna and receiver count as one source for this rule when the threat includes jamming or spoofing.
 - **PBS-TIME-REQ-031:** When sources disagree, a reference node SHALL stop disciplining, continue in holdover as class 2, and record the event.
@@ -186,3 +186,5 @@ The clock network is deployed with the communication hardware, not beside it.
 3. Leap seconds: Unix epoch time repeats or skips a second; the effect is within `U_max` but should be stated.
 4. Mapping between Unix epoch time and a lunar time scale for PBS-ENV-01 Timestamp on the Moon (PBS-PNT-CTX-01 REQ-006).
 5. Whether TIME-STATEMENT needs a nonce-based variant for listeners that can transmit.
+6. The Section 4 quality byte cannot express uncertainty below 1 ms. Anchors that hold microsecond agreement report it in the TIME-RESP Uncertainty field; whether the byte needs a finer scale is open.
+7. Agreement versus truth. Expiry decisions and arrival checks need nodes to agree with each other; they do not all need traceable UTC. A network whose anchors hold a common time by witnessing each other can serve those uses while isolated from every external source. How such an ensemble states its offset from UTC is not defined.

@@ -66,7 +66,9 @@ A 16-bit bitmap names the links a node can use in a session.
 | 6 | CCSDS Proximity-1 |
 | 7 | LunaNet proximity link (PBS-LNIS-01) |
 | 8 | Wired (PBS-HW-CON-01 or Ethernet) |
-| 9–15 | Reserved for PBSF assignment |
+| 9 | Ultra-wideband ranging radio (IEEE 802.15.4z) |
+| 10 | Optical (coded light or display read by a camera) |
+| 11–15 | Reserved for PBSF assignment |
 
 Discovery MAY happen on one link and transfer on another: two nodes can hail on a low-rate link and move bulk transfer to a faster one both support.
 
@@ -216,6 +218,8 @@ CLOSE is `0x28` followed by one reason byte: `0` complete, `1` authentication fa
 ## 13. Open Issues
 
 1. Per-frame link protection (Section 9) is unspecified.
+1a. Measured proximity. AUTH proves identity, not distance. A session on a ranging-capable link (Section 3, bits 9 and 10) should be able to carry a distance or line-of-sight measurement bound to the session challenge, and report it with the result, so that a receiver can require presence and not only identity.
+1b. Disagreement reporting. A node that hears conflicting time or identity on different links has no message in which to record and publish it.
 2. Signing with the tag requires the tag to be powered and reachable by the host during AUTH. Whether a host-held session key certified by the tag should be allowed needs a decision.
 3. Channel plans and beacon intervals per link type are not defined.
 4. Group sessions (one sender, several receivers) are not defined.
