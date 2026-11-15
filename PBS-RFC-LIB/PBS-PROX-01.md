@@ -10,9 +10,9 @@
 
 ## 1. Purpose
 
-PBS-ROUTE-01 assumes store-and-forward operation and PBS-CAPS-01 lets a node advertise what it can do, but no PBS specification says how two nodes that come into range find each other, prove who they are, agree on a link and hand over stored envelopes. PBS-CAPS-01 Section 6.5 places negotiation out of scope.
+PBS-ROUTE-01 assumes store-and-forward operation and PBS-CAPS-01 lets a node advertise what it can do, but no PBS specification says how two nodes that come into range find each other, prove who they are, agree on a link and hand over stored envelopes. PBS-CAPS-01 Section 6.5 places negotiation of security capabilities out of scope, and no PBS specification defines session establishment.
 
-PBS-PROX-01 defines that procedure once, for any radio. A scheduled contact in a DTN contact plan and an unplanned meeting between two ground devices use the same session. The session supplies what a contact plan supplies where contacts are scheduled: the neighbor, the link and the expected duration.
+PBS-PROX-01 proposes one procedure intended to work over any link. The intent is that a scheduled contact and an unplanned meeting use the same session, and that the session gives a node, for an unplanned meeting, what a contact plan gives for a scheduled one: the neighbor, the link and the expected duration. None of this has been implemented or tested (Section 14).
 
 PBS-PROX-01 messages are link-level. They are not PBS envelopes, are never forwarded, and do not change PBS-ENV-01.
 
@@ -57,15 +57,15 @@ A 16-bit bitmap names the links a node can use in a session.
 
 | Bit | Link |
 |---:|---|
-| 0 | Sub-GHz chirp spread spectrum (LoRa) |
+| 0 | Sub-GHz chirp spread spectrum (LoRa physical layer used directly; not LoRaWAN, see Section 11) |
 | 1 | Bluetooth Low Energy |
 | 2 | Wi-Fi Aware (Neighbor Awareness Networking) |
 | 3 | IEEE 802.11ah (Wi-Fi HaLow) |
 | 4 | IP over any infrastructure network |
 | 5 | ISO/IEC 15693 contactless (PBS-HW-ID-01 passive interface) |
 | 6 | CCSDS Proximity-1 |
-| 7 | LunaNet proximity link (PBS-LNIS-01) |
-| 8 | Wired (PBS-HW-CON-01 or Ethernet) |
+| 7 | LunaNet proximity interface (LNIS V005 Section 4.1, LNSP-User Proximity Interfaces) |
+| 8 | Wired serial or Ethernet |
 | 9 | Ultra-wideband ranging radio (IEEE 802.15.4z) |
 | 10 | Optical (coded light or display read by a camera) |
 | 11–15 | Reserved for PBSF assignment |
@@ -76,7 +76,7 @@ Discovery MAY happen on one link and transfer on another: two nodes can hail on 
 
 ## 4. BEACON
 
-A beacon is 19 bytes, small enough for the service data of a BLE legacy advertisement. Its time on air on a sub-GHz link depends on the regional settings in use.
+A beacon is 19 bytes. A Bluetooth LE legacy advertisement carries at most 31 bytes of advertising data, so a beacon fits in one together with the structure headers it needs; Section 11 states what else that requires. On a sub-GHz link, whether a 19-byte frame is permitted at a given data rate depends on the region (PBS-CLP-01 Section 7).
 
 | Field | Size | Content |
 |---|---:|---|
@@ -197,14 +197,16 @@ CLOSE is `0x28` followed by one reason byte: `0` complete, `1` authentication fa
 
 ---
 
-## 11. Relationship to Other Specifications
+## 11. Relationship to Existing Protocols
+
+This section states what the named protocols provide and what has and has not been examined. PBS-PROX-01 is not derived from any of them and does not interoperate with any of them.
 
 - **PBS-CAPS-01 and PBS-POS-01** remain the way to describe a node in detail. They travel as envelopes after the session is up.
-- **CCSDS Proximity-1** provides hailing and link establishment for its own links. Where it is in use, PBS-PROX-01 starts at HAIL over the established link.
-- **Wi-Fi Aware, BLE** provide their own discovery. BEACON content MAY be carried in their service-discovery payloads.
-- **BPv7:** a PBS-PROX-01 session can serve as a convergence-layer contact between two bundle nodes; that binding is future work.
-
----
+- **CCSDS Proximity-1.** Its Data Link Layer defines the procedures for establishing and terminating a session between a caller and a responder (CCSDS 211.0-B-5, adopted as ISO 22663:2015). Its Physical Layer defines a hailing channel and, in the edition adopted as ISO 21460:2015, operation at UHF for the Mars environment only. Where a Proximity-1 link is in use, the intent is that PBS-PROX-01 begins at HAIL over the established link. That arrangement has not been designed in detail.
+- **Bluetooth LE.** A legacy advertisement carries at most 31 bytes of advertising data, organized as structures with a one-byte length and one-byte type. Carrying a BEACON as Service Data or Manufacturer Specific Data requires a 16-bit UUID or a company identifier assigned by the Bluetooth SIG. PBSF holds neither.
+- **Wi-Fi Aware** provides its own discovery and pairing. Carriage of BEACON content in its service discovery has not been examined.
+- **LoRa and LoRaWAN.** LoRaWAN defines communication between end devices and network gateways; it is not a device-to-device protocol. Link bit 0 therefore means the LoRa physical layer used directly. A node doing so is itself responsible for the duty-cycle and dwell-time rules of its region.
+- **BPv7.** A PBS-PROX-01 session could serve as a contact between two bundle nodes. No convergence-layer binding is defined, and none has been proposed to the IETF DTN working group.
 
 ## 12. Security and Privacy Considerations
 
@@ -224,3 +226,20 @@ CLOSE is `0x28` followed by one reason byte: `0` complete, `1` authentication fa
 3. Channel plans and beacon intervals per link type are not defined.
 4. Group sessions (one sender, several receivers) are not defined.
 5. The BPv7 convergence-layer binding (Section 11) is not defined.
+
+---
+
+## 14. Basis and Limits
+
+- **Checked by computation:** the message sizes in Sections 4 to 8, and that an Ed25519 signature over the initiator's Section 6 challenge does not verify as the responder's.
+- **Taken from other PBS documents:** the `SIGN_CHALLENGE` command, its 16 to 64 byte challenge and its signing prefix (PBS-HW-ID-01 Section 5.5), the master device ID derivation (REQ-011) and the binding certificate (Section 6).
+- **Not done:** no implementation exists. No message has been sent over any radio. Timers, back-off and the 30 s session timeout are estimates. The design has had no security review, and Section 12 lists a relay attack it does not prevent.
+- **Prior work not yet reviewed:** neighbor discovery proposals from the DTN research community, and the discovery and ranging procedures of IEEE 802.15.4z. Either may supersede parts of this draft.
+
+## 15. References
+
+- CCSDS 211.0-B-5, *Proximity-1 Space Link Protocol: Data Link Layer*, December 2013 (ISO 22663:2015).
+- ISO 21460:2015, *Space data and information transfer systems: Proximity-1 space link protocol: Physical layer*.
+- NASA, ESA and JAXA, *LunaNet Interoperability Specification*, Version 5, 29 January 2025.
+- RFC 7748, *Elliptic Curves for Security*. RFC 8032, *Edwards-Curve Digital Signature Algorithm (EdDSA)*. RFC 5869, *HMAC-based Extract-and-Expand Key Derivation Function (HKDF)*.
+- Bluetooth SIG, *Bluetooth Core Specification*, advertising data format. Figures here were taken from vendor documentation of that format, not from the specification text.

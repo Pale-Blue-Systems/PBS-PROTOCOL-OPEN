@@ -142,9 +142,9 @@ Where the bridges are also bundle nodes, envelopes are carried under PBS-DTN-MAP
 
 ## 9. ISO 21423 (Unverified)
 
-ISO 21423:2026 is reported by its publisher to build on VDA 5050 and the MassRobotics Interoperability Standard, to use MQTT and JSON, and to extend to building systems such as lifts, automated doors and alarms. Its text has not been consulted for this profile.
+ISO 21423:2026 has not been consulted for this profile. What is stated here about it comes from trade-press coverage of an announcement by the Association for Advancing Automation dated 2 November 2026 (<https://www.marketscale.com/industries/industrial-iot/a-373-iso-standard-lets-mobile-robots-from-different-vendors-share-a-floor>). According to that coverage, the standard builds on VDA 5050 and the MassRobotics Interoperability Standard, uses MQTT and JSON, and extends to building systems such as lifts, automated doors and alarms. None of that has been verified against the standard.
 
-The intention is that this profile extends to ISO 21423 with additional rows in Section 4 and no change to Sections 3, 5, 6 or 7. Expected additions, to be confirmed by a contributor with access to the standard:
+If that description is accurate, this profile may extend to ISO 21423 with additional rows in Section 4. Whether it can do so without changing Sections 3, 5, 6 or 7 is unknown. The rows below are guesses at treatment, recorded so that a contributor with access to the standard can confirm or replace them:
 
 | Message | Expected treatment |
 |---|---|
@@ -162,4 +162,5 @@ Until then, this profile makes no statement about ISO 21423 messages.
 2. A field dictionary for compact encoding on low-rate links (Section 5).
 3. Messages addressed to several robots at once.
 4. Whether the site bridge needs one MQTT client per robot so that each robot's retained `connection` message has its own last will if the bridge itself fails.
-5. Carriage of the MassRobotics Interoperability Standard messages.
+5. Carriage of the MassRobotics Interoperability Standard messages. That standard was not consulted.
+6. No bridge has been built. Sections 3 to 6 were checked against the VDA 5050 text and schemas only; behavior with a real fleet control and robot is untested, including whether fleet controls tolerate the state ages this profile produces.

@@ -12,9 +12,9 @@
 
 PBS-ENV-01 Section 15 requires every relay and gateway to keep a clock synchronized to Unix epoch time and defines no age field for a node without one. It does not say where that time comes from or how good it must be.
 
-PBS-TIME-01 defines an open clock network that PBS nodes operate themselves: time is passed from node to node over the same radios and sessions that carry envelopes, each node states how uncertain its clock is, and a node that cannot bound its uncertainty stops making expiry decisions until it can.
+PBS-TIME-01 proposes an open clock network that PBS nodes operate themselves: time is passed from node to node over the same radios and sessions that carry envelopes, each node states how uncertain its clock is, and a node that cannot bound its uncertainty stops making expiry decisions until it can.
 
-The design goal is modest. Envelope lifetimes are in whole seconds (PBS-ENV-01 Section 12), so the network needs agreement within about a second, not nanoseconds. That is achievable with low-cost oscillators and occasional contact.
+The design goal is modest. Envelope lifetimes are in whole seconds (PBS-ENV-01 Section 12), so the network needs agreement within about a second, not nanoseconds. The arithmetic in Section 3 indicates this is within reach of low-cost oscillators with occasional contact. It has not been demonstrated on hardware.
 
 PBS-TIME-01 does not replace a positioning or precision-timing service and is not a source of legal or traceable time.
 
@@ -25,7 +25,7 @@ PBS-TIME-01 does not replace a positioning or precision-timing service and is no
 | Class | Role | Requirement |
 |---:|---|---|
 | 3 | Reference | Disciplined by at least two independent sources (Section 7) |
-| 2 | Holdover | Synchronized from a reference or holdover node; oscillator drift bound of 2 ppm or better |
+| 2 | Holdover | Synchronized from a reference or holdover node; oscillator drift bound of 2 ppm or better (proposed threshold) |
 | 1 | Follower | Synchronized from any valid node; any oscillator with a stated drift bound |
 | 0 | Unsynchronized | No valid time |
 
@@ -46,7 +46,7 @@ U(t) = U_sync + rho × (t − t_sync)
 - **PBS-TIME-REQ-001:** A node SHALL state `rho` for its oscillator over its operating temperature range and SHALL compute `U` as above.
 - **PBS-TIME-REQ-002:** A node that restarts without a clock that kept running SHALL set its class to 0.
 
-Informative holdover, for a budget of `U <= 1 s` after a synchronization with `U_sync = 50 ms`:
+Informative holdover, computed from the formula above for a budget of `U <= 1 s` after a synchronization with `U_sync = 50 ms`. The oscillator classes are illustrative drift bounds, not measurements. Real drift varies with temperature, aging and supply voltage, which is why PBS-TIME-REQ-001 requires a stated worst-case bound:
 
 | Oscillator | Drift | Stays within 1 s for |
 |---|---:|---:|
@@ -114,7 +114,7 @@ Used inside a PBS-PROX-01 session after AUTH. Times are Unix epoch microseconds.
 
 TIME-REQ is 17 bytes and TIME-RESP 37 bytes; each fits one frame at the smallest MTU listed in PBS-CLP-01 Section 7.
 
-With `T4` the requester's clock when TIME-RESP arrived:
+These are the offset and delay calculations of the Network Time Protocol (RFC 5905 Section 8). With `T4` the requester's clock when TIME-RESP arrived:
 
 ```text
 offset     = ((T2 − T1) + (T3 − T4)) / 2
@@ -158,9 +158,9 @@ The Epoch and Time quality fields of a PBS-PROX-01 BEACON are hints. A node uses
 
 ---
 
-## 8. Deployment (Informative)
+## 8. Deployment Considerations (Informative, Untested)
 
-The clock network is deployed with the communication hardware, not beside it.
+The intent is that the clock network is deployed with the communication hardware, not beside it. The points below are design reasoning, not results.
 
 - **No extra transmissions for discovery.** Time rides in five bytes of every beacon and in a 17/37-byte exchange at the start of a session that is happening anyway.
 - **Reference nodes go where power and backhaul already are:** gateways, relay masts, access points, and on the lunar surface the powered relay and habitat nodes. A reference node needs its sources, an oscillator of holdover grade, and a clock that keeps running through a power interruption.
@@ -175,7 +175,7 @@ The clock network is deployed with the communication hardware, not beside it.
 - Time is safety-relevant: a clock that runs late keeps stale commands alive, and a clock that runs early discards live traffic. Sections 5.2 and 7 bound both.
 - TIME-RESP is trusted only as far as the PBS-PROX-01 session is authenticated. Authentication identifies the responder; it does not make the responder's clock right. PBS-TIME-REQ-021 and PBS-TIME-REQ-032 limit what one wrong or malicious peer can do.
 - A delayed TIME-RESP enlarges `round_trip` and therefore `U_sync`; it cannot make the requester more confident than the path allows.
-- GNSS interference is the expected failure of bit 0 and bit 1 sources. PBS-TIME-REQ-030 exists so that it degrades a reference node to holdover instead of misleading the network.
+- Loss or falsification of GNSS signals is the failure of bit 0 and bit 1 sources that PBS-TIME-REQ-030 is written for: the rule is meant to degrade a reference node to holdover instead of letting it mislead the network. Whether it does so against a real spoofing attack has not been tested.
 
 ---
 
@@ -188,3 +188,18 @@ The clock network is deployed with the communication hardware, not beside it.
 5. Whether TIME-STATEMENT needs a nonce-based variant for listeners that can transmit.
 6. The Section 4 quality byte cannot express uncertainty below 1 ms. Anchors that hold microsecond agreement report it in the TIME-RESP Uncertainty field; whether the byte needs a finer scale is open.
 7. Agreement versus truth. Expiry decisions and arrival checks need nodes to agree with each other; they do not all need traceable UTC. A network whose anchors hold a common time by witnessing each other can serve those uses while isolated from every external source. How such an ensemble states its offset from UTC is not defined.
+
+---
+
+## 11. Basis and Limits
+
+- **Checked by computation:** message sizes, the holdover table, the offset example and the quality-byte examples.
+- **Adopted from existing practice:** the four-timestamp offset and delay calculation is NTP's (RFC 5905). Reporting an uncertainty bound with a time value, and refusing a single source's large correction, are established ideas in time distribution; this draft does not claim them as new.
+- **Not done:** no implementation exists. No oscillator was measured. `U_max`, the 2 ppm class boundary and the 15-hop limit are proposed values without experimental support.
+- **Outside this draft's reach:** it gives agreement among PBS nodes to roughly a second. It does not provide positioning-grade or traceable time, and it does not show that a network of mutually witnessing clocks stays close to UTC without an external source (Section 10, item 7).
+
+## 12. References
+
+- RFC 5905, *Network Time Protocol Version 4: Protocol and Algorithms Specification*.
+- RFC 8915, *Network Time Security for the Network Time Protocol*.
+- RFC 8032, *Edwards-Curve Digital Signature Algorithm (EdDSA)*.

@@ -10,7 +10,7 @@
 
 ## 1. Purpose
 
-PBS-ENV-01 fixes a 44-byte header and requires relays to forward it byte for byte (PBS-ENV-01 Section 15). A PBS-SEC-B-01 protected envelope with Service Intent carries 160 bytes of overhead around its application data (Section 7). Many low-power radios carry less than that in one frame.
+PBS-ENV-01 fixes a 44-byte header and requires relays to forward it byte for byte (PBS-ENV-01 Section 15). A PBS-SEC-B-01 protected envelope with Service Intent carries 160 bytes of overhead around its application data (Section 7). Low-rate links carry less than that in one frame. The LoRaWAN application payload limit in the EU863-870 band is 51 bytes at its three lowest data rates, and a Bluetooth LE legacy advertisement carries at most 31 bytes of advertising data (Section 11).
 
 PBS-CLP-01 defines, for one hop between two adjacent nodes:
 
@@ -18,7 +18,7 @@ PBS-CLP-01 defines, for one hop between two adjacent nodes:
 - a lossless compression of the PBS-ENV-01 header that restores the identical 44 bytes;
 - segmentation and reassembly of a datagram larger than the link frame.
 
-PBS-CLP-01 does not change the PBS-ENV-01 wire format. An envelope leaving a PBS-CLP-01 hop is byte-identical to the envelope that entered it. PBS-DTN-MAP-02 Section 2 refers to a registered segmentation profile; Section 5 of this document is proposed as that profile for link-level use.
+PBS-CLP-01 does not change the PBS-ENV-01 wire format. An envelope leaving a PBS-CLP-01 hop is byte-identical to the envelope that entered it. PBS-DTN-MAP-02 Section 2 refers to a registered segmentation profile for carrying one PBS protocol data unit in several BPv7 application data units. Section 5 of this document is a different mechanism: it segments across one hop and reassembles before the next. It does not supply the profile PBS-DTN-MAP-02 refers to.
 
 ---
 
@@ -140,6 +140,10 @@ A PBS-SEC-B-01 envelope carrying a MUX container (2 bytes), a Service Intent fra
 | 115 | 2 |
 | 222 | 1 |
 
+The MTU values are the LoRaWAN maximum application payload sizes for the EU863-870 band at data rates 0 to 2, 3, and 4 to 7 (the repeater-compatible values of the LoRaWAN Regional Parameters). They are used here as examples of small frames. They are not properties of PBS-CLP-01, and a node using the LoRa physical layer directly has different framing overhead and must itself meet the regional rules those limits come from.
+
+Smaller limits exist. In the US902-928 band the LoRaWAN application payload limit at data rate 0 is 11 bytes. At an MTU of 11 a segment carries 8 data bytes, the 170-byte envelope above needs 22 segments, and the messages that open a PBS-PROX-01 session do not fit in one frame (BEACON 19 bytes, HAIL 38). PBS-CLP-01 is not expected to be practical at that size.
+
 A Security frame with an 8-byte `key_id` is 91 bytes for Ed25519, 59 for HMAC-SHA-256 and 43 for the 128-bit truncated tag proposed in PBS-SUITE-01.
 
 ---
@@ -154,4 +158,24 @@ Compression and segmentation add no authentication. A forged segment can spoil a
 
 1. MTU values per radio and data rate belong in an informative annex once measured on reference hardware.
 2. Whether to add payload compression (for example a registered dictionary for MUX frame headers).
-3. Whether segmentation should also be registered for end-to-end use under PBS-DTN-MAP-02 Section 2, or stay hop-by-hop only.
+3. The end-to-end segmentation profile that PBS-DTN-MAP-02 Section 2 refers to remains undefined.
+4. Whether Section 4 should be expressed as Static Context Header Compression rules (RFC 8724) instead of a PBS-specific format. That has not been evaluated.
+
+---
+
+## 10. Related Work
+
+The mechanisms here are not new. A first-byte dispatch and tag-based fragmentation are used by 6LoWPAN (RFC 4944). Compressing a header against context shared by two neighbors, and fragmenting what remains, is the subject of SCHC (RFC 8724), which has a LoRaWAN profile (RFC 9011). PBS-CLP-01 follows those ideas for one fixed header. It is not compatible with either, and it has not been compared with them for efficiency (Section 9, item 4).
+
+## 11. Basis and Limits
+
+- **Checked by computation:** a script rebuilds the PBS-ENV-01 Section 13.2 and 12.5 headers, confirms their CRC32 values, compresses them to the Section 4.4 vectors, and confirms that decompression returns the identical 44 bytes; that a wrong context ID or time base fails CRC32 verification; that segments delivered out of order reassemble; and the sizes in Section 7.
+- **Taken from published limits:** the LoRaWAN payload sizes are from the LoRa Alliance Regional Parameters as reproduced in LoRa Alliance member and network-operator documentation; the specification text itself was not consulted. The Bluetooth figure is from vendor documentation of the Core Specification's advertising format.
+- **Not done:** no implementation other than the checking script exists. Nothing has run on a radio. The 60 s reassembly timeout and the three-error rule are estimates.
+
+## 12. References
+
+- RFC 4944, *Transmission of IPv6 Packets over IEEE 802.15.4 Networks*.
+- RFC 8724, *SCHC: Generic Framework for Static Context Header Compression and Fragmentation*.
+- RFC 9011, *Static Context Header Compression and Fragmentation (SCHC) over LoRaWAN*.
+- LoRa Alliance, *LoRaWAN Regional Parameters* (RP002 series).

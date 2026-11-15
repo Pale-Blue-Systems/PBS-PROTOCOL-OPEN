@@ -2,7 +2,13 @@
 
 The documents listed here are proposals under PBS-GOV-01 Section 5.1, step 1. They are not part of PBS v1.5.0, are not listed in PBS-CONFORMANCE-01, and may change or be withdrawn. None of them changes the PBS-ENV-01 wire format or PBS Core semantics.
 
-Together they extend PBS from scheduled space links to opportunistic, low-rate and terrestrial links.
+Their aim is to extend PBS from scheduled space links to opportunistic, low-rate and terrestrial links. That is a goal. None of these documents shows it has been reached.
+
+## Standing of These Documents
+
+- Each is a design proposal written from specifications and arithmetic. None has an implementation beyond a checking script, and none has run on radio hardware or against a third-party system.
+- Statements about other protocols (BPv7, CCSDS Proximity-1, LoRaWAN, Bluetooth LE, Wi-Fi Aware, VDA 5050, ISO 21423) describe what those protocols define, with the source named in each draft. No draft claims compatibility with, adoption by, or endorsement from any of them.
+- Each draft ends with a section stating what was checked, what was taken from other documents, and what was not done.
 
 | Draft | Title | Addresses |
 |---|---|---|

@@ -44,7 +44,7 @@ PBS-ADDR-01 leaves the TLV `value` type-specific. This document registers four f
 | `0x00` | Scope-defined | As agreed within the authority scope |
 | `0x01` | PBS Source ID, 1–16 bytes UTF-8, without padding | Addressing a unit by its operational name |
 | `0x02` | Master device ID, 16 bytes (PBS-HW-ID-01 REQ-011) | Addressing a physical unit regardless of its current role |
-| `0x03` | Node number, two unsigned 32-bit integers (allocator, node) | Direct mapping to an `ipn` endpoint (PBS-DTN-MAP-01 Section 8) |
+| `0x03` | Allocator Identifier and Node Number, two unsigned 32-bit integers (RFC 9758 Sections 3.2 and 3.3) | Direct mapping to an `ipn` node (PBS-DTN-MAP-01 Section 8) |
 
 - **PBS-ADDR2-REQ-010:** Form `0x01` identifies an endpoint only within an authority scope (PBS-ADDR-01 Section 3). Across scopes, an envelope SHALL also carry a PBS-AUTH-01 Authority Context frame, or SHALL use form `0x02`.
 
@@ -62,7 +62,7 @@ An Address frame is part of the payload. The PBS-ENV-01 CRC32 does not cover it;
 
 Section 3.1, first bullet, to read: "When PBS-MUX-01 is not used, extension TLVs SHALL appear as the first bytes of the payload or within a payload schema explicitly defined by the application layer. When PBS-MUX-01 is used, they are carried as PBS-ADDR-02 Address frames."
 
-This is a corrective change under PBS-GOV-01 Section 5.2: it resolves a conflict between PBS-ADDR-01 and PBS-MUX-01 without changing either wire format.
+This is proposed as a corrective change under PBS-GOV-01 Section 5.2, on the reading that it resolves a conflict between PBS-ADDR-01 and PBS-MUX-01 without changing either wire format. That classification is for the governance body to decide.
 
 ---
 
@@ -70,3 +70,8 @@ This is a corrective change under PBS-GOV-01 Section 5.2: it resolves a conflict
 
 1. Whether the on-behalf-of role belongs here or in PBS-AUTH-01.
 2. A text form for addresses (for logs and configuration), parallel to the `hwid:` form.
+3. No implementation of the Address frame exists. PBS_LINK 0.1.3 implements the PBS-ENV-01 envelope and was not examined for PBS-ADDR-01 or PBS-MUX-01 support.
+
+## 7. References
+
+- RFC 9758, *Updates to the 'ipn' URI Scheme*.
