@@ -2,6 +2,7 @@
 ## High-Performance DTN Convergence Layers (IEEE Aerospace Conference 2025)
 
 **Alignment Identifier:** `PBS-ALIGN-IEEE-AEROCONF-2025-01`
+**Errata:** 2026-11-14: removed two statements that attributed mission-architecture content to Templin et al. The Source identification note already recorded that the paper contains no such content; the abstract (NTRS 20240015952) confirms it concerns DTN performance. No alignment dimension changed.
 
 ---
 
@@ -27,8 +28,6 @@ Findings:
 - Replacing `sendmsg`/`recvmsg` with `sendmmsg`/`recvmmsg`, or adding GSO/GRO, had little effect on ION LTP throughput (Section V).
 - Segmentation offload and a kernel-resident LTP segmentation function are projected to give HDTN a factor of 4 over the LTP base case (Section X).
 - On the International Space Station, BP runs over TCP, LTP, UDP and STCP convergence layers selected per link (Section IV).
-
-The IEEE Aerospace Conference 2025 paper presents a mission-oriented space systems architecture emphasizing distributed assets, heterogeneous communications, and coordinated operations across independently operated systems. The architecture assumes intermittent connectivity, variable latency, and mixed relay and direct communication paths as baseline operating conditions. It further separates mission logic and data workflows from underlying transport and relay mechanisms to support extensibility and reuse across future missions.
 
 ---
 
@@ -88,8 +87,6 @@ PBS operates above transport and relay layers, reinforcing this separation by al
 PBS is explicitly designed for multi-authority interoperability. It provides policy-aware mediation between independently governed systems, enabling coordination without requiring shared control planes or internal disclosure.
 
 ### Forward Extensibility and Reuse
-
-The paper positions its architecture as reusable across future missions and adaptable to expanding operational domains, including cislunar and deeper-space environments.
 
 **PBS alignment:**  
 PBS is mission-agnostic and orbit-agnostic, designed to persist across mission eras and domains. Its architecture supports progressive expansion without requiring architectural reset as mission scope evolves.

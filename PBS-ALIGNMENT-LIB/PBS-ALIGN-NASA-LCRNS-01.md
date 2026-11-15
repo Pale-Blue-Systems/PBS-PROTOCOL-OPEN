@@ -2,6 +2,7 @@
 ## NASA Lunar Communications Relay and Navigation Systems (LCRNS)
 
 **Alignment Identifier:** `PBS-ALIGN-NASA-LCRNS-01`
+**Errata:** 2026-11-14: statements re-checked against the paper (NTRS 20250003321). Removed a paragraph that called LCRNS itself a network of cooperating networks and a next-generation architecture; the paper applies the first phrase to LunaNet (Section 2) and does not use the second. Removed a statement that LCRNS separates service provision from governance, which the paper does not make. Two statements in Planned Architecture were restated to what Sections 1 and 2 say. No alignment dimension changed.
 
 ---
 
@@ -19,8 +20,6 @@ NASA Technical Reports Server 20250003321, <https://ntrs.nasa.gov/citations/2025
 Esper et al. describe the LCRNS project of NASA's Space Communications and Navigation (SCaN) program. Cislunar space has no existing communications, position, navigation or timing infrastructure (Section 1). The LCRNS charter is to enable an interoperable commercial lunar communications and navigation orbiting service infrastructure that meets NASA's needs and extends to Moon-to-Mars missions (Abstract). Intuitive Machines was selected in 2024 through the Near Space Network Services (NSNS) call as the first commercial LCRNS service provider; NASA is expected to be one of many users of LCRNS services (Section 2).
 
 PBS is application-layer protocol data carried over the network services such relays provide (PBS-LNIS-01 Section 2). The dimensions below map statements in the paper to PBS specification sections.
-
-NASA’s Lunar Communications Relay and Navigation Systems (LCRNS) defines a next-generation lunar communications and navigation architecture designed to support sustained lunar operations and future deep-space missions. LCRNS is conceived as a **network of cooperating networks**, emphasizing interoperability, onboard processing, delay-tolerant networking, and commercial service provision under open standards.
 
 **Planned architecture (in development):** Pale Blue Systems (PBS) aligns with the LCRNS architecture by providing a governance-aware interoperability and translation layer capable of operating across independently governed lunar, cislunar, and terrestrial networks. PBS complements LCRNS by enabling policy-aware coordination among heterogeneous systems without imposing centralized control or constraining internal provider architectures.
 
@@ -108,21 +107,19 @@ PBS operates above CCSDS, IETF, DTN, IP, and related standards, enabling transla
 
 ### Commercial Multi-Provider Ecosystem
 
-NASA positions LCRNS as a commercially provided service environment, where NASA acts as one customer among many. Providers retain independent internal architectures and compete on performance, coverage, and service offerings.
+The paper expects NASA to be only one of many users of LCRNS services, and states that the selected provider manages its network independently of NASA (Section 2).
 
 **PBS alignment:**  
 PBS is designed to support commercial multi-provider ecosystems by enabling interoperability at defined exchange boundaries. It allows providers to maintain proprietary internal systems while participating in a shared interoperable lunar communications environment.
 
 ### Governance, Authority, and Safety
 
-LCRNS separates service provision from governance, anticipating participation by multiple national, commercial, and international actors. Governance and safety are addressed through standards and agreements rather than centralized operational control.
-
 **PBS alignment:**  
 PBS provides explicit authority-context handling and policy-aware routing, enabling deterministic interoperability across independently governed systems. Its design supports auditability and safety without requiring payload inspection or centralized trust.
 
 ### Strategic Extensibility: Moon to Mars
 
-NASA frames LCRNS as a foundational architecture extensible beyond lunar operations toward future Moon-to-Mars and deep-space networked missions.
+The paper states that this approach to networking and interoperability in the cislunar domain will lay the groundwork for similar capabilities for Mars and other deep-space missions (Section 1).
 
 **PBS alignment:**  
 PBS is orbit-agnostic and mission-agnostic, designed to persist across mission eras and celestial domains. Its architecture supports progressive expansion without requiring architectural reset as operational scope evolves.

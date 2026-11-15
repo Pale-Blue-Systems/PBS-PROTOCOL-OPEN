@@ -2,6 +2,7 @@
 ## LEO Mega Constellations: Congestion, Surveillance, and Governance
 
 **Alignment Identifier:** `PBS-ALIGN-SPJ-LEO-2022-01`
+**Errata:** 2026-11-14: removed a statement that the paper examines autonomy, distributed decision-making and multi-agent coordination. The published abstract describes a review of LEO mega constellation development, impact, surveillance and governance, as the Alignment Overview states. The Planned Architecture section below was written against the earlier description and does not derive from this paper.
 
 ---
 
@@ -19,8 +20,6 @@ doi:10.34133/2022/9865174.
 Zhang et al. review the growth of low Earth orbit (LEO) mega constellations and their effect on astronomical observation, in-orbit spacecraft safety, and the space environment. They conclude that sustaining activity in LEO requires more rational surveillance and governance mechanisms, and examine two responses: space surveillance and situational awareness to keep spacecraft operating safely, and accelerated end-of-life deorbiting through post-mission disposal and active removal.
 
 PBS does not perform surveillance, collision avoidance or debris removal. It defines message formats for authority, position and priority information exchanged between independently operated systems.
-
-The Science Partner Journal paper (2022) examines the increasing necessity of autonomy, distributed decision-making, and multi-agent coordination in future space systems. It frames autonomy not as an optional enhancement, but as a structural requirement driven by scale, latency, operational complexity, and the expansion of missions beyond Earth orbit.
 
 ---
 

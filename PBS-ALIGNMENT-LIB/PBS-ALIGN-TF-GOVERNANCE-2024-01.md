@@ -2,6 +2,7 @@
 ## Space Governance, Hybrid Organisations, and Multi-Actor Coordination
 
 **Alignment Identifier:** `PBS-ALIGN-TF-GOVERNANCE-2024-01`
+**Errata:** 2026-11-14: removed three statements attributing to the article claims that are not in its abstract (governance fragmented across treaties, regulatory bodies and markets; governance through operational practice and infrastructure). The abstract's argument is that hybrid organisations bridge clusters of similar organisations, as the Alignment Overview states.
 
 ---
 
@@ -12,7 +13,7 @@ Beaumier, Guillaume, Cynthia Couette, and Jean-Frédéric Morin.
 *Journal of European Public Policy*, vol. 32, no. 4, 2025, pp. 1004–1034 (published online 2024).  
 doi:10.1080/13501763.2024.2325647.
 
-The article is not open access. This alignment is written from its published abstract.
+The article is not open access. This alignment is written from its published abstract. An author-hosted copy exists at <https://cergo.enap.ca/cergo/docs/Cahiers_de_recherche/2024/Hybrid%20organisations%20and%20governance%20systems%20%20the%20case%20of%20the%20European%20Space%20Agency.pdf>; it was not used for this revision.
 
 ---
 
@@ -21,8 +22,6 @@ The article is not open access. This alignment is written from its published abs
 Beaumier, Couette and Morin argue that the organisations in a governance system multiply and diversify over time, and that a tendency toward homophily groups them into clusters of similar organisations. Hybrid organisations, which share characteristics with several types of organisation, bridge those clusters, act as brokers for material and ideational resources, and keep the system cohesive. The authors illustrate the argument with the space governance system and the European Space Agency.
 
 The article concerns institutions, not communications technology. PBS relates to it at one point: the exchange of information between organisations of different types.
-
-The Taylor & Francis (2024) paper examines outer space as a politically governed, institutionally fragmented domain characterized by the participation of states, commercial actors, and hybrid public–private entities.
 
 **Planned architecture (in development):** Pale Blue Systems (PBS) aligns with this analysis by providing a governance-aware interoperability layer that enables policy-consistent coordination across independently governed space systems. PBS operationalizes institutional and political realities at the systems level, enabling cooperation without requiring centralized authority or uniform governance regimes.
 
@@ -62,8 +61,6 @@ PBS is explicitly designed for multi-actor environments, enabling interoperable 
 
 ### Governance Fragmentation as a Structural Condition
 
-A central argument of the paper is that space governance is inherently fragmented across treaties, regulatory bodies, market mechanisms, and operational practices, and that this fragmentation is unlikely to resolve into a single unified framework.
-
 **PBS alignment:**  
 PBS treats governance fragmentation as a baseline architectural condition. Its interoperability mechanisms are policy-aware and authority-scoped, enabling coordination across fragmented governance structures without requiring consolidation or harmonization.
 
@@ -72,8 +69,6 @@ PBS treats governance fragmentation as a baseline architectural condition. Its i
 PBS enables coordination without centralized authority by mediating interactions through explicit policy context and routing logic. Systems can interoperate and coordinate outcomes without surrendering control or autonomy.
 
 ### Infrastructure as a Governance Mechanism
-
-The paper highlights how governance increasingly occurs through operational practices and infrastructure, particularly where formal institutional frameworks lag behind technological and commercial developments.
 
 **PBS alignment:**  
 PBS functions as governance-enabling infrastructure. By embedding policy awareness and authority context into interoperability mechanisms, PBS allows governance to be expressed and enforced through operational systems rather than solely through formal institutional arrangements.

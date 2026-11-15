@@ -2,6 +2,7 @@
 ## Space Communications in the 6G and Beyond Era
 
 **Alignment Identifier:** `PBS-ALIGN-NTONTIN-6G-01`
+**Errata:** 2026-11-14: removed four statements, and part of a fifth, that attributed to the paper an emphasis on multi-stakeholder participation, layered architecture and coordination. They carry no section reference, predate the Alignment Overview, and were not verified against the paper; the published abstract describes use cases, technological enablers and the role of open standards.
 
 ---
 
@@ -19,8 +20,6 @@ doi:10.1109/JPROC.2024.3512934. Open access (CC BY 4.0).
 Ntontin et al. (University of Luxembourg SnT, KFUPM, SES) present a vision of satellite communications beyond 2030. The paper covers use cases (Section II), including near-Earth, lunar, deep-space and proximity links; enabling technologies (Section III), including delay-tolerant networking; three technologies treated in depth, namely AI, space-enabled quantum networks and joint communications and positioning (Section IV); and open challenges (Section V).
 
 The paper's subject is the satellite and radio layer. PBS operates above it as application data. The dimensions below cover the statements in the paper that bear on PBS.
-
-Ntontin et al. articulate a system-level vision for space communications as a foundational component of future global connectivity in the 6G-and-beyond era. The study frames space systems as part of a heterogeneous, multi-domain networking environment spanning terrestrial, aerial, orbital, lunar, and deep-space segments. It emphasizes long-term scalability, coordination across diverse stakeholders, and architectural approaches capable of evolving alongside rapid advances in underlying communication technologies.
 
 **Planned architecture (in development):** Pale Blue Systems (PBS) aligns with this vision by addressing interoperability and governance challenges that arise at the architectural level in such an environment. PBS operates above evolving physical and network layers, enabling policy-aware data exchange across independently governed systems consistent with the future ecosystem described in the study.
 
@@ -86,14 +85,10 @@ PBS is architected with heterogeneity as a first-order assumption. Its interoper
 
 ### Multi-Actor, Multi-Authority Participation
 
-Ntontin et al. emphasize the participation of multiple stakeholders—including public agencies, commercial operators, scientific missions, and defense systems—as a central feature of future space communications.
-
 **PBS alignment:**  
 PBS is designed to support interoperability across autonomous, authority-scoped networks. Its architecture enables collaboration among independently governed systems without imposing centralized ownership or shared control structures.
 
 ### Layered and Evolvable Architecture
-
-The roadmap advocates a layered architectural approach that decouples advances in physical and access technologies from higher-level networking and service functions to support long-term adaptability.
 
 **PBS alignment:**  
 PBS is positioned as a higher-layer interoperability and governance mechanism that remains agnostic to lower-layer implementations. This enables continued innovation in space communication technologies without disrupting inter-system interoperability.
@@ -104,15 +99,13 @@ PBS supports long-term scalability through a federated, gateway-based model that
 
 ### Governance and Coordination as Core Requirements
 
-PBS directly addresses these requirements by providing a governance-aware interoperability layer that enables policy-aware data exchange across independently operated systems, aligning with the study’s emphasis on coordination as a foundational concern.
+PBS directly addresses these requirements by providing a governance-aware interoperability layer that enables policy-aware data exchange across independently operated systems.
 
 ---
 
 ## Alignment Summary
 
 Ntontin et al. place lunar communications on LunaNet, identify DTN as the most mature networking technology for deep space, and tie interoperability to standardization in a multi-vendor, multi-owner market. PBS adds an application layer above those networks: LunaNet carriage (PBS-LNIS-01), end-to-end priority over BPv7 (PBS-DTN-MAP-02), public conformance definitions (PBS-CONFORMANCE-01, PBS-CONFORMANCE-02) and authority context (PBS-AUTH-01).
-
-The vision presented by Ntontin et al. (2025) describes a future space communications ecosystem characterized by heterogeneity, multi-actor participation, layered architectures, and long-term scalability.
 
 **Planned architecture (in development):** Pale Blue Systems aligns with this vision by providing an architectural interoperability and governance layer that enables policy-aware coordination across autonomous space, lunar, and terrestrial networks consistent with the 6G-and-beyond roadmap.
 

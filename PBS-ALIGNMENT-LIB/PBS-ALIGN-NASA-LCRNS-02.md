@@ -3,10 +3,11 @@
 
 **Alignment Identifier:** `PBS-ALIGN-NASA-LCRNS-02`
 **Revision:** 2026-10-06 (PBS v1.5.0); first issued 2026-09-22 (PBS v1.4)
+**Errata:** 2026-11-14: removed two sentences that duplicated and overstated the paragraphs above them (that PExT demonstrations "establish" enterprise service management, which source [7] describes as a demonstration NASA is partnering to conduct; and that the LCRNS testbed "validates" relay performance, which source [4] describes as a capability in development). LNIS V005 citations corrected to the sections that carry the cited text.
 
 ## Aligned Architecture
 
-NASA's Lunar Communications Relay and Navigation Systems (LCRNS) project [6] procures commercially provided lunar relay communications and PNT services built to the LunaNet Interoperability Specification (LNIS) [3, 4]. LNIS V005 describes LunaNet as a network of cooperating networks on which LunaNet Service Providers (LNSPs) deliver communications, PNT and other services [3, Preface]. It defines real-time IP network services (Section 3.1.1.2) and DTN network services, for which Bundle Protocol version 7 (BPv7) shall be used (Section 3.1.2). LCRNS relays process link-layer and higher-layer protocols onboard and route frames, packets and bundles to provide these services [5].
+NASA's Lunar Communications Relay and Navigation Systems (LCRNS) project [6] procures commercially provided lunar relay communications and PNT services built to the LunaNet Interoperability Specification (LNIS) [3, 4]. LNIS V005 envisions LunaNet as a network of cooperating networks (Preface) on which LunaNet Service Providers (LNSPs) deliver services (Section 1) [3]. It defines real-time IP network services (Section 3.1.1.2) and DTN network services, for which Bundle Protocol version 7 (BPv7) shall be used (Section 3.1.2). LCRNS relays process link-layer and higher-layer protocols onboard and route frames, packets and bundles to provide these services [5].
 
 PBS defines the mission semantics that applications carry over those network services: identity and authority, priority, Service Intent, freshness, security requirements and PNT context.
 
@@ -55,7 +56,7 @@ PBS authenticated mission messaging binds command data to source identity, autho
 
 ### Need 24.05 — Scalable Lunar PNT
 
-PBS carries reference-frame, time-reference, epoch, uncertainty, provenance, validity and quality context with mission PNT data. LunaNet-aligned deployments bind these identifiers to the lunar reference system and LunaNet Reference Time defined by governing LunaNet documents (PBS-PNT-REQ-006; LNIS V005 Section 2.1).
+PBS carries reference-frame, time-reference, epoch, uncertainty, provenance, validity and quality context with mission PNT data. LunaNet-aligned deployments bind these identifiers to the lunar reference system and LunaNet Reference Time defined by governing LunaNet documents (PBS-PNT-REQ-006). LNIS V005 Section 2.1 covers LunaNet Reference Time; the lunar reference system is assigned to applicable document [AD5], which Section 2.1 notes was not yet available at LNIS V005.
 
 **PBS allocations:** PBS-PNT-CTX-01.
 
@@ -65,13 +66,9 @@ LCRNS, ESA's Moonlight and JAXA's Lunar Navigation Satellite System providers ar
 
 NASA's Polylingual Experimental Terminal (PExT) completed its primary objectives in December 2025 by returning data through NASA's Tracking and Data Relay Satellite system and commercial relay networks operated by Viasat and SES Space and Defense. Its extended mission, through April 2027, includes direct-to-Earth links through SSC Space ground stations and a planned enterprise service management demonstration with Aalyria's Spacetime software [7]. PBS operates at the application semantic boundary above such service-management functions.
 
-NASA's PExT demonstrations further establish multi-network terminal operation and enterprise service management across government and commercial communications services. PBS integrates at the application semantic boundary above those service-management functions.
-
 ## Verification Alignment
 
 LCRNS is developing an Interoperability and Performance Testbed (IPT), a hardware-in-the-loop testbed that emulates a universal lunar user terminal to verify by test LCRNS relay service performance and interoperability requirements [4, Section 5]. PBS-CONFORMANCE-02 verifies PBS at the application interface: test cases PBS-C02-T001 to PBS-C02-T016 cover IP and BPv7 carriage, provider transition, deadline expiration, authentication, replay protection, command authorization, PNT context, QoS policy, disruption, capacity constraint, BPSec layering and no-expiry bundle lifetime (Section 3).
-
-NASA's LCRNS Interoperability & Performance Testbed validates commercial relay performance and LunaNet interoperability.
 
 **Design target:** PBS-CONFORMANCE-02 applies the same engineering principle at the application-semantic boundary through hardware/software-in-the-loop capable tests for IP, BPv7, disruption, provider transition, security, PNT context, deadline handling, and constrained-capacity operation.
 
