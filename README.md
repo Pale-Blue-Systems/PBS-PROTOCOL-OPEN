@@ -124,18 +124,6 @@ Each alignment document identifies its external sources, summarizes what they st
 
 ---
 
-## External Alignment & Validation
-
-The Pale Blue Systems Open Standard is explicitly aligned with authoritative, peer-reviewed architectures from major space agencies and technical bodies.
-
-| Alignment ID | External Source | Domain |
-| :--- | :--- | :--- |
-| **PBS-ALIGN-NASA-LCRNS-01** | NASA LCRNS (Esper, 2025) | Lunar & Cislunar Networking |
-| **PBS-ALIGN-IEEE-AEROCONF-2025** | IEEE Aerospace Conference | Space Network Architecture |
-| **PBS-ALIGN-IEEE-TNTN-2025** | IEEE ComSoc | Integrated T/NTN Networks |
-
----
-
 ## Open Standards and Stewardship
 
 PBSF is intentionally structured as a neutral foundation stewarding open standards and reference specifications.
